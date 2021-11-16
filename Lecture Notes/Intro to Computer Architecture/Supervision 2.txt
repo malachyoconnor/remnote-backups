@@ -1,0 +1,106 @@
+%LOCAL_FILE%ujcL6v4TPBhwrAcC9U-DaheF_SZq6DZo4qsSSIJ_y5ZWZw2da0KoPhAc-IC7-96muSFQa3iDtOcZFGvVILKMMqKF8thbd7P8VPDM5HDH-kPnflEeHP0Iu8ue1pvtHVLD.png 
+    An immediate is a value that does not need to be fetched from a register or memory, that is it represents a value directly rather than an address of that value. The only computation that needs to be computed is extracting the immediate, involving sign extending.
+    %LOCAL_FILE%Bp04bTw83jaJ9i3BiMwlJkcbV2zGungrBbTZkiONosl6IIUNJIY44FN8t0FxPPXLej7ilSAiBcFsEAvBObuzn9CT5dsZGLDwxryh2ouy-blZW25weMm4z1xKCbkLAbPx.png 
+    AUIPC rd -1000; // rf[rd] = PC - 1000
+BEQI x5 x4 100; // if (x5==x4) PC = PC+100;
+ADDI x5, x0, -5; // This stores -5 in x5.
+    %LOCAL_FILE%TeoYGLDUjRa7z5q-5Sn9A1w67YUAcm-CNL2WnXCz09VzCz1Y1eAmoGrncZiSqTrcIBx5hleeoQ8KLbe3CDOo3AHBFzl_korJ4nzpcqvhA0TUp8CJZVWmEYJoi97vraU9.png 
+        Because immediates take up space that can otherwise be devoted to funct3 & funct7 fields, which extend the opcode space and allow for thousands of more instructions. R-type instructions contain no immediate and thus have a funct3 & funct7 field, while I-type uses an immediate and thus only have a funct3 field - 6 bits less opcode control results in 2^6 times less possible instructions you can perform. The reason in general is that register-to-register instructions require only 5-bit register addresses, while immediates often need to be longer than 5 bits.
+%LOCAL_FILE%TYJ8_gFTsVYCGehDl-wZLT7Wk-FpYNQne44DtqUNd_0Py1Jv5aJylbRJ4IaeaoUsJeyOuexaycxFPcKAOd--yodGGGFhyijXf2dy-_R2Ffu7kqihZ0lBTMsOzn79_bnA.png 
+    ISA level simulations are programs that interpret machine code and run said machine code in a higher level language, they are often "bare metal" (they don't run an OS) and also ignore factors like varying clock speed & interrupts from other programs. An example would be SPIKE which is the ISA simulator for RISC-V.
+%LOCAL_FILE%J7L7np4Dby_9cLgtwDrxVP_rCQvCdpja652qu3tqA_9_zf00zFxmlz5Y1Y91Q67pxNMadtl_1T3b4jNQSVQnK436sCLkhjdhDGUyd30sLe-CNjCeLVA7cAOgRoHtkRP5.png
+    The data path is the actual flow of information (be that immediates, addresses or register values) while the control path is the signal that controls the flow of information. They tend to flow together because certain control decision can only be made once the instruction has been decoded, and the data values can be examined - for example, the values of the registers in a BEQ command control the control-flag the ALU emits. 
+
+    %LOCAL_FILE%hUXO8mnviRXtruya41BN9kijy81S75f1t4yhCe2D_F-K5Xcfy00i2Whwvtj99jatVA46g22xuuDOv_P9KBet5IdEGrYBfqtoWorSMisBVdFzpaJ7X8lrnVRKxaSQIBiq.png 
+        Performance can mean many things, in terms of CPU we have Clock speed, Cycles per instruction, Cache fetch speed, Number of cores, Individual core speed etc. A benchmark could be developed to measure any one of those metrics, but there is no overall metric of performance.
+        Performance varies as outside conditions vary, a benchmark could be run when the CPU or other components are already hot or when the room is abnormally cold, which can lead to incorrect predictions when the system operates outside those conditions.
+        Performance can change due to conditions inside the system. for a CPU we could have lots of OS interrupts during the benchmark or lots of other processes being used that hog resources - making the benchmark innacurate for normal operation.
+            Performance can vary for the use-case, for example a CPU can favour high core frequency vs more parallel cores - where the higher core frequency system could do better in a non-parallel use-case the system with more cores would do better on tasks like video-decode that are suited for parallelism.
+    %LOCAL_FILE%DHrxwCXTlVqaXyaqr4YJu0IbL7nGyZFwnlKjLGPDeZMf46R9iyOaHoTqqmMn5aIdtOCMtTu4BuB1UhY87LdrVnJM-IsjP_GRWLZyIzpINdk3GP7_nPBvnq869JBRisYq.png
+        Instructions per second varies wildly depending on the program used, some instructions take more cycles than others - thus, a computer running software with more lengthy instructions would inherently be considered slower by this metric.
+        Two computers using identical hardware but with different ISAs would result in different measurements for performance, consider CISC vs RISC - a given CISC instruction could encode multiple RISC instructions into 1, and even for the computations would thus compute less instructions. 
+        Again, this measurement would vary with the conditions of the two computers - a higher temperature computer would likely throttle and result in a lower clock speed, leading to less computations being computed per second.
+        Under Von-Neumann architecture, much of the time spent is data fetching & setting - and while we wait we can simply perform polling instructions. Thus, the most critical factor for performance is not captured by this metric as we can compute a load and then repeatedly poll to see if the data has arrived - this will result in a high instructions per second although nothing useful is calculated.
+    %LOCAL_FILE%oJoZsvB6MsmJwvU8JTK0mCpOZwXsO74aGqk67D3Kj0BtNaS0ZZ3ub3GzMCUEzROzFokhWOllo9mU1Ht2Rdzvp0omRBRQ756XZfOpMBsc7tz53YwTOfD_naTefMAxWsxm.png
+        Peak performance is only useful as an upper bound on performance, can't tell you anything about the common case.
+        Common case can vary wildy from the peak performance.
+        The difference between peak performance and common case performance will vary wildly from program to program.
+        A computer with much higher peak performance may complete a task slower than a computer with a higher average case performance as the peak performance cannot be continuously upheld (temperature throttling, data starvation etc.). 
+    %LOCAL_FILE%jazhr05nvPg_iVt0LtIBeOZTQuMCyOcdNOviCvlVf8W-KmER0h5cIj1Gy4QVqy27RU2Mf6u2qwK0glP-aOVH4hOEofmgDjSUeOpeV9vqStLxou_cxkEC8iLi0bDwCb7X.png 
+        Some applications are orthogonal, e.g. best performance and lowest price, meaning you can't have both. 
+        General purpose CPUs are usually slower than FPGAs computing the same algorithm, due to the allowance for greater parallelism. Thus, serving multiple purposes results in slower speeds. This similarly goes against making the common case fast.
+        The design is always a trade of between performance, energy use and area - these trade offs cannot be thrown aside, as some applications want small area & energy use with a lower requirement for performance (phones) while some require high energy & performance resulting in larger areas (compute servers). So no ideal processor can be developed for all applications. 
+    %LOCAL_FILE%Dpic-8nsa3ExxGcMZkvAmhuAwT4wbYgoy6GScYpcugSf2Dc3x02taF2oTvhMwuRzlhJIHprRr0jXl8fTvSyvfLNlzpcchdPBLJhtQxoF8eFn_67EheC2FgQxVtZv5h56.png 
+        While longer pipelines can allow for higher clock speeds (less work per stage, allows for higher clock speed), there are associated trade offs. 
+        Diminishing returns from performance increases, Amdahl's law - if an operation time is barely used, adding a pipeline stage can decrease performance as time needs to be spent waiting for that stage to complete while a fast operation may be waiting.
+        Additionally, resolution of control and data hazards increases time taken (we need to fetch the correct instructions and flush state causing bubbles in the pipeline). Mis predicted paths have a greater effect on longer pipelines - Got this from notes, but don't really understand why it's the case wouldn't it be the same? 
+%LOCAL_FILE%HrcWNFR_E2HESaJNxYOc7XrcKLX7vDuEmKx5F6q0Ap4tlz7gLbVz46xUZcZFdvFK8tcDtriByoZ1znxvUBVKmXSTWuBOSG3FdtkBC2qTP4jjZxoijgI4vGt2mfKPaIf8.png 
+    No, more complex pipelines can have more stages - the 5 stages is what RISC-V uses and can be modelled as an abstraction for more complex pipelines. For example, CISC pipelines can have a second decode stage where longer instructions need to be further examined but this would be put under the umbrella of DI.
+
+    %LOCAL_FILE%3Uy5_FV4LoCFD69iUHoN_NLwWYbbpIANN4-7dl7wqsadCZTdSr4xD-zcEHF0qNv23_lY9jodR7L4rdJ2zgKOFGKC_LU5288COxmEU7NaLzdlxbKOIQJjtXzlziqGeyJz.png 
+        From a birds eye view, data & control hazards are a necessary feature of parallelism - if we are to run sequential programs concurrently we are going to have instructions which rely on the results of a currently executing instruction. More specifically, data hazards are when an instruction needs one or more of the items that are to be "written-back" by an executing instruction as it's operand/s. This hazard is caused by operations wanting to use transformed data. Control hazards are caused when conditional branch instructions need to wait for there condition to be evaluated before we can update the program counter and fetch the next instruction. This can be mitigated by trying to predict the outcome of the branch, and rolling back if the guess was incorrect.
+    %LOCAL_FILE%p7VHTCavrC_gDoAR3T0SQE-x2lZ_lO0XFya-WFeB8v6O2zvBO6s58odYJIEVdVIHLepDOIV3hatj8h8JZdGnpm9wZjd81eZD7Yeh9vuEx_fffZQ2FUQWL9_RZI45vFYL.png 
+        Can we go through this question - don't know what it's asking 
+    %LOCAL_FILE%fzxrPBHAxm4NkUXqKIIy3xlM1J658qmhBqCZWn75WRdHYpWMNfBPKWKdz_GVO_imF2vt0XpRlyQLUNFiCsbEkHOa2w2Cam9dfqed3WxBz8dZ6CMFjiYVFaTwaSLC4WdA.png 
+        Pipeline A:
+            Data hazards cannot happen in pipeline A, because once we've decoded the instruction the previous instruction has concluded and the register has been updated so when we fetch the register the results will be correct.
+        Pipeline B:
+            We can introduce forwarding from end of the 3rd stage of the 1st instruction to the beginning of the 3rd stage of the 2nd instruction:
+                %LOCAL_FILE%I_OZbM7nhza2JNMJh9i2jbqw_hqkjESg5n2cqMqBOB5aHntnRGYE-eWc_xiuCoxd86If-izdy5APWDfFTaUwprErMbypg7j-UDXOSqc8QYz1J78Ht_rHpij5uhmKKGSh.png 
+            This forwarding would overwrite the values in the registers if they were changed, for example:  ADD x1, x5, x6;
+ SUB x2, x1, x6;
+            We would have to feed the updated value of x1 from the 1st instruction to the second.
+        Pipeline C:
+            This can be resolved using standard forwarding if this is an R-type instruction, where the result of the execution of the first instruction is fed into the operands for the second execution stage:
+            %LOCAL_FILE%2X9HLoPP_olxS3qMxdKywBN3qrUQgBv4Kf1gqfUKzKNf0TriTV0CpKUE2BvwaQrnlAVIwM7SmYywV8nKXZauyItrAKNbnAdUzyMExe8igbYJHystbNYxCkDFFvGOvzwU.png 
+            HOWEVER, if our first instruction is a load that the second instruction relies upon we will have to have a bubble and use forwarding from Memory to execution.
+    %LOCAL_FILE%1iYR9GJRtRBen6sgG7ruEOkFMcgFH1yGk9-keOL-hwq0rO_NbQwSkqMITqdFblngsP9H1TSsdhYrqlPyp7_pYQ3nO1B8moL3fvPWS0_tSq2TYDbf0Sl4P_D2up8CNA64.png 
+        Exceptions do introduce control hazards, as they result in the pipeline being flushed. For a precise exception, the exception is recoverable and this will simply result in bubbles in the pipeline according to the number of clock cycles the exception took to resolve. However, for an imprecise exception we cannot recover and must simply exit.
+    %LOCAL_FILE%rj3My9YwE1oxjg_TS7tLeqXizhP0fVSeBZvGTt2ve4bmbMWPQx7skKXtO1nEQyuIwAIIMTOB6YrXpcvSAXWF2iVxhwW8_c-mpR3DUg3SjHZGkZiofmio1q8VIZBtSeVB.png 
+        Interrupts do not introduce a control hazard, as the entire pipeline would be pushed onto the stack in the event of an interrupt and resumed after the interrupt was handled. We never add incorrect instructions to the pipeline while the interrupt is running.
+
+    %LOCAL_FILE%E7o0ebzVnw8np-AE1bfqtq4SmA7zbpTWTm-KLVnaK_u4T80CWJvAXgZpbBOgPh4J56uQ4qBtn1GzFJSpo6w6QmNmH-NJvJhJvQJ09P40jKqdpBMgVJjx2UR11VtZah4J.png
+        Branch prediction is when the processor does not wait for the arithmetic operation section of a conditional branch to be executed, instead we make a prediction about what leaf of the branch we'll follow and roll back if we are found to be incorrect. This can avoid control hazards (if it predicts correctly more often than incorrectly) as we don't begin fetching items while we wait for the branch to execute, instead we instantly make our prediction and update the PC resulting in less instructions needing to be flushed.
+
+    %LOCAL_FILE%E3_cpU7FhIMFMosx0KRu0eo_OaU7N78GMgNKn6Z4mK05y9ZFcbgrbb_xNb5vFRQhmDFCxO9uEGx9vqsbmy8p0InfYnVHSLIG032U0pjFECdo8YqrRwhM5RB2uJCC_tJB.png 
+        This is contents of lecture 9 which has not occurred yet.
+
+    %LOCAL_FILE%XqoBtTygBlIN6uHJnGQFh8I3qcG5IFvD87VmbkDnkztk5tUxtfQOmQ40ltDXkkhsoRbKPujZEQQmJ1r7D0-xwc8AfWKfENyGLKqnF8dNeNZPx3Hzb5rcMjgZsBNdVUPU.png 
+        Memory latency is the amount of time it takes for memory to arrive after being fetched, while memory bandwidth is the amount of memory that can be fetched within a certain amount of time (generally a second but sometimes 1 clock cycle).
+    %LOCAL_FILE%4MbwB78Gg0rz54Ex-HTTS495wkzxAFFrId7boZPkYTW-NPvTw84Qy-53SoNYxxl69wJs1_1j2r8vQFsyMWfBPaiv3mkT0CgYqPKrqdf5aOTBKXc-hPD3KD_pC3UhqCiU.png
+        Exceptions are caused by processes in the CPU, whether that be a division by zero error or a syscall, while interrupts are caused by an outside I/O controller like the OS. Interrupts require the registers to be put on the stack until the handler is completed, while exceptions can cause irrecoverable flushes of register files.
+    %LOCAL_FILE%64IDOmAG3--v5FSz06UBv19TM9Ten3RMit5FpFJrCZQedy_Pgck5FP-1510pdgGPPtl5qPy-9vTc09QwuPVdvnZrrzZiJBbbQO3Ao__BU6FBh4ye4wZ_zhLPMo43xFM7.png 
+        The programming model of a flat linear address space is the most intuitive and easiest to reason with model, we assume the programmer doesn't need to know the fine details and abstract them away. The CPU is then tasked with making this intuitive process fast. A hierarchy of memories is used because the speed of light is slow (and because very fast memory is expensive) , calls to fetch data from DRAM can take hundreds of cycles so we position fast caches nearby the CPU that can be polled very quickly. Only if we miss our poll do we need to step up the hierarchy and fetch data from DRAM or potentially even HDDs. This is also a result of the Turing tax, as most of the time is spent fetching and manipulating data rather than performing computation.   
+    %LOCAL_FILE%CjzrJJe0a3jCVrKSznbuZBlZa6b775Anpio3P0U3NAmDXWuekow4eGuAqN7z0olkCfSAxcq0RR6HeaMfRf00bPhCXCBf0EgKikgvbJN88Rgdaj0FmQZeFT_L1NBYBygS.png 
+        A direct mapped cache consists of many cache lines that contains data that was spatially-bunched on memory when it was fetched - each line is referred to by a unique hash which is usually some combination of it's index, it's tag and the word to be fetched. A set associative cache is a large collection of direct caches, where all direct caches are polled simultaneously to find data. In direct-mapped we have no choice of which cache-line is replaced, as it is built into the memory address. In Set-associative we have certain options, such as least-recently used, not last used and random. 
+
+    %LOCAL_FILE%Ayul6TLMRCoxjIc4cAeVdla03F32FFZBHs2WOkxOm2JoUTWhDDDPHb8vr82sLaKnJBgFSvWweZFPG13haPBzu_i3HkOIMibSi3Dl2xp5QEaUlmmq0CIc6xsAEWPCUWJZ.png 
+        In control-flow machines, values need to be accessed and consumed quickly to allow for the progression of the program - as later instructions will require the results garnered from the consumption of the aforementioned value. Thus, if the memory access latency is high the program cannot proceed - this lack of progress while waiting explains the sensitivity.
+    %LOCAL_FILE%6XbZtfmhU9YoHSaiiAAH83hNSuVF-1TFe30ZdN-KZp1KnKiYdasyjpow9irpDz__J0zagsIWnV0Khhi2GcNVi-DMhcImhRCB06PwBVLuNLgsTvXFz3zIms49CxjvSPPJ.png
+        Temporal and spatial properties of data access patterns are exploited. Spatial: if a certain piece of data is accessed, it is likely that nearby data is going to be accessed soon. Thus, we cache requested data and data spatially close to it (in the linear memory) on a miss. Temporal: If a piece of data has recently been accessed, it is likely it will be accessed again soon. Thus, don't just flush data after it's been delivered to the CPU - cache it for reuse.  
+    %LOCAL_FILE%BubVqInmQH73h3cTr6eb56u3QrOMDUy5kFkJzxcyS4I_rHKgLZAQl5X7WiVh5fbXXb0d-BcUAOC62OoAj4WKHekVCLk6dpp5CjkD76PMcil9bcVpM3nVLQdjz19D5dBH.png  
+        Direct-mapped caches have no choice as it is governed by the address of the item. However, set associative can use least recently used (hard to manage for large sets), not most recently used (easier to manage) or random (easy to implement and around same performance as LRU). They might also implement a victim buffer, to avoid "pathological misses" 
+    %LOCAL_FILE%x42S6Ceps_2HqEL8DCX2MNjn47hCcBIv9BnoibcAplrSNuL_RqflsWNePHiY5N5eqrUFDV2Wm8SpJfcq6qwtGCjYEhto6W3BFUAt7d3m4rdWi9Mim0FhrzSw8TvhPmWe.png
+        Write back & Write through. Write through is where you keep a write buffer, when a data-write hits update the item in the cache and add it to the write buffer. Only stalls if the write buffer is full, in which case memory needs to be synced. Write back is where we mark updated items as dirty on data-write hits, then when we attempt to remove the item and it's dirty then we must sync memory. Both of these are methods of keeping memory and caches synchronised while keeping the CPU occupied with computation rather than memory management (as much as possible).  
+%LOCAL_FILE%tSOQjmd979Wel0vDmCZMaa4dj7gHcSLmRnHZGNq-uA1Gb4DFVOomMrCrDVhBVXvV9Cxt50j0SrgvZUOg3hsJqdi3K1aOOmmrVFslMiHiQztfSseQ-kh8ZOlfQIHFQgdf.png
+    Cache miss rate is the rate at which we poll the cache for a certain value, and it's not there - meaning we have to fetch the data from higher up in the memory hierarchy, if that's DRAM then hundreds of clock cycles can be spent waiting for memory to arrive rather than the 1 or 2 for the data to come from cache. If our cache miss rate is very high then we are constantly accessing from DRAM, resulting in huge slowdown of our code as we wait for memory to be shipped over to operate on.
+%LOCAL_FILE%neVpREEPM9QEQh0eE3YLO6iHU2MOTJ8UiE2T7JCPv6ylofruCHwLnLNZxJUANvvPIw5kajdAq7yl4xxj7T7OJgd_Pjuc4SmLGKzDApXwbEKWsi1JFjIsiPUVq-HFBqUE.png
+    Single sections of the pipeline can take less time than others:
+    %LOCAL_FILE%QgDYiw-84BUNbSgRI6NeWKTsYHXqJqKIWtTbVWCEnfVMsvlGWNfH5W5BeOhrrU5w0y9YksdAxhGCdVecxuyuDUb4iJjyRvl6EzU7QIohyaNRMn-pQ631fgHoWeTquEbn.png
+    Thus, if a given instruction wasn't waiting for the proceeding instruction to finish it could complete the execute stage quickly and advance to the memory stage - however in the pipeline model, every stage takes as long as the slowest stage - resulting in: 
+    %LOCAL_FILE%Mu_iWQF_bZD1YvTf0XGvMi35rlo8rUysvGO3fuqEI3NB9t-5Gn3tTOVaLJEIMSSn0JHGqE_6up5Rok71mWSeQJahF-fzbRXKp5m9o7AZUGIw25izDnqQ1xJ4OkzYnv1n.png 
+    While individual stages can be slower, we can compute up to 5 stages simultaneously using the pipeline model, resulting in the overall execution being faster.
+%LOCAL_FILE%xBcTxIj0lgc1qrOs4Tz9MmVw0eVOqdOgEF_xlwQ3nmMJXJNAb2DWCYVTLvC9tinnMJxqkmtRZYWBUOLadV3iTFoi4cPNaDDMkYTXclrfMWae96U6qY0svUk7ndFljEBZ.png 
+    Compulsory misses occur on the first access to the block and will always occur.
+    Capacity misses occur because the cache is a finite size.
+    Collision misses occur (only) in non-fully associative caches due to competition for entries in a set.  
+Discuss the main message from lecture 5 in 1-3 sentences:  
+    The ISA provides the interface between hardware and software, however that interface can be misunderstood as its often explained in English prose rather than a formal language. We desire a formal language of an ISA to allow for easy ISA simulation of a processor. We can then compare the models of the processor using tandem verification.
+Discuss the main message from lecture 7 in 1-3 sentences:  
+    ISA influences the design of the data & control paths. Multiple issue and dynamic scheduling can be used to reduce hazards and increase parallelism.
+Discuss the main message from lecture 8 in 1-3 sentences:  
+    Because physical constraints prevent the creation of a huge low-latency memory, we must rely on a memory hierarchy. Caches (widely set-associative caches) take advantage of the temporal and spatial statistical features of memory access to store data that is likely to be used close to the processor.
+
+
+Discuss the main message from lecture 6 in 1-3 sentences:  
+    Pipelining improves performance through parallelisation, each individual instruction has the same  (or higher) latency but the overall computation time is decreased. However, it is subject to hazards that must be handled with care. Instruction set design affects the complexity and feasibility of a pipeline.

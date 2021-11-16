@@ -1,0 +1,414 @@
+Supervision 2
+    Arenas are a useful tool for amortizing allocated memory discovery, and have the side effect of potentially more efficient cache usage through the introduction of an array for item storage. I would use one when I have a data structure that may contain cyclic sections or sections where a given item is pointed to twice from another item (DAG) - in which case traversing the structure myself at the end becomes complex & error prone, and can result in memory leaks if not carefully thought through. Arenas trade-off complexity with memory usage, as we must allocate a large array of items (the size being the maximum number of items the program could use) to eventually deallocate. An example control flow would be creating a graph, every time I create a node I add it to the arena (wherein we already specified the max possible number of items) incrementing the current value in the arena - then when finished with my data structure I free the arenas elements array and free the arena itself.
+    In mark and sweep garbage collection we store an list of "root" nodes (items that are alive, and we'd like to keep alive) and an list all nodes (these may be the lists). In the mark phase we iterate through all the root nodes, and mark all nodes reachable from each root node (i.e. depth first exploration, stopping when we hit a marked node). Then in the sweep phase, we step through our list of all the nodes and free any unmarked nodes and unmark any marked ones. When we next run the garbage collector the nodes still alive will form our roots.
+        a.) A conservative garbage collector is one who scans the execution stack, and upon finding a value that looks like a pointer to the heap - if there is an object at that pointer, the collector must mark it. This conservative estimation is that this is a pointer to the heap and not (say) an integer value. This is necessary many reasons, including:
+            C lets you easily convert from values to pointers, so we can't know if in future the programmer will use that int as a pointer to an item in heap memory.
+            The garbage collector should never alter the execution of the code, and storing extra blocks of useless memory is better than deleting a useful block. Especially considering that if the value on the call stack is not a pointer, it is likely to change at which point the memory can be freed. 
+        b.) Garbage collection solves the issue of cyclic data structures that reference counting cannot - under reference counting, two cyclic items pointing to each other can maintain a pointer count of 1 each even if there is no way of accessing either item (all pointers to those items has been removed) - thus these marooned items cant be freed resulting in a memory leak. Garbage collection stores all the nodes, and will find these items to be unmarked in the sweep phase - thus they will be freed.
+    Show how a struct of arrays performs better than an array of structs when traversing the elements of the form struct entry { int id; double val; };
+typedef struct entry Entry;
+
+struct struct_of_arrays {
+	int *id_array;
+	double *val_array;
+};
+
+Entry *array_of_struct = malloc(sizeof(Entry) * NUM_ITEMS);
+
+struct struct_of_arrays Struct_of_Arrays;
+Struct_of_Arrays -> id_array = malloc(sizeof(int) * NUM_ITEMS);
+Struct_of_Arrays -> val_array = malloc(sizeof(double) * NUM_ITEMS);
+        For simply iterating through the array of struct, we have an int of size 4 bytes and a double of size 8 bytes - this will then be padded to size 16 bytes. So we can fit 4 entries into a single cache line before getting a miss (whether we're storing an int & a double or only an int/double) - alternatively if we iterate through the id_array and then the val_array, we first have 4 byte ints to iterate through - resulting in 16 items before getting a cache miss - and secondly 8 byte items, resulting in 8 items before a cache miss. 
+        \text{array of structs}: \frac{n}{4} \text{ cache misses} 
+        \text{struct of arrays}: \frac{n}{8} + \frac{n}{16} = \frac{3n}{16} \text{ cache misses} 
+        So as \frac{3n}{16} < \frac{n}{4} = \frac{4n}{16} we'll have less cache misses in our second solution, and as cache misses are hundreds of times more costly than arithmetic operations - our struct of arrays will perform better.
+    Describe loop blocking and when it's useful:
+        Loop blocking is a technique for deconstructing accesses of large contiguous data structures into smaller chunks which can be stored in cache lines. The first access of each chunk will result in a cache miss, but subsequent accesses wont. In short it attempts to introduce spatial locality of data, for fast accesses.
+        The technique is useful when a given array access scheme jumps around a lot, and does not return to a chunk of memory for a long time (at which point the cache line can have been cleared). Alternatively, your method of jumping could cause conflicts within the cache and force eviction of prior cached lines. In general, loop blocking is useful for items with poor spatial locality.
+    1998 Paper 6 Question 6
+        a.)
+            Memory corruption 
+            Hard to read programs 
+            Security liability
+        
+            Low level control
+            
+        b.)
+            Forgetting to deallocate sensitive data?
+            Memory leaks
+        
+    2010 Paper 3 Question 6 
+        a) 
+            typedef struct node* Node;
+struct node {
+    int value;
+    Node xor_pointer;
+};
+Node head;
+Node xor_addresses(Node a, Node b) {
+    return (Node) ((long long)a ^ (long long)b);
+}
+void add_value(int value) {
+    Node new_node = malloc(sizeof(Node));
+    new_node->value = value;
+    new_node->xor_pointer = head;
+    head->xor_pointer = xor_addresses(head->xor_pointer, new_node);
+    head = new_node;
+}
+Node get_next(Node prev, Node current) {
+    return xor_addresses(prev, current->xor_pointer);
+}
+void traverse() {
+    if (head==NULL) return;
+    Node current = head->xor_pointer;
+    Node prev = head;
+    printf("%i  ", head->value);
+
+    while (current != NULL) {
+        printf("%i  ", current->value);
+        if (current->xor_pointer == 0)
+            break;
+        Node temp_prev = current;
+        current = get_next(prev, current);
+        prev = temp_prev;
+    } 
+    printf("\n");
+}
+
+void delete(int value_to_del) {
+    if (head==NULL) return;
+    Node current = head->xor_pointer;
+    Node prev = head;
+    
+    if (head->value == value_to_del) {
+        if (current->xor_pointer != 0) {
+            current->xor_pointer = get_next(head, current);
+        }
+        free(head);
+        return;
+    }
+
+    while (current != NULL) {
+        if (current->xor_pointer == 0) {
+            if (current -> value == value_to_del) {
+                prev->xor_pointer = 0;
+                free(current);
+                return;
+            }
+        }
+        if (current -> value == value_to_del) {
+
+            Node next = get_next(prev, current);
+            Node prev_prev = xor_addresses(prev->xor_pointer, current);
+            prev->xor_pointer = xor_addresses(prev_prev, next);
+            Node next_next = xor_addresses(current, next->xor_pointer);
+            next->xor_pointer = xor_addresses(next_next, prev);
+            free(current);
+            return;
+        }
+        Node temp_prev = current;
+        current = get_next(prev, current);
+        prev = temp_prev;
+    } 
+    printf("Node not found to delete\n");
+}
+ 
+            b.)    Comment on this form of linked list. Consider the comparative speed, memory overheads, maintenance and other advantages or disadvantages of the XOR doubly-linked list approach when compared with an approach that stores both previous and next pointers  
+            
+            In this form of doubly-linked list, each node takes up less space - while before they store two pointers and a payload now they store only one , resulting in less overall memory usage of the new data structure. (16 bytes vs 24) For large lists, one list being two thirds the size of another while accomplishing the same thing could be important.
+            However, if you want to hold specific nodes to edit later - you need to hold that node and the previous node if you want to be able to traverse from your node and edit preceding nodes - this makes it harder to maintain, as management of individual nodes is more complex. Additionally, traversing the list is more expensive in the XOR doubly-linked list as we must compute an XOR every time (which is admittedly a relatively cheap operation). 
+            You could make the argument the XOR doubly-linked list is more secure, as you can pass your node value to another function safe in the knowledge it cannot destroy any other of your nodes as it will have no way of traversing to them. 
+    1996 Paper 5 Question 5 :
+        a.) Pre-processor macros and conditional compilation:
+            #define BIT64 1
+
+#if BIT64==0
+#define BIG_INT (64*1024*1024)
+printf("%i", BIG_INT);
+#else
+#define BIG_INT (1024*1024)
+#endif
+
+// This defines a macro BIT64 set to 1, and chooses different definitions of BIG_INT depending on the value of said macro 
+        b.)
+            char t = 'a';
+char *p2 = &t;
+int *res = (int*) p2;
+
+// We created t, which holds the a character. Then we instantiated a char pointer to t. Then we created an int pointer res, and cast the char pointer to an int pointer. 
+        c.)
+            // This is a single line comment
+/*
+	This is a multi-line comment
+	!!!
+*/ 
+        f.)
+            jmp_buf current_env;    
+int sam = 0;
+int val = setjmp(current_env);
+printf("%i\n", val);
+longjmp(current_env, sam++);
+
+// This code infinitely loops printing 0, 1,2,3...
+// setjmp copies the PC and stack pointer into the jmp_buf current_env, then we print sam and finally we longjmp back up to int val = setjmp(current_env); val will then be overwritten with the value of sam+!
+        g.)
+            unsigned int sam = 3;
+switch (sam) {
+    
+    case 0:
+        printf("Sam less than 2");
+        break;
+    case 1:
+        printf("Sam less than 2");
+        break;
+    default:
+        printf("Sam more than 2 ;( ");
+        break;
+}
+// if the unsigned int sam is 0 or 1 we print "Sam less than 2", otherwise we print "Sam more than 2 ;( ".
+// In this case we'll print the latter, as sam is 3. Each constant case is checked against the value in the switch()  braces and a case is selected. 
+// The breaks ensure the default case doesn't always run. 
+    2014 Paper 3 Question 3   :
+        %LOCAL_FILE%zB0WVJroIQK0RkHQzho8zvjIfCkmXtlmIL3jLz1ZOLw0MoLHOFDLFaEUh1PaKLG-bc64iVhJIajoLCoCy2b996jK4MoffBw6nDR-nU2P_UYxEe8qrzNow4mU46s9QqRk.png
+        char revbits(char to_reverse) {
+    int working = (int) to_reverse;
+	int result;
+    for (int exp=7; exp>-1; exp--) {
+        if (working > 1<<exp) {
+            working -= 1<<exp;
+            result += 1<<(7-exp);
+        }
+    }
+    return (char) result;
+} %LOCAL_FILE%4EncOulylcP3ibS2i2YvFWOnzfLIxKEKnPaaiubqq7GDBEapF3kAEAU-uD7XBSla7UjDwumB_HkKu4FrEu1z6Zt9XdJ1EG6EnsNg07bjh9XbeYN6QInE3JQbCpm6AdPo.png
+        void revbytes(char *ls, int num_bytes) {
+    int left = 0, right = num_bytes-1;
+    while (left <= right) {
+        if (left == right) {
+            ls[left] = revbits(ls[left]);
+            break;
+        } else {
+            char temp = ls[left];
+            ls[left] = revbits(ls[right]);
+            ls[right] = revbits(temp);
+            left++, right--;
+        }
+    }
+} %LOCAL_FILE%5CvOkCE8ymJEeAFOsAjUVCQ44LCbCUtbJYWKdAgIN0OS8u2Wsy8ILFqk3zp-DPTbnJzLqlTcGVHd5dTnEuRc-4ql_tRA0umkx1Z9W4pm4vhHkDiAUYf7cgRiqiUI5SfJ.png
+            The problem here is the file is left open after the result is returned, we should change the block to:
+            if (...) fclose(p); return ERR_MALFORMED; 
+    1995 Paper 5 Question 5  
+        This is an attempt at an implementation of quicksort.
+        typedef unsigned long int thing;
+// Bad unilluminating variable name #define swap(p,q) v = p; p = q; q = v;
+ // the type of v is not defined, this will result in an error.
+        		/**********************
+int i, j; * Declare variobles! *
+thing v; **********************/
+// int i,j and thing v will be commented out here. Also incorrect spelling of variables 
+        i = left, j = write;
+// i & j are not given types 
+         while (a[++i] < v};
+ // Wrong ending bracket, should be  while (a[++i] < v) 
+        while (a[++i] < v};	
+while (a[--j] >= v);
+if (i < j) swap(a[i], a[j]);
+else break;
+
+// I believe what they intended was:
+while (a[++i] < v} {
+	while (a[--j] >= v) {
+		if (i < j) swap(a[i], a[j]);
+		else break;
+	}
+}
+
+// What they achieved simply repeatedly increments i until a[i] >= v, and repeatedly increments j until a[j]<v and then swaps a[i] & a[j]
+
+// ALSO these should be a[i++]... and a[j--]... . Otherwise we dont test the initial values of i & j.  write would more sensibly be named right
+    
+    Questions from lectures:
+        In the lecture on reference counting, the lecturer builds a binary tree using:
+        %LOCAL_FILE%crzic95YRyiryiMHGIrmxmqkDggUe_2KbJnaftk-5YUTWrhbDsP0rUPfufcy8XmrHUAHD9C9DPDpkqALR3EPC4UDY5wVP-WUnHm3WYEhxJX-Ea59BIvdWIrXP6XKJJO9.png
+        But wouldn't this mean, If I edit a value on the tree (other than the root) I'm actually editing two? Given that both left & right point to the same node. Sure the tree is build, but it can't be used.
+    
+    
+    \text{speedup}(n) = n(1-B)+B 
+Supervision 1
+    %LOCAL_FILE%5x-kpFtSmurzNUmXPlR8GMTKt44S-pGI_uXQn-loC5FTlBbwH2KnTOZb_8vHNtz5Vc-B7ENcAojGyI83lmpHfPa1uVKKFQiiso5afgZZSAndShPRGx_1n1jctwLtBL13.png 
+        'a' is a char while "a" forms a string literal - e.g. an array of chars terminated with a null terminator \0.
+    %LOCAL_FILE%Y7TUSDPht8rMMmjwyibGk-4zzDDtqFry6U0sB0wSGHN80olxqx8IhSL4w7q1B7AwdfL5s1F1G8LzJ8q7-K3oTPmuVAZMovFSPG6aKrPGL5mZ2dLldl2lZEglvvYQf7oj.png 
+        Yes, it will terminate when j equals 5 (e.g. the 5th ASCII character) as long as the two chars were initialized to 0 (which is not guaranteed). This is because you can store integer values in chars, ranging from -128 to 127 for unsigned chars.
+    %LOCAL_FILE%dpZ64aPO1RH5e4EsS1UpUmsF6S1j8sYlwLx6vDShfHV1sW0kweO6ow9QUln0VP0NK6dzaTv2HQGT_siYVBxZQugXD5dBNPaOHMVYXAvK5T_8rvmGEmV0otOOn9oYFKxz.png
+        #define SWAP(t,x,y) {\
+    t temp = x;\
+    x = y;\
+    y = temp;\
+}
+    %LOCAL_FILE%wnEQh3sjj-ggBtFu8O9dNmiI2bL6F-ycmM394KL46Q4W-zJ1YH1L8zb5AuhRQgO0yH7tmlkZoS4jhEaKhz0CZSQcIHphGvCgeGCD5LGCuKrC4Cx7S9oxORSzpGNZE18s.png 
+        No, the i++ will be evaluated twice - meaning the x in the second line of the macro will differ from the x in the third line of the macro (unless the values of v[i+1] and v[i+2] are the same). Similarly, if f(x) changes when it's called twice we will be getting different indices of w.
+    %LOCAL_FILE%29dC0HQ66WGsn2vo69u4gNIJZt9N4FnfT5RwFJfM_G3BW7d5EhdsZOHsXWNjWacNu5zL96DZhIyb0C6NbtTEcqJ-TlSKnzxtwO9zn0fVU-ErJJFrKkkTJH3OY9HJb7no.png 
+        #define SWAP(t,x,y) {\
+    x = x - y;\
+    y = y + x;\
+    x = -x + y;\
+} 
+    %LOCAL_FILE%VjH7bsEoeEXOb-ZAO4st3yXVKrJqqTgta_w8kMyod9Oe22Y2SY3BN4_UwFKmCzzzfdD_XCnzJG4-JQsuy9qVOjbjp3QFCvNPX9JwYgL0iIb2bJSPIhuJLUjEDjsW6djw.png
+        p[-2] means the value two items before the pointer, this is legal if p is a pointer inside an array - this works because arrays allocate a contiguous block of memory which we can simply step along (pointer-wise) to reach earlier array-items.
+    %LOCAL_FILE%6xCzQuVGM16QjzvbI4VY4CytzsorrFvjZX1148C4R1ovPU0H4YfSVTLPf1cagxhM-sD31wpTXg6cKaq74aQ609n_mIrRaPIb0Yvmv8tjBgN0IUPrbDjxPksgy8rh1VM-.png  
+        char *strfind(const char *to_find, const char *to_search) {
+
+    for (int i=0; i <= strlen(to_search) - strlen(to_find); i++ ) {
+        int bookmark = 0;
+        while (to_search[i+bookmark] == to_find[bookmark]) {
+            if (bookmark == strlen(to_find)-1) {
+                return to_search[i];
+            }
+            bookmark++;
+        }
+    }
+
+    return NULL;
+} 
+    %LOCAL_FILE%GtHkEKbpOG6jIjweOng_l6W05H7Yu9StIWUwwxs9dLB2QzAVtBTakVMQh-pHkARbLFo5t3z56QsppajKkhummkk_929JjfaKqROSQEgcZnq0Z_E6z2HzmF_wMr1mqUGD.png 
+        A const pointer to an int is a pointer that cannot be changed, e.g. it will always point to that integer. However, the integer value itself can be changed. A pointer to a const int means the pointer can be changed to point at something else but the integer value cannot be changed. For a const pointer to a const int, neither the pointer nor the integer value can change.
+    %LOCAL_FILE%ux0pai4I1dl1vDxBhD-cTy9Pz5Ne3eDRwJRRZ6_oW7PPjGjn5gxRXK5Yci7-xFVq4OFPnbgim5O5YHtj-Atp0MF37r5LXuplWnJQLl4xKYwVvp2RaesqucxNl1jgu8zW.png
+        You could pass the values as const:
+        int adds_wont_change(const int *x, const int *y) {
+    return *x+*y;
+} However, this is only an indication not a promise - the function still has it within its power to alter the arguments using casts.
+    %LOCAL_FILE%q7tzntYJoJxSzhSjxKKL5xo7tQqMM2aUb8ggmcPB4hgSru1O59WOwTIIP62lL9UZ0YPkGiR0WsTifUx0OSi5me7cNjbveENoAqi5HehC-Vkt1tGajaBGdTSkVhekzIGE.png
+        char* read_a_file(char input_filename[]) {
+    FILE *file;
+    file = fopen(input_filename, "r");
+    char *string = malloc(1001);
+    int memory_len = 1000;
+    int currently_used = 0;
+    if (file) {
+
+        char c;
+        while ((c = getc(file)) != EOF) {
+            if (currently_used >= memory_len) {
+                memory_len += 1000;
+                string = realloc(string, memory_len);
+            }
+            string[currently_used] = c;
+            currently_used++;
+        }
+        string[currently_used] = '\0';
+
+    }
+
+    fclose(file);
+    return string;
+} 
+    %LOCAL_FILE%0P3QCnLO7m_QReMJWnZiOuxdyR3x8rUtd4bSxrgQch_t8UEhDy3_iGE_cLCbN7043bbQXt9NcOorpBdzmfdQnEzNhkW0RsMTM0Ltx9cSEdIhb1jvO9vaDtXgTKXoCGka.png
+        %LOCAL_FILE%gcBE6wQaCcIKAs4I7o-7BUREOglWeWiNw8BVM06fB5iiiNPfsSRYKNJn0vki2qk-RDt2nyizBGi96ckZmwg_rQFMd10Tci3VUG2wwnunH84ZH-_MHy6VY6QWxUhE4njR.png
+        Func1 can pass the pointer to the array to bar as the array still exists while bar runs, however when Func1 attempts to return the pointer to the array it's memory on the stack will be deallocated and thus any local variables will be lost and the values the pointer points to will be undefined - that is it's very possible they will be overwritten.
+    %LOCAL_FILE%KmKDW7D5NUYnv6HW7bY0Ut9L2F_PSp9sxF8ykkzky4_dUrWqcETQTVvt38Ziv905iqB3iSvV7SQEiPUOhrVvgJ79DOcg_jc1y26c4jvSACgavfpB3Sdz3ZP4AHY3UU-C.png
+        Declaration simply tells the compiler a variable with the given name is going to be defined at some point, while definition allocates an area of memory for the variable. 
+    
+        a.) %LOCAL_FILE%BlbZtBHf-NMCqx0Ni45FvW9jsJN0z5SnOn0pjG_FusfpndxTwr2s-jl7bfzlokLtRs-Q0rR3NqUjvoXWEm5YZkOonm8F1twD90e2am_nDGl_2sn6oatalYCCy3Zahj_l.png 
+        **i is the integer value 78 0c 00 00 - which is  c78 which is 8 + 7*16 + 12 * 256 = 3192
+        p⇒c[2] is 62 in hex = 6*16 + 2 - slightly confused by this one, how does the compiler know to move 2 bytes along (as if its working with a char) rather than 9 bytes along (as if it was working with a struct i2c)
+        &(*pps)[1] is 0x18 + 2 = 16+8+2 = 26 (we move 2 forwards because we're dealingiwth a short)
+        ++p⇒i is 3192 + 1 = 3193 
+        
+        %LOCAL_FILE%01AJtT87kPJuaTX5C5XZt2fkDMlszM_KcOj76VYkPP3spld9TxWz8igbTte2mVcT__CsI1CFlFlr5dQEdpgf-iLHbBo6NlIEVf1o_opvopjYa6F9XEK7M8kOF47i33A5.png
+            First we cast our manager pointer to an employee pointer, however when we call wage(e) it sill uses the wage calculating function wage_man as the address not wage_em (we never changed the function being pointed to in the cast) - this then casts our pointer back to a manager pointer and calculates 40*10 + 20 = 420.
+    
+        %LOCAL_FILE%8zVLbpTXRupf0NULVKpgctjp9VkjS4ZcHNDQLuTRUyCGgd-edbhLPclwFXnuh2uXkjhKEDkIJdy5lWAaQEGJWZsfd_psK0fXIA_-BxK-hqwe3y9Ljza6RhcTgKYN287h.png
+            #define CONCAT(a, b) (a b)
+        %LOCAL_FILE%tic3LFyhReYVg9QlQVNVKS7tIwEUZBzjUdDYyiQSwuZ9_n2oEAijrte48htdQ-JcRmPa7VhPCys-1hnYCqOysIGcx4ATPZnLFITqbksPDrIto3T51OM49qsvJWNfTpJj.png
+            Line 3 would not work, as CONCAT only works by leveraging the fact that string literals next to each other get concatenated in c - e.g. "a" "b" ⇒ "ab". All CONCAT does is paste the values next to each other and let the language do the rest - however CONCAT(b, a) will result in CONCAT("UoCCL", a) and the compiler cannot simply infer the value of a to combine the strings (not a string literal). 
+            Line 4 would not work, as j is not a pointer and you are thus taking the integer value of the pointer that concat(a,b) returns. 
+            concat(a,b) allocates memory on the heap and creates a list of chars, while CONCAT simply places two string literals next to each other (uses stack memory). concat(a,b) returns a pointer to the char array while CONCAT(a,b) will evaluate to the combined string literals. 
+    
+        %LOCAL_FILE%Yc7pDYou5sDFsk8G-vXRMbYZJZkvIvoPnxYzVJzVgAFYuEB1gHaD_VDxY8yvyAernjZfJxRStzCKWnlxhKLebEBiAt38UsEs5HBe0iDRIrJeeAJE7wnMXcHI_ZDczi3L.png
+            500 bytes: (4 + 1 bytes) * 100. sizeof(struct Elem) =  5 bytes. long is 32 bits - compiler supports unaligned access, unlike all below.
+            800 bytes: 32 bit machine, the long is 4 bytes, char is 1 byte. sizeof(struct Elem) =  8 bytes - but as 32 bit machine have to use two 4 byte words. Resulting in 100 * (4 + 4) = 800. 
+            1200 bytes:  48 bit machine, the long is 6 bytes, char is 1 byte, sizeof(struct Elem) =  12 bytes - but as 48 bit machine have to use two 4 byte words. Resulting in 100 * (6 + 6) = 1200.  - possible answer but more likely: long 64 bits but aligned to 32 bits - 4+4+4 = 12
+            1600 bytes: 64 bit machine, the long is 8 bytes, char is 1 byte sizeof(struct Elem) =  16 bytes- but as 64 bit machine have to use two 8 byte words. Resulting in 100 * (8 + 8) = 1600. 
+        %LOCAL_FILE%Ep4ntJAbb4n94rCUys5-sCXlO1A_qHTJLLNhp1VaSOwwGa6LU1mKBgnyYGPDlAocg7j39QT7M7vUoPh_zTSCQKRoMdoaB5ne8E74h4aC1Mc6_P7-HdZsak0E_be6VYwQ.png 
+            The fundamental changed is converting the file that was created by a compiler using unaligned access to one that does not support unaligned access (no need for the added complexity when memory so abundant).  Also assumed little-endian.
+            struct Elem { signed long val; char flags; } v[NITEMS];
+char temp[5*NITEMS]; // Each byte in the 5 byte line is going to become it's own item
+fread(file, 1, size_of(temp), temp); // First we read the file and get every byte as a char value in our temp array
+for (int i; i<size_of(result); i++) {
+	
+	v[i].val = temp[5*i] | temp[5*i+1]<<8 | temp[5*i+2]<<16 | temp[5*i+3]<<24; // This line combines them using bitwise ors - consider 00001010 | 1010000, combines the values as the zeroes are ignored
+	v[i].flags = temp[5*i+4]; // last value is an actual char as we want it
+}
+ We could simply have a flag to compute this for or not depending on if we're using this outdated format or not.
+    
+Lecture 1
+    Primitive Types in C
+        What are the three primitive types?↔Numbers, Characters and pointers
+        Are there primitives of composite types in C?↔NO
+    What types of locals are supported, and what is implemented by a library
+        Stack and static locals built in
+        Heap implemented by library 
+    Sizing of various types
+        Char↔≥8 bits
+        Int↔≥16 bits
+        Float↔Single precision
+        Double↔Double precision
+    Type operators meaning
+        unsigned↔Makes the value unsigned
+        short↔Synonymous to short int, varies but is at least 16 bits
+        long↔8 bytes
+        const↔Informs the compiler that this value will not be changed, can still be changed using pointers though
+        volatile↔Means the storage can change at anytime, compiler must check it every time it's used
+    How do you specify different types of number in C?
+        long↔123L
+        float↔123e10F OR 12.5F
+        double↔123e10
+        octal↔053
+        hex↔0x54
+        
+    Enumeration
+        enum boolean {TRUE, FALSE};
+enum override {TRUE=1, FALSE=5, T=5} One can define Booleans, they are indexed from 0 by default - but this can be overridden. 
+        What items in a enum need to be distinct and what don't↔Names must be distinct but values need not be.
+    Declaration
+        Variables must be declared before they are definition, where definition means giving them storage. They can be declared, defined and initiated inline. int i = 5;
+ char a, b, c;
+        What's the different between Declaring, defining and initiating a variable?
+            Declaring↔Telling the compiler this variable name will be used
+            Defining↔Setting aside storage for a variable
+            Initiating↔Putting a value in that variable
+        What does the extern keyword do?↔It declares but doesn't define a variable, means the variable will be defined elsewhere - i.e. we allocate it no storage.
+        What does the static keyword do in regards to
+            Static variables in functions↔The variables keep their values between invocations
+            Static global variables↔Static global variables are only seen in the file they're defined in
+    ALL OPERATORS RETURN A RESULT INCLUDING ASSIGNMENT! int y;
+ int x = (y = 3);
+ // x = 3
+    Type Conversion:
+        Type conversion occurs when a binary operator takes in two elements with varying sizes. The operator will return a value with the same size as the larger of the two elements - e.g. short + int ⇒ int.
+        However, narrowing is possible.int x = 1234;
+char y;
+y = x + 1;
+// y is overflowed and is the last 8 bits of x+1, in this case -45 in denary.
+
+// CASTING:
+y = (char) 1234; 
+    Expressions and statements
+        What is an expression?↔An expression is a formula in which two or more operands are combined with an operator.
+        What is a statement↔A statement is an Expression ended by a semicolon
+        What type and value will this expression take on?int x;
+short y;
+x = 5, y = 3↔The expression has type short and value 3. (The rightmost expression)
+    
+    Arrays and strings
+        Strings or arrays are created using this syntax: int x[10];
+        Give 3 facts about string arrays
+            They must end in "/o"
+            No bounds checking is performed
+            The compiler places them on a contiguous chunk of memory
+        What does the following result in and why does it work? char x[] = "abc" "def";
+ printf("%s", x);↔This results in abcdef, it works because string concatenation is done by default. "abc" and "def" are set to strings using double quotes.
+    goto statement
+        Works but shouldn't be used some_label:
+ 	printf("We used a goto")
+ goto some_lable;

@@ -1,0 +1,274 @@
+Supervision 2
+    
+        %LOCAL_FILE%Swiev7gzpJr99rrNiwQ5TgxsXFzzJnb9TDsw3XEAIPEcszEutqMEGgth5IkZjGmHMjrbrsUpMTebpMmwY6gia6b6fzs4e40gkgUjNsAa24VjL1d4CfQ3xROkgAYKh1rb.png  
+            Atomicity: Not necessarily true that we do all of the transaction or none of it, as we could crash during the system and we have no specific roll-back procedure. More work needs to be done to ensure rollback should we crash - could copy shadows of the data.
+            Consistency: Not necessarily, one could still for example remove money from a system - invariants not necessarily preserved.
+            Isolation: More work is needed, as we must implement strict 2PL to guarantee this. This falls out with strict 2PL, as our work on the objects is not affected by any other threads as only we can access those objects because we hold our locks.
+            Durability: The system can still crash while running commands, we now have the additional task of having to release locks after a crash. 
+        b.) %LOCAL_FILE%3www75KrC9L4l9rLhFcV3IN-01D-iZpqMqQg3uMdruRyWkCnPbJNPuERRhQogTsi0qvReyD3RoKQC_EPUjkAp8XfhCp67_aBwKbHr5S6_w5A3z7S0n1FF8nscRIkJgRr.png 
+            Serial possible results: 
+	T1: A = A + A * interest
+	T2: A = A * (1 + interest) + 100; B = B + 100;
+	(A,B) = (A*(1 + interest)+100, B + 100)
+	OR
+	T2: A = A+100; B = B+100;
+	T1: A = (A+100) * (1 + interest)
+	(A,B) = ((A+100)*(1 + interest), B+100) 
+            Interleavings:
+1: a = A.getBalance();
+2: A.credit(Interest*a);
+3: A.debit(100);
+4: B.credit(100);
+
+1,2,3,4: Serial
+1,3,2,4: Result for A: A = A(1+interest) + 100. Conflict Serial
+1,3,4,2: Result for A: A = A(1+interest) + 100. Conflict Serial
+
+3,4,1,2: Serial
+Below will be Conflict Serial: Doesn't matter who we arrange change in B, since 1&2 dont alter B
+3,1,4,2: Conflict Serial
+3,1,2,4: Conflict Serial
+            %LOCAL_FILE%tzUTAneZ0s9AsmnNR00hdVj71jlOLoBLAjVEsRjWBDQPY5L5USmZY5KjscqZIsDiqTD8jfVjRTYrvmwV1b8RUCJhAUkQTtrvbwM3XZjAplhqnONhEFVHbui1ZWRKevyf.png
+                Because with OCC works on local copies of the data, and only does its commit right at the end when all computations have completed. Thus, if a computation does not complete it is not committed. However, with 2PL commands that augment the dataset can occur before we commit - thus crashes can occur after augmenting commands have run. We would need to implement some form of a roll-back mechanism.  
+            %LOCAL_FILE%ZxmkFIv7FVtFhWDGJNEmNntWkAPkBx0ji8GPHQCqzvHfPji44haQVbAwjVhOwWcShYuKjSG_iE6O-BQG920FrNyxo199WYCRcGgZHxwgH-GGmlqjXWM_oMQorNyEzdjV.png
+                T1: 
+	lock(A)
+	a = A.getBalance()
+	A.credit(a*INTEREST)
+	unlock(A)
+T2:
+	lock(A)
+	A.debit(100)
+	lock(B)
+	unlock(A)
+	B.credit(100) // If T2 aborts here, T1 could have acquired the lock of A and done some work, T1 would then have to abort in sympathy with T2.
+	unlock(B) Strict 2PL would have avoided this problem because no work that could have caused an abort would occur while we're unlocking A & B - as we do our unlocks at the very end of the program. 
+            %LOCAL_FILE%zeXb8Y8jfZNbfPh9thhE-nn5c8NptqY5l3TRNLFjBN-_NmXcNv-ZlkWqE89Y2A32wrZ-0fW1nu3tr3ILAENnmP1Ce3ZIQfr_2lTbjlgcvWlwCc5lHaYQqKbnIpnVbWLP.png  
+                If the program crashes after having written some object updates to disk, as then the transaction hasn't completed but has still changed the state of the data. We would need a roll-back mechanism.  
+    
+        %LOCAL_FILE%8Gmm-oC6vjMBJtvL4PA9fP7zCsvZyUlL-qzd3B5wtClDSZDbUl5q09Pws4pc_mrRL3mN7NYIIt4d7PPbQQDrCecLxizAZhJgkym_3PnZWsJ3OqZv6xe6wz3Xm0-eaq9G.png
+            T1.L1 // T1 now holds the lock for A
+T2.L1 // T2 now holds the lock for B
+T3.L1 // T3 now holds the lock for C
+// A deadlock is now in effect, no further work can be done
+        %LOCAL_FILE%A2Sp068a8HqNXoBYDmO99qWukv3ScfW2dHTrDsZ-xOUwZupjRty6_bn1htMfxrytwMjq1Bd2bc-rqRxZ3bZLMwdO5UgpqBvhTH5LqtcHKAdLzNZfx0_TrvbYcO0pBqox.png
+            T1.L1 // T1 now holds the lock for A
+T2.L1 // T2 now holds the lock for B
+T3.L1 // T3 now holds the lock for C
+A Deadlock will be detected at T1 all processes will abort.
+T1.L1 // T1 now holds the lock for A
+T2.L1 // T2 now holds the lock for B
+T3.L1 // T3 now holds the lock for C
+
+This process of all processes aborting and restarting will continue.
+        %LOCAL_FILE%FE29KtXxq3a2RPGt-6SQkq_ZmPfUGq4obesyhGD56B1hBGbiGG4E2FMBGdDaxaencwVoGQSKI0QUGaUewM1vpjHwiFFLuMjJKYsDaiHF1uXhuXkMGjBmefVzFzv66yXG.png 
+        When deadlock is detected, we abort the next thread we operate on and continue. 
+        T1.L1 // T1 now holds the lock for A
+T2.L1 // T2 now holds the lock for B
+T3.L1 // T3 now holds the lock for C
+A Deadlock will be detected at T1 and T1 will abort
+// T2.L2 skipped, no lock for C
+T2.L2 // T3 will acquire the lock for A, then release locks for C & A
+T1.L1 // T1 acquires the lock for A
+T2.L2 // T2 acquires the lock for C, then releases locks for B & C
+T1.L2 // T1 acquires the lock for B and then releases locks for B & A   
+    
+        %LOCAL_FILE%vN_VbUS8amAxLCs-AOhqqxAur_W_tYyXlN2WybuBBo5j7uiEavHAl7gChERgXUax844uyMNik7Ls2WjWzgR_JehImsbRLJySqF3P5gUnieydjoYVyYrZJSH95wDSm42u.png
+            T1:
+	a = A.gb()
+	b = B.gb()
+	return a+b
+T2:	
+	A.debit(100)
+	B.credit(100)
+
+Interleaving:
+A.debit(100)
+a = A.gb()
+B.credit(100)
+b = B.gb()
+return a+b
+
+T2: timestamp 1. T1: timestamp 2.
+ 
+A.debit(100)
+a = A.gb() // Abort here, as V(T2) < W(A) but final result would have been correct
+B.credit(100)
+T1 -> Gets new timestamp 3
+a = A.gb()
+b = B.gb()
+return a+b  
+            %LOCAL_FILE%CPdhUdYYYwwg7iW6ACw3pMXPZmGXASdwc5aRJ4MdLmnuDbdz7WN9ACNex7r5uCM1tbFiRDOHXE4JoVgyk-DNkIAi0G-RnVexfzrWOclPFaUgPI8VyB1G8HHobO6nxjed.png 
+            TSO can result in situations akin to an even worse spinlock - This occurs when a thread needs a resource a later thread has accessed before it, and thus the thread has to abort, like a spinlock the thread will be restarted but will be spinning over it's entire code contents rather than a single while loop - that is all computation before the abort needs to be recomputed (To to ACID requirements). So, if the mentioned resource is never freed the threads could continually 'spin' over their whole codebase - continually computing the same results and then throwing them away. 
+            Also, for a multiple resource case - a live lock could occur when multiple threads are trying to hold a lock on all the resources:
+            %LOCAL_FILE%gJrEJWDYlmX2Q9E3k9-OCYAzelh1401QHiC5_6LVvhEBgXMmKidk9IVDW15tVHKE1PDebbVxV85pL9ojHgKOXuy31beFjQWPscTcmuqqTOPlGdfMEqvQFX_NTn6yAgno.png 
+            Case where T1 gets lock of R1, T2 gets lock of R2 - T1 aborts meanwhile T3 gets the lock of R1... This pattern would continue.
+        %LOCAL_FILE%QEfpCL6My-m7761W-3ZbSyaqMfX5WKrbxSg48JYQR1NDZXX__BAGkf5jkASIGBZG2nS7G7XjCNXMmeRvWUhep_U31MN9Ox7KQZ_9L6paneWAQ4_U67n1fdftT672yiRQ.png
+        T1: 10
+	A.debit(100)
+	C.debit(100)
+T2: 11
+	A.debit(100)
+	B.debit(100)
+	
+
+T1: A.getBalance() (0,0) 
+
+T2: A.debit(100) ()
+
+T1: B.getBalance()
+
+T2: B.debit(100)
+
+// As OCC distinguishes between write VS reads, while by default TSO doesn't 
+        d.)  OCC executes transactions against local copies of data (‘shadows’) rather than globally visible 3 original copies, which avoids the need to explicitly handle cascading aborts. However, copying all objects at the start of the transaction is problematic if the set of objects to be operated on is determined as part of the transaction itself. Why does on-demand copying of objects complicate transaction validation?  
+        Because using our current system, the previous state that decided on demand the object should be loaded - could have been referring to an earlier version of the item that has since been changed (by another thread). And since we would be copying it on demand (and thus getting it's timestamp when we load it) we would have no way (within this system) of determining if this was the version the state referred to. So the transaction would be valid by our current system, even if the object had been changed to a different (unwanted) object just before we actually loaded it.
+        %LOCAL_FILE%IHsATz-UZGEawcPlhHwr-fQBPo2GeTACbAb6eaeIyZlNZb2M1CPnhclXl_dtuQsY9L01l4AkOEF4_QID_hg0tOnjvjGX8jTB2cjuGwT0SbyXybhL1XMkkyK_ejpfoi_r.png
+            Because TSO aborts simply when transactions don't follow it's one prescribed schedule, while OCC seeks only to abort conflicting commits. So as TSO aborts more, more live-lock situations will occur when perfectly correct schedules are disallowed.
+        %LOCAL_FILE%gslF3mNNmDHVxaPjwqK3JmnsluwJTXFPvI39tdrA2MQg_Sp8cZXQCJVJw3CUryCqRKZ5IWDZml6eoKi6e5KVvT1q-qCptOaRxVa6gA7O_j7To72jCGQVF-Oy2sN6aBYE.png
+            If a given transaction does a lot of computation in it's body, it may be slower than other threads who use the same resources - in such a case, the thread will continually find that once it's finished computation a faster thread has modified the used resources, forcing us to restart our slow computation. Consider a case where we're performing a statistical analysis of some database, this is a slow operation which will require shadows of multiple different fields - meanwhile one or many fast threads could change the values used in the statistical analysis, meaning once our slow thread has concluded it discovered it's used stale values and must restart. If a database is continually being added to, the slow thread could be starved forever.
+    %LOCAL_FILE%tt68NLsWYZBlsWdYWq-ZfTPlVMtMZMMxIeiiadDE8gkDHP1rrUj30jF_zmobxPhdwmMZ9LYWpyJMFLTYJgpBUFZwBW8QFW9gfS3OShawlETDGMD_se7_T7r6TeG6hnW-.png 
+        %LOCAL_FILE%Fh51IxHMCTYmMkjSu0vg7Zr9psKsZquDCBnOGirStWM76-uwrBGw3Moa17c4hOgwhMUMZOMA0CCOevAty9w_g7YMxf9LjNugU7xThtFkM3Vf8LCSTmKMMXnSbAjFqIcT.png 
+            Edges represent a "is-before" relationship between nodes.
+        %LOCAL_FILE%h-UuK42dzShBvMy6BZKKVy9nxj85tKJTgxX6fY000655jnaru8NGXJEZ94y2Oc_HSs75GiIB41jfWQcIrJ8M1ViUwOgwAsPRq-8zxfYAbFm13xzd7ivT_XLIPrjuX9B3.png 
+            A Cycle will be present. I.e. both threads have operations that occur before operations in the other thread - a temporal impossibility.
+        %LOCAL_FILE%k9dHfdy-m5Bm1Eh4nEabAx6LZQo4HfDy5d7XcTZc9ZLOc87gNUEhqyyianbsfSc-0y-QXgxdDKkJ2j7dYa0nlJaeQScECu4ifV3BcNMKri-JIlFhwagPLhzuvDerZvxQ.png 
+            Isolation & Atomicity
+        %LOCAL_FILE%lsFX9NuhzszQ6riLY5SF10nNuNddizzb2_KRElUbL73415zKh3CQen490K6g0gEZ4CQiU_un_kVQ4SUV86nbwqyTn4fm5gdJLjSqnvUsIpnjC6DVt5nohO5ezn8spbCN.png 
+            Serial execution is when threads complete their whole execution before another thread can begin and complete it's whole execution. Serializable is when commands from threads are interleaved, but the result is the same as the serial execution. Serializable executions are a superset of serial executions, as serial executions clearly produce the same results as themselves. 
+        %LOCAL_FILE%uXFO19F5I8DmY5Z7OaAZvp1OCZxkVIdYFBPvVU3CH7wsdY0yXABb27KDwQhcXAxFWV2jDo0GdQCURa77rgG7UBmwHX_dZ0c8pnZJL5izrJX03bYhPyPSZjJKqTDaqw3v.png
+            A dirty read is when a thread reads a value that has been modified by another thread, hear we could read the value of A after it's been debited (a dirty read) and read b before it's credited resulting in a result 'v' less than it should be.
+        %LOCAL_FILE%qvlb9mw6AyME0cDsNXhKYb5hPJHHP8jZCC2YSiNwg5GH8MTA4oIHZkKCLgs7iQ96f0__8rfLHJIt3-RbJyDVpn7OgwFWnWGaM2Q2v11sn02SX-n2KRZcGzsCVF4CdFPm.png 
+            %LOCAL_FILE%Ah4OrMb9r7ElHo9fqdvI3fits0ZlHtYDXNv5C0LxsOnCMi1PEYfKS1j7Gxrpqo-ls1s3qoHqq-PmZrtfhIMZ6mGrOGESeSMf_yJsOOJKTdqEBziY9QtbWTdsHpa_Dadc.png 
+        %LOCAL_FILE%Dq_JxVQqJdUaj6lqnlApNCeWstzIj_u0XzVkiOIVwyfUlxb8htFtTObOn340pTU-tVbtaVwprsSKa6GnLTKzquscQgSw3MDMfWTdDLQY5ql5am_9kJNZvcZ8XAfxDS6D.png
+        %LOCAL_FILE%7rCJGSabjZmRl1LewnIgITcgke_b5wYjbn4wOGZI5HDIY7q-QNd6xKWmFnHA_yo6l9c3MpUV-stiEmAP05LuKZyyNJv6K0tPCmly-W2RnHqnq5noQABzyfvk_lr2qOia.png
+            Not necessarily, after roll back the transactions could travel along the same execution path and cause the same commit error - resulting in livelock. However, there will be some cases which are solved by this addition, at the cost of large overhead of generating and testing this graph.
+        %LOCAL_FILE%4KdOPCU5sQRPvkY0iFyRQMmkUlkcPEKxeLPdF1ldpMQ8VgM8VbJyiB3mSW_EUC4-b7hFhKs-EIeE1qpsdhuUYOW6H_Vvp-NE_8HZQhN_QyEdnDO-WFfeJGNuoCI_m9WJ.png
+            It accepts more, because it will never reject a good schedule. While TSO accepts a single correct schedule as transactions come in.
+        %LOCAL_FILE%43Q_Ib1cOqV0P8xcRYdZMwJmJt1eP3PSh7ie0ZEadmfnt0Vw7ljIT6_I1Z5gf-uOtiOQ2C6u5Q4fk-Gg1ZeKTLjRxm6Yt4v3JnFy0jE7cqgbrX_V-5frhNiPZP7zgCs3.png
+            This method accepts more schedules, so could result in less cascading aborts resulting in less wasted time. However, this scheme has a huge performance overhead of generating a history graph and checking it for cycles at every step.
+    
+    
+Supervision 1
+    %LOCAL_FILE%sd2R5eXh_2n9qz1rlMJFYdNLd0tG-bE0UaLbKmCsWpDMrlH-pHYl-ZYXdacYEQIOuqaugFW1YRGzMEU9GQ6JOBONxdF-ugR7vRcWjB1AKZSipTorsRhQrosKThDmkULR.png 
+        0 - Condition synchronisation where one thread is producing items and another thread is consuming them. Initialising this to zero signifies that there are no items to consume and thus the producer must run. The consumer will wait for items to be produced (S > 0) and will then be signalled (whenever the producer produces an item it will call signal()).
+        1 - If we have 1 resource available for use between multiple threads, in this case the first thread that arrives get's access to the resource - i.e. only one person can print from a printer at a time.
+        n - If we have n resources available between multiple threads (more than n threads), in this case the first n threads get access to the resource immediately - i.e. only n people can use the n printers at any one time.
+    chopsticks = new Semaphore(2);
+int chopstick_1, chopstick_2 = 0, 0;
+// Thread 1
+while (1) {
+	if (chopstick_1 == 2) {
+		eat();
+		chopstick_1=0;
+		signal(chopsticks);
+		signal(chopsticks);
+	} else {
+		wait(chopsticks);
+		chopstick_1 ++;
+	}
+}
+
+// Thread 2
+while (1) {
+	if (chopstick_2 == 2) {
+		eat();
+		chopstick_2=0;
+		signal(chopsticks);
+		signal(chopsticks);
+	} else {
+		wait(chopsticks);
+		chopstick_2 ++;
+	}
+}
+
+// This can result in both threads getting one chopstick and starving
+    %LOCAL_FILE%hB68m6SGg36hFL_xPZrweB2Eqg7k_MVpuvzdel9hIGD09WTMEsLGbpsWbnxmyGvH09l_OM7wDs9nDkFSYcrrMckP0b-W4XChfeRFosc3SSgvINuuRlz1TegpO9zNM9qH.png 
+        Yes, because if we have a context switch anywhere between the weights (including just after the wait command is run) the various producer/consumer threads have different conceptions of the state. For example, if a context-switch occurred (in the case of a producer) before we changed buffer[in] we could resume the thread when the list is full and cause an overflow. Alternatively, we could consume the wrong item by the same means.
+    %LOCAL_FILE%D19kr_2Pf7_0ZafdDz9-dTMCRWKuzsTeC3BNISA9-vMa91p5xUIbPtkAcO-FvWKG-BOYddEfZNGpxymen8EKKA9v6OFpxc89bqDSu4Y6cYZwpsad_kCWmOu6P2Fstjta.png 
+        In the implementation of wait & signal presented in the lectures, the problem would be making checking the queue and changing S atomic (for signal) or checking & changing S atomic (for wait) rather than the question posed above. This is because in the version presented in the lecture, only the first and last threads in the door change S.
+        Wait would be unaffected - this is because we only perform a decrement if S > 0 - and we only block a thread when S = 0. This means the two can never be in contention.
+        If signal's integer & scheduler operation were not atomic, we could have a race condition - in between the integer operation and the scheduler operation another thread could call wait on the semaphore and perform a computation. While that thread is running, we would complete our scheduler operation and our awoken thread would perform the same computation - this race condition could lead to anomalous behaviour. Waking up the thread first, and then incrementing the value would solve this.
+        
+    %LOCAL_FILE%33akS39qWNR2m71NzOgaRJBQFNkWyVBtTw06nG-8WkaHVY_RldW4gw2BUKle6mpGtR5l7Eizk96IOtfF0m8hj52Aznye1SsP6aGioBc16kDSvqDO1K60vUqc9_FwdWnM.png 
+        Round-Robin - In a multi-core processor where each consumer thread is on a different core, we would spread the work to different cores to ensure temperatures of an individual core doesn't skyrocket which would result in a slowdown.
+        Prioritized Work - In a multi-CPU architecture where faster CPUs are in more demand for work, faster CPUs would be given a higher priority as they would complete faster and we'd like that time-save when those CPUs are available, while slower CPUs would be given a lower priority. 
+        MRU - If the CPU cores have caches that will have recent data stored in them, if a thread has been used recently it may happen that the required data to perform the computation is already in the cache (addresses of items etc.) meaning time will be saved which would have been spent fetching data from main memory.
+    %LOCAL_FILE%RdrlWILK0E0bNwSv0LdF4PR9LSwMfofFUuoeUnN2zZ51HMYhG-COY7mcbZQY7g0NXtGGAgopnKwofrjQhkZ-RW5b53cxNVacz10Dj-fph_bN_LdPWE_SrBDgb1eLYKHN.png 
+        int buffer[N]; int in = 0, out = 0;
+spaces = new Semaphore(N);
+items = new Semaphore(0);
+producer_guard = new Semaphore(1);
+consumer_guard = new Semaphore(1);
+// Producer threads
+while(true) {
+	item = produce();
+	wait(spaces);
+	wait(producer_guard);
+	buffer[in] = item;
+	in = (in + 1) % N;
+	signal(producer_guard);
+	signal(items);
+}
+// Consumer threads
+while(true) {
+	wait(items);
+	wait(consumer_guard);
+	item = buffer[out];
+	out =(out+1) % N;
+	signal(consumer_guard);
+	signal(spaces);
+	consume(item);
+} 
+        %LOCAL_FILE%bPGP_gNXPzszZu0_q37-gatUw0H5dw8izVNFee9drU-pzJ-qJsaKuetdA0NFulnHZLxjr7CjpzZMpGvCJCxYpVZWCmMPIlAGMK-4SQrszI27PiIeOky3BPa_hlCHoaQN.png 
+        We can consider that the consumer and the producer interact with different sections of the buffer in their "guarded" sections - the consumer deals with out and the producer deals with in. We can then consider that the whole design of the spaces & items was done to ensure the back and front of the list cannot affect each other, that is we can never add to a full list due to spaces and can never detract from a full one due to items. So as in & out are safely independent, we need only protect our consumers from other consumers and producers from other producers. 
+    %LOCAL_FILE%y6BGMYo6C6AtmnKq8ltCZY67Be2lsy6CI2hVWujhK59XcjEncDNTVw9qCa3N4l3fOIbd_kzM-OmGGOfOdTIkNrFe_W9laL-85ipJVFLlCulSOooNdRFDJ1ZLkqcR-Mw-.png 
+        Because generally there will be multiple (low priority) consumer threads in the guard queue ahead of the producer thread, they will necessarily be popped from the queue ahead of any producer threads. However, if you were using a mutex:
+        while (! test-and-set(note)); The thread that gets access to the resource, is the thread that runs test-and-set(note) first after the resource is freed - if the producer threads are set to a higher priority by the OS, they are more likely to run the command first.
+        
+    %LOCAL_FILE%XtO2e4DqYfpL0B1gbYvMSEYqayEMkA50280I_JG5WD2FiCBcqtGMbZTY-fLOAmdiJLDuTOEe-alLzih8lCUPd9E7G_BCc0Dv_sxyKAGKcJd8IY8mq4XdPT6UXHgvTkhm.png 
+        One could replace the queue structure with a priority-queue, rather than waking up the next thread in the queue in signal we would call popmin() (where a lower priority number signifies a higher priority) and the higher priority consumers would always go first.
+    %LOCAL_FILE%Wy1sGRze451GrBUFtmUiDbaytnxBlC36EbdEbjjsWFZ2CaSDbQa78plAuoKq4hHoXQ5CslliK5YT_cJkEkuecGzqnKCKst6nEduav4Pibnv5blNuHzndlqfJqDSZCyOg.png 
+        One solution would be to raise the priority of the producers (to high) whenever there's a high-priority consumer waiting - the wait() commands thus acts similarly to the signal() command, in that it allows another thread to run.
+    %LOCAL_FILE%cjRL7x0rri8fzqS45tGSxJ_lTt-r8ZbvSkwSlM-jlu96XC0v3j76VAMtqfibLO0JJQMDupkzyO4in-M9lDVC3LpA_f5UZ8DUvR3fXWzaR68yH9UANntExc4So-IiYXSf.png 
+        Each thread has its own stack, register file and scheduling state, thus there will be two instances of each of these.
+        Threads share the executable program and virtual address space, so there will be only one instance of each of these.
+    %LOCAL_FILE%gSeUH_wE-tW5DLaCuzxk0t7wair3fJw17i5FnYJAVLrFHH8d6hAQtJur1zWRVBjCKb5gsnuUcMNPlui8jIWfaKs-Wys6EhI_8toKLA9B3cFTitBM2p9WMPdN--zIbDxD.png 
+        Consider the following case: 
+        if (!beer) {
+	// printf(note);
+	if (!note) {
+		note = 1;
+		get_beer();
+		note = 0;
+	}
+} A race condition can occur between checking for beer and checking the note - if another thread is just about to write to the note. However, as printf() takes a non-zero amount of time to execute that added time could result in the second thread changing note  in time, meaning the first thread will check the note once it's been changed (e.g. desired logic flow occurs).
+    %LOCAL_FILE%r9xDNEUd21vdFWgQV_oBu_b-yT79qFcKluEGCeipA0baCbUXBf4g13mns3lEDnAmLdZwxbOyLpKM8587Ae9iw3K87JXbLdhpE_C6FkpF5JD65RNQAfDJqyiWzg03192u.png 
+        n! As the OS is (modelled as) non-deterministic, we cannot know the order in which threads will be scheduled and execute thrprint.
+    %LOCAL_FILE%rOmx9KUE6ei8U0fUQOOJT_dEeaW033n8VTJbWBYfwSH8oESnVDHu_5OpJl-KV63e0zBY8VNTCTXmF_RLMl1F0t5ujdZmkq99WLSKkC8Lk3_AKDNASEYiuUNcygfFIsWc.png 
+        1 - As pthread uses signal-and-continue style conditions, the if should be a while loop - as the value of the condition could have changed while the thread was waiting on the condidtion.
+        2 - We do our printf after unlocking the mutex, this defeats the whole purpose of the safety - another thread could legally access the state and complete it's printf before we've completed ours (this could be due to a context switch or simply another core that's faster).
+        3 - We never signal ordering_cv to wake up other threads.
+        int next_thread_id = 0; // Next ID to print
+pthread_mtx_t ordering_mtx; // Lock protecting next ID
+pthread_cond_t ordering_cv; // next_thread_id has changed
+
+void ordered_thrprint(int thread_id, char *message) {
+	pthread_mtx_lock(ordering_mtx);
+	while(thread_id != next_thread_id) {
+		pthread_cond_wait(ordering_cv, ordering_mtx);
+	}
+	next_thread_id = next_thread_id + 1;
+	printf("Thread %d: %s\n", thread_id, message);
+	pthread_mtx_unlock(ordering_mtx);
+	pthread_cond_broadcast(ordering_cv);
+} 
+    %LOCAL_FILE%gcADy-5emy1KJOIoJd595ND9GnD5-ptl-P6YS97lwBJayyx_m-ziHUyQeKJsIrMoEv3TZJd2euOaVtZE15SHtQdEbABINv6eTJNsILmfI65csyku1bmNsxdHQBmVlNKl.png 
+        We could solve this problem using two additional pieces of state (and associated mutexes), an array of size N (number of threads) and a protected integer that starts as N. Whenever a thread is executed, it would do the following
+            First get control of the buffer and the protected integer
+            Then it would place it's debug message into the buffer at the index of it's thread ID.  
+            Then decrement the protected integer, if that integers value is now 0 print out all the debug messages and associated indexes and we're done.
+            Release the protected integer and the buffer.
+Lecture 1
+
+

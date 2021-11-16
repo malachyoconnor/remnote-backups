@@ -1,0 +1,16 @@
+
+Sunday:
+    TODO
+        Convert the following from notes to remnote
+            Programming in C & C++ 
+            Intro to Computer Architecture
+            Further Graphics
+            Concurrent and distributed systems
+    HOURS
+        1 : Started writing notes on Programming in C & C++
+        2 : Finished writing aforementioned notes and started on Intro to computer architecture
+        3 : Finished Intro to computer architecture notes and highlighted relevant parts of graphics and concurrent and distributed systems
+        
+
+
+

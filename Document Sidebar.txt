@@ -1,0 +1,28 @@
+--------------------- Portal ---------------------
+--------------------- Portal ---------------------
+    ✓✓✓TO GET DONE
+    Daily Document
+        PASSED
+            TODO 12/11 FRI
+            TODO 11/11 THUR
+            TODO 10/11 WED
+        TODO 14/11 SUN
+    Lecture Notes
+        Data Science
+            Supervision 1
+        Programming in C & C++
+            Supervision 2
+            Supervision 1
+        Intro to Computer Architecture
+            Supervision 3
+            Supervision 2
+            Supervision 1
+        Further Graphics
+            Supervision 1
+        Concurrent & Distributed Systems
+            Supervision 2
+            Supervision 1
+    Work what I done
+        Week 2
+        Week 1
+--------------------- Portal ---------------------
