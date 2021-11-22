@@ -51,5 +51,13 @@ plt.show()
 
     
 
+    X \sim Bin(n, \theta)  then Pr(\theta | x=0) = (1-\theta)^n  
+    P(\theta | x=0) = \kappa \cdot(Pr(\theta)) \cdot (1 - \theta)^n  
+    1 / \kappa = \int_0^{1/2}{\epsilon (1-\theta)^nd\theta} + \int_{1/2}^{1}{\epsilon (1-\theta)^nd\theta} \rightarrow \kappa = (n+1) / \epsilon 
+    P(\Theta \le 0.5 | x=0) = \kappa\int_0^{1/2}{\epsilon (1 - \theta)^nd\theta} = 1 - \left( \frac{1}{2} \right)^{n+1} 
+    This equals a half when n = 0, if epsilon = 0 our results would have been nonsense and the probability would be zero. 
+
+    
+
 
 

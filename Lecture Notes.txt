@@ -1,3 +1,446 @@
+Economics Law & Ethics
+    Supervision 1
+        Exam Question 1 
+            a.)  Explain what economists mean by a lemons market. [150 words] 
+                A lemon market is a market where information on the products in asymmetric, and customers cannot differentiate the higher quality products from the lower quality. As sellers have a vested interest in selling their product for what its worth (they have the knowledge on its worth), and buyers are unwilling to risk buying at higher prices for fear of buying a 'lemon', this leads to sellers selling the low quality goods rather than selling the higher quality goods at a loss until only the low quality items are on the market at all. 
+            b.) What is the difference between hidden information and hidden action? Give examples of  each. [150 words]  
+                Hidden actions are actions taken by one side of an economic relationship that the other side cannot observe, while hidden information is information held by only one side of an economic relationship. For example when buying cars, the fact that you're a bad driver is hidden information, and making the decision to buy a safer car because you're a bad driver is a hidden action. Another example would be a worker deciding to slack off, this is a hidden action that can lead to a worse product - the employer has an incentive to associate a cost with this action, this could mean only paying the worker for good products or monitoring their work schedule.
+            c.)
+                a.)  You form a trade association with several other anti-malware firms and promote a quality assurance mark, perhaps with assistance from the government. [200 words] 
+                    This signals to the user that your item is of high quality, as the government and . While this doesn't eliminate competition (as other firms also have this quality-assurance mark) it results in poor-quality providers who can provide a cheap enough service to allow for massive undercutting of price to be less favourable by customers. This means a greater share of customers land inside the quality-assurance holding group, resulting in a larger share of the profit. However the asymmetric knowledge of the user could include the existence of this mark, and they could end up buying the cheap product they see without knowing about the mark. Additionally, the validity of quality-assurance marks (especially for anti-malware programs) can be difficult to validate by the user, as illegitimate companies could produce their own mark to trick users. There's also the problem that you may be further legitimizing your competition, where alternatives with better products where the legitimacy was previously in doubt can now be chosen safely in place of your product.
+                b.)  You approach the UK banks with a proposal that they certify your product for use along with their banking app products, in the sense that a customer using your  system will have exercised due diligence. [200 words]   
+                    This would likely be successful in making your product seem more trustworthy, as it is bundled with the air of legitimacy banks have but don't deserve. However, this would still have to combat lock-in, where people already with a malware protection service may be reticent to swap. Also, the price that would need to be paid to the banks to advertise your service would likely be very significant - and the firm would have to consider if the potential increase in customers is worth the outgoing cost. This method does have the advantage of using people propensity to go with the flow - if their banking app tells them to install a certain program, they simply go with it and not question if there are cheaper or better alternatives. 
+                c.)  You tell customers that if they are the victims of a scam that used malware on their  phone you will pay their legal bills. [200 words] 
+                    This gives the customer a signal that you are a efficient malware detection site, as a failure in your system becomes more expensive to you meaning you are incentivized to stop such failures (very similar to car warranty). However, this will come against the behavioural psychology problem that most people don't think they would fall for a scam or trick. Additionally, if a problem with your service is found and exploited by scammers you may end up having to pay for hundreds of users refunds while the bug is still in place - this means very robust bug-checking features must be in place. This method does have the benefit that it sounds good, but few customers will be able to use it - as a tiny percentage of scam victims are able to pursue any legal action (many scammers being overseas). However, when scam victims attempt to use this service and find there's no recourse - there could be public backlash against your firm. If a firm was truly certain of their product, perhaps they would advertise refunding scam victims (who are scammed through malware their service failed to detect) rather than paying for their legal bills.
+        Exam Question 2 
+            a.)
+                %LOCAL_FILE%fmDPF-dInQpQH71USeyACbGDBgB3nscLlH3JJzNT4er96vIhCtjR1TYQGylX4N1pvTc6Vt6Sr3_pZcqlcEMQgX1KadmjmFAHIMDqaEx9SY8cG9oGrHlHWDcwUI1pK1WI.png 
+                b.) In case v>c, then it's always better to choose hawk (as you don't run the risk of getting 0) so must have case v<c:
+If the utility of choosing hawk is the same of that of choosing doves, where hawks are chosen with some probability p, this will form an equilibrium.
+                c.) Set the initial conditions and calculate:
+                \frac{v-c}{2} \cdot p + v(1-p) = \frac{(1-p)v}{2} 
+                \frac{vp}{2}-\frac{cp}{2}+\frac{v}{2}(1-p)=0 
+                - \frac{cp}{2} + \frac{v}{2}=0 \implies p=\frac{v}{c} 
+            b.) In real life encounters, the probability of death is 0 - if you strictly consider this (without replacing c with some other factor) then the optimal strategy will always to be aggressive (choose hawk) as you gain at least \frac{v}{2} and don't stand to gain 0.  
+            However, if you replace c with some embarrassment factor where the other aggressive user wins the argument then the game plays out the same way as the hawk and dove game. Depending on the probability of getting embarrassed (a function of how good you are at arguing and how embarrassed you get at losing) you will decide to be a hawk or a dove .
+        Exam Question 3
+            a) What are the first and second theorems of welfare economics? [200 words] 
+                The first theorem states that market equilibrium is pareto optimal, that is there is no further way for anyone to be made better off without making anyone else worse off - further changes would negatively impact some players. 
+                The second theorem states that any pareto optimal allocation can be achieved by market forces provided preferences are convex. Preferences being convex means any line between two bundles on an indifference curve will be made up of points that are weakly preferred to the bundles on the indifference curve. So given some initial conditions, we can reach any pareto optimal allocation (whether that be communism, monarchy or anywhere in-between) can be reached using a market.
+                Both of these theorems behave under certain assumptions, such as:
+                    Complete markets, everything is traded on the markets. 
+                    No transaction costs on the market.
+                    Perfect information with rational actors
+                    All consumers and firms are price takers
+            (b) Give three examples of ways in which markets can fail to reach competitive equilibrium  when the assumptions of the first theorem do not hold, discussing the implications for the  information goods and services industries in each case. 
+                One assumption is that the markets are complete, that is everything can be sold on the market. Consider a country deciding that food should not be sold on the free market, this will result in farmers suddenly unable to make money resulting in a decrease in a supply (without a corresponding decrease in demand). A change to government funding will have to be put in place, resulting in a lack of competition as farmers will be given a set rate. The equivalent for information goods and services industries would be if information on users could no longer be sold, platforms like Facebook and Google would have a large chunk of their business model wiped out as selling information on users through real time bidding for targeted ads is a large part of their business models.
+                If the assumptions that actors in the market are rational with perfect information were not fulfilled (and generally they aren't), this could lead to people purchasing things with little to no utility - meaning people who actually require the item could suffer, and results in people having less money to spend on utility rich items - potentially leading to a decrease in price as the price people are willing to pay decreases, finally this could lead to a stagnation of growth in those industries as they have less money to expand. In relation to the tech industry, this could be people spending all their money on NFTs with incomplete information on their worth - leaving nothing to be spent on the items YouTube, Google and Facebook advertises to them.
+                If the assumption that consumers and firms are price takers isn't met, then firms may list items at a price too low where they cannot keep up with demand - while they struggle and battle with the initial throws of this supply and demand curve:     %LOCAL_FILE%4rqcmEIjQt_7SHMQvvfC0rawX7bN5sS307ywCIuC9CtuiDA4SXZ6n-m_2m2tyJjY8jsZmnz5i4uL858ZndmTTYwcLCrjvqOMFW34IqhJP-2knWk6Nca6sixpTfBWWhHs.png                                                                                           Until they reach the later stages, other firms will be met with a huge decrease in demand - leading to stagnation of growth. Contrarily, if consumers buy the more expensive items when cheaper alternatives exists, competitors will have to change their product or lower prices even further to appear palatable. In regards to the information technology industry, this would be the equivalent of word becoming free to win back users of google docs - or if github started charging for the service and people kept using it.
+        Exercise 1:
+            a.)   Suppose that we say that an allocation x is socially preferred to an allocation y only if  everyone prefers x to y. (This is sometimes called the Pareto ordering, since it is closely  related to the idea of Pareto efficiency.) What shortcoming does this have as a rule for  making social decisions? [100 words]    
+                Everyone needs to be polled in order to make any small decision, so decision making will be slow and cumbersome. Additionally, If even one person disagrees, no matter how absurd their reason is the idea will be thrown out, and as almost all decisions are likely to have some level of disagreement very few decisions will be accepted. 
+            b.) A Rawlsian welfare function counts only the welfare of the worst-off agent. The opposite of  the Rawlsian welfare function might be called the “Nietzschean” welfare function—a welfare  function that says the value of an allocation depends only on the welfare of the best-off  agent. What mathematical form would the Nietzschean welfare function take? [100 words]    
+                \max U_i  
+                We select for the maximum utility of our population, and try and boost that.
+            c.) Suppose that the utility possibilities set is a convex set and that consumers care only about  their own consumption. What kind of allocations represent welfare maxima of the  Nietzschean welfare function? [100 words] 
+                At face value, improving the utility of the best off person seems to be giving them all the resources. However, then the surrounding agents will suffer and the world around the richest person will degrade. Additionally, due to the convexity of utility functions resources become less desirable the more you have of the resource - meaning more money means less to a rich person than to a poor one. Thus, while some effort must be spent further enriching the best off agent - some money must be spent to maintain their surrounding population so the best off agent needn't witness poverty or drive on broken roads. 
+            d.)  The ability to set the voting agenda can often be a powerful asset. Assuming that social  preferences are decided by pair-wise majority voting and that the preferences given in the  table below hold, demonstrate this fact by producing a voting agenda that results in  allocation y winning. Find an agenda that has z as the winner. What property of the social  preferences is responsible for this agenda-setting power? [200 words] 
+                %LOCAL_FILE%S1XX-5lu6CMf8Oex4OuNutrHIHl8lA_z2RtN62sSS1UOlyLVRJ7fXN8frGL6TGGjzsMr_YJbGNr_STTvSPBZZuGJtZJmTvClb6EsVz4a2kqikwXXrgbQSJqvtTl9RW_j.png 
+                Not sure if my understanding of voting agenda is correct
+                Obviously, without an agenda the entire vote is a three way tie. If we set the agenda to who wins out of y vs z, we have y winning - as we get to wins for y and one for z. If the agenda is x vs z, we have z winning out with 2 votes to 1. 
+                I believe it's the property that people vote for the candidate they actually want to win first, and the following results are murky - especially if given a choice of the top X candidates rather than ranking all candidates. Thus, if specific candidates are chosen the results can vary wildly as less strict rules hold for the last two options.
+        
+    Lecture 1: 
+        Macro vs MicroEconomics↔Macro: Performance and structure of global economy or a nation or region.  Micro: Individuals and firms responding to incentives, how market mechanisms fail and circumstances in which markets fail.
+        Prices and Markets
+            Consider searching for a flat, one bed or house share - people who can afford flats will get them, and others will cycle to far away house shares.
+            %LOCAL_FILE%RJdFdwqCAq_YvvqEJmjnukPI87T0GMU2tOel0cVyW8yoJAQxx6SCnpH0QIfVz6MJLmNtUDpXBR3-7ZUCIzErrtZwX-0bvHUkYRsmImVt4wuojOMT32vY-EO8qTHX4Fw3.png The equilibrium price is where the supply and demand curves corss - e.g. £500
+            Consider if there's rigging - the cartel meet and restrict supply, 800 flats at £700 can earn more than 1000 at £500 - This is inefficient, houses are left empty for which there is demand. 
+        Efficiency:
+            A monopolist might leave flats empty, despite people being prepared to pay for them.
+            Pareto Improvement↔A way to make some people better off, without making anyone worse off
+            A Pareto efficient allocation↔Is such that no Pareto improvement is possible
+            Pure monarch and pure communism are both pareto efficient.
+            Discriminating Monopolist
+                If you know what the person can pay, charge them exactly that, this is pareto efficient and lets you extract the most from the market. The monopolist captures all of the consumer surplus:
+                %LOCAL_FILE%i1z7Qw6bTJvxLthQPGUlCWVpvDvoBp5rLqa46oeI4ScBvHRJLeroPu7YnmfCNlFY6GR9u6z00gATNgS873ZixfReC3zNi38M_aOH05ZUcVGhMgjh0HrrSxZ1PfEtQVyj.png 
+                This is what the IT industry tries to do with different prices of service (microsoft word). 
+            Consumer Surplus 
+                Consumer surplus↔Is the total amount people saved off their reservation price (What they were willing to pay)
+                %LOCAL_FILE%O-15rQakD1bu-vSC_cXcj6TSpt-v5tqk6yRcyAdBYwMXKfwTC8k5N7ZwWLTX67VhATkCvqjj4imubQ4tjjQOKA31QHEIX9a6Ll_wioRt23rWQcnf0lPgQfy5oGLVwZ2-.png 
+                People would have payed 2000 payed only 700. Lost out on A & B. The discriminating monopolist gets the lot 
+        Basic Consumer Theory:
+            Consumers choose best bundle of goods they can afford. Most of the time two goods enough, books versus everything else. 
+            Assume a budget constraint m, p_1 x_1 + p_2x_2 <= m 
+            %LOCAL_FILE%sECy__ijlVN8kbj_fZJR4bWZyWg-uGKgWjhyHCKYxtPsD-0wwqGAl3LhbhkozcnIjzbW3PgidkM-WVKJ5K0AxxozqZvOWKCXdwyGDpeX3FC3TUfOzSNjcp2rbod-3wda.png Choices lie within this line
+            Preference: 
+                Using Indifference curves or isoquants, we plot where a user has no preference between bundle (x_1, x_2) \ vs \ (x_1', x_2'). They are indifferent:
+                %LOCAL_FILE%Rnc8D1UP6kPGTUwukPeOKun0fV8lBEH4Pz6V5FnQKDiFoq6_cLuS8-Km9zTYqZQLT37RzJxSTJFAGVfvU9vUxXxf4920JH-yUEbBjt8RE_d4VqR7Z4LVW7lvN96wR_dW.png 
+                We assume they're well behaved and don't cross, this is the weak axiom of revealed preference. I.e. If I'm indifferent to having 10 apples and 10 chocolate bars, I'll be happier with 20 apples and 10 chocolate bars.
+            Perfect Substitutes: 
+                Perfect Substitutes↔Don't care whether I have good 1 or good 2, e.g. sugar from Tesco vs Sainsburys.
+                %LOCAL_FILE%RtW4sVt6ZsJ0q8l-QmqUbEUw5Q9eryLcS5Nmn4D30fl0DS-w5BQo2QkEPPSKuqAaimDiKYHLkdB_LUJhkNMkuPJLsjWGQh3y4EiHy9cptDrBpAwQp8itUTiUnYVSdsv3.png 
+            Perfect Complements: 
+                Perfect Complements↔Want exact same quantity of good 1 and good 2, left & right shoes for example.
+                %LOCAL_FILE%v0o8b3wdSbHqfQhwfS0ixECIKjMrHcSB7onxgFp8l3iqdca2mLhezud9q8iNgz1_qgaWwYzpn6arhkGmVjkMK_hPuLo29m99yrgEHrbLa6ILYEXnIkSAHhjX-RNr1hHF.png This indifference curve says, once I have 1 left shoe and 1 right shoe, it doesn't matter if I have 1 left shoe and 300 right shoes.
+            Bads:
+                These are goods I'd rather avoid, sometimes I have to consume of the bad in order to have some of the goods.
+                %LOCAL_FILE%M4iSNms1tnx-YOSJMhigTNsGoB6JonMSKNy76ZC2gStAI835LxRgzx6dSJyXqwCj8Fy0f8dlXwTcxoT_z-upEfAFNXbTHk1ptbErRrIgNayhrmjOruwqCN_0Zgmap3Yi.png 
+                I'm indifferent to getting more sprouts as long as I get more turkey.
+            Marginal rate of substitution
+                The tangent to an isoquant gives the marginal rate of substitution. This is the exchange rate at which the consumer will trade the two.
+                Convex curves: You're more likely to trade a good if you have more of it
+                %LOCAL_FILE%7ECMsjYfQPiyz0X6fyHargCzgFHlL44jINYU5fjzGEQRlvSLSC-07qn4Yv5HIkq8o6B5WLRxAb276LOR8M7wg3m49zPeW6AFS_b3Uvm1NaLp7oarKvPhe57wFz4VDhrS.png 
+                Diminishing MRS:
+                    You are less willing to pay for more books if you have less money. 
+                    %LOCAL_FILE%xdD_GZn9yyeAJ9L-H3Cin_MTBznLB2lJirWVTYvNfZAVBSQFCXjanoE6nI-63ytQbJfOXKTnKPuwCd8IuPO4zmLGld-XmtAn2JTbUuU_JyTAcqtzGiJGsxygUPncLikN.png 
+                Utility
+                    Indifference curves can be parametrised.
+                    Marginal cost↔Cost of producing one more good or service
+                    Marginal Utility↔Is  MU_1 = dU / dx1 - e.g. the change in utility with respect to a given good.
+                    Then MRS is -MU_1 / MU_2 , utility functions can be useful for describing customer choices. And can be inferred from things like shopping patterns.
+                    %LOCAL_FILE%U6CZ7hN8XHwXnTqE3AbKr7UoyFEWUMREiibQn8XtkMKG0s-TWRHFj_hXoRwIZqG7mLqAeX2iNaWLS90BuXcWIAlvmgZCO2VpqCXD6Xv96xFaPQlqE7kltJAJI6nUpc0q.png 
+        The Marginalist revolution:
+            Why is water cheap and diamonds expensive. 
+            The value of the last and least wanted addition to your consumption of a good sets its value to you. 
+            Marginalism asserts that individuals make purchasing decisions on an additional item, based on the added utility it will garner them. This idea shifted thinking from costs of production to demand.  
+            Local coal market has 3 producers and consumers:
+%LOCAL_FILE%-vko3s4LW2USaWft_HrsAWSr10bXcb_C5wmB0s8pFnN531Eb6BWtGhU0l2dMlf523KiyQYq-k3mu56BBm7lQT_sJbEaOgR3Yj3JN8Bv_G87FdEBd-bdGFHRjpQEEBIYY.png The price of coal will fluctuate between winter and summer with demand. It's determined by the marginal transaction
+        Demand 
+            Market demand is the sum of the demand over the consumers. We can get a consumers demand from their utility or vice versa.
+            %LOCAL_FILE%dYeW6tK9xXJ8L56YeOFbm-OJiuK9YxaS8lvYvMJKVcB0APpamzdLloeSgDbpOPJSnRrl8IR71jFS7wt2wsZLyAoYzdyYUSo5DJBQMOfksz8TqipMWqFJG9oTi_A41Nmi.png 
+        Elasticity 
+            Elasticity measure the effect on demand of a small change in price. When do people stop buying your product given an increase in price.
+            %LOCAL_FILE%vTT7b5HI05V2gkljJuvA-N__lA99IpgPl85EaPEArA7LQI3OBb_14H0vUQULw9QgVAUM_GycldqTKIyHMo2J1HZw3pYRqif6-1eqyzoqtzvSwxdul-yfTPqtZm9LkaoP.png 
+            
+            %LOCAL_FILE%IwIUmuMf3EuWulCyFKAzRgs5RWZMSx4okIlM-S8wfP39AZrtjtg33kzqwB3dbZ6ETSBR92QD4B0jO2nFDj6mOSD4JMGjeB8dwCIH5gRYg2kPLMRLUdzllgofWY-7Zqsb.png 
+            Elasticity = 1 means theres likely to be a substitute.
+            %LOCAL_FILE%7-y8UFFxlppXF8VuLxiOQsmI4CwPQKhulJqIngb1n74FMQtaiTw18DBRmMqIVadikqJqjN-pHU7e-3nXiz_yNqBa914UqdGRQxCNTVYdm0xd0zL9LJ_6rIueMmNNsF9a.png 
+            Elasticity = \frac{\text{Percentage change in quantity}}{\text{Percentage change in price}} - so if we have 10%/30% - we have an elasticity of 1/3, meaning that change doesnt have a large effect. 
+        Supply 
+            %LOCAL_FILE%4rqcmEIjQt_7SHMQvvfC0rawX7bN5sS307ywCIuC9CtuiDA4SXZ6n-m_2m2tyJjY8jsZmnz5i4uL858ZndmTTYwcLCrjvqOMFW34IqhJP-2knWk6Nca6sixpTfBWWhHs.png 
+            Average cost of goods initially falls are more are produced, then something occurs (overtime etc) and costs rice quickly due to capacity constraints. Thus supply curve is typically convex.
+        Cost Evolution
+            %LOCAL_FILE%j8i2xcfsdw00xI7OybDEvjmbqTMqFbrib9AoTvvNW9kGwRQP5GxFErq8238MCh1M1BHafGLiIzkfUU1dsuUCP5NgHIVSy4clXG7KGm0JnJHRRI4EUHr_5oLEnz0j8uGf.png 
+            Firms can build more factories to build capacity constraints, gives nearly constant fixed cost as firm expands.
+        Firm Supply  
+            %LOCAL_FILE%0eUwnpy4Evz5Y61Fw6bosytT0EYGJI4OXlf9bJsIBIyAqmN2f9C5U6bnVahOWpTroGe-JTmuDthRyGSI_wtsOKstpmXmGeAZ6iaFnRzpUr6AhGksSFSBl0tfHkJ5Muvt.png 
+            MC = Average cost
+            In a competitive market, at a price above p* the firm would have no demand and at a price below p* the firm would be faced with all the demand. The firms profit is maximised when it sets output so that its marginal cost equals the price p*.
+        Putting it all together 
+            Prices are set where supply and demand curves intersect.
+            %LOCAL_FILE%2dG1jmObyO9oF7hWBzX3xm60RFWD5Z-wH5Ue-LJ9e_nn1_fam7JbMvMs266_GAa36ufhBP5oPksvynADsergwaYZE3VMQyVQSlMujO1wKRLkxT0mk-KOLp3fuOLnJSly.png 
+            p* = marginal cost of marginal supplier.
+            Intrinsic advantages of non-marginal suppliers (good farmlands or easily mined coal) get build into rental values - more expensive. 
+        Equilibrium 
+            Supply and demand for 1 good↔partial equilibrium analysis
+            General equilibrium analysis adds labour, capital etc. 
+            Theorems of welfare economics 
+                Theorem 1: Market equilibrium is pareto optimal
+                Theorem 2: Any pareto optimal allocation can be achieved by market forces provided preferences are convex.
+            This has lots of conditions to be correct.
+        Efficiency, welfare and justice 
+            There are different theories of justice: 
+                W = \sum U_i  - The average citizen, classical utilitarian welfare
+                W = \min U_i  - the most miserable citizen, Rawlsian welfare
+            Diminishing marginal utility of money means that transferring £1 from a rich person to a poor one improves welfare.
+            Arrows impossibility theorem↔There is no perfect way to aggregate personal choices into social welfare that's consistent with democracy.
+        Transaction costs
+            Trades are not free, time effort comissions bargaining policing and enforcement.
+            External transactions costs higher than internal ones
+            Agency costs within firms also matter hugely
+            Incomplete contracts, opportunistic behaviour comes out.
+            So should tech make firms smaller on average? 
+        
+    Lecture 2:
+        Effect of technology on supply and demand: 
+            Increase of supply much easier than other industries, marginal costs may never rise. Microsoft enjoys ever increasing returns to scale. 
+            Technology can also improve efficiency.
+        Competition and information:
+            Marginal cost of producing information is zero. Market clearing price. Encyclopedia vs wikapedia
+            Machine readable phon ebooks, Nynex charges 10000 per disk, ProCD starts selling for 300 - finally price dropped to $20.
+            Nowadays free online, how do you make money from selling information?
+        Lock-In:
+            Buying a product commits you to buying more of it, or spending money on one or more of (consider apple): 
+                Accessories - apps for phone
+                Skills - fluency with microsoft
+                Services - network service for phone
+            Time and effort and bother to change.
+            Fewer people change their bankers than their spouses.
+            Fundamental Theorem:
+                The net present value of your customer base, is the total cost of switching.
+                Suppose it costs £25 pounds to get a new customer, and it costs a customer £50 to switch. If you offer them £60 cashback to switch and customers are worth £100 to you - The customer is £10 ahead and you're £15 ahead.
+                SO the value of microsoft is what it would cost people to switch to google docs and linux. 
+            The incumbend will strive to maximise switching costs, competitors to minimize them
+                File format wars
+                Loyalty programs 
+                Phone number portability
+            Incumbents promote complementary goods and services that increase lockin, tied printer cartridges to G suite.
+            Asymmetric switching costs, a phone network may supply a phone to win a customer, but keeping them they can simply offer minutes which costs nothing.
+        Network Externalities:
+            Networks more valuable the more people use them.
+            Metcalfe's law↔The value of a network is proportional to the square of the number of users.
+            More complex than this, local effects are stronger, but still more than linear.
+            Overall effect - past some threshold, network use takes off rapidly and creates lock-in (telephone takes off as more people have them).
+            Real networks like fax and email, virtual networks like pcs and software. 
+            Most people choose to buy PCs rather than macs because of software. Then people decided pc was winning, so people just developed software for PCs. This pushed microsoft forwards.
+            It works for bads as well as goods, malware writers target windows while mac and linux are also vulnerable.
+            %LOCAL_FILE%4zvGoVnMRgE48-8A6GJHCZmDyD5mS0Pkp0xFV_cUPCjZdKgAKmX9BWKFCAaTHMIzYkMqoguOzoC1jDcS5YatuMeEzaDD9zfs-PBtenaEFP3BTJCum_yNmSdrM3d7THgW.png 
+            Markets with network effects can "tip", one suddenly taking over. Consider rail gauges in the 19th century. Colour TV standards in the 1950s. Paypal vs other payment startups. Facebook vs myspace. Google meet, skype, zoom etc.
+        Strategic issues:
+            High fixed cost + low marginal cost. Significant switching cost due to lock in and network externalities. Tends to lead to a dominant firm market model.
+            Given all three monopoly VeRY likely. 
+            Hence the race for market share when a new product or service market opens. IBM very well engineered, windows ship it tuesday and get it right by version 3. 
+            Is your customer acquisition cost still less than the lifetime revenue.
+            How bad are monopolies? No competition to allow equilibrium, however what if consumers arent paying anything? EU LAW: A fairly-won monopoly is ok, but cant leverage monopoly in one field to another - google cant direct people to their travel service.
+            US - monopoly used to be measured by consumer surplus, doesnt work for google and amazon. 
+        Price discrimination:
+            An efficit monopolist sells to each customer at their reservation price.
+            Pigous three degrees of price discrimination:
+                Personalized pricing - haggling or loyalty cards
+                Versioning - first class vs economy
+                Group pricing - student
+            Tech increases the motive for price discrimination, have more information about you. Also firms are more likely to have market power.
+            Price discrimination is often unpopular, people don't want to pay more for the same things. 
+        Bundling: 
+            How to conceal discrimination - selling a number of products together.
+            A & B price willing to pay for word and excel:%LOCAL_FILE%nbzIJ1zjMLLSUb48JiYJcBC556k1-06cjLSkbAqBf6PyOqKYZbC_s1vV0Ki0-js5medhE1e8q6zaTxUO_7wt7tludXk-1sj8prILOrpRYCUd70Rdg7GhAAmosxXqN4Ts.png            By bundling word and excel together, they can make £125 per customer, rather than £50 or £75 each.
+        Income distribution:
+            %LOCAL_FILE%dCQbixGY2SMyLGp7phuvx8Bpv40tdxMvcqMDSJrkaTbj6X2QT60UstgET7AjpxfMqy7LbLcAnFbKYBegmCtQHdbNYZ-J7bfV0qvYUcTe7MkSaxGRWr6bIWBb6puzisw1.png 
+            The Gini coefficient is used to measure inequality. Gini = A/(A+B) where B is the cumulative income distribution. If Gini = 0 then communism, Gini =1 then the king has the lot.
+            Gini falls with development, rate of violent crime correlates with the Gini coefficient. US has similar Gini coefficient to a 3rd world country. The poor fight harder for welfare than the rich resist them.
+            Democracy is strongly corelated with equality, however cuts both ways. Farm subsidy that gives each farmer £200000 but costs non farmers £200. 
+    Lecture 3:
+        The Business Cycle: 
+            Global economic crisis, money out of banks, banks bought out leading to economic debt doubling. The more recent economic crisis was not as deep as the last, but the recover has not been as thorough:
+            %LOCAL_FILE%zoTwERlnGfC_RiVFcJ1dOuWTgSPSSAYBF3IdssGfOc6JqVzNJPfGNqJHhPFTr637zqbghRfc0-vT2-qVgxU6xSlW0wkQn7JM0qezdregQ8wDhc5LhSPxAU-J1aLmdu0K.png 
+            Pandemic causes greater impact on economy than the 2007 crisis, tech industry doing much better than other industries. 
+            Why the pattern of boom and bust?  
+            Mill and Ricardo argued that: demand for goods + savings = supply of goods + investments. Further savings = investment, so demand = supply. Meaning that the market for money needs to be considered, just the market for goods.
+            People want a certain level of savings, maybe 3 months salary. In a recession, liquidity preference rises.
+            In a boom, people and firms borrow assets that can be sold later. A bank that takes in £100 pounds in deposits might lend out £94, meaning £6 of capital underwrites £94 of lending. 94/6 = 15.7  
+            In a recession, loans go bad, share prices of banks fall and banks call in loans, capital requirements increase so governments compete for available loans. Money supply contracted leading to large unemployment.
+        Recession and Tech:
+            Booms as people built railways, Electricity replacing steam lead to boom, mass production of cars led to a boom. Whole industries replaced with online alternatives, amazon half of book market, newspapers move to online. 
+            Increase in demand of online shopping.
+        Trade:
+            Wealth of Nations - if a foreign country can sell something cheaper, buy it with produce from own industry, employed in a way in which we have some advantage. Was a radical view, previosuly maximizing exports and minimizing imports.
+            %LOCAL_FILE%Pj6uafDRyN_Xgjw4HIGLkLjzqN033NruSKXd6dKINmjEs4wCRkco_Dnr73azj7MY6vrAFk6m1ZVyUsnAmytxBDho2eP6yNvIQNKiK9g2dy49PjKClnxycSM4Yy576RwD.png 
+            Comparative advantage, England unit of wheat costs half a unit of wine, while Portugal costs 2/3 a unit of wine.
+            %LOCAL_FILE%4IQclGj4j4zfCGoEPFsD7fpo_xlYYips86GGOC2nfPQneZvkEeEGBjrgaYIX8eiTs5Zi5XpdvU69zkTog9TUpcIhQaqb9ljag_MKYQhQzXlIUHuyFl3kvF5vW2ye-TwW.png 
+            If each play to their advantage, each are better off. 
+            Capital v labour, outsourcing.
+            Under perfect competition, free trade optimal but there are still losers in this case English Vintners.
+        Growth:
+            Output = f(land, labour, capital). Implies colonization and increase in capital. 
+            States invested in industry for time, as governments could borrow money cheaper than private companies.
+            Neoclassical school, all about technology and population growth.
+            Modern view, mostly knowledge that leads to growth. 
+            Prescription, world should spend 4 times more on research and development.
+        Tragedy of the commons:
+            If 100 people each graze a sheep on the commons, if one person adds another sheep he gets 100% more and you get 1% less. That small decrease is unlikely to cause a row, meaning the logically correct move is to have more sheep.
+            Leads to overgrazing, overfishing etc.
+            Welfare theorem assumes complete property rights, this can be used as a reason to privatize common property and fence it off.
+        Externalities:
+            Effects that people care about but not traded - side effects.
+            Consumption externalities include smoking in restaurants, increased education decreases crime. Competitive equilibria are unlikely to be pareto efficient in light of consumption externalities.
+            Can in theory fix with property rights, can only have 100 sheep on the commons.
+        Public Goods:
+            Scientific knowledge is a public good. 
+            Public bad being CO2 emissions, every country affects it equally meaning temptation to free ride.
+            Can capture benefit from scientific discovery, without contributing. Need to institute grants, nobel prizes, doctorate programs etc.
+        Club Goods:
+            Traditional communitites can limit scale.
+            Fishermen in a community can gather and form a rota, signed by the mayor. This is self-enforcing, have the right to chase people off.
+            Needs to be a small enough group to come together and make decisions. 
+        Enter Politics when the club breaks down:
+            Buchanan: " Politics is  a structure of complex exchange among individuals, a structure within which persons  seek to secure collectively their own privately  defined objectives that cannot be efficiently  secured through simple market exchanges  "
+        Monopoly Rents:
+            Firms will enter a market until excess profits competed away, if no barriers to entry in place. 
+            Economists define a rent as an excess, undeserved income resulting from barriers to competitions. 
+            Rent seeking drives much of politics.
+            What if we regulate prices?
+                Sometimes an increase in prices through regulation can help the owners rather than the workers, taxi license cost.
+                Taxi license bubble.
+        Asymmetric information:
+            100 used cars, 50 which break down $1000 and 50 which work well $2000 - would think price would be the average. But buyers cant tell the difference, so price is $1000. 
+            Additionally, if the price was $1500 those with the good cars wouldn't sell - leading to only the bad cars getting to the market.
+            Can offer a warranty, this is cheaper for those with good cars and acts as a signal for the hidden information. Signalling theory important for recommendation systems like Google, eBay, Uber... 
+            Uber drivers more likely to be courteous than black cab drivers,  due to their attached rating. 
+            Do Volvo drivers have more accidents because:
+                Bad drivers buy volvos to survive - adverse selection.
+                Drivers go faster due to increased safety - moral hazard
+            These are examples of hidden information and hidden actions. Adverse selection is a lemons market.  
+        Behavioural Economics:
+            Classical economics - indivifuals are rational, they maximise utility with no cognitive limitations.
+            Behavioural economics:
+                Behaviours deviate from this, based on experimental psychology. 
+        Bounded Rationality:
+            People tend to act intuitively rather than rationally, Prospect theory: People offered £10 or a 50% chance of £20 people prefer the former. If it's a loss, they usually prefer the latter.
+            Framing actions as saving can make them more efficient. Political marketing with terorrism takes advantage of this.
+            Cyber crime vs terrorism. 
+            Satisfice↔People want to make just-good-enough decisions. Stop once meet goals.
+            Hyperbolic discounting, discount events likely to occur in the future. 
+            The endowment effect→People are more willing to buy an object than sell the same object.
+        Cultural Biases:
+            The way in which people make consistently irrational decisions. It was noted that machine translation from gender-neutral turkish text made Doctors hes and nurses shes. 
+            How to capture implicite biases ingrained in culture?
+        Nudge Theory:
+            Application of behavioural economics to policy. Consiiders how choices are presented, this can have a powerful effect. Can induce individuals to make better choices, but does not affect underlying structural issues. 
+        The Power of defaults:
+            Most people go with the flow. Accept product as it comes out of the box. Checkboxes to opt out of market hard to find, used to have to sign up for pension now its opt out rather than in.
+            Organ donation laws in Spain opt-out, now has highest donation rate in the world.  Same in the UK.
+            What is the ethical requirements related to opting in/out to sharing of medical data for research.
+        Agency effects:
+            Classical economics sees instutions as rational, however managers make decisions that improve their personal utility as well. 
+            Some companies give stock options to align interest, public choice economics apply this incetive analysis to civil servants and politicians.
+            Why do public sector IT projects fail more than private sector projects? 2/3 fail in public sector, vs 1/3 in the private sector. 
+    Lecture 4:
+        Auctions:
+            Corporate takeovers to house sales are also really auctions. Auctions are a big success of the internet, from eBay to Google. 
+            Types of auctions: 
+                English, start at reserve price and raise till a winner is left.
+                Dutch, start high and cut till somebody bids.
+                First-price sealed-bid auctions: one bid per bidder. Higher bidder wins.
+                Second price sealed-bid auctions, highest bidder wins and pays second highest bids.
+                All-pay auctions: everyone pays at every round until one remaining bidder gets the goods. Times of war or litigation.
+            Strategic equivalence:
+                Dutch and first price the same result, highest bidder gets the goods at their reservation price. Should bid low if you think your valuation is much higher than everybody else's.
+                Second price and English the same - best to bid truthfully. 
+            Revenue Equivalence:
+                Not who will win, but how much is paid on average.
+                According to the revenue equivalence theorem, you get the same revenue from any well-behaved auction under ideal conditions.
+                Conditions Include:
+                    No collusion
+                    risk-neutral bidders
+                    Pareto efficiency (highest bidder wins)
+                    reserve price
+                    independent valuations
+            What goes wrong?
+                Private value auction, every bidders value is personal and the piece generally has no intrinsic value - say art.
+                In public value auctions, the items do have an intrinsic value - say oil drilling rights. The buyer is the sucker who overestimated the most - the winners curse.
+                Most real auctions lie somewhere between the two.
+                Bidding rings: 
+                    Bidders collude to buy low, have a private auction later and split the proceeds. 
+                    First price auctions harder to rig, everyone must collude. Second price easier to bid. New Zealand bit of 7000000 payed only 5000.
+                    Deter people from entering low quality bids, TV rights where detailed programming plans need to be drawn up. However, placing barriers can result in larger companies scooping up all the TV rights at low prices.
+                    Predation: we'll top any other bid - aggressive behaviour designed to scare people off. 
+                    Also sniping, where a bid is placed in at the last second.
+                Bidders should be risk-neutral, however rationality is bounded - with most people being risk averse. People put in bids that are far to high, from fear of not getting the item.
+                Bidders may pay signalling games, show aggression by a price hike - bidding for TV, do a price hike in their area if they are trying to buy in your area.
+                Also budgets constraints, revenue equivalent theorem only works for infintie money. 
+                Externalities between bidders - profit from selling to both sides with arms.
+            Combinatorial Auctions: 
+                Externalities may lead to preferences for particular bundles of goods.
+                Bid $x for A+B+C or $y for A+D+E
+                Critical app for CS, routing in presence of congestion. This is NP complete.
+                How can we make an auction strategy-proof, if its second price people have the incentive to tell the truth (pay too much and someone else may have as well, suffer winners curse).
+            Ad Auctions:
+                Google makes about a third of all digital advertising revenues.
+                Basic idea, second price auction mechanism but tweaked to optimise platform revenue.
+                Bidders bid prices p_i platform estimates the quality e, and then ad rank a_i = p_i e_i
+Where ad quality is a function of the relevance and the clickthrough rate.
+                %LOCAL_FILE%rZvVd8BnX4p36wkAIOnBIrPmXwuFBJdQxmIh8Qe9GK6s4uUrME6cRllFuxR2NMrCB3yoWAgdgy1N6zL0wUu-KcXkC20MyaUQWYnmTvmuNJyIQOsuDfzhzRisOx-fBZf3.png 
+                With four people bidding for the first ad position, jerry has the highest rank. And has to pay 1.50 per click - This is calculated by taking Elaine's score divided by Jerry's score multiplied by his bid \frac{6}{8}\cdot2 = 1.5 
+                Each advertiser is paying less than they initially bid, but as their bid affects their ad rank they have an incentive to tell the truth about their valuation. 
+                Ethical Aspects of ad auctions:
+                    Ad quality can easily transform into virality, so if your ad is good as clickbait you pay less. Trump paid less than Clinton. 
+                    Many sites then tend to server more provocative and extreme content, as they have a high quality score.
+        Game Theory:
+            Cooperation or Conflict:
+                If you want something, you can: Make something of value and trade for it - Economics.
+                Just take it, by force or the ballot box - Politics.
+            Game theory is a focus on games of strategy, with problems of cooperation and conflict among independent decision makers.
+            Games of perfect (chess) or imperfect (battleship) information
+            Example matching pennies, if two pennies are different Alice gets bobs penny - else he gets hers. The strategic form is:   %LOCAL_FILE%E9YwIxeKkXu1lqHplqGdrv_SHFUVKUHeKCQ0LjNFA2RkUPgpGYpM9dx0TQDat9fJSZHyo3ucSbKnSSli5sD1DGJ6U4X0iuD4kGbUSbku1aF_nviqMyBS4KXuRX45cTNQ.png 
+            Zero sum game↔One players gain is anothers loss.
+            Consider this strategic form: %LOCAL_FILE%7TKd0Fp1aHGZbdkyQUxKi5Lxr39MDqVSauBOuS5_ILDagnfuq3y8xDZpKU7WO3cUdRUOxI39qP_e_gTMxp77RedwPik8XjbZIJFsO-d9ygFuVS4fwcq-Lq2yktrAgeqf.png         Bob is always better off playing left, regardless of whatever Alice plays. A strategy is an algorithm - input state and output play.
+            Nash Equilibrium:
+                %LOCAL_FILE%J9BK-4asv8GkG0WFHEGH2Ivz9dwSg2HWDoeAOGFE-aSRAY4bHh3dXjS0Hvr5UV3offClGwlr7A8bhcXq86_K-1AzlFUCkc8C7OIkI1aT2YjaerrHGfYmTPjBsoKQt9Fn.png 
+                The optimal strategy depends on what they think the other will do. 
+                Nash Equilibrium↔Two strategies are in Nash's equilibrium when A's choice is optimal given B's and vice versa.
+            Pure v Mixed Strategies:
+                Rock paper scissors - has no Nash equilibrium. 
+                Alice plays scissors ⇒Bob plays stone ⇒ Alice plays paper... Fix this using a random algorithm.
+                Deterministic algorithms called pure.
+            Prisoners Dilemma:
+                %LOCAL_FILE%4_VH7AgZnVE6DQrL2943-HqDL8F7f1NDAfUYJZB-X8mT4VDHQqgzh-JYPMGEf9hLXsKvfxXNcOz9Pvih0aGZU8jv4owcwStUmIe7GRsQcAJ4TUzbhKHfXmC4Q8XcihTI.png 
+                Both will cheat rather than cooperate, applicable to defense spending - fishing quotas etc.
+                If played repeatedly - Tit for Tat solution. Cooperate at round n, do what other guy did at round n-1.
+            Price Fixing:
+                If it costs x to fly from A to B, to flights compete and spend x + 5, OR collude and charge 2x?
+                Competition laws forbid price fixing cartels. Bug can occur naturally. Try charging 500 and see what other airlines do. If they defect by competing, play tit-for-tat.
+            Stag Hunt:
+                People have to work together to hunt stag, but hares can be caught individually. 
+                %LOCAL_FILE%phJ_0IA1kUxgZYTwYfjs5TWPxZiCXUMMC1qx9kAoUpv0roCC9Cls5Rr9qdpSL-CjWTPL2-8RQ6N1tEj2kYlbRduANgpGaXXQL0Tz0-Zyps4fQF0SD6nqGzWru57hCkci.png 
+                Only chase hare if you believe your buddy will defect.
+            Volunteer's dilemma:
+                %LOCAL_FILE%4TatYBq4ak-QZMZdc2hj8oynqq_AaHmyBrGd6Ykw8EoRQLCVM5Nq6tjPAMeWuEZdjr88WrIUBrGCm-gLpzVv4L-qBZ9zWodZffo_2QzfuJLCg4a3_o6ME9AKW6ca1s-P.png 
+                Leader shows bravery.
+            Chicken:
+                %LOCAL_FILE%1ns9L4OCTV0Luda7C0jR0aQ6SMnCZPNYWqJI6637KmuvrYiTGh1Y5Oj-WVYv9J3lkUB7894mIUe5BHvLaViUXT4UVVbs-d1wlaVKF2LXe8ZMd7UNuzY7MxJx0XseT_5p.png 
+                Iterated version of chicken ⇒ hawk dove game.
+            Hawk Dove Game:
+                Food v at each round, doves share and hawks steal from doves. Hawks fight with risk of death c.
+                If v > c, whole population would become hawks - if c>v then hawks will start to die off and an equilibrium reached.
+                %LOCAL_FILE%fmDPF-dInQpQH71USeyACbGDBgB3nscLlH3JJzNT4er96vIhCtjR1TYQGylX4N1pvTc6Vt6Sr3_pZcqlcEMQgX1KadmjmFAHIMDqaEx9SY8cG9oGrHlHWDcwUI1pK1WI.png 
+                \text{note}: (1 - c)v/2 = \frac{v-c}{2}  
+                if v > c:
+                    If one player chooses Hawk, the other should also choose Hawk, as (v-c)/2 > 0
+                    If one player chooses Dove, the other should choose Hawk, for the same reason.
+                    So hawk dominates. 
+                if v < c: 
+                    If one player chooses hawk, choose dove.
+                    If one player chooses dove, choose hawk. 
+                Small number of hawks prosper, as most interactions will be with doves. DO THIS: at hawk probability p setting hawk payoff = dove payoff.
+                %LOCAL_FILE%xXsTJGAs1j2Rt3ZGXAFFl7tRuvM7ICZf_NUdOoVkV-OjMxssCw1B8-XRpKiWrV3pIf9DIIQ8kF3Ui556E7zsM9rrmUU11er2-fUmGlMbsso-wIczS2xn9-OZyTxDxd9G.png 
+                So stable equilibrium at p=v/c, Models the probability that population in a species will be aggressive.
+            Broader Implications:
+                In pre-state societies, better kill someone you don't know. We know live in more fair society. Evolutionary basis of morality, fairness from tit-fot-tat - hierarchy from hawk-dove.
+                Internet - less cooperative social mechanisms and more echo chambers. No equilibrium reached as in hawk dove. 
+            
+            
+        
+        
+Semantics
+    Semantics Supervision  1
+        %LOCAL_FILE%EWCgcOK-lZJ6GXtKgqpmCeQA2MFAPMXNYxRMBbtq1Xo64BIrKQCe2_wG2RV3mMZDM0vlnXIIDh2jgmHZ7JV5hYlLSXv7Nh7gdgyv65mlLn2cT_dn6BefcHmjX5Q-Un2e.png 
+            l2 := 1;
+while !l1 >= 1 do (
+	l3 := !l2;
+	l2 := 0;
+	while l3 >= 1 do (
+		l2 := !l2 + !l1
+		l3 := !l3 + -1
+	)
+	l1 := !l1 + -1;
+)
+l1; 
+        %LOCAL_FILE%5Ris8GT10bHMokG27aJov3qS-y0LOsB4EbaA3x1h1pbTkoRyJWK9FX4GYRcTAdUtR-ckWJZ8cnaVcBBGlOy6idjILbTxVkbiAEgSiSujgYSpbiCSXSOq3cc6xGtHBf4x.png  
+            Assign1: \langle (skip); (l_1 := (!l_0 + 2)), \{l_0 \rightarrow 7, l_1 \rightarrow 0\} \rangle \rightarrow 
+            seq1:      \langle (l_1 := (!l_0 + 2)), \{l_0 \rightarrow 7, l_1 \rightarrow 0\} \rangle \rightarrow 
+            deref:     \langle (l_1 := (7 + 2)), \{l_0 \rightarrow 7, l_1 \rightarrow 0\} \rangle \rightarrow 
+            op+:       \langle (l_1 := (9)), \{l_0 \rightarrow 7, l_1 \rightarrow 0\} \rangle \rightarrow 
+            assign1: \langle (skip), \{l_0 \rightarrow 7, l_1 \rightarrow 9\} \rangle  
+            \not\rightarrow 
+        %LOCAL_FILE%PU6c_xWMwTB5BMOi_AkS3jCdEHAoljIZzyNF1tKO8M5b7SWREeV8y14p8GfIL5rYW4YehyDDK53ae1Lbm1Agt0aUFcc-bcBJTW_NXNnZsDT23rxT1KosrOxxyUvB6YkD.png 
+            Assign1: \langle  (skip;0)+(l:=2;0),\{ l \rightarrow 1\} \rangle \rightarrow 
+            seq1:      \langle  (0)+(l:=2;0),\{ l \rightarrow 1\} \rangle \rightarrow 
+            op1         \langle  (0)+(skip;0),\{ l \rightarrow 2\} \rangle \rightarrow 
+            assign1   \langle  (0)+(0),\{ l \rightarrow 2\} \rangle \rightarrow 
+        6)
+        7)
+            %LOCAL_FILE%Rc4c9TOhFHPbRYzj828cEU4_JRuZDmfE-v24Gu_YmS6y--EURzhWW-PMU88sEU22nb49y_9OYtEjwwEdB_PleXYOnxhWitd-yfqix22QhzlPCYXoVZTXboLjKpahlJJQ.png 
+            %LOCAL_FILE%Jc0qhbdhd-lL9d7htzVB0_f9SqP9bb5cg1QrRt-2_XH6PLNFBcCgD0PslnWjyxw__WxN4QVXJjagXmCzgDniPmUKrGjhscxgVhtRB8CdcFzhVshxtcn2trM9rlsZMn9w.png 
+        8) 
+            %LOCAL_FILE%tphLaWwDL-YsZsNbnqyIY3lPP1hldIbTHJjTmHTf32HFBRl65rLnYtqVRM6pgTP8FCPyBd__LGWK4u1OgePF-XJQuSVxTgMWJ4kxnnMBdwSzgPEuCnol18OwFxHrv_y4.png 
+        9) 
+            %LOCAL_FILE%qWfnPEWfH_HIYJemqT-IHCZx3cpmYU4lSexlKMO_mKxcgZzZw9j6HqDFubB9XnHoPVzY1gO3e4NRsLSceJ4jPHuDdtlSIX0w8DPVnLA4Z84VFK6YPlm2P36wGpaDocVO.png 
+            %LOCAL_FILE%Vx3Ur63En_V4zF2JiCllUlKE3nqF6yIrgRJgxZDUTiVBZbtgPw95U_0dzJ9ArCj0M2dHGq0ShIQvgEU7-qOfFNlq71eF0K92PslbFFBcAfcdHZe2JftJGAqZdtED7v6t.png 
+            %LOCAL_FILE%E7T2oUrHiW5yHfKarhk0Rw6izgx2OfDpiJeCAOGa7s0oL6DieyFBMB28SgTmCmvKGdjPiEmjsPbeNy5KSJZaTM30AIA4oJYf3Mu9mm24NPYbMmqtuFjMnQp_SGLdEvp0.png 
+            N̶o̶,̶ ̶i̶f̶ ̶e̶ ̶i̶s̶ ̶v̶ ̶i̶n̶ ̶v̶;̶e̶2̶v̶;̶ ̶e̶_̶2̶ ̶v̶;̶e̶2̶ ̶​̶ ̶v; e_2 ̶ ̶t̶h̶e̶n̶ ̶v̶'̶s̶ ̶v̶a̶l̶u̶e̶ ̶i̶s̶ ̶a̶t̶ ̶f̶i̶r̶s̶t̶ ̶i̶n̶t̶,̶ ̶b̶u̶t̶ ̶u̶p̶o̶n̶ ̶t̶h̶e̶ ̶n̶e̶x̶t̶ ̶s̶t̶e̶p̶ ̶t̶h̶e̶ ̶v̶a̶l̶u̶e̶ ̶i̶s̶ ̶n̶o̶n̶e̶ ̶  - No cant step in a section of a statement.
+            I believe type preservation does still hold, I don't see how assign1 could change that, as the type should be unchanged - and seq1 shouldn't affect the final 'return' type, as we evaluate left to right - meaning our new int value is stuck at the front.
+        
 Data Science
     Supervision 1
         
@@ -50,6 +493,14 @@ plt.show()
                 Pr(\theta | x_1, x_2, ..., x_n) = 1_{\theta \ge b_{0}} \text{Pareto}(k, \alpha+n) \text{let} \ c = (\alpha + n) k^{\alpha + n}  Then Pr(\theta | x_1, x_2, ..., x_n) = 1_{\theta \ge b_{0}} \ \  c \ \ \frac{1}{\theta} \cdot (\frac{1}{\theta} ^{\alpha + n}) 
             c.)
                 P(\Theta \le \theta) = 0.95  ⇒ 0.95 = 1 - (\frac{k}{hi})^{(\alpha+n)} ⇒ hi = (0.05)^{-\frac{1}{\alpha + n}} \cdot k 
+        
+            
+        
+            X \sim Bin(n, \theta)  then Pr(\theta | x=0) = (1-\theta)^n  
+            P(\theta | x=0) = \kappa \cdot(Pr(\theta)) \cdot (1 - \theta)^n  
+            1 / \kappa = \int_0^{1/2}{\epsilon (1-\theta)^nd\theta} + \int_{1/2}^{1}{\epsilon (1-\theta)^nd\theta} \rightarrow \kappa = (n+1) / \epsilon 
+            P(\Theta \le 0.5 | x=0) = \kappa\int_0^{1/2}{\epsilon (1 - \theta)^nd\theta} = 1 - \left( \frac{1}{2} \right)^{n+1} 
+            This equals a half when n = 0, if epsilon = 0 our results would have been nonsense and the probability would be zero. 
         
             
         
@@ -472,6 +923,109 @@ x = 5, y = 3↔The expression has type short and value 3. (The rightmost express
  	printf("We used a goto")
  goto some_lable;
 Intro to Computer Architecture
+    Supervision 4
+        %LOCAL_FILE%Guf1exbPhgo5Z2eHqD_6p41EcW-pvbqzLDBBZ_gOjY64bnMq11BYpEMCRjDD3_JWU3vMJWO67JNqmPSquhOyJkS2PxJKRzPY6XuzIcYWXPAbuDEVMGcvlSn9bpEIyR0F.png 
+            The load linked instruction ll r1 (0)r2 loads the value of the memory address in r2 from memory into r1, the store conditional sc r5 (0)r2 then checks if the value stored in r2 has been altered in-between operations (generally checking for alterations or reads by a different core), and if it hasn't it writes r5 to memory - if the write succeeds (e.g. r2 hasn't change and no hardware problem occurs with the write) then sc writes a 1 to r5 otherwise it would write a 0. 
+            This attempts to mimic an atomic operation - e.g. do the whole operation or do nothing, by only writing the result of the two operations if no changes have been made to the operands. 
+            %LOCAL_FILE%1rdxh0kr1BQ1jjIGbyqaSZ8W2c6wf4DwLBw-5RvlBmglt3WQDKr8tj0N7ni9qzJv8j-MwMl_epY5fYx-LhZR_yWnD56j0E2Ggjch1EbaAr2z58svi8htj_54ryx4vAPH.png 
+            		membar // Ensures that loads before and after the membar cannot be reordered across the membar
+
+label1: ll r2, 0(r1) // Store value in mem add 31 to r2
+		sub r2, r2, #1 // Subtract one from the value
+		sc r2, 0(r1) // Write-back the updated value
+		beqz r2, label1 // Repeat this operation untill we successfully write-back without interruption
+// Label 1 performs the atomic operation mem[r1] += 1
+
+label2: load r2, 0(r1)  // Load r2 <- mem[r1]
+		bneq r2, label2 // r2 is a lock which we are trying to get hold of, we keep spinning until
+						// it equals zero 
+         
+            https://remnote-user-data.s3.amazonaws.com/_U4TG3oypX8dYFLZO9RObBtRyB8CiCxGwFyqdIBjeCkDFKKdS24mEW7ZeWtP7DGgM0Hau_p5zXZC2zepjdNVfT9eaglGIqaHO5f5eI7RbA-wk7uzdG1YQM5jfVVbNjb-.png 
+            i.) The process supports branch divergence through conditional execution, mask registers associated with the warp decide which threads will execute the commands based on commands within the code (e.g if (i%2)―0) then the inverse of the command is also calculated (else) and the other threads are selected to execute - we also have the mask registers being reset by the end ifs
+            ii.) 
+                
+r1 = load X[i]              0,1,2,3,4,5,6,7    100%
+r2 = load Y[i]				0,1,2,3,4,5,6,7    100%
+if (i%2 == 0) 				0,1,2,3,4,5,6,7    100%    //(They all have to calculate the i%2)
+	if (i%8 == 0)			0,_,2,_,4,_,6,_    50%
+		r1 = r1 * 2 		0,_,_,_,_,_,_,_    12.5%
+		r1 = r1 + r2 		0,_,_,_,_,_,_,_    12.5%
+	endif					0,_,2,_,4,_,6,_	   50%
+else						_,1,_,3,_,5,_,7    50%
+	r1 = r1 - r2			_,1,_,3,_,5,_,7    50%
+endif						0,1,2,3,4,5,6,7    100%
+store r1, X[i]				0,1,2,3,4,5,6,7    100%
+
+
+Average usage = 725 / 11 = 65% 
+            iii.) 
+                Multithreading - the GPU can schedule warps based on their access to resources and if they are ready to run or not, if a given warp is stalled execute a command from a different warp.
+        %LOCAL_FILE%TNZR6cjY7oDvebFDH8Cku4Hqg0vqxF1BSYSpUjOiqgAWrDoYi2S5cFGlDfZP5rP65SgqJKwjyUXpj1qFqbQj14QsIMksEU5uqkf_dPBy8QcvdaTEkTbCPg3n67v5RIQZ.png 
+            Accelerators allow for better energy usage, speed and efficiency - however the specialisation necessarily denies generality - meaning they can only accomplish the one task they are designed for. This specialization could be creating a custom ALU for the instructions or adding greater parallelism (less hold and wait time). GPUs are more general, and can compute a range of tasks with data-level parallelism additionally they can be purchased off the shelf, meaning they are usually the cheaper (and faster to deploy) option than designing a task specific accelerator. So for products not likely to be deployed to a million users, they are often the better choice regardless of higher latency and power usage.
+        %LOCAL_FILE%jdQXJHFRblXwGUT5JyMar0f0PdVC6YoHzUuZYif0STh_qA2hDyTnHtaY0G42L0jQ4LeVMdCHILzPoe-pEmhEOIshVbehstITpHUg6150ZIOgB6qnwTvXomUgOOdrP9N2.png 
+            The store changes the source register to instead store a 1 if the store succeeded, or a 0 if the store failed - e.g. if the value stored in the address register had been updated. This operation has two reasons for overwriting the source register:
+                So a third operand isn't required to the command specifying the register to store the 0 / 1, as we need to know if the operation succeeded or failed.
+                Because we don't want to keep a stale value of the operand, if the value has changed we want to compute value to store again - there is usually no need to keep the stale value, and the overwrite promotes safer programming without usage of stale values.
+        %LOCAL_FILE%NajlrDgoopacMKkKoVyMrpgocQeL1ZzZluRfVJ3EblO8mKTajlNTXshswBRR0RBXh1G2ZweW-oFnOJwLUMfV0kauNuNe73ov5MOOtZe-i7jzZXH_IfZGPOOzy2jbYaeD.png 
+            lock:
+	si r1 1  // store 1 into r1
+	xchg r1 LOCK // exchange r1 and the LOCK location in memory 
+	bneq r1 lock // spin if r1 != 0, e.g. if the lock was 1 before hand
+				 // If the lock was zero we'll advance 
+        %LOCAL_FILE%6pCNKWTCJojnQ9ocytIxRRox7zAzsCnW7GLFj_qBYwN2RkQ08135G36BcSkP2eWadM_XBWCXPJaAOehbxZFTty-4odvJYJGgpZYMiMzwuMXTUkxhPpmiXPqBIhfBxCBd.png 
+            A memory barrier ensures that load or store commands before the barrier cannot be rearranged to be after the barrier and vice versa - this ensures the memory consistency cannot be damaged by the rearranging of a CPU seeking high performance. Consider:
+            CORE 1:
+	a = 3
+	a = 100
+	b = 4
+
+CORE 2:
+	if b==4 and a==100:
+		print("This should be impossible") We could fix the error here by doing the following:
+            CORE 1:
+	a = 3
+	a = 100
+	membar
+	b = 4
+
+CORE 2:
+	if b==4 and a==100:
+		print("This IS impossible") 
+        %LOCAL_FILE%iHIusEpcvm2NLeNyL3AhyejG8cbQ69rFfzL0jRTwwzXkKlf1HfJmUFGqLfK_Yy2P3P6Wcn3XoaCaH3l7IMIWRauhgEVLChvv4IAHzqvk5YSq9tzJCOEmzQxXhk1VYNUs.png 
+            Because placing the memory locks after the lock ENSURES the lock inside the two memory locks runs after the lock is gained, likewise the final memory bar ensures the code runs BEFORE the lock is released. If we placed the memory bars before taking and after releasing, then rearrangement could occur resulting in us performing computation before we've gained the lock and potentially after we've released it. The memory bars create a contiguous set of code that can be jumbled around (within reason) but cannot be exchanged with commands outside those bars, placing the lock and release within those bars allows those two commands to also be jumbled.
+        
+        %LOCAL_FILE%5uy3-Ave4JWzB5if7xDjyuptcRc2P18LQVLSyqhAchb4gpelNdsRmxiuPMTs_2w3d3ec0eGZe6o9o7XbZwYQvanclbcIt8VbOG6f2CjuFg2KnV0CWrbcnHtnfRTekPnz.png 
+            Single instruction Multiple Threads is a method of parallelism, in which multiple threads are grouped into warps who execute together in lock step. These warps all work from the same code on the same data, however they may execute different commands due to branching paths in the code - they execute those commands on different data items. Each thread also has its own registers and memory, and the concurrency of the threads in the warp is coupled with concurrency of the processor executing multiple warps at the same time.
+        %LOCAL_FILE%ix1_1-b9Uqxg1LL281nlEESsr1Rsq0Xhfq_qPOmvSo9dIqP7XA-seCjj8CpabVZW9e5_0CL7GytshZayofYi5-Ys-jakOdh9-_dkhwn_n_kznVYpn-yS9zZF-PHHu-1I.png 
+            The SIMT processor can choose from multiple warps (or even multiple instructions within the same warp) to execute, allowing it massive multithreading - this means if a given warp is blocked waiting on data the scheduler can choose a different warp to execute and the latency is avoided. This differs as in a CPU threads are in groups not one by one, and we don't wait for an interrupt to know that a resource has loaded instead the scheduler has that information all along - additionally multiple instructions are executed at once rather than one at a time in the usual pipeline.  
+        %LOCAL_FILE%GQ6bygtAaGCx0cF5VnHRJPttyMp5ex4FtV34sztbIaRH76EPEVxR8xztT-g_E9HxgIUydQBQXLoKNh1m2BNOvf2k1e0DlWIwfrNuthm4Km1QnqLFlTEQ95X5leTGFEcJ.png 
+            The data cache must be larger to allow for a larger amount of data to be flowing through (we now have to provide data to far more threads), each thread has its own private cache and each warp has its own larger caches. However, the inherent data-level parallelism means less communication needs to occur between caches as our data is independent and changes need not be communicated. 
+        %LOCAL_FILE%NAEUQVtSV9DFM_c_whatVLAJ-LlLb8T2iCQASPraqNRYadmSa9p5hsl8X1ZQB9aSq41EvabBTqfCblhKpTJUl8ZZ9Nbcx6RVBCmc2OKe8Sjuv3xfR5QLZ6OAOJaJ1G9G.png 
+            Each thread is given its own stack, and predicates are push and popped from it - the GPU decides which thread should execute using mask registers and will allow only those that are unmasked to execute. The threads still walk through the code in lock step, but only certain threads are allowed to execute.
+        Sum the total number of threads executing instructions, divided by the total number of threads times the number of instructions:
+            r1 = load X[i]              0,1,2,3,4,5,6,7    8
+r2 = load Y[i]				0,1,2,3,4,5,6,7    8
+if (i%2 == 0) 				SET PREDICATES    
+	r1 = r1 * 2 			0,_,2,_,4,_,6,_    4
+	r1 = r1 + r2 			0,_,2,_,4,_,6,_    4
+endif						Restore Predicates
+store r1, X[i]				0,1,2,3,4,5,6,7    8
+
+Average usage = (8+4+4+8+8) / (8 * 5) = 32/40 = 80% efficient 
+        %LOCAL_FILE%xNBXDXDISRgklZb-mFVvIiDg_mQ2q5YIYCPyEerp4me7-uhdHT0f0_6uOSB1wlZcvShNWDf0kcT97Y2sdGDs25PcjqhklqseiyRE4Kaha0KE4qajcJIQvLKel2vRm5Ic.png 
+            Warp parallelism is multiple warps executing commands at once, this is done by a GPU with multiple cores wherein a given set of warps are scheduled and executed in parallel. SIMT parallelism, is the parallelism in the individual warps where multiple threads execute the same set of instructions (subject to branch divergence) in lock step.
+        %LOCAL_FILE%HTSklwp1g1oC-jOqXimSsTSqBEYpGHpEKvwn75yk1S7sooPub-mert71pd1W8ZyfLTCeNkbvKa-ZelnPnBg-k-rRme14lQaTdHNp3l9MO-4Zsp_f41BWLdSbgrD4mCos.png 
+            Each thread has its own private local memory, this memory is very small but incredibly fast.
+            Multi-threaded processors has its own shared memory, warps executed on those processors can access that shared memory (different processors cant access each others shared memory). It is slower to access but much larger than that of the individual threads- this can be used for communication between threads. 
+            Global GPU memory is available for communication between processes, this memory is the slowest and largest - but is accessible by the host and can thus be programmed and changed.
+            Finally we have constant and texture memories, these are read only but are quite fast. Constraining the design to be read only can lead to performance or energy benefits.
+        %LOCAL_FILE%nXULcIhJFr_O7XGmj-_A0xcqUzMr6itAeNRtJnovL9geICqxQzFpqlhqaOrGGK2Rt1Idg7pqtXfDyoTw6zWU3MGgb7LlhhZwMZ0fsPdONqgGsfdPHcsiY6ZTyyS8v7WU.png 
+            Atomic operations can be achieved with multiple instructions. The memory consistency model describes how loads and stores to different places are seen. Memory barriers and load-linked, store-conditional important tools for synchronisation.
+        %LOCAL_FILE%BAHk5Ew6Aadc2EIputQEPJ_blb8CdsP4EqgyMkmax37DCVDwd9QVOkSpqXQFqdc4ZlooNd0GgywjzgS4bEeyQd2-RisE8pzdvHTX22vuql90zZXHvM6UiKjWFbNVAimz.png 
+            GPUs massively multithreaded processors, threads grouped for efficiency into warps - SIMT execution. Multithreading hides latency.
+        %LOCAL_FILE%pP4O5zBCdjQJYUWklv6yE2IM2zLCEYTh7q-a-5drkiw8_5Np4mmtonZuB6JqoYWM8wv2q5_fipmGMOL99neXPwVVIjlwu30pqRBEGDv5nupq0gePUC4ch0pp760WtpHW.png 
+            CUDA Is the common NVIDIA approach, while OPENCL is more broad. Programming languages are designed to help code using GPUs.
+        
     Supervision 3
         %LOCAL_FILE%jf-UuofY17s1TjPGvIF8ZS9eJEGHmrfT6Dtk0fNmdAlw730xbsBUpcv3s28ChgFS2TM2cTESgdTonLNfsyKo82RUWXrUehVixXxz1GrdTSRgtEiPUrhlTh0PBrIs_iYQ.png
             Interrupts are caused be factors external to the programmers, and cause a context switch in which the kernel takes over and performs certain commands - this could be scheduling different operations to take place, in which case the operations stack space and registers are saved and a different operations starts work. These occur occasionally and we have no control over them, and cannot predict when they will occur.
@@ -889,7 +1443,147 @@ endmodule
         General Purpose Chips
             Not power efficient and slower than the equivalent FPGA which have 15x slower gates - this is due to parallelism being exploited. 
     
+    Lecture 15:  CUDA and OpenGL
+        GPU Memory:
+            Different hierarchies of memory, various levels of sharing. Isolation vs sharing for individual threads and warps composed of threads.
+            Modern GPUs also use caches, even though multithreading hides DRAM latency - they reduce DRAM bandwidth requirements (Would need larger buses).
+            Memory Types:
+                Threads allocated private local memory. Stack Frame, spilling registers. 
+                Shared Memory on each multithreaded processor (streaming multiprocessors):
+                    Not shared between processors 
+                    Dynamically allocated to thread blocks on creation
+                    Can be used for communication between threads
+                Global GPU memory available across GPU, also available to the host/system processor. This is GDDR VRAM if the GPU has it, else external RAM.
+                Also constant and texture memories 
+            GPU Memory Locations:
+                Local memory - in external DRAM; Can be large
+                Shared Memory - within each multithreaded processor; high bandwidth
+                Global memory - In external DRAM; can be cached
+                Constant and texture memories - In external DRAM; cached in specialised caches.
+                NOTE: Accesses by one thread is broadcasted to all other - don't need 32 accesses for a single value.
+            Example - Kepler Memory:
+                %LOCAL_FILE%XuzblUh_rrlMLk8o-CPXl4Rw7Hjsp0HIfwgeOevS6YsNjBev9u3lAXwXPQ77Cg8sIS57ijCwg3fcPgtWE5wzKHu-ltUTmoxfomsFz8W1B26CPtf6i4BOuhcvjPl8DIq_.png 
+                Configurable, can set up a split between amount of shared memory and cache. E.g. 16/48kb split.
+                ECC (Error correction Codes) on registers, caches and DRAM, protect from errors from things like particle strikes.
+        Programming with CUDA:
+            We can use High-Level languages, make things portable across GPUS. To abstract away from GPU internals. 
+            CUDA widely used and mature.
+            Compute Unified Device Architecture overview: 
+                Its a C like language but allows C++ constructs too. Programmer identifies the code to run on the CPU and that for the GPU.
+            %LOCAL_FILE%2_rk_SLGfYaCbC7L7_eBMpQTqnZeHX85WaM_EL3At4or7O4_zj0ySO38fofD4qJbpTa9w5X8HmiTlFyeqC9Y2mx0XBSa9KUyHCPyxSc8NFRJ2tlqx-2lXlsBhkAhT3q3.png 
+            %LOCAL_FILE%dbmGAZxgLYhjIY9qKOOKtFehp2duKks1M9KvhVIZ8qGP3rH_8j3ZFrfwKvIgEaCBq2jOImcvNFHRsExCVfjqAsUD1uCtrSUpFx1kq6Y0vy2xxCRBsFo7TQ3LxrLETxKf.png 
+            The 128 forms the THREAD BLOCKS within the GRID. Contained within the Thread blocks are WARPS. 
+            %LOCAL_FILE%IOpN_f2w7U97udVrPrApTVX3kF50t4vhMTdOHOIfpfFaCbTbe3SpkPBmt4vq47OWje2XY4Uee77ULJh7FJSLx-sIvb4GYv3lSqzlQkdXiGXKo602PG-3Yq9gjV1bNum_.png 
+            __device__ or __global__ mean on the GPU.
+__host__ means on the CPU Must call GPU functions with code dimensions:
+            These specify the number of blocks within a grid, AND the number of threads within a block. Programmer sets these, and vary from problem to problem.
+            func<<<dimGrid, dimBlock>>>(params)
+In the above case:
+func<<<128, 8>>>(params) 
+            %LOCAL_FILE%IV-BieGOCBrUPR1f1WfLxLAxTszfR145eY_YKGy6PUT58Cez6N2otQQygd5YmlzTzqVo6sdf9kkTILbMntewX-mi3FT19NTryACLaUcemLRyXt3Q6gJk81Jk6trgQf3t.png This is replaced with: 
+            %LOCAL_FILE%Mge8HfaS1Wte6Kp2rLWLoeKXEMlPkYyTEXjOskuf7-lRgHMPpunbIMoP_g09Dp2D3RyvUfD1ulqyB1crfvIveWJYrFJmm3Fl1Mg6lk0g2yC5mlsHeDOYPVCQUjhG2I_Z.png 
+            So each thread is one iteration of the for loop! Note that the i<n is used because we could call it with more threads than needed because must have 32 threads in a warp. 
+            Called using:
+            %LOCAL_FILE%fEpPAxd5Adxm1gbu5o48waHRg8Yxt0gtDGWLkfS9yGG8Jv0zZoC4LWtuGndgcOhm9EcJTaqJhJ_hZ7TkS2UpMKYBig7Qu_MvpVUdkKiW8ugEl_TJRrqNhxm61IH2LTMN.png 
+        Programming with OpenCL:
+            Designed for many different types of systems. CPUs, GPUs, DSPs, FPGAs, etc
+            Based around 4 models of Computation
+                Platform model - Specifies one host and multiple devices
+                Execution model - Defines how the host interacts with devices
+                Kernel programming model - Defines how concurrency is mapped
+                Memory Model - Defines the abstract memory that kernels use
+            OpenCL Platform Model:
+                Host & 1+Devices where devices are divided into compute units and then divided into processing elements: 
+                %LOCAL_FILE%4rf5xMsFBIDTfR0cNw_V4VC8lpFBr-lM4-LRcaHfGkjUvQTVEQ-SNxLabgxSBbzKYYGTzExGqfVnOncifpWkm2T1JtlV8xRP6d3znfFsLl6-Z45uDGmgVv9Lv_5JDXkR.png 
+                Host would be main CPU for your computer, GPU one device containing streaming multiprocessors (Compute unit) and each thread would be a Processing element.
+                A system could have multiple platforms, e.g. intel and AMD platform with different characteristics. And apps use a rich API to determine devices and platforms and create and run computation. 
+                 clGetPlatformIDs(entries, *platforms, *num)
+                    Need to call twice, the first call gets the number of platformIds then allocate the memory for the platform array (now you can with the number) and call again to populate the array.
+                    Do the same with  clGetDeviceIDs(platform, device_type, ...)
+            OpenCL Execution Model: 
+                This describes how execution is actually set up. For which we need a context:
+                    An abstract environment for the execution
+                    Manages memory objects
+                    Manages interaction between the host and devices
+                    Keeps track of programs and kernels on each device
+                Command queues lets the host to communicate with the devices
+                    One queue per device, host sends the commands
+                    For example data transfer or running a kernel
+                Queues can be in-order or out-of-order, in order = FIFO Queue. Out-of-order, commands can be rearranged for efficiency. 
+                Barriers used to synchronise queues.
+                We also have command dependencies, e.g. a given command depends on others. Event objects specify these command dependencies.
+                    Each command has a wait list.
+                    Each command has its own event, to link dependent commands with this
+                    Events contain the state of the command: Queued, running, submitted, ended, ready, complete.
+                    %LOCAL_FILE%g5IxZIxS7kbLZkh4q50OMN6J0KveTEEgfwzVD_yBNJfcMjSDnH5CEJgWa8M4KMFeOlATwdk4J67xdlsd_bLA_53GlGQGpP9J8Pb3z-zz9Ft5R0mIlv-ggcPKyCJbahrV.png 
+                Kernels is the code that actually runs on the device. 
+                    Syntactically like a C function, each kernel contains the body of a loop. 
+                    Kernels express parallelism at a fine granularity - allows efficient mapping to a wide range of hardware.
+                Work items are the basic unit of concurrency, each work item executes one iteration of a loop. Corresponds to a CUDA thread. 
+                Number of work-itiems created is expressed as a n-d range
+                    Either 1 2 or 3 dims, called an index space.
+                    Usually corresponds to input/output data 
+                Work items within an NDRange are grouped into smaller units called work-groups
+                    Share a memory address space AND can synchonise with barriers.
+                    So NDRange like multiprocessor, and work group like warps. 
+                    %LOCAL_FILE%YIcQUGPH3R_-VjyAdj7kTkf8DIabxxt09KamvGHs6zTC4mm1qgG_bR7FaodXWBWygh_LmlhTO6ZLlzLk7TcU74n8x182ThQtHUsOZoQBo6gSPZiTRmFFdY5dSKRl2cgx.png 
+                %LOCAL_FILE%ByZZ8HnD4pWOMhL-gIvdDRe5GmBzERU4KHrrgdtesq-HdvOkuhp6Tll6ruD-BIxUuuGrq9vmfm7ig5BGEXQUwAITQSF9GUTpPxN7AQZ34pHceFFNr_koWHUL3qmflvOZ.png 
+                Kernels are compiled at runtime, this allows optimisation for a specific device - otherwise would have to provide binaries for new devices.  Allows easy development and execution on different systems. This adds an overhead in startup time. We start with kernel code as a char array in memory.
+            OpenCL Memory Model:
+                An abstract memory model, to abstract away differences between different devices, need to be able to map to something physical as vendors map their hardware to this model.
+                Defines what happens to each memory operation, i.e. what values to read and in what order the operations should occur.
+                Memory objects encapsulate data for devices:
+                    Buffers - equiv to C arrays
+                    Images - abstract storage that cannot be directly referenced
+                    Pipes - ordered sequences of data as a FIFO
+                Memory is either host or device memory, host memory is not worried about by openCL. Device memory is accessible to kernels. 
+                    Global memory visible to all work-items. 
+                    Constant memory visible to all for simultaneous access. 
+                    Local memory shared between work-items within a work group
+                    Private memory only visible to each work-item
+                    %LOCAL_FILE%DyxW5z8yzG_0ws52kJDEee5y0NAr4d8jYSmzFcS94aip5zBnrvJCXtc1SldJS8_PcHcWFkcHnIXFN6E-16fB-ISxGATxacbBHZkXLftjvkdQa2nDWRT2-aOmmh8dhhAX.png 
+                Running OpenCL code:
+                    %LOCAL_FILE%5w9hDVmdSIRGs7TDGAtayWCd-e7D4CWxIJ84aSMi1Wo_lFYQUkTL_VltlCzoRG9MuDh0_GjWFi-XqsqOxlKycy2ICDXGGpezzUn8h3M6eqoYPtaMVodyqTzHDEVc4Zb4.png 
+                %LOCAL_FILE%rA3v0z1Eq08duWs10CRgOManH37EqCKMBY-BtWX7cAPLjleoKygO7meQgBbN98k8Q-IJZJkR5dX7VRAeFqH2sIZqOvA3HheT5dDzSaJN8N_2Knaifnp2Zz5ZHsz_5tWr.png 
+                OpenCL much more verbose than CUDA 
+                    Platform discovery and compilation performed at runtime. SO you can't actually know what's going to be executed, in terms of machine code. Allows code to be changed at will depending on the generation of the gpu.
+                    CUDA only targets NVIDIA's GPUs, so one platform and static comilation to PTX. OpenCL targets much more than that.
+                    Intel and ARM can't "retire" commands from their ISA as they require backwards compatibility, however NVIDIA can change by adding or removing instructions. For OpenCL the ISA is only known at runtime. 
+            
+        
 Further Graphics
+    Supervision 2
+        
+        13. 
+        https://remnote-user-data.s3.amazonaws.com/17Edkai7g7Fd5qebWHcQ8u-c8mqJ2t8Fs2Ps0S0XNiNz-twUM2aCW9oIReBYPPF2Cto8FtoPALxoC4LxgpSmCdjF9_jYSw8tvh9oxWqE9eDXMeb-25IcpWVuPCf42kkW.png 
+        14.  
+            a.) Rigging is the process of adding joints and bones between said joints, and placing them within the model. The bones are given a weights that decide the area of effect of the bones, and the bones & joints form a hierarchy (a graph) that is used to filter down transformations from one bone to other connected bones. 
+            b.) i.) T_f = T(1/2) + I (1/2)  
+                x' = T_f(x) 
+                ii.) T_f = T(\frac{1}{1+\sqrt2}) + I(\frac{\sqrt2}{1+\sqrt2})   OR T_f = T(\frac{\sqrt2}{1+\sqrt2}) + I(\frac{1}{1+\sqrt2})  
+                x ' = T_f(x) 
+        15.
+            a.) Dual quaternions allow us to represent translations and transformations in the same value - this makes animation much easier, before if one was to perform a translation & a rotation - careful attention would have to be payed that they were at the same rate (as we always translate around a point! We don't want our characters arm to rotate around where it was 30 frames ago) while with dual quaternions we get that for free.
+            b.) It's more computationally costly to use quaternions than linear blend skinning. (Not by a huge amount though)
+            Linear blend skinning can be repurposed with ease to 2D animation (or any number of dimensions, but so far we've stuck to 2 or 3 I await a compelling 1d tale), as the process is simply averaging transformations said process makes no demands about the dimensionality of the transformations. On the other hand, quaternions do not make the jump from 3d to 2d so handily - if we only have i & j we don't have the property ijk = -1 to differentiate them from imaginary numbers (ii = jj = ij = -1 is true for i = j = sqrt(-1) ) and just  i & j don't form a basis with which to perform animations.
+        16.)
+            https://remnote-user-data.s3.amazonaws.com/Mq6Ih2CBkUzLCkQyVPcARUSPbWA6pB8Tx2ap3czxbNB39-2BElzVEn-sQqUY2Abm2zJV7mPGLGoUryKQhjmg7CdBsroRlPL1VLb3dvK0cJ0XTQPVHHQzjVrJs84SUWmx.png 
+            We can separate them into three dual quaternions, one rotation about the z axis, on translation along the x axis with zero rotation and finally a translation along the y axis with zero rotation. Finally, if we multiply the three quaternions the resulting quaternion will represent our translation.
+        
+        ) %LOCAL_FILE%w07UOHSZFJMNCuTGrCebgQaTJV7bJwcW8lc7f3lkThFZ9tvE24CUQy14UjfmU-vqgixnNwzUYgd2Rk0h58wPwTalUJxfvxAYa-hLaoGcvdfSxOvGQumLsnyiGlJaLG2H.png 
+            Caustics - The interaction of light & curved surfaces or glass - e.g. the refraction of light. 
+            Subsurface scattering - Light entering and being scattered by a translucent material, e.g. skin.
+            Soft shadows - point lights cannot create soft shadows, as the incident intensity is the same everywhere (varying only with distance & angle) - there are not points in which light from multiple  points on a light source combine and a gradient of luminance is formed. 
+            >1 bounce lighting - light that arrives after performing 2 or more bounces is not accounted for. 
+        In areas of low curvature, less sampling needs to be done as the effect of reflections and bouncing will be less pronounced. In areas of high curvature we should have more samples, as there is likely to be more occlusion of objects and more light bouncing effects.  
+        
+            %LOCAL_FILE%13sI92Gd6ULRrF3ccPF88UmC8s1hGEqwULrVuPoak71HfJUjMn6D7XHAlHHjXgdk90XoI3P1xnGUd_2N5jAE4Qz3klTtLoto7vfoBu1AmZQgqY7GT9wmxvjcHZjkdki5.png 
+            %LOCAL_FILE%OezAp8d-MEVVCvNOfirN596uGuWLFVCq-Qg469KNo8-qjZs-dQBnLijynE-hDCBtH4-veMjI8wafwqHl1ulMM-65UFO81bz-DlRNfgguqThRLWfV3Lr4-kethFFQ5BPk.png 
+        
+            https://remnote-user-data.s3.amazonaws.com/wLzNg5gjNt3K68OaClfqbigNmPNV1-RdDY6KrQ0XOSSVr9m1HtRmrghguA5E7wOKx0SqNXOkot5n8MkJCmMEbVvta_N6SoFV-nYRTXAFJ-djLIY9CqYjYROLcXJlLSc6.png 
+            c.) b shows that using importance sampling, we can still get a high quality approximation while sampling a smaller area - in reality we use monte carlo integration rather than analytical integration. 
+            d.) Using cosine we sample more light values at a greater angle to the surface, giving perpendicular light a higher weight. We assume that light is coming from all angles for this to work, however if light is coming from a more acute angle - less of it will be sampled resulting in a lower quality image.
+        
     Supervision 1
         %LOCAL_FILE%gTK4JW5ryukfyXXqdHoX4VyrjOWKeMBIZR0MErPyy_mHWLsDjfYI4zrgxLoRfwEXncPqwwfL72zuQswpGmhrs_N-qTprQFaoxHUWpdUPJ19TiARF_nwV6yK5JSa4Afkv.png 
             Parametric surfaces are created using a function f which operates on sets X \subseteq R^m and Y \subseteq R^nmapping set X onto set Y: f : X \rightarrow Y. Whereas Implicit surfaces are created using a (distinct) function f, where a point x \in R^k lies on the surface if f(x)=0. 
