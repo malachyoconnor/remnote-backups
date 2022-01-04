@@ -271,4 +271,425 @@ void ordered_thrprint(int thread_id, char *message) {
             Release the protected integer and the buffer.
 Lecture 1
 
+Distributed Systems Lecture 1
+    Introduction
+        What 4 advantages are there to make a system distributed? 
+            Some Systems are inherently distributed (text messaging).
+            For better reliability - if one node fails others can be used
+            For better performance - different nodes for different parts of the world 
+            To solve Large problems - some problems consist of such a huge amount of data, can't fit on one computer.
+        The problem with distributed systems is that processes can crash and communications can fail without us knowing. Additionally, these may happen non-deterministically.  
+        We want Fault Tolerance, a system should continue working even if it faces these problems. 
+    Computer Networking
+        %LOCAL_FILE%J4ZxKhqnf7YPMc5Ea8liL9bMYQS-goUHpgeoYlVCrKv7VTkhfIle7j8MwYyoAPuOubzU79fQ5RZxTlDG74x2GtG5fd12tWrjFjdZ8LkE9qxWOodDrXj3pIubVuBOE0Ne.png 
+        The fundamental abstraction of distributed systems is that of nodes sending messages to each other.
+        Latency: Is↔the time it takes for a message to arrive 
+        Bandwidth: Is↔The data volume per unit time
+        Client-server comms over the web:
+            %LOCAL_FILE%6IhRlUSXdP3733UVQmOFVDHC6Y0SLe-fYyKuwmLbL3b2U5a2oy4D7ZPz0nHz3m1t06uB3w_2pTNhRk2qpGDvSoLsQpaN92fCXiIZzljH8icC1Qndznxoklb3M_CdU0Df.png 
+            URLs are separated into the server name and the path of the page you'd like to get.
+    RPC (Remote Procedure Call)
+        Consider an online shop communicating with a payment service:%LOCAL_FILE%NHXB6R_B2KKd0WN4Dpvtf-FS0i_-AZwnXGdIDp-4KeagopAQLGHJdKnebhFw-cyNVYqG20tL2suIEBVbuKa7_l5sN7OtQ2-A53JtIsVMwGEaIr2-G8yAuLXLB5OzsoV9.png 
+        We can have a function applied to the shops card object, that is processed on another node/s (that of the payment service). What looks like a function call, is translated to a network request.  
+        RPC is used to→invoke a function call from your local machine, on a different machine via network communication.
+        RPC's are implemented using a RPC framework: 
+            RPC frameworks implements stubs, which are→function definitions with the same type and arguments as the function to be called via RPC. This stub function sends a message to the other node to process the payment.
+            The RPC framework "marshals" and "unmarshals" the arguments, this means→it encodes the arguments of the stub so they can be sent over the network, then on the other end the args are reencoded into the function:%LOCAL_FILE%r037lljqIJLOb5QtnsdTRQFyTEq8ssiKFEVmqAV4vYTAhU1BleC9nB8lqX9fcHYH1Y9i0aaPShY4UuPiNLGOOjnppR4QRSBrY-L7djycaZ1vuuIvlWO_AoOhgYd7rpmM.png 
+            The return value is then sent back, via the same process.%LOCAL_FILE%3fJb_xRoqYCt3dK-TfmYos_wLSknPOsok2cuONek9VDV2yCb_PhIoxuDDhLMbTMX7rvHTUa6KYJJYoBcAB6SOaqktjRaobFagTDvg39xb5-sQ8dAkriVULQGXoWD0j2e.png 
+        We would like our RPC call to look the same as a local function call. This is Location transparency, the location of resources is hidden. 
+        RPC in enterprise systems
+            RPC is used in enterprise systems because→these systems can become so large that they cannot be run on a single computer. 
+            A "Service oriented Architecture" (SOA)→is the architecture in which a large service is broken down into microservices on multiple nodes which communicate via RPC. 
+            If multiple services within SOA are running different languages, we use→Interoperability (datatype conversion) and IDLs (Interface Definition Language).
+            An IDL (Interface definition language) is a→Language independent API specification. Method of ensuring datatypes are stored in a method not specific to any one programming language.  
+            Example IDL: %LOCAL_FILE%0xdtpuDkEuhCU8penCtWhT3yg4iFSQacbIje6oM4eGYy5K-eQRmFuyFQ7oE1txO74kASiw2cYLWza3bW8Ho_A9Ur1gMwi_U-gk95VJY_GhJL2GuRgF4IgJ9PpafguiKQ.png 
+    
+    
+    
+    
+Distributed Systems Lecture 2 (Models of distributed systems) 
+    The two Generals Problem: 
+        Consider two armies, if they attack together they win - but if either one attacks alone they will lose. %LOCAL_FILE%kZF5kAjLXMdskp7Es7wh7db6UkMY_9NZcFf9DvSpP-6zUwEsFYgDhPIpmv9ovYPdIQwryWGSfXEzul_ZeP-_trYhNxI-asW1L4n7bEtV62xzcnLhcC1BrwMoEJndrbZj.png 
+        The two generals can only communicate via messengers, however the messengers may be captured and the sender could not know (except if they receive a response).
+        Initial message delivered, but the response is captured: %LOCAL_FILE%bP57WAkbwWs9MDQXFH0vELMgsOf0iZkhPpGCCu2cYZXMwBbw0BcAZGgMpinj8FVjILtbJtjaWE77MbaPaEcPw4UNaQiW7X86i4TjGhQqxyze-gddSQENt1dJ-Yb57bNI.png 
+This is indistinguishable from the following (from general 1's POV): %LOCAL_FILE%Ey46dnl7hwQePgXZ1o7bHuVw7OV6dgmdaS3mxrncvAibJNFQMW2JzRp0Hjg3CHDJdpgQJe1ks_lNrCWzAa0v5pvvzqe3NpjyUCiXLeskxHn_4bkAF0GDD-8UEPlzP54Y.png 
+        In the two Generals problem, General 1 has the following two choices 
+            Choice 1: General 1 always attacks, in this case they may send lots of messengers to increase the probability of receipt - then if the message is received General 2 knows it's safe to attack (even without sending a response). However, if the message isn't received General 1 will die. 
+            Choice 2: General 1 attacks if a positive response is received, in this case General 2 is safe if a response arrives but General 2 is in Choice 1 when they send the positive response. 
+        This can result in an infinite chain back and forth of communications where no absolute certainty of an attack is reached. 
+This is the problem of No common knowledge in DS which is→when the only way of knowing something is to communicate it. 
+        An example of the two generals is the following:%LOCAL_FILE%CfPVn-fTG7HNM1XhiINgF1iSMSKSHqv5Rny771BO2iMwu7RG4OxInE0oxC2IjB-5Gx98WFGcN6o2UB-bAvPjpe_fCoomhEBPbPBpRM0qZph8ADP66ZqlNx3rs9kE7IiS.png 
+The reason that this differs from the Two General problem is that→The charge is a revocable action, we can always return to the starting point.
+    The Byzantine Generals Problem:
+        %LOCAL_FILE%kVjnfDY9vy2AyF3x7MfD3YRsM_q6WT92dlh1O5oVermmNCANiw2qsOklQ7t9MwAEvRVMI8T9RSns63Oxj1ZLVqKrPlOnvNVfpGGtZbJzSsMiyZEUKDmymk_B4C_K77kG.png 
+        Within the Byzantine Generals problem we make the assumption that communications are reliable but some of the generals are traitors. 
+        We further make the assumptions that up to f generals are malicious, that traitorous generals may collude and know who the other traitorous generals are and that honest generals don't know who the traitorous ones are. We then require that the honest generals must agree on a plan. 
+        Generals may lie:
+ %LOCAL_FILE%5y7MCi0wsHxY59MPzWPIY-KL9gZc7jv7vo3MtTd6mxd-w5A8cbXB2dVuqGqFRn7tXBDkPwuSroBGKrMrS6APOTSaJBc47XpUQ7MXSuhSUPoqF40YQTYjbmRoSn0ehD3M.png 
+General 3 cannot tell who is lying!
+        Theorem: We need 3f + 1 honest generals to tolerate f traitorous generals. I.e. < \frac{1}{3} may be malicious 
+        Cryptography: Digital signatures help, as we can prove a certain party sent a given message, however the problem is still hard.
+        Real life agreement:
+ %LOCAL_FILE%OxXWMFBndgJuLV8Z1-F3b7M6MusMgTuaDnq4kdDu1NCuYCwNFYLcf2ZWcy0x7MREMxDxTAFlZBvRqp2KYAy7vk9N5wUx_LGgLiiYJkQp5ge17R3NzXory9ZLFYnxV946.png 
+Customers can act fraudulently, online shops could be fraudulent etc. (could have asymmetric relationship where the payments service is trusted).
+    System models
+        We have seen the two generals problem in which the communication medium was faulty and the Byzantine generals problem in which the nodes were faulty. In real networks both can be faulty!
+        Networks are unreliable, can be damaged by nature.
+        System Model: Network behaviour
+            Assume a bidirectional point-to-point communication between two nodes. The three models of such a link are→a perfect link, a fair-loss link and an arbitrary link.
+            A perfect link is→a link where no packets are lost, reordered or damaged.
+            A fair-loss link is→a link in which some packets can be lost or reordered, however we make the assumption that if we send a packet enough times it will be delivered.
+            An arbitrary link is→a link in which anything can happen. We model this as having an adversary acting on our communications. They can replay, block or edit packets as they please.
+            A Network Partition is when a link between two nodes is disconnected for a period of time. 
+            A fair loss link can be converted to a perfect link using→Continuously resending, and deduplicating at the other end.  
+            An arbitrary link  can (*almost) be converted to a Fair-loss link using→TLS. An internet protocol to guarantee successful communication has not been tampered with. 
+This is only arbitrary, as the adversary could block all packets. 
+        System model: node behaviour
+            Under the assumption that each node executes a given architecture, the three types of nodes are→Crash-stop, Crash-recovery and Byzantine.
+            A Crash-stop node means→the node could crash at any time and never re-join the network (dropping phone in toilet). 
+            A Crash-recovery node means→The node could crash at any time, lose its memory state but it will re-join the network at some point. 
+            A Byzantine node means→A node that doesn't follow the algorithm (although it could pretend to).
+            A node is either correct or faulty. 
+        System model: synchrony (timing) assumptions
+            The three types of synchrony assumptions about nodes and networks are→Synchronous, Partially synchronous and Asynchronous.
+            A Synchronous connection means→Message latency is no greater than an upper bound. Nodes execute the algorithm at a known speed.
+            A Partially synchronous connection means→communication has (finite) periods of asynchronicity but is synchronous otherwise.
+            A Asynchronous connection means→Messages can be delayed an arbitrary amount of time, nodes can be suspended an arbitrary amount of time. 
+            Real networks behave in a partially synchronous manner, under such a system an algorithm designed for a synchronous network could fail catastrophically.
+            We can have many real life violations of synchrony, within message latency we can have: 
+message loss requiring retry - removing any hope of an upper bound on latency
+Congestion causing queueing
+Network/route configuration, meaning a packet could get stuck for long periods of time.
+
+            Similarly we can have changes in node execution speed:
+OS scheduling resulting in a thread being suspended.
+Stop-the-world garbage collection pauses.
+Page faults, swap, thrashing (constant page faults).
+            Real-time operating systems (RTOS) can give some scheduling guarantees - however most DS don't use RTOS.
+    Availability
+        Online services being offline = losing money. 
+        We can measure uptimes using the fraction of time the service is operating correctly. For this we can use "nines" 
+'Two nines' = 99% up ⇒ down 3.7 days/year
+'Three nines' = 99.9% up ⇒ down 8.8 hours/year
+...
+        Service-Level Objective (SLO), the period of times the service will be up and the response times. "99.9% of requests get a response within 200ms"
+        Service-Level Agreement (SLA), a contract specifying some SLO ⇒ there will be penalties for failure to meet the SLO.
+        High availability: Fault Tolerance: 
+            We have a Failure of the system, in which the system as a whole stops working. We have Faults where a node is faulty or communication with that node is hampered.  
+            Fault tolerance is the design of a system so→a given number of faults does not result in a failure.
+            A Single-point-of-failure (SPOF) is→a single point in the system where a fault will result in failure. 
+        A Failure Detector is an algorithm that→detects if a given node is faulty.
+A Perfect failure detector is an algorithm that → says a given node is faulty IFF it has crashed. 
+        The typical implementation of a failure detector is to→send a message to the node, then wait a set amount of time for a response. IF the node doesn't respond in that time it will be assumed to have crashed.
+            The problem with this implementation of a failure detector is that→we can't know if that's because the node has crashed, the message was lost or the message/node was only very delayed.
+        Failure detection in partially synchronous systems
+            We can only build a perfect failure detector in a→synchronous, crash-stop system with reliable links.
+            Instead we have a Eventually perfect failure detector this can→temporarily label a working node node as crashed or temporarily label a crashed node as working. But, it will always eventually reach the truth of the labelling. 
+            This reflects the fact that detection is not instantaneous and we can have long timeouts from a working node. 
+    
+    
+    
+Distributed Systems Lecture 3 (Time) 
+    Physical Time
+        Distributed need systems to measure time, used for:
+            Scheduling
+            Performance measurements
+            Log files
+            Data with time validity (e.g. cache entries, TTL)
+        The difference between a logical and physical clock is→Physical clocks count number of seconds elapsed while logical clocks count events (e.g. messages sent) 
+        Quartz Clocks
+            Quartz crystals can be engineered to vibrate at a particular resonant frequency, this frequency can then be detected (and fed back into the crystal again to keep the vibrating going). 
+            We use this quartz vibration by→counting the number of cycles to measure elapsed time. As we know f 
+            Clock drift is measured in parts per million, meaning 1ppm = 32s/year of drift. 
+            %LOCAL_FILE%acy_5LTVfZi7tnDFZQCnv__uIjFbqSiIwq8P9U5BQXY2cNJN_RXcJM9g1BVOQjjT9FwYNIKdhyhX248FmQyvO9sf7C7HX4nmYpXFVWvK-3_GpHMASP-kA3Al6KhMy0f-.png 
+        Atomic clocks
+            Caesium-133 has a given resonance we can measure - about 9 GHz . The second is defined by 9192631770 periods of that signal. We are of by 1 second every 3 million years
+        GPS as time source
+            31 Satellites in space broadcast their location and the time from their atomic clocks. We then pick that up, and can calculate the time taken for the signal to arrive (via c) and thus get the time.
+            We do need to correct for atmospheric effects and suchlike.
+        Coordinated Universal Time (UTC) 
+            Greenwich Mean Time is defined by→noon when the sun is in the south, as seen from the Greenwich meridian
+%LOCAL_FILE%R9jUYQZGK9nZ6IIhjhW_voek4fxcitDPk3Z3yWTRZj4hvYUVxeEFkbBKxIp1khhsXIy1YwU9mFeTkWVNR9tfhkVwGoKuz0MgWIt7384d0evYj6KJCVM3w2IsCIT7qFv5.png 
+            International Atomic Time (TAI (based on French)) is → time based on Caesium resonant frequency 
+            Problem: Speed of Earth's rotation is not constant
+            Because of the disagreement between GMT and TAI, UTC is→TAI with corrections to account for Earth rotation.
+        Leap Seconds
+            A leap second is→a second that can be inserted or removed (typically) twice a year
+            Every year on 30 June and 31 December at 23:59:59 UTC, one of 3 things happen 
+                The clock jumps forward to 00:00:00 without waiting a second (a negative leap second) 
+                The clock continues to 00:00:00 after a second as normal
+                The clock continues to 23:59:60 after a second, adding a second (a positive leap second) 
+            Leap seconds are announced several months in advanced
+        Most common timestamps
+            Unix time: Which is→the number of seconds since 1 Jan 1970 00:00:00 UTC not counting leap seconds 
+            ISO 8601: Which is→year, month, day, hour, minute, second and time-zone offset relative to UTC. E.g. 2020-11-09T09:50:17+00:00
+            Conversion between the two requires Gregorian calendar to calculate leap years and knowledge of past and future leap seconds 
+        Most software ignores leap seconds, however OS and DistSys require them.
+        Smearing is→The spreading out of a leap second over a whole day. This helps prevent software that doesn't manage leap seconds from crashing when encountering a discontinuity of a second.
+    Clock Synchronisation
+        Computers track physical time/UTC with a quartz clocks - and due to clock drift the error gradually increases.
+        Clock skew is the→difference between two clocks at a point in time 
+        A solution to clock skew is→periodically get the time from a server with an accurate time (based on an atomic clock/ GPS). Using the NTP protocol.
+        Network Time Protocol (NTP)
+            An NTP server is→A server to give an accurate time source for computers to sync with. Many OS vendors run NTP servers and configure their OS to use them. 
+            Hierarchy of clock servers are arranged into strata, these are→
+Stratum 0: atomic clock or GPS receiver. 
+Stratum 1: Something synced with Stratum 0 device
+Stratum 2: Something synced with Stratum 1 device
+            NTP servers may query multiple clock servers, discard outliers and average the rest. Furthermore, servers are queried multiple times to remove network error
+            Using NTP we can reduces clock skew to a few milliseconds in good network conditions, but can be much worse over a bad network .
+            %LOCAL_FILE%3H78pNX0DSOHMqLDwyVPqkjGFU7zmOV7K0fZkHoGgXtkzVZAm7wjLcoEQttsBlj3Hrz4FkSwU39_HL7Ev8iQ5-vxPvQlrTV2aG0Uz4DBV2l7p856O5XpanEJArqHOIc2.png 
+                The round trip network delay would be→\delta = (t_4 - t_1) - (t_3 - t_2) 
+                We can't find the time taken for the request and response individually because→the two clocks aren't synchronised. We can only get the time difference between two timestamps of the same clock. 
+                The estimated the server time when client receives the response would be→t_3 + \frac{\delta}{2}
+ Because we assume the delay each way is half the total.
+                The estimated clock skew would be→\theta = t_3 + \delta/2 - t_4 
+        Correcting Clock Skew
+            Once the client has estimated the clock skew \theta, there are three options for changing the time 
+                If \theta < 125ms, slew the clock. Speed up or slow down the clock very slightly (around 50ppm) so it's correct after a period of roughly 5 mins.
+                If  125ms \leq \theta \lt 1000s, step the clock - i.e. suddenly reset the clock to the server estimate. 
+                If  \theta \geq 1000s, panic and let the human resolve it.
+            What's wrong with this code? start_time = System.time()
+code_to_profile()
+print("Function took", System.time() - start_time)AND, what is the solution?→NTP could have stepped backwards while code_to_profile() was running - resulting in a negative time taken or too high of a time. Solve this by  using a monotonic clock, who still have slewing but will never jump backwards 
+        What are Time-of-day and Monotonic clocks and how do they differ?→Time-of-day clocks is the time since some fixed date. Monotonic clocks are the time since some arbitrary point (e.g. since system booted up). 
+The difference is that Time-of-day clocks can suddenly jump forwards or backwards subject to leap second adjustments, monotonic clocks simply go forward at some (near) fixed rate. 
+Additionally Time-of-day clocks can be synchronised across multiple nodes, monotonic clocks cannot (only good for measuring elapsed time on 1 node).
+    Ordering of messages
+        %LOCAL_FILE%cSyRVfDprWQX6kkONyGuwzXN2cN0oyfX6oT83kiZLRpY4bOkHQ9lOXbG_D-03xvyuC8B0azFM9uvHw7Hj-wBD_IOpw0j4tNwiCrL28Yox_ow4OqhZpM2ERHovfopgoFu.png 
+        The problem with using timestamp ordering→is that t_2 < t_1is  still possible if the clock skew is greater than the network latency. 
+        The happens-before relation
+            An event is something happening at one node. 
+            We say event a happens before event b ( a \rightarrow b ) iff 
+                a & b occurred at the same node and a occurred before b in the local execution order.
+                event a is the sending of some message m, and event b is the receipt of said message (establishing causality)
+                There exists an event c s.t. a \rightarrow c \ \text{ and } \ c \rightarrow b . Transitive closure!
+            The happens-before relation is a partial order - it is possible that neither a or b occur before one another (i.e. they are unrelated, doesn't mean they occurred at the same time) this is written→a||b  
+            %LOCAL_FILE%Bd6o0t7rZ1n8gzSYN0RPPgRQ-0aFu86YR9Wo9EaJDut_cwcndGwgL4ezC2i7DkZo5Ubp0Vma60xmCyP-z5RpbSZEo5C9ann8FL4-JWlOWaD7eTw5jUUabr3rb1uOTdaa.png 
+        Causality
+            When a \rightarrow b, a might have caused b 
+            When a||b, a cannot have caused b 
+            Happens-before relations encode potential causality.  %LOCAL_FILE%E91bglfXDom_vwusocHwkGxcTDNMEX7Moxuhp-TSmcOwQBQSHlCAQmz19vRpVbCNDCsUnbsroqMQYgVVx19c46wt4vhTq1Ri2FbvYSdBOOZgASW6b1C-C2ALIPFo9r19.png 
+    
+    
+    
+Distributed Systems Lecture 4 (Time) 
+    Logical Time
+        Logical clocks are designed to capture causal dependencies (e_1 \rightarrow e_2) \implies (T(e_1)  < T(e_2) ) 
+        Lamport clocks algorithm
+            The Lamport clock algorithm is→# for every node:
+t := 0
+
+on event:
+	t += 1
+
+send_message():
+	t+=1 
+	message = (t, m)
+	send (message)
+	
+receive_message(M):
+	t', m = M
+	t := max(t, t') + 1
+	deliver m # to application 
+            Within the Lamport clock algorithm, L(e) is→the time after an the increment due to e.
+            The Lamport scheme has the following Properties 
+                if a \rightarrow b  then L(a) < L(b) 
+                However, L(a) < L(b)  does not imply a \rightarrow b  . We could also have a||b. 
+                We can have L(a) = L(b)  
+            %LOCAL_FILE%NWzGP1UyEkHkO4gREgLixeoi8cOAM4abaB3se7r0ImB-uzVNIeJLEEEilhXwyPSYFctCqAc8cLQLGqg2iXnPG5HF_yYSeGBjEAiTAUxkYYBLtQWAWq5JqrzjIa__JHhu.png 
+            We can form a unique identifier for an event by→combining the name of the node (the event occurred at) and the time the event occurred ID = (N(node), L(e)). 
+            %LOCAL_FILE%xg2IfyouuRbVa9FbkOdHsZXyJrWZxa92DLDPqCaeqaBZR37C6_wCYtchKhkZaF1LKEjOHs1N8x3PyIv-OF-XxQr8SfrNiTL26-8Kc2Qfox0K7qERfYkVDVtK73NpHwmw.png 
+            The main problem with Lamport clocks is→if we have timestamps L(a) and L(b) we can't tell if a \rightarrow b  or a||b . Remember, a||b simply means they're unrelated! If no messages have been exchanged all events are concurrent . To solve this we need vector clocks. 
+        Vector Clocks 
+            %LOCAL_FILE%UvnFvkZTVzGPxEWZjr_kMUAUiA7FcxrCIors0myTDQknWQy0MOakHVv5DjhY0pPpkSIOxF37OGZ7cqINEulpWsY8VMVsTHrhChFYieuysBBZlfJpbEkqsvS5lL4yem04.png 
+            The algorithm for merging vector clocks is→ T = [0] * n
+ i = index of us
+ 
+ on_event():
+ 	T[i] += 1
+ 
+ send_message(m):
+ 	T[i] += 1
+ 	send( (T, m) )
+ 
+ receive_message(M):
+ 	T', m = M
+ 	# Max of each element
+ 	T = [max(a,b) for a,b in zip(T, T')]
+ 	T[i] += 1
+ 	deliver m to app
+            Example vector clock arrangement:%LOCAL_FILE%Nr5EZypRAEEhXIQ3kVwQIrAtEEzY7-1YKCseaafPouBz8U9SArWl5NBxnYxQ3E1DpzsTK0SW2zXUkMJ6qeaWYvFCBPj4Vv9vAHDxLtiFGC0w6xzAIX0AxjIhzxwrDRwd.png 
+            The vector timestamp of event e represents→e and all it's causal dependencies: t = \{e\} \ \cup \ \{a \ | \  a\rightarrow e\}   
+So <2, 2, 0> represents the first two events from a, the first 2 events from b and no events on c.
+            %LOCAL_FILE%jFFIw1x1E-_MHi9JcaPCEKgEPWcijXTumy-uCOmOWnKEh71Kj14VxJa0iETImwR0bE3qfHN_3vPgy6eXGfP15rhqUhXkak-Iou5cYI6cN6pmwg9CZgfn0wNNlMJuI95r.png 
+            Two events are concurrent in vector clocks iff→Some events in T happened before events in T' and some events occurred after events in T'. 
+            %LOCAL_FILE%fhN2SFw_h1aP_p7Qcn7UesaVszsVJ1kru10VOP5nlT890pjRlorhlOqw9B5dGM_DcWj7OAQb2rH12_9VM1BYQnevf-mC_886oGi05m1S6IeXHdc-Om81nVkytey9s-TF.png 
+    Broadcast ordering
+        Broadcast protocols
+            Broadcast is group communication where 
+                One node sends a message, but all nodes in the group deliver messages
+                Groups can be a fixed or variable size
+                If one node is faulty, the remaining group members carry on
+            Group communication can be designed to be best-effort (messages may be dropped) or reliable (non-faulty nodes deliver every message by retransmitting dropped messages). There is no upper bound on message latency, as we use an Asynchronous/partially synchronous timing model.
+            The layout of a broadcast system is→%LOCAL_FILE%mFs8TN1pTuSMYFTopeZB2CUFSaNOk2UVEs0gL8tcAuDdaJ1GFrg-gwSi5vUp1M-SvvrldgftFPs3ME__MzkOS4qXyRkFubKjHa6FQzd5bYKziVR0Vn8KHVcD7QaJG9hu.png 
+            The broadcast algorithm may wait to deliver a message to the application, because→we wish the messages to arrive in a certain order
+        FIFO broadcast
+            Note that when a node broadcasts a message, it also sends it to itself.
+            %LOCAL_FILE%I8jo0cSS3gODTf6w8D-mqHvxH6IBkmHggRtWq7ZQ27V5108wBpOfUFy-f6iFOPAgFvy-xQp4AidZD7C1calXQ5p-qEngwFMCc8X8IREnv5zzoYSww9hYtWmapqTBp2Zb.png 
+            For FIFO broadcasts we require that→messages sent from a given node are delivered in the order they were sent. Messages sent from different nodes have no required ordering.
+            Valid orderings of the above diagram are then (m_1, m_3, m_2) || (m_1, m_2, m_3) ||(m_2, m_1, m_3)  
+        Causal broadcast
+            %LOCAL_FILE%L1nUAnI60q5QqXN8NehbVWovcNwsWgdNcwup_XbfUwGOx-93_iv4GtGP5E_b19fPyGA9SxZC81O5d5FmZTfsJGNX6f-M_wkVxHfnZloOIqmfxL0hY8tOXzgDfChYqMw6.png 
+            For Causal broadcasts we require that→Causally related events are delivered in causal order, concurrent events can be delivered in any order. 
+            The valid orders here are (m1, m3, m2) or (m1, m2 m3). 
+            The difference between Causal and FIFO→If FIFO we could technically have m1, m2, m3. In Causal broadcasts this would not be allowed. Or m2, m1, m3.
+%LOCAL_FILE%I8jo0cSS3gODTf6w8D-mqHvxH6IBkmHggRtWq7ZQ27V5108wBpOfUFy-f6iFOPAgFvy-xQp4AidZD7C1calXQ5p-qEngwFMCc8X8IREnv5zzoYSww9hYtWmapqTBp2Zb.png 
+        Total order broadcast
+            %LOCAL_FILE%JG3S3CbaHrwr0rjbwr8YSPGYh6GWcWdCw9q_Dt68yE8YD47hQlqUDWyyR6uOeZx-V0qgaufPQlakuX1RNi_zzdC7SRN-ce1ZlUOB9aSbmVIZuuppV0gX5nOdkwNoNUkU.png 
+            For Total order broadcast  we require→that all nodes deliver the messages in the same order. This includes the nodes delivery to itself! 
+            The above ordering is for the example m1, m2, m3, but we could just have easily have said  m1, m3, m2: %LOCAL_FILE%G782ZOFwPUarYj_VHKvoWeHGWkbal8CP8CDza7d5sze5ffFJcnNtmgsUzVj1HvJsjnZtkoE4t0Svhhvf9d-Fug9YQ-x17gBueGzyuzJ0TtUQsUfX0J0meyQAk4v8-jEJ.png 
+        FIFO total order-broadcast:
+            Fifo total order-broadcast requires → That all messages are delivered in the same order and messages from a given node are delivered in the order they were sent
+            %LOCAL_FILE%JLfDCSOtxO_AKEZA9k300iA46WVFHDVBzEUHdfxH2KpbRXALgOjd9Hm1L60e9Jle3lEBqCJ2FLwp08e_Bg1mYDRxoEUVVzEusDhrNLCXjnQ4aRzuYXBJT2xuA5dxeuw7.png 
+    Broadcast algorithms
+        There are two sections for devising a broadcast algorithm 
+            Ensuring the best-effort connection becomes reliable (retransmitting dropped messages)
+Enforce delivery order atop of the reliable connection 
+        What is the problem with simply retransmitting and deduplicating dropped messages?→A node may crash in the middle of retransmitting a message, in which case not all nodes in the group will have received the message 
+        Eager reliable broadcast
+            Eager reliable broadcast is→%LOCAL_FILE%P3SNOBLC-Ooeys3gf9H7Qj0ZdDIu890t306QOWR0iqkivcEUNQE7tDaYU0LksM93348Hg3O__KEcRTbsTUpjmMjXGtwOJwLKmEhCdrDgkQbSb-pbnTVKMd4-Ja20jR5J.png 
+            The problem with eager reliable broadcasts is→for n nodes, we have O(n^2) messages being sent. 
+        Gossip protocols 
+            Gossip protocols works by→%LOCAL_FILE%AzHyQZqzTUIfVER7QY9jaTCTx-lgQzOZlK8nHdNeWaYKIvhopEjZU7JzK87ameqhPIbJ0HjY3nyWJixFvnQiV4T7PLY-OaTSLRv5NHcDstyN0dTnLbX7JMBuJ-MWsLTM.png 
+            %LOCAL_FILE%_3X3m6GVxLKq8rUjorTbV_cZm4Sb0heFxEEyEPt1EO3EZbOX0o5r7U2QGz2FC9nT_oTen14u9eTrBZcTvud57w6f6uD8MvaFr1i1PTWg3ZgmDZ7hhZ1Q1n88MIVP7jSI.png 
+            Note: if a node has already received a message it doesn't send it again. 
+        FIFO broadcast algorithm
+            The FIFO broadcast algorithm is as follows→sendSeq, buffer, delivered = 0, [], [0,0,0...,0]
+i = ourNodeNumber
+
+send_message(m):
+	send(i, sendSeq, m)
+	sendSeq+=1
+
+receive_message(msg):
+	buffer.append(msg)
+	for M in buffer:
+		i', sendSeq, m = M
+		if sendSeq == delivered [i']:
+			send (m)
+			delivered [i'] += 1	    
+			buffer.remove(M)
+        Causal broadcast algorithm
+            The causal broadcast algorithm is as follows→ sendSeq, buffer, delivered = 0, [], [0,0,0...,0]
+ i = ourNodeNumber
+ 
+ send_message(m):
+ 	dependencies = buffer[:]
+ 	dependencies[i] = sendSeq
+ 	# Remember we send dependencies to ourself too
+ 	send( (i, dependencies, m) )
+ 	sendSeq += 1
+ 	
+ receive_message(msg):
+ 	buffer.append(msg)
+ 	for M in buffer:
+ 		i', dependencies, m = M
+ 		if dependencies <= delivered:
+ 			delivered[i'] += 1
+ 			send(m)
+ 			buffer.remove(M)
+        Total order broadcast algorithms
+            The single leader approach is done by 
+                Choosing a single node to be the leader 
+                All nodes send their messages directly to the leader (FIFO)
+                The leader sends a FIFO broadcast to all nodes
+            What's the problem with the single leader approach→If the leader crashes no more message can be sent. Additionally, changing the leader safely can be hard
+            The Lamport clocks approach is done by
+                Attaching a Lamport timestamp to every message 
+                The order messages are broadcast is the order of the Lamport timestamps
+                But - if we get a time stamp T, how do we know we won't in the future get a timestamp < T? We need to wait for a timestamp ≥ T from EVERY node! We need to use FIFO links
+    
+Distributed Systems Lecture 5 
+
+GO FROM HERE NEXT: Distributed Systems 5.1: Replication - YouTube 
+NEED TO DO PROOF Q's
+Distributed Systems supervision 1 
+    Exercise 1. A TCP connection allows two nodes to send each other arbitrarily long sequences of bytes. You decide that you want to send multiple requests and responses over the same TCP connection. What do you need to do in order to implement such a request-response protocol using TCP?
+        You could wrap each request and response with a header which would encode the length of the message (among other possible pieces of information), the header would have to accord to a set code that both nodes understood (e.g. it could have the first 4 bytes specifying the length of the header, the next 4 specifying the length of the whole packet perhaps more data specifying the type of the request). Then when a node receives a stream of bytes, it can find the length of each individual message by examining the header - then if there are more bytes after the header they can know that is another message (whose header will be examined).
+    Exercise 2. How is RPC different from a local function call? Is location transparency achievable?
+        An RPC call is different in a few ways
+            The function is not executed on your local machine
+            The arguments of an RPC must first be marshalled to be sent over the network
+            RPCs make use of an API to facilitate their use
+        Location transparency (the idea that the location of a resource (whether it be on our local computer or on another node) is achievable under perfect conditions (impossibly fast WiFi or having local resources slowed down to achieve such transparency) however in reality the lag between forging and communicating over a network connection is detectable and is much greater than the lag of local file being opened is large. So the very quick loading of a file would indicate a local file.
+    Exercise 3.  Say you have a client-server RPC system in which a client repeats an RPC request until it receives a response. How could the server deduplicate the requests?
+        One solution would be to attach a request number and a repeat number to each request. So if I a request "GET : "img:coolpic.png"", it could be sent multiple times like this:
+            "req:1, rep:1, GET : "img:coolpic.png""      "req:1, rep:2, GET : "img:coolpic.png"" ...
+Then a second request "STORE : "img:coolerpic.jpeg"", could be sent like:
+   "req:2, rep:1, STORE : "img:coolerpic.jpeg""        "req:2, rep:2, STORE : "img:coolerpic.jpeg""
+
+This would allow for easy deduplicating in order of req then rep
+    Exercise 4. Reliable network links allow messages to be reordered. Give pseudocode for an algorithm that strengthens the properties of a reliable point-to-point link such that messages are received in the order they were sent (this is called a FIFO link), assuming an asynchronous crash-stop system model. 
+        buffer = []
+received, messages_incoming = 0, 0
+time = time.monotonic()
+# read_message() blocks while waiting for a message
+# Wait a max of 10 seconds before exiting the while loop
+while (time.monotonic()-time < 10000 and msg = read_message()):
+	time = time.monotonic()
+    received += 1
+    messages_incoming = msg.messages_incoming
+    buffer.append(msg)
+
+    if received == messages_incoming:
+        break
+
+if time.monotonic() - time > 10000:
+	send_failure_message()
+	return []
+else:
+	# Sort based on the message number
+	buffer.sort(lambda x : x.number)
+	return buffer 
+    Exercise 5. How do we need to change the algorithm from Exercise 4 if we assume a crash-recovery model instead of a crash-stop model?  
+        We would need to implement a mechanism for informing the receiver/sender that we have crashed and lost the data stored in our memory, in the two cases: 
+        Sender node crashes: We don't know how long the period of unresponsiveness will last, so we can't simply keep waiting until the node comes back online. Instead the receiver should cache the messages received so far in some non-volatile memory. Then when the sender wakes up again, a unique ID of the message should be sent, the recipient can then indicate how many (if any) messages were received and the sender can resume sending where they left off. 
+        Recipient node crashes: Once the recipient wakes up, it will need to signal the resending of the entire incoming message - on the senders side a non-volatile storage of outgoing messages will need to be held or a method of backtracking execution so the message can be sent again.
+    Exercise 6. Describe some problems that may arise from leap second smearing.
+        Floating point accuracy: The smearing of 1/86400 in binary form will introduce a very small error, and that error will be repeated 86400 times every time this update is done - if a small low bit floating point representation is used, the error introduced will defeat the purpose of the whole exercise. 
+        This is more reason for software vendors to simply ignore the problem. While this is not a problem  now, bugs mirroring Y2K could start to appear in the (far) future which go undetected.
+        This makes bugs harder to detect, as desync occurs over many hours rather than at one instant - while the latter would be noticeable in logs, the former would be very difficult to sus out.
+        Desync problems can arise if one node is doing smearing and another isn't. 
+    Exercise 7. What is the maximum possible error in the NTP client’s estimate of skew with regard to one particular server, assuming that both nodes correctly follow the protocol?
+        %LOCAL_FILE%qpQ_ydxHmeLCcJOH6RsYAsXfSQmhKyB1tFdamdF6Ap_bDPQSH3D9yXDiDWlMRhPCDIbkBbsV34oweAqelXOk2YakrBsEOBexbuDNPmUFzd2RpaSGhmlB3zKHzVrmj3e5.png 
+        delta = (t4 - t1) - (t3 - t2) = total network delay
+        skew = (t3 + delta/2) - t4  Question: should the skew not be the absolute value of this? 
+        This estimate is worst, when the estimate of the time taken for the second response is worst - i.e. when request 2 took the minimum time (according to the speed of light & the distance) \tau and the response took  (t4 - t1) - (t3 - t2) - \tau, resulting in a true value of: (t_3 + \tau) - t_4  = (t_3 - t_4) + \tau 
+        and an estimated value of:
+        (t_3 + ((t_4 - t_1) - (t_3 - t_1))/2) \ = \ \frac{t_2 - t_1 + t_3 - t_4}{2} 
+        Resulting in an error of:
+        \frac{t_2 - t_1 + t_3 - t_4}{2}  - ((t_3 - t_4) + \tau) 
+        
+        \text{error} = \frac{t_2-t_1-t_3+t_4}{2} - \tau = \delta/2 - \tau 
+    Exercise 8. A relation R is a strict partial order if it is irreflexive (\nexists a. \ (a,a) \in R) and transitive %LOCAL_FILE%Tr9viplmSNiKq50nlHvkjyohfNkNxldfyLFftzC7JUv-v8e7n6hIDdBX1gO_OOMmmP5GjnbhpBY4048vJGJBE5zmzwoXCjTSGQlA_WR5BP80fAZWZL_oxr_IvSwOInUn.png. (These two conditions also imply that it R asymmetric, i.e. that %LOCAL_FILE%4hpbm3lFLPnpNpJ_WQZCAX4vNJhu1Xkmi68UO7aQf6faFCgjsCsjTlz5PczTq1BOYoHaZBl-wlg3YzArARI9wFAfg4jmCqzIIA1tHsMIH1WdvxqEZcbZbt7NQa2jb_Ba.png Prove that the happens-before relation is a strict partial order. You may assume that any two nodes are a nonzero distance apart, as well as the physical principle that information cannot travel faster than the speed of light.    
+    Exercise 9. Show that for any two events a and b, exactly one of the three following statements must be true: either a⇒b, or b⇒a, or a || b.   
+    Exercise 10. Given the sequence of messages in the following execution, show the Lamport timestamps at each send or receive event   
+        %LOCAL_FILE%4atqIBUEAzm7OncyN5qB3j5Z5XjQtc_OHDZgMdXZh6kXNeqKApIIRpARrwbyAHUyX7k7ndM-H0MBpStyrugFtkC4DMVZEVYv2pTPR9uWBOaXYXUGmwbk1reIC3dx1sE2.png 
+    Exercise 11. Prove that the total order ≺ using Lamport timestamps is a causal order. 
+    Exercise 12. Given the same sequence of messages as in Exercise 10, show the vector clocks at each send or receive event.  
+        %LOCAL_FILE%9jwOOpv8Z8WqVwxq7ynfW03XwQFEn7ipkP88FMsmB5DkrGrmrNBuwEUhIDojkOzdAeBx17jEOVmlWrU2whx6-qnXAjz4jqukHzSSGc3F-r53v3Rg82YAzsXevXp8Bh-Z.png 
+    
+    
+    
+    
+    
+Distributed Systems supervision 2
+    Exercise 13. Using the Lamport and vector timestamps calculated in Exercise 10 and 12, state whether or not the following events can be determined to have a happens-before relationship.   
+        SAVED TO BROWSER IN DRAW IO
+        
+            local://C:/Users/malac/remnote/Malachy_O'Connor/files/4atqIBUEAzm7OncyN5qB3j5Z5XjQtc_OHDZgMdXZh6kXNeqKApIIRpARrwbyAHUyX7k7ndM-H0MBpStyrugFtkC4DMVZEVYv2pTPR9uWBOaXYXUGmwbk1reIC3dx1sE2.png    local://C:/Users/malac/remnote/Malachy_O'Connor/files/9jwOOpv8Z8WqVwxq7ynfW03XwQFEn7ipkP88FMsmB5DkrGrmrNBuwEUhIDojkOzdAeBx17jEOVmlWrU2whx6-qnXAjz4jqukHzSSGc3F-r53v3Rg82YAzsXevXp8Bh-Z.png  
+            
+    
+
 

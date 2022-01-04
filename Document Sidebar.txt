@@ -1,24 +1,24 @@
 --------------------- Portal ---------------------
 --------------------- Portal ---------------------
-    ✓✓✓TO GET DONE
+    Quick Add
+    ‒‒‒HOLIDAY TODO‒‒‒
     Daily Document
+        04/01
         PASSED
-            TODO 14/11 SUN
-            TODO 12/11 FRI
-            TODO 11/11 THUR
-            TODO 10/11 WED
-        TODO 22/11 MON
     Lecture Notes
         Economics Law & Ethics
+            Supervision 2
             Supervision 1
         Semantics
             Semantics Supervision  1
         Data Science
             Supervision 1
         Programming in C & C++
+            Supervision 3
             Supervision 2
             Supervision 1
         Intro to Computer Architecture
+            Supervision 5
             Supervision 4
             Supervision 3
             Supervision 2
@@ -29,7 +29,5 @@
         Concurrent & Distributed Systems
             Supervision 2
             Supervision 1
-    Work what I done
-        Week 2
-        Week 1
+            Distributed Systems supervision 1 
 --------------------- Portal ---------------------

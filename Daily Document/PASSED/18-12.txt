@@ -1,0 +1,11 @@
+12:30 - 2:00: Data Science lectures
+2:00 - 2:30: Take a break (read a bit of a book?)
+2:30 - 3:00: Finish what you were working on
+3:00 - 4:00: Do some C lectures
+4:00 - 5:00: Big break! Food maybe? Relax a bit
+5:00 - 6:00: Last push, Distributed systems work.
+
+
+
+
+

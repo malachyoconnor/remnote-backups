@@ -1,17 +1,54 @@
 Economics Law & Ethics
+    Supervision 2
+        Exam Question 1  
+            a.)  Explain the criminal offences created by the various sections of the Computer Misuse Act.  [100 words] 
+                Section 1 makes unauthorised access of computer systems a criminal offense, however you have to know that the access is unauthorised. This can carry a maximum 2 year sentence but intent can be difficult to prove leading to large obvious banners parroting legal access rules when you turn on certain computer systems. Section 2 appends the intent to commit another serious offence after unauthorised access, making logging on to someone's computer and reading off their credit card info in order to commit fraud an offence worthy of 5 years in prison. Finally, section 3 covers the modification of items after unauthorised access, meaning writing viruses can now carry a 10 year punishment. This covers DDOS and the creation of hacking tools. 
+            b.) What offences are likely to be committed in the following circumstances?
+                a.) Alice is clearly running a distributed denial of service attack, and furthermore she is doing it with the intent to harm - I.e. she knows this form of access to the system is unauthorised. Note that if the volunteers were informed of their part in the scheme, they could also be charged. For precedence for this case, we could examine the Wimbledon case where 5 million emails were sent to a company - rendering their email useless. This was classed as a Section 3 offence and carried a prison sentence, while Wimbledon's lawyers used the defence that this usage of the system is legal as if 1 or 2 emails were sent that would be fine (so why not 5,000,000), however the test of reasonable use of a system should be "what would the system owners say if you were to ask them if you could use the system in this way" - and of course the use would be disallowed in Alice's case. Furthermore, denial of service attacks were specifically added to the law in 2008 meaning her attack would definitely be a section 3 offence which could lead to jail time of up to 10 years. Always discuss precedent - write notes on that. 
+                b.) Bob has committed three (or possibly four) separate infractions of Section 3 of the computer misuse act. Firstly, illegally accessed a website and modified it without the permission of the owners. Secondly, he has distributed a virus to customers, e.g. software that uses the customers computers in a way they gave no permission for. Thirdly, he is running a Denial of service attack on the baking firm. And finally, he could be accused of distributing hacking tools to all that installed the software - but this would be more debateable, as the customers would have no idea of the tools existence.  Overall, this could result in a combined jail sentence of up to 40 years as Bob has committed multiple severe criminal offences.  Apparently section 1 in there? 
+        Exam Question 2
+            You have an opportunity to resell limited supplies of a discontinued model of printer at a good price.  You have doubts about how reliable the printers will be. You will sell them through a website, and want to avoid becoming committed to sell more.  
+            a.) How do you plan to set up your website and use the law of contract to achieve these results? [200 words]
+                I would have to make clear the difference between offering the printer, and "inviting the customer to treat" where the customer makes the offer for the printer (at the specified price) and I can choose to accept or decline the offer (meaning if I have no more to sell, I can decline the offer). This can be done by creating a Terms of Service document and linking to it clearly on the website, this should be done with the advice of a lawyer to ensure no loopholes exist. I should also draw up an electronic contract describing that the offer is an invitation to treat, and also iron out details about defective goods. Due to our limited stock, defective items should be repaired or refunded - we must make clear in the contract that the item will not be replaced. Then once they electronically accept the contract, it is legally binding. Jurisdiction need to remember that it's handled through English/Welsh law.  
+            b.)  How effective will you be? [100 words]
+                My effectiveness would be in question if the lack of a replacement policy was taken to court, as the customer has the right to the repair or replacement of an item within 6 years if it was faulty. So if I am unable to repair the item (and all my printers have sold out) the customer could take me to court, and dispute the contract as being unfair to the consumer. In this case a legal battle would ensue, and the results would indicate my effectiveness. The "invitation to treat" is a well known practise, and would be effective.  
+        Exam Question 3
+            You are commissioned by a customer to design a toy robot that children will be able to control using a smartphone app. This app will also enable them to program the robot using a simple scripting language. To simplify the networking, all communications between the app and the robot flow over Wi-Fi via your server.  
+            a.) Discuss the ethical and legal implications. [200 words]
+                The legal implications include problems of ensuring intellectual property rights around the scripts that customers use, ensuring we are not liable for any harm caused by the robot (ensuring the correct usage is explained in the TOS) and ensuring correct functionality. Furthermore, because the communications are routed through our servers, precautions must be taken so we act as a mere conduit. This gives the legal defence that we are not liable for damage caused by the customers use of the robot. We must make it clear in the contract, that we are not liable for scripts written that cause harm (if the script executes correctly). We must ensure the parents sign for this contract in order for it to be legally binding. May have to employ a Data protection officer depending on the scale.
+                Ethically, we would like to ensure the robot cannot cause harm - and abort operation if triggers that predict harm are found. However, we have the simultaneous responsibility of respect for persons and our customer may use the tool without our meddling. We would like to uphold the law, but this could require inspection of the users code that could be viewed as a breach of privacy. Additionally, we must take into account that the users of the system are children - non-rational actors who do not have the sense to analyse a harmful use of the robot. One solution could be to make the robot very weak, so certain harmful manipulations of it are impossible. Hardware, if it breaks shouldn't hurt the child 
+            b.)  Your customer decides to incorporate a microphone so that the robot can also recognise  spoken commands. To save battery life, the speech recognition will be done in the server.  What effect does this have on the ethical and legal situation? [200 words]   
+                The legal situation now must include accordance to GDPR laws, as we are processing data about our customers. We must ensure the data is processed lawfully, used only for the stated purpose, the data is not kept after it is no longer needed and the processing of the data is secure enough to ensure no loss or damage to the data. We are also under obligations to keep internal records of the database as well as garner consent from our customers (must get permission from parents!). Finally, we must ensure that a process is in place so customers can retrieve any data stored about them - the simple solution being to very temporarily store the data while processing it, and promptly delete it afterwards. 
+                The ethical situation changes slightly as we now have more sensitive data, that could include information from parties other than our client. The ACM code of ethics would have us respect privacy and honour confidentiality, meaning very few people should have access to the data. Additionally, we should ensure the models we use for speech recognition are not discriminatory - although there are limits, as we should not be expected to provide a universal translator for all languages if the product is only sold in England. If vulnerabilities are found we have an ethical (and legal) obligation to disclose that to the government and to parents.
+            c.) What practical advice can you give your customer about mitigating the legal risks? [200  words]  
+                Ensure data is stored no longer than it is needed, ideally the data should be discarded immediately after processing, this protects against GDPR laws and removes the need for a data handover mechanism. Ensure the toy is not strong enough to commit harm in obvious ways like speeding into people, this protects them from liability. Collect the parents consent before the child is allowed to use the system. Hire security experts to decrease the likelihood of a data breach or hacking, they should then implement a bug bounty program to ensure problems are caught. Ensure no data is sent from the robot to the server when the user is not trying to use it, an initiation phrase akin to 'hey Siri' or 'ok google' should be implemented. Needs to be distinct so not accidentally activated 
+            d.) Your customer now wants to include a camera so that the robot can recognise gestures as  well. Does this create any further ethical or legal risks, and if so, what might be done about  them? [200 words]  
+                Some further legal risks are included around the photography of children, these data are far more sensitive than audio data and the punishment for failure to uphold GDPR could be much greater. One solution to this is to disregard battery life when this feature is used, and have all the processing done on the device; meaning the data is never held on our customers servers. This also ensures we are never in possession of any illegal data. It must be made very clear and the parents should have to give informed consent that the data is to be sent to our servers if this is not put in place. Alternative is to send features like edges, no sensitive data held 
+                Further ethical risks arise as this is information that can be used to identify the user and anyone in the scope of the camera, meaning the data should be kept with the upmost privacy. 
+            e.)  How might the situation be affected by Brexit? [200 words]  
+                While the UK is no longer a part of the EU and GDPR laws cover handling of EU based citizens, it is unlikely that GDPR will be discarded in the UK. This is because, significant altering of the GDPR laws could result in the EU deciding the UK is an unsafe place for data to be sent - vastly reducing the possible customers to UK businesses that handle data from EU citizens. However, slight altercations to the laws could occur post Brexit. E-commerce laws relating to running of the business are also unchanged after Brexit, and laws around when you need permission from parents always differed between the EU and Britain (and thus will be unchanged). If gap between UK and EU laws, would need a dedicated EU server 
+        Exercise 1:
+            (a) Describe three different philosophies of ethics. [300 words]   
+                Consequentialism states that actions should be decided right or wrong, dependent only on their consequences. Furthermore, more positive results leads to an act that is "more right" and the opposite for more negative results. We with to maximise W = \sum U_i. However, utilitarianism requires perfect knowledge of all situations in order to assess all the good and bad consequences of an action (knowledge that any actors within such a system cannot have) it additionally requires a method of deciding if an action is good or bad and how good or bad an action is. 
+                The veil of ignorance or Original position, this is a thought experiment where rule makers are given no knowledge of their family, wealth, race or creed before they are reincarnated into society - it harnesses peoples natural self interest and funnels it into the creation of a fair society. Clearly, this is because you would imagine people would want the best life possible for themselves regardless of where/to whom they are born. This could potentially suffer issues depending on the values of the rule makers, one could imagine someone who would rather die be poor who gives half the population all the resources and flips the coin to establish their life.
+                The Kantian theory of duty states that an action is morally correct, if it would be willed to be a universal law. Additionally, one should treat people as an end in themselves not simply a means to an end (this could be seem as an instantiation of the first law). This mimics ideas found in many religious texts, where one should treat others as you would wish to be treated. This does face problems of perspective, as while some people would wish things to be universal law, others may not - for example an exhibitionist could be thrilled at clothes being made illegal, to the dismay of everyone in cold climates.
+            b.) Which of these philosophies might be more, or less, attractive to a successful businessman  who made his money from coal or steel? Justify your answer. [200 words]
+                Clearly the Kantian philosophy does not hold, as to be truly successful in business one must often treat people as pawns - additionally, they may not the utilisation of fossil fuels to become a universal law. The veil of ignorance could be more appealing, as highly successful individuals are often benefited the best upbringing - however they may balk at their hard earned money being redistributed to allow for such a scheme to take effect. Consequentialism may be their best option as there are effects that are impossible to observe, for example while the employment of people within the business is obviously positive the effects of pollution are less obvious. Additionally, one brings ones own moral compass to Consequentialism when it is decided how virtuous an action is - and the businessman may attribute his own morals as he sees fit.
+        
+        
     Supervision 1
         Exam Question 1 
             a.)  Explain what economists mean by a lemons market. [150 words] 
-                A lemon market is a market where information on the products in asymmetric, and customers cannot differentiate the higher quality products from the lower quality. As sellers have a vested interest in selling their product for what its worth (they have the knowledge on its worth), and buyers are unwilling to risk buying at higher prices for fear of buying a 'lemon', this leads to sellers selling the low quality goods rather than selling the higher quality goods at a loss until only the low quality items are on the market at all. 
+                A lemon market is a market where information on the products in asymmetric, and customers cannot differentiate the higher quality products from the lower quality. As sellers have a vested interest in selling their product for what its worth (they have the knowledge on its worth), and buyers are unwilling to risk buying at higher prices for fear of buying a 'lemon', this leads to sellers selling the low quality goods rather than selling the higher quality goods at a loss until only the low quality items are on the market at all.
             b.) What is the difference between hidden information and hidden action? Give examples of  each. [150 words]  
                 Hidden actions are actions taken by one side of an economic relationship that the other side cannot observe, while hidden information is information held by only one side of an economic relationship. For example when buying cars, the fact that you're a bad driver is hidden information, and making the decision to buy a safer car because you're a bad driver is a hidden action. Another example would be a worker deciding to slack off, this is a hidden action that can lead to a worse product - the employer has an incentive to associate a cost with this action, this could mean only paying the worker for good products or monitoring their work schedule.
             c.)
                 a.)  You form a trade association with several other anti-malware firms and promote a quality assurance mark, perhaps with assistance from the government. [200 words] 
-                    This signals to the user that your item is of high quality, as the government and . While this doesn't eliminate competition (as other firms also have this quality-assurance mark) it results in poor-quality providers who can provide a cheap enough service to allow for massive undercutting of price to be less favourable by customers. This means a greater share of customers land inside the quality-assurance holding group, resulting in a larger share of the profit. However the asymmetric knowledge of the user could include the existence of this mark, and they could end up buying the cheap product they see without knowing about the mark. Additionally, the validity of quality-assurance marks (especially for anti-malware programs) can be difficult to validate by the user, as illegitimate companies could produce their own mark to trick users. There's also the problem that you may be further legitimizing your competition, where alternatives with better products where the legitimacy was previously in doubt can now be chosen safely in place of your product.
+                    This signals to the user that your item is of high quality, as the government and . While this doesn't eliminate competition (as other firms also have this quality-assurance mark) it results in poor-quality providers who can provide a cheap enough service to allow for massive undercutting of price to be less favourable by customers. This means a greater share of customers land inside the quality-assurance holding group, resulting in a larger share of the profit. However the asymmetric knowledge of the user could include the existence of this mark, and they could end up buying the cheap product they see without knowing about the mark. Additionally, the validity of quality-assurance marks (especially for anti-malware programs) can be difficult to validate by the user, as illegitimate companies could produce their own mark to trick users. There's also the problem that you may be further legitimizing your competition, where alternatives with better products where the legitimacy was previously in doubt can now be chosen safely in place of your product. Signal is good if cost high for low quality but low for high quality - to the point where lying about lemons is not profitable. Assumption being that  
                 b.)  You approach the UK banks with a proposal that they certify your product for use along with their banking app products, in the sense that a customer using your  system will have exercised due diligence. [200 words]   
-                    This would likely be successful in making your product seem more trustworthy, as it is bundled with the air of legitimacy banks have but don't deserve. However, this would still have to combat lock-in, where people already with a malware protection service may be reticent to swap. Also, the price that would need to be paid to the banks to advertise your service would likely be very significant - and the firm would have to consider if the potential increase in customers is worth the outgoing cost. This method does have the advantage of using people propensity to go with the flow - if their banking app tells them to install a certain program, they simply go with it and not question if there are cheaper or better alternatives. 
+                    This would likely be successful in making your product seem more trustworthy, as it is bundled with the air of legitimacy banks have but don't deserve. However, this would still have to combat lock-in, where people already with a malware protection service may be reticent to swap. Also, the price that would need to be paid to the banks to advertise your service would likely be very significant - and the firm would have to consider if the potential increase in customers is worth the outgoing cost. This method does have the advantage of using people propensity to go with the flow - if their banking app tells them to install a certain program, they simply go with it and not question if there are cheaper or better alternatives. Assumption being that banks have technical knowhow to detect lemons, and lemons cannot trick the banks. This would then be a good signal.  
                 c.)  You tell customers that if they are the victims of a scam that used malware on their  phone you will pay their legal bills. [200 words] 
-                    This gives the customer a signal that you are a efficient malware detection site, as a failure in your system becomes more expensive to you meaning you are incentivized to stop such failures (very similar to car warranty). However, this will come against the behavioural psychology problem that most people don't think they would fall for a scam or trick. Additionally, if a problem with your service is found and exploited by scammers you may end up having to pay for hundreds of users refunds while the bug is still in place - this means very robust bug-checking features must be in place. This method does have the benefit that it sounds good, but few customers will be able to use it - as a tiny percentage of scam victims are able to pursue any legal action (many scammers being overseas). However, when scam victims attempt to use this service and find there's no recourse - there could be public backlash against your firm. If a firm was truly certain of their product, perhaps they would advertise refunding scam victims (who are scammed through malware their service failed to detect) rather than paying for their legal bills.
+                    This gives the customer a signal that you are a efficient malware detection site, as a failure in your system becomes more expensive to you meaning you are incentivized to stop such failures (very similar to car warranty). However, this will come against the behavioural psychology problem that most people don't think they would fall for a scam or trick. Additionally, if a problem with your service is found and exploited by scammers you may end up having to pay for hundreds of users refunds while the bug is still in place - this means very robust bug-checking features must be in place. This method does have the benefit that it sounds good, but few customers will be able to use it - as a tiny percentage of scam victims are able to pursue any legal action (many scammers being overseas). However, when scam victims attempt to use this service and find there's no recourse - there could be public backlash against your firm. If a firm was truly certain of their product, perhaps they would advertise refunding scam victims (who are scammed through malware their service failed to detect) rather than paying for their legal bills. Make assumptions and solve problem based off those assumptions, assume code is really bug free (obvs not realistic) - assume competitors code worse than yours, and assume claims do occur. Finally point out the drawbacks of your assumptions. Because hyper-rational customer would know few claims go to court, would know the signal is worthless. 
         Exam Question 2 
             a.)
                 %LOCAL_FILE%fmDPF-dInQpQH71USeyACbGDBgB3nscLlH3JJzNT4er96vIhCtjR1TYQGylX4N1pvTc6Vt6Sr3_pZcqlcEMQgX1KadmjmFAHIMDqaEx9SY8cG9oGrHlHWDcwUI1pK1WI.png 
@@ -41,13 +78,13 @@ If the utility of choosing hawk is the same of that of choosing doves, where haw
                 Everyone needs to be polled in order to make any small decision, so decision making will be slow and cumbersome. Additionally, If even one person disagrees, no matter how absurd their reason is the idea will be thrown out, and as almost all decisions are likely to have some level of disagreement very few decisions will be accepted. 
             b.) A Rawlsian welfare function counts only the welfare of the worst-off agent. The opposite of  the Rawlsian welfare function might be called the “Nietzschean” welfare function—a welfare  function that says the value of an allocation depends only on the welfare of the best-off  agent. What mathematical form would the Nietzschean welfare function take? [100 words]    
                 \max U_i  
-                We select for the maximum utility of our population, and try and boost that.
+                We select for the maximum utility of our population, and try and boost that. Assume we're looking at the utility of a single good 
             c.) Suppose that the utility possibilities set is a convex set and that consumers care only about  their own consumption. What kind of allocations represent welfare maxima of the  Nietzschean welfare function? [100 words] 
                 At face value, improving the utility of the best off person seems to be giving them all the resources. However, then the surrounding agents will suffer and the world around the richest person will degrade. Additionally, due to the convexity of utility functions resources become less desirable the more you have of the resource - meaning more money means less to a rich person than to a poor one. Thus, while some effort must be spent further enriching the best off agent - some money must be spent to maintain their surrounding population so the best off agent needn't witness poverty or drive on broken roads. 
             d.)  The ability to set the voting agenda can often be a powerful asset. Assuming that social  preferences are decided by pair-wise majority voting and that the preferences given in the  table below hold, demonstrate this fact by producing a voting agenda that results in  allocation y winning. Find an agenda that has z as the winner. What property of the social  preferences is responsible for this agenda-setting power? [200 words] 
                 %LOCAL_FILE%S1XX-5lu6CMf8Oex4OuNutrHIHl8lA_z2RtN62sSS1UOlyLVRJ7fXN8frGL6TGGjzsMr_YJbGNr_STTvSPBZZuGJtZJmTvClb6EsVz4a2kqikwXXrgbQSJqvtTl9RW_j.png 
                 Not sure if my understanding of voting agenda is correct
-                Obviously, without an agenda the entire vote is a three way tie. If we set the agenda to who wins out of y vs z, we have y winning - as we get to wins for y and one for z. If the agenda is x vs z, we have z winning out with 2 votes to 1. 
+                Obviously, without an agenda the entire vote is a three way tie. If we set the agenda to who wins out of y vs z, we have y winning - as we get to wins for y and one for z. If the agenda is x vs z, we have z winning out with 2 votes to 1. Agenda means, first have a and b fight then have b and c fight 
                 I believe it's the property that people vote for the candidate they actually want to win first, and the following results are murky - especially if given a choice of the top X candidates rather than ranking all candidates. Thus, if specific candidates are chosen the results can vary wildly as less strict rules hold for the last two options.
         
     Lecture 1: 
@@ -300,10 +337,10 @@ If the utility of choosing hawk is the same of that of choosing doves, where haw
             Corporate takeovers to house sales are also really auctions. Auctions are a big success of the internet, from eBay to Google. 
             Types of auctions: 
                 English, start at reserve price and raise till a winner is left.
-                Dutch, start high and cut till somebody bids.
-                First-price sealed-bid auctions: one bid per bidder. Higher bidder wins.
                 Second price sealed-bid auctions, highest bidder wins and pays second highest bids.
                 All-pay auctions: everyone pays at every round until one remaining bidder gets the goods. Times of war or litigation.
+                Dutch, start high and cut till somebody bids.
+                First-price sealed-bid auctions: one bid per bidder. Higher bidder wins.
             Strategic equivalence:
                 Dutch and first price the same result, highest bidder gets the goods at their reservation price. Should bid low if you think your valuation is much higher than everybody else's.
                 Second price and English the same - best to bid truthfully. 
@@ -402,6 +439,329 @@ Where ad quality is a function of the relevance and the clickthrough rate.
             
         
         
+    Lecture 5:
+        
+        What is law?
+            Can't get all we want through buying and selling through marketplace - because of externalities
+            Politics system which persons seek to secure their own objectives, which cannot be achieved through simple market exchanges.
+            The main mechanism is law!
+            Many origins & flavours, state religion common Roman Napolean etc. We are interested in Criminal and civil law 
+            Criminal: Alice harms bob seriously, so state prosecutes her
+            Civil law: Alice harms Bob or breaks a contract, Bob can sue Alice 
+            SIGNIFICANT OVERLAP - if police too busy and there's an assault can sue.
+            Difference between showing image in video to pirating large scale
+        Criminal Law:
+            Requires:
+                A guilty act
+                A guilty mind - if no intent cant be prosecuted. 
+            Prosecution must prove guilt beyond reasonable doubt
+            CPS guidelines matter and agreements - e.g. with the IWF. Hacking tools are offensive if they are intended to be used for damaging or stealing from computer systems. Wireshark could be considered a hacking tool! Need a good reason.
+        Civil Law:
+            Contract - making the agreements you want
+            Tort - avoiding infringement of the rights of others, give adequate notice to other of your rights you want to enforce
+            Regulations - specific things needed to avoid penalties and enforce your rights
+            International law - agreement with customer in other countries
+        Contracts:
+            Offer and acceptance my competent people, for a lawful purpose. Must be at least 10 years old! Need both people to supply something
+            Can be made in writing, orally, by conduct
+            We make dozens of informal contracts every day. 
+            When you have offers, this isn't an offer but an 'invitation to treat'. The customer then makes the offer and the shopkeeper accepts!
+            This is important if you run out of stock, won't get sued.
+            Linking to terms and conditions generally enough - train ticket too small
+            Many laws require some contracts in writing - in USA all goods over $500
+            Many jurisdictions have electronic signature laws; electronic writing fine as essence of signature is intent. 
+            Clicking on button evidence of intent in the us since 2000
+        Limits:
+            You're now liable for any malware you give to customers 
+            Retailer has one chance to repair or replace - - else refund.
+            Can't enforce unfair contracts against retail customers
+            Can't exclude liability for death or injury, even if excluded in contract
+            However, this doesn't apply to services. If your satnav sends you to an inappropriate place, the makers can be sued - not so for google maps 
+        Globalisation:
+            Can be tiresome for a firm in the UK to be sued in Australia, need to make it clear who's laws apply and separately where claims should be heard.
+            Enforcement of foreign judments not straight-forward, USA is rogue
+            One fix is to specify arbitration - private civil law 
+        Arbitration:
+            Contract can specify binding dispute resolution by an arbitrator
+            Can also specify applicable laws and other things like limits on cost
+            Arbitration awards are recognized and enforceable everywhere.
+            This is a method of optimizing and privatizing the law to settle disputes between companies. 
+        Costs:
+            US system - Each side pays own costs in sueing. Can be expensive for some firms 
+            UK system - Loser pays the winners cost, over £5000 pound threshold outside of small claims court - rich consumers can ruin you, but poor customers may lose their house.
+        Tort:
+            Second main way you can become liable online, after contract
+            A tort, is a wrong which unfairly causes someone else to suffer loss or harm
+            Examples are negligence, defamation or copyright infringement
+        Negligence:
+            Arises if you break duty of care, e.g. if you cause a car crash, you are liable for damages to cars
+            Doesn't apply to indirect harm, if you cause a traffic jam its too hard to measure the damage 
+            Usual yardstick is the standard of the industry. E.g. if some banks start using 2fa, all banks need to do that to not be negligent
+            Insurance laws tied up with liabilty, car crashes - medical malpractise.
+            If you software harms a non-customer, you didn't disclaim liability as they didn't make a contract with you - negligence rather than breach of contract  
+        Defamation:
+            Libel (if spoken, slander) is a tort, UK is a popular venue for this 
+            Direct defamation; innuendo; linking
+            Burden of proof on defendant in UK
+            Uk system of costs shifting, loser pays winner's costs.
+            Defamation act 2013, excludes trivial claims, creates public interest defence - journalist can claim public interest. Makes the claimant pursue the author first rather than the organization they work for
+        Intellectual Property:
+            Patents:
+                Mechanism to tackle lack of money given to R&D from externality in research
+                Protects an invention which must be: 
+                    Novel (no prior ideas)
+                    Useful (Not something that doesnt work)
+                    Non-obvious (to something skilled in the art) 
+                Typical duration 20 years - Only granted if applied for - Also will most likely want to apply for one in multiple countries. 
+                Traditionally only physical inventions
+                Public key encryption made huge amounts of money
+                But the economoic case is weak, except in the pharmaceuticals - to IT firms, patents are a nuisance many thousands of patents that are said to conflict
+                Software patents not allowed in Europe in theory, often discarded by courts. The court keeps stretching this - not to be believed. 
+                In general innovation in CS very incremental - thousands of ideas in code, as opposed to a blockbuster molecule drug.
+                So far only 4 CS patents earn serious money
+                Microsoft has an open invention network, "trade patents"
+            Trademarks:
+                Marks that distuinguish your good or service (IBM)
+                May be registered (®) or not (TM) - registering can make litigation easier. If registered, usually win in domain name disputes
+                Can sue infringers, but have to show misrepresentation damages your business 
+                McDonalds used to sue anyone with Mc in the name in catering - too aggressive. 
+            Copyright:
+                Statue of Anne, protects your literary works - extending from novels and drama to art, music. Beforehand, courts gave monopolies to businesses to write books of particular types. Oxford making dictionaries 
+                Is the main protection of software - No need to register but asserting copyright can make litigation easier
+                Duration of copyright has steadily increased, lifetime + 70 years. Walt Disney
+                Protects against copying - but fair use and fair dealing get outs from criticism
+                Moral right - right to be recognized as creator remain yours even if copyright is sold. Can refuse that your sold work be published if damaged
+                Many orphan works, where author not known. This stalled the Google Books project
+                How to avoid software having thousand of competing claims -  Stallman GPL Licence if you use free work, yours additions must be free too. BSD license allows companies to use as they like
+                Creative commons gives a general framework for sharing 
+            Other IPRs 
+                Specialist rights
+                    Databse rights 
+                    US semiconductor chip protection act
+                    Plant breeder's rights
+                    Design rights
+                Rights based on contract
+                    Materials transfer agreements 
+                    Confidential information NDAs
+                Limits - employers cant restrict knowledge that becomes part of the tools of your trade - if become very good at coding at Google, can go elsewhere
+            DRM - Digital Rights Management
+                Copyright ownders panicked at printing, internet, cassetes 
+                Huge push to introduce DRM - but shifted power to Apple, Google, Amazon from old-style record companies
+                US law made it illegal to mess with DRM mechanism
+                Lexmark vs SCC case allowed for reverse engineering for compatibilty - allowed people to circumvent Lexmaark ink cartridge certification
+                October 2018 - John Deer put software in tractors that made them stop working if taken to unauthorised repairers - breaking this illegal, but selling tools to break it legal. 
+                Open-source tools grey area still
+            Strategy:
+                IPR often a combination of patents, software copyright, MTA
+                IT industry strat, patent portfolios mostly defensive, used to get access by cross-licensing
+                Compound models, GPL the linux version and sell the Windows version - can then charge for support and other things
+                Startups: VCs like to see some IP
+    Lecture 6:
+        UK Law and the Internet
+        Computer Evidence:
+            Until 1968, relying on computer evidence was akin to hearsay - e.g. if Fred says something, Fred should speak in the witness box. Civil Evidence Act 1968 solved this, computer must be operating properly.
+            Police & Criminal Evidence Act 1984: Required evidence to be brought by an expert that system was operating correctly. Now replaced by presumption that its operating correctly, if disputed the relying party must demonstrate their computer works right
+        GDPR:
+            Applies to EU firms from 25 May 2018. Law has survived Brexit, unchanged so far. If Uk changes too much, EU might stop sending data. Applies to those who process data about people residing in EU 
+            Aim is to protect the interests of the Data Subject. Differs from US privacy protection landscape, companies volunteer to not do types of processing for privacy. 
+            Six Principles to be compleid with, data must be:
+                Fairly and lawfully processed
+                processed for limited purposes 
+                adequate, relevant and not excessive
+                Accurate and up to date 
+                Not kept in  aform that identifies for loinger than you need it 
+                Processed securely and protected against loss or damage - losing just as bad as having it stolen
+            Extra protection applies for "sensitive personal data" - health, about political affiliation, trade union etc.
+            Requirements to keep internal records of your databse:
+                Who you are, the type of data and who provided it
+                Retention schedules, how long until its discarded or anonymised
+                Security arrangements, technical & organisational 
+                Details of transfers (especially when 3rd countries involved) 
+            Essential to identify why processing is allowed:
+                Consent: for each purpose, data must be freely given (no bribes), specific, informed and unambiguous (no pre-ticked boxes)
+                Contract - will say what data gas company keeps and who they share it with
+                Legal compliance, banks have to keep some data
+                Vital interest of a human, public interest, legitimate interest (have a legitimate reason to process and run their business - complex), member state specific reasons, crime & justice ... etc 
+                Must get permission from parents if under 16 (UK: 13)
+                Regulations apply all across the EU right from when it's put in place, unlike directives. Intent to have consistent set of rules across EU. 
+            GDPR provides the following rights for individuals:
+                The right to be informed - privacy notice that explains processing
+                The right of access - systems need to be designed to provide data
+                The right to rectification - complicated when opinions come in
+                The right to erasure - if you have no compelling reason to keep the data, right to remove it. Google has this problem, man bankrupt 10 years ago
+                Right to data portability - allowed to get a copy to feed it into a different system
+                Right to object - they have to record this, can hold but not process or remove
+            New systems must have data protection designed in - may have to do impact assessment
+            Data breaches must be reported to regulators within 72 hours - plus a req to notify data subjects (if data high risk) 
+            Fines can now be much bigger - used to be 500,000 now percentages of world wide turnover! BA got a 1.5% fine got reduced to 20,000,000 as shopping card got hacked
+            Firms processing data at scale (& public authorities) must have a Data Protection Officer
+                Can be a contractor
+                Must be capable of advising on GDPR obligations
+                must monitor compliance with GDPR
+                must report to the board and cannot be fired for doing their job!
+            DPO optional for other firms, but must have sufficient staff & skills to discharge their duties under GDPR
+        Computer Misuse Act 1990: 
+            Various hacking activities in the 1980s, prosecuted with forgery or criminal damage legislation
+                Gold & Schifreen gained top level access, altered messages in the Duke of Edinburgh's mailbox. Originally found guilty and fined, forgery convictions overturned on appeal
+            Failure of existing legislation to be effective led to legislation cover hacking, virus propagation etc.
+            Section 1:
+                Unauthorised access to a program or data, - need to know it's unauthorised 
+                Need not be a specific machine (or in the UK) 
+            Section 2:
+                As S1 but done with intent to commit another serious offence
+                Raises the stakes from 2 to 5 years - s1 was a mere 6 months but amended in 2008
+            Section 3:
+                Unauthorised modification - tariff is up to 10 years 
+                Intended to make virus writing illegal
+                Added denial of service of attacks in 2008
+                Making/distributing hacking tools is illegal since 2008 - confusing when white hats use
+            Case Law is Chequered:
+                Fines often much smaller than damages caused 
+                Only aroudn 20 cases a year, often easier to chrage under Fraud act
+                Paul Bedworth got off on an "addiction" defence - couldn't know what he was doing was wrong
+                Whitaker convicted (but conditional discharge) for not disclosing a time-lock that froze the software when clients were late on making payments
+                Pile convicted and received custodial sentence for writing virus
+                AMEX case shows multi-level access can matter - not entitled to access part of system so unaurthoised access
+                police officer found to access data on a car parked outside ex-wifes house to find out who it belonged to. Found to be legal, but subject to disciplinary action 
+                Wimbledon case, mail bombing with 5 million emails is an s3 offence - test of unauthorised becomes "If I were to ask would they say 'yes'" I.e. Can I send you 5 million emails, No.
+                Cuthbert ("tsunami hacker") convicted of s1 offence for trying out ../../../ URLS. Donated money and poked around in the website, lied to the police.
+        Electronic Communications Act 2000:
+            Part II - electronic signatures:
+                Admissable in evidence
+                Creates power to modify legislation to allow the use of electronic communications or storage
+                Not as relevant in practise. Most companies care more about if you have the money, than who you are
+        Investigatory Powers Act 2016: 
+            Replaces RIP Act 2000
+                Much remains the same, but legalises lots of things that Snowden revealed - made to allow GCHQ and the NSA to keep doing what they were doing before
+            Deals with interception - revealing content other than the sender/receiver 
+            Deals with communications Data 
+                Metadata describing communication - length of communication, IPs, etc.
+                Provides for retention regime by ISPs
+            Permits equipment interference (with a warrent) cab put malware on your system
+            Permits bulk initerception, bulk acquisition, bulk equipment interference and collection of bulk personal datasets. Allows GCHQ to access all data coming out of UK, get all database data from Swansea etc.
+            Interception:
+                Tapping a phone, musut be authorised by warrent signed by the Secratery of State:
+                    Product is not currently admissible in court - would only disclose some of the information, as don't want to show the holes in the collection regime.
+                    GCHQ can scan international communications for "factors" (keywords)
+                Some sensible exceptions:
+                    Delivered data
+                    Permission from both aprties
+                    Stored data can be accesseed by production order - just a judge
+                    Techies running a network, can intercept for debugging
+            Lawful Business Practise:
+                Reulations describe how not to commit an offence under the RIP/IPA acts. Do not specify how to avoid problems with data protection legislation or other relevant laws.
+                    Only applies to business
+                    Must be by system controller
+                    For recording facts, quality control etc
+                    Detecting business communications
+                    Or for keeping the system running
+                Must make all reasonable efforts to tell all users that interceptions may occur
+                RIP Act 2000 - Encryption:
+                    Still in place, deals with encryption
+                        End of  along road, starting with "key escrow" where encryption keys had to be given to the government
+                    Basic requirements is to put material into an intelligible form - can be required to decrypt
+                        Can apply to messages
+                        Stored data 
+                        If you claim to have lost or forgotten the key, prosecution must prove otherwise
+                    Keys can be demanded:
+                        Signed by Chief Constable
+                        Notice can only be served at top level of company
+                        Reasoning must be reported to commissioner - ensure different police forces use the power consistently
+                    Specific "tipping off" provisions may occur, must not tell anyone you've been served the Notice
+        E-Commerce Law:
+            Stayed the same after Brexit
+            Consumer Rights Directive (2011):
+                Remote sellers must identify themselves, and where they're based 
+                Details of contract must be delivered, email ok
+                Right to cancel (unless service already delivered)
+            E-Commerce Directive (2002):
+                Online selling and advertising is subject to UK law if you are established in the UK - no matter who you sell to
+                Complexities if foreign consumers have rights in their country, the test is if you marketed them. E.g. £ and all in English, clearly advertising to UK people 
+                E-Commerce Directive also priveds key immunites for ISPs:
+                    Hosting, Caching, Mere Conduit - if you do any of those things, not your fault if there's bad things on those.
+            Privacy & Electronic Communications:
+                Rules on phone directories and location info etc
+                Bans unsolicited marketing email to natural persons. But see your ISPs acceptable use policy
+                Controls on the use of cookies, superceded by 2010 legislation
+                    Must give clear and comprehensive information
+                    AND must have consent ...unless cookies are strictly necessary for provision of an information service
+                Was intended to be replaced by time GDPR in force - now left EU not clear what will happen
+            Lots of other Legislation!
+                Lots more E-Commerce stuff:
+                    Sale of Goods, Contract law, Unfair terms, Unsolicited faxes etc etc etc
+                Lots of rules for adult stuff
+                    Children stuff illegal
+                    Extreme porn making + poss illegal
+                    Obscene publications act - webmaster conviced
+                Lots of other specialist issues
+                    Fund raising for political parties
+                    Selling age-restricted goods
+    Lecture 7: 
+        Philosophies of Ethics: 
+            Ethics:
+                Laws are often 10 years behind, and even then don't often fit reality very well
+                Practical Ethics - in what circumstances should we restrain ourselves, more than the law requires
+                Analogy: medical ethics constrains doctors behaviours - how can we form these for software developers
+            Philosophies of ethics:
+                Often authority theories arise, coming from religion - these often have disputes that need to be resolved. E.g. should slavery be legal, scriptures often allow for it.
+                Intuitionist theories say we can tell what's good or bad - but intuitions can differ. 
+                Egoist theories say people act rationally in their own self interest.
+                Consequentialism:
+                    If an act is right or wrong depends only on consequences.
+                    If more positive acts, the better or more right the act
+                Maximise W = \sum U_i , however the consequences cannot be worked out in detail, and welfare is difficult to define.
+                Ticking bomb argument, torture should be allowed if terrorist knows the unlock code - does the end justify the means
+                Modern debate: act vs rule utilitarianism
+                Would you rather be reincarnated in the USA or Portugal - poorer but with better welfare.
+                Aristotle: Consequentialist theories are for beasts, you'd be happier if you were stupid. Prefers people acting in accordance with nature and duty
+                It's not all about the consequence of actions, but the motives as well.
+                The many flavours include Kantian theory of duty - act only on maxims you'd like to be universal, and treat people not as means to an end
+                John Rawls Theory of Justice - should make moral decision based on ignorance, ignorance of whether we'll be reincarnated poor or rich - leads to maximising W = \min U_i. 
+            Moral Reasoning:
+                Koglberg's theory of moral developmentL
+                -Pre-conventional:
+                    Stage 1: Punishment and Obedience (greater the harm the greater the wrong, law breaking morally okay if no punishment)
+                    Stage 2: Instrumental hedonism (Conformity to gain rewards)
+                -Conventional: 
+                    Stage 3: Conformity, what is right is what your family views as right. Conforming to those rules preserves relationships.
+                    Stage 4: Authority and social order, what is right is according to authority and duties
+                -Post Conventional: 
+                    Stage 5: Morality of contract, individual right and democratically accepted law. Rules based on concensus, lawbreaking alright if based on social justice and preserving human rights. Changing laws preserved to breaking.
+                    Stage 7: Morality of universal principles of conscience. Behaving in the way that one believes to be right, hold beliefs and behave in line with them
+        Professional codes of Ethics:
+            ACM's code of ethics, a computing professional should: 
+                Contribute to society and human well-being
+                Avoid harm
+                Be honest and trustworthy
+                Be fair and take action not to discriminate
+                Respect the work required to produce new ideas, inventions, creative works, and computing artifacts
+                Respect privacy 
+                Honour confidentiality
+            Responsible vulnerability disclosure:
+                If vulnerabilities found, do we keep quiet or tell everyone at once
+                Responsible disclosure: confidentially disclose to those that can remedy or mitigate the impacts - heart bleed. Meltdown and spectre
+                Bug bounty programs
+                Should we make it public, if no efforts are made to fix the bug post responsible disclosure
+            Ethics in research
+                1940s: Nazi human experiments
+                1930-1970s: Tuskegee syphilis experiment
+                1970s: Stanford prison experiment
+                1960s: The Milgram experiment
+                2010s: Facebook emotional manipulation study
+                2019: use of organs of executed prisoners without consent in China
+                People now screened before research, trauma, mental fortitude etc.
+                Nuremberg code:
+                    Voluntary and informed consent of subjects essential. Must be able to leave the experiment at any time
+                Research Ethics Boards  - declaration of Helsinki independent review board or committee
+                Research funding bodies must consider ethics
+                Program committees and journal editors, consider ethics after research is done but before publishing
+                Professional ethical guidelines or codes of practice - ethical framework that provide ethical guidelines
+                For Computer science: The Menlo Report:
+                    Acknowlodges the speed of distributution of computer science research
+                    Core principles: respect for persons, beneficence (minimze harm, maximize benefits) , justice (risks and benefits distributed fairly) and respect for law & public interest. 
+                Your Part II project may involve human experimental subjects
+                    Independent review by uninvolved scientists greatly reduce risks of civil litigation and criminal prosecution if things go wrong
+                    Pay attention to the procedures for ethics committee approval - if they say no don't do it (unlike Cambridge Analytica).
 Semantics
     Semantics Supervision  1
         %LOCAL_FILE%EWCgcOK-lZJ6GXtKgqpmCeQA2MFAPMXNYxRMBbtq1Xo64BIrKQCe2_wG2RV3mMZDM0vlnXIIDh2jgmHZ7JV5hYlLSXv7Nh7gdgyv65mlLn2cT_dn6BefcHmjX5Q-Un2e.png 
@@ -441,6 +801,7 @@ l1;
             N̶o̶,̶ ̶i̶f̶ ̶e̶ ̶i̶s̶ ̶v̶ ̶i̶n̶ ̶v̶;̶e̶2̶v̶;̶ ̶e̶_̶2̶ ̶v̶;̶e̶2̶ ̶​̶ ̶v; e_2 ̶ ̶t̶h̶e̶n̶ ̶v̶'̶s̶ ̶v̶a̶l̶u̶e̶ ̶i̶s̶ ̶a̶t̶ ̶f̶i̶r̶s̶t̶ ̶i̶n̶t̶,̶ ̶b̶u̶t̶ ̶u̶p̶o̶n̶ ̶t̶h̶e̶ ̶n̶e̶x̶t̶ ̶s̶t̶e̶p̶ ̶t̶h̶e̶ ̶v̶a̶l̶u̶e̶ ̶i̶s̶ ̶n̶o̶n̶e̶ ̶  - No cant step in a section of a statement.
             I believe type preservation does still hold, I don't see how assign1 could change that, as the type should be unchanged - and seq1 shouldn't affect the final 'return' type, as we evaluate left to right - meaning our new int value is stuck at the front.
         
+    
 Data Science
     Supervision 1
         
@@ -508,6 +869,136 @@ plt.show()
         
     
 Programming in C & C++
+    Supervision 3
+         2015 Paper 3 Question 1:   
+            a.) It encourages the compiler to immediately evaluate the function inline. However, it gives no guarantee that the compiler will actually do that. Can waste space if an inline function is reused many times, less space efficient than creating a stand alone function to be run.
+            b.)  #include <tgmath.h>
+ int receive_int() {
+    unsigned int result = 0;
+    for (int i=31; i>=0; i-- ) {
+        result += receive_bit() * pow(2, i);
+    }
+    return result;
+}
+            c.) template <class T, int len>
+T receive(void) {
+    T result = 0;
+    for (int i = 0; i < len; i++) {
+        T bit = receive_bit();
+        result += bit * pow(2, i);
+    }
+    return result;
+};
+
+ans = receive<short, 8>;
+ans = receive<unsigned long,32>; d.) 
+                Line 6: buf is a value on the stack, thus the value returned will be lost once the function returns.
+                Line 4: fuel is never initialized
+                If Message is not 1 or 2 the function will not return a value, when it's supposed to return a char
+                Line 5: THRUST will overrun buf, as buf doesn not have space for the /0 that ends the string
+        2015 Paper 3 Question 2:
+            a.) The differences between C pointers and C++ references. [Hint: Consider issues of syntax, initialisation, mutation and safety in your answer.] [5 marks]
+                Pointers are created using the * syntax, while references use the & syntax: 
+                int x[] = {1,3,5,7};
+int* ptr = &x[0];
+int& ref = x[0]; 
+                References act as aliases to the data item in questions, meaning they can only affect the value they are initialized to reference - references cannot be changed to reference a different data item. On the other hand pointers act as an address to the data item, an address which can be changed to point to somewhere else in memory:  
+                ptr++;
+printf("%i ", *ptr); // outputs 3 as ptr is now pointing to the second array item
+ref++;
+printf("%i ", ref); // outputs 2, as this incremented the 1st array item 
+                Where references point to is an immutable feature, because can only change the value they point to they are much more safe than pointers - arithmetic of pointers can be done in error, resulting in the changing of arbitrary bits in memory.
+                ptr+=10; // pointer now points to an arbitrary place in memory
+printf("%i ", *ptr); // unkown output
+ref+=10; // Increments the 1st array value by 10
+printf("%i ", ref); // outputs 12 
+            b.) extern "C" {} tells the compiler that the enclosed code should be linked as C, not C++. Declaration and definitions can then be grouped inside the scope. This has the limitation when combined with C++ name mangling, i.e. C++ uses name mangling to allow for default arguments and overloading for functions - this gives each possible combination its own symbol name. If the C function name clashes with an overloaded function, a compile time error will occur. 
+            c.) Implementation defined behaviour means the creators of the compiler have documented the behaviour of the compiler when facing certain incorrect code, and the compiler will adhere to that behaviour. Unspecified behaviour means the C compiler can do whatever it wants and there is no specified behaviour. An example of implementation defined behaviour is the size of all data types char, short int etc. Examples of unspecified behaviour include how inline functions are handled, the order that operators like ++i i++ are evaluated when combined. This loosely specified behaviour allows for more freedom for optimizations by the compiler. - not sure about this
+            d.) Interactive debuggers give you a large range of tools for fast debugging, including stopping the program if assert conditions are not met, get the value of variables during running, stepping through the program, getting the trace of function calls.  A breakpoint gives the line of code where application will pause, a watchpoint allows you to set a data item such that the program will pause if it changes. The symbol table keeps track of the location of variables and stack offset for function callstack inspection.   
+        2013 Paper 3 Question 3: 
+            b.)  class T {
+    const int n;
+    public:
+    T (int n=0) : n(n) {
+        printf("%i", n);
+    }
+
+    virtual ~T () {
+        printf("%i", n);
+    }
+};
+            Fields and constructors cannot have the virtual tag. Virtual destructors are useful for when a class is derived from, and when the static class varies from the dynamic class with a non-virtual destructor undefined behaviour can occur. 
+            ii.)   T Objects are allocated to the heap using new, and removed using delete  T value = new T(1);
+ delete value;Delete runs the destructor and then deallocates from the heap. New allocates to the heap and runs the constructor. Stack constructors are run when a scope is entered, and destructors are run on exit. Static store is used by writing static C x. Virtual is essential for destructors when a class is derived from. Try finally ensures the finally block is always run at the end of a block, similarly stack allocated objects run their destructors when they go out of scope.
+        2012 Paper 3 Question 3:
+            a.) 
+                i.) What is the difference between a local and global variable in C? (Consider variable scope, storage and initialisation.)
+                    A local variable is one who can only be accessed within the current scope, after the end of the scope the allocated memory is removed. 
+                    A global variable is one who can be accessed anywhere in the program, they are initialized to zero and consume storage throughout the program.
+                ii.) What are the properties of a static member variable in a C++ class?   
+                    A static member variable only has one instance of the variable, rather than one instance per variable. 
+            b.) 
+                i.) The section of memory the pointer addresses can be changed using pointer arithmetic:  int * p1, p2; // integer and int pointer declared not two int pointers
+ 
+ int sam = *p1; // pointer uninitialized 
+                ii.) A pointer can be used to point at an array, and you can use array syntax with pointers - however a pointer is a variable (you can reassign it), while an array name is not.
+            d.) 
+                i.) void * can point to anything, any data item. void sort(void *arr, int nitems, int size, bool (*compar)(const void *, const void*));
+                ii.) void * has no type checking in C, C++ helps this using template functions:  template <class myType> 
+myType GetMax (myType a, myType b) {  
+	return (a>b?a:b); 
+}  
+            e.)
+                i.) We can "copy" instances using simple assignment, meaning all the values are copied - however if some of the values are pointers this may not be the desired behaviour. Thus, a copy constructor could solve that problem by properly dealing with those items.
+                Dog::Dog(const Dog& old_dog) {
+	bark = old_dog.bark;
+	name = new char[5];
+} ii.) 
+As in i.) when one class instance is assigned to another, variables are overwritten and this behaviour may not always be desired.
+Test& operator = (const Test &t) {
+    cout<<"Assignment operator called "<<endl;
+    return *this;
+}  
+        2009 Paper 3 Question 1:  
+            e.) Pointer arithmetic is the manipulation of the pointer address, the main (good) use is to manipulate an array using pointers - however there is no bounds checking so precautions must be taken: 
+            int sam[3] = {1,2,3};
+int *ptr = sam;
+
+printf("%i", *ptr); // print 1
+printf("%i", *(ptr+2)); // prints 3 
+            d.) class dog {
+
+    int age;
+    const char* name;
+    public:
+    
+    dog (int age, const char *name) : age(age), name(name) {
+        printf("Constructor run");
+    }
+
+    void bark(char* msg) {
+        printf("%s", msg);
+    }
+
+};
+
+int main() {
+    const char * name = "Apollo";
+    dog* Apollo = new dog(5, name);
+    Apollo->bark(name);
+    return 1;
+} 
+            c.)  New and delete are features of the language that call an objects constructor or destructor - malloc() and free() are functions, and are not features of the language but are provided from a library. Malloc and free manipulate a large data structure (a heap) to allocate data for variables, while new and delete need not use this external data structure.
+            f.)   Catches take a single argument and allow for the escape of a code block to a predefined location if an error occursint main () {   
+	try {     
+		throw 10;   
+	}   
+	catch (int e) {     
+		cout << "Exception number " << e << '\n';   
+	}   
+	return 0; 
+}  
+        
     Supervision 2
         Arenas are a useful tool for amortizing allocated memory discovery, and have the side effect of potentially more efficient cache usage through the introduction of an array for item storage. I would use one when I have a data structure that may contain cyclic sections or sections where a given item is pointed to twice from another item (DAG) - in which case traversing the structure myself at the end becomes complex & error prone, and can result in memory leaks if not carefully thought through. Arenas trade-off complexity with memory usage, as we must allocate a large array of items (the size being the maximum number of items the program could use) to eventually deallocate. An example control flow would be creating a graph, every time I create a node I add it to the arena (wherein we already specified the max possible number of items) incrementing the current value in the arena - then when finished with my data structure I free the arenas elements array and free the arena itself.
         In mark and sweep garbage collection we store an list of "root" nodes (items that are alive, and we'd like to keep alive) and an list all nodes (these may be the lists). In the mark phase we iterate through all the root nodes, and mark all nodes reachable from each root node (i.e. depth first exploration, stopping when we hit a marked node). Then in the sweep phase, we step through our list of all the nodes and free any unmarked nodes and unmark any marked ones. When we next run the garbage collector the nodes still alive will form our roots.
@@ -922,7 +1413,635 @@ x = 5, y = 3↔The expression has type short and value 3. (The rightmost express
             Works but shouldn't be used some_label:
  	printf("We used a goto")
  goto some_lable;
+    
+    Lecture 10: 
+        C++ is said to be: 
+            Better than C
+            Supports data abstraction
+            Supports OOP
+            Supports generic programming
+            Much is familiar with Java with subtle differences
+        Use C or C++
+            Don't want two conflicting IO libraries active
+            Using a standalone library coded in C is fine
+            Code with different metaphors in C & C++
+            C code may not expect an exception to bypass their tidy-up code ?
+            DECIDE AT THE START OF A PROJECT
+        C++ vs Java
+            Speed or safety
+            More vs fewer features
+            Java trying to follow C++ with value types 
+        Types:
+            A lot like C types, but additionally: 
+                Character literals 'a' type char (int in c) 
+                New bool type
+                Reference types: New type constructor &
+                enum types are disticnt, not just synonyms for integers
+                New type constructor class 
+                Names for enum, class, struct and union can be used directly as types - e.g. struct sam{...} can just use sam not struct sam
+                Member functions (method) can specify this to be const - can say this method does not mess with contents fo this
+            Auto and thread_local:
+                auto now means, the type of the initializing expression - like type inference auto sam = 5;
+                thread_local is an additional storage class e.g. only one thread sees that same value, opposite of static
+            C++ booleans:
+                bool types true (1) and false(0) when cast to integer.
+            C++ enumerations:
+                enum flag {is_keyword=1, is_static=2, ...} Defines a new type where you can use it's name: flag f = is_keyword
+                Implicit type conversion not allowed: f = 5; // WRONG
+f = flag(5); // ALLOWED, enum secretly is a bitmap 5 is allowed because bitmaps have explicit max and min values based on the max / min binary values contained in the.
+            References:
+                Alternative name (alias) for a variable
+                Generally used for specifying parameters to functions and return values as well as overloaded operators.
+                Reference declared with &: int i[] = {1,3};
+ int *ptri = &i[0];
+ int &refi = i[0]; // NEW
+                Must be initialized when it's declared!  
+                You cannot change what a reference refers to after creation. E.g.:  refi++; // Results in i[0]=2
+ ptri++; // Results in ptri point to 3
+                Can think of reference types as pointers with implicit use of * each time. 
+            References in function arguments:
+                When used as a function parameter, the value is not copied:  void foo(int& i) {i++;}
+ 
+ //Same as
+ 
+ void fooTwo(int* i) {*i++;}
+                Declare a reference as const, when no modification takes place. 
+                It can be noticeably more efficient to pass a large struct by reference than by value.
+                Implicit type conversion into a temporary occurs for const references but errors otherwise:  float fun1 {float&};
+ float fun2 {const float&};
+ void test() {
+ 	double pi = 3.14159;
+ 	fun1(pi); // ERRORS 
+ 	fun2(pi); // ALLOWED because it knows the value is not going to be changed. Implicity type converts to float. 
+ }
+  
+            Overloaded functions:
+                Works just like java, functions with varying argument type but same name.
+                Type conversion is used to find the best match, but that isn't always possible:  void f(double);
+ void f(long);
+ void test() {
+ 	f(1.0);
+ 	f(1L);
+ 	f(1); // Fails, f(double) or f(long) ?
+ }
+                Can also overload built-in operators, such as assignment and equality
+            Scoping and overloading:
+                Overloading does not apply to functions declared in different scopes.  void f(int);
+ 
+ void test() {
+ 	void f(double);
+ 	f(1); // calls f(double);
+ }
+            Default functions arguments: Uses overloading, creating two separate functions.
+                double log(double v, double base=10.0);
+// Like python, non-default cannot follow default:
+double log(double base=10.0, double v); // NOT ALLOWED
+
+// A DECLARATION does not need to name the variable:
+double log(double v, double=10.0);
+// Obviously when I actually DEFINE the function I would need to do:
+
+double log(double v, double a) 
+{... // do some stuff};
+// where log(1) same as log(1, 10)
+
+
+// But beware of lexical interactions between * & = 
+void f(char*=0); // Wrong *= is assignment 
+        Namespace:
+            Related data can be grouped together in a namespace,  not the same as a class as we can't create an object of the namespace type - just a logical grouping of values & functions.
+            namespace Stack{//header file
+	void push(char);
+	char pop();
+}
+
+namespace Stack {//implementation
+	const int max_size = 100;
+	char s[max_sizez];
+	int top = 0;
+	
+	void push(char c) { ... }
+	char pop() { ... }
+}
+
+void f() {//Usage
+	Stack::push('c');
+} Ensures we don't have clashes of external functions, namespace formalizes naming conventions (gm_openscreen meaning graphics manager openscreen for example). 
+            using namespace Stack; // imports everything to the scope
+
+int main() {
+	pop();
+	push('a');
+} More like java packages than modules in java.
+        Using Namespace: 
+            Scope and expresses logical program structure - collect together related pieces of code.
+            A namespace without a name limits the scope of vars, functions and classes within it to the local execution unit.
+            Can declare the same namespace in multiple source files.
+            Can be defined more than once.
+            Global function main() cannot be inside a namespace.
+        Linking C & C++ code: 
+            extern "C" specifies that the declaration should be linked as C NOT C++ Code:  extern "C" int f();
+ 
+ extern "C" {
+ 	int globalvar;
+ 	int f();
+ 	void g(int);
+ }
+            'Name munging' for overloaded functions.  A C compiler typically create a linker symbol '_f' for the f above, this gives the compiler a namespace the programmer cant use (funcs beginning with _). A c++ compiler generates '__Z1fv' function of length 1 that takes a void argumeny.
+            Function calling sequences can differ, e.g. exceptions.
+            If we want to write a library in C, and specify it to be importable into both C & C++:  #ifdef __cplusplus
+ 	extern "C" void myfn(int, bool);
+ #else
+ 	include <stdbool.h> //No boolean in C
+ 	extern void myfn(int, bool);
+ #endif
+            Care must be taken with pointers to functions and linkage - if I pass a C++ function to a extern "C" piece of code, could get errors.
+    Lecture 11:
+        Classes and objects in C++:
+            C++ classes are somewhat like java.
+            Two main components of classes↔Data members and member functions which act on the data. Both data members and member functions can be static.
+            The 3 access controls of C++ members are→private, protected and public 
+            Class and struct are almost synonyms in C++, the only difference is→class members are by default private while struct members are private by default.
+            Classes are created with→class or struct keywords: 
+                Struct members default to →public access 
+                class members default to → private. 
+            A constructor is simply a↔Member function with the same name as the class 
+            C++ supports overloading on both→constructors and member functions
+            A destructor is named with↔the same name as the class prefixed with a tilde (~). 
+            Big differences from Java:
+                Values of class types are→ not references to objects, but the objects themselves. 
+                    So we access members with C-style . (dot) ( using -> more convenient when we have pointer to objects). 
+                We can create an object of class C, two ways 
+                    On the stack by declaring a variable C x;
+                    On the heap: new C() which returns a pointer to C. 
+                If a function is statically resolved it means→the code to execute for a given function name is generated at compile time (or linked at link time) not runtime.
+                If a function is dynamically resolved it means→the code to be executed will be determined at run-time. 
+                Member functions by default are resolved →statically. For java-like code declare them virtual. 
+                The virtual tag and the dynamic resolution allows for→runtime polymorphism.
+                Member functions can be declared inside a class but defined outside it using : :    
+                C++ uses new to allocate and delete to de-allocate. No garbage collector.
+            Example (emphasising differences from Java):
+                class Complex {
+	double re, im;
+	public:
+		Complex(double r=0.0, double i=0.0);
+};
+
+Complex::Complex(double r, double i) : re(r), im(i) {
+	// This is the preferred form of constructor initialization
+	// NECESSARY FOR CONSTANTS
+}
+
+Complex::Complex(double r, double i) {
+	re=r, im=i;  // DEPRECATED initilization by assignment
+}
+
+int main() {
+	Complex c (2.0), d, e (1, 5.0);
+	return 0;
+} // local objects c,d,e are deallocated on scope exit!!
+  // IMPORTANT - STACK ALLOCATION
+            The preferred form of constructor initialization in C++ is (somehow). It MUST BE USED WHEN...→ Complex::Complex(double r, double i) : re(r), im(i) {...}
+ 
+ // You MUST use it when itializing
+ // const and reference members
+            In java, constructors only initialize heap storage (which has to be pointed to), only way to update is x.f = updated_val; 
+            In C++ because objects values are "first-class-citizens"→there are more update behaviours
+                In "C x;" x is initialized using→The default constructor   
+                In "C x = y;" x is initialized using→The copy constructor
+                We need to worry about what "x = y" does. 
+                We split class definitions into separate behaviours and control them to→Preserve class invariants (If I can define an object, with no members initialized - certain invariants may not hold) and object encapsulation (All the behaviour of the class should be held within the class)
+            Default Constructor  
+                Default constructors are called when→you type "C x;" or if you do "new C();" i.e. with no arguments.
+                If no default constructor is specified→The compiler creates one, with little to no initialization.
+                To disallow users to use the default constructor we↔define the default constructor and set it to private.
+            Destructors 
+                destructor are called→when a stack-allocated object goes out of scope INCLUDING when an exception causes this to happen, when a heap allocated object is deleted
+                There can only be one destructor for a class
+                Make destructors virtual when→The class has subtypes or super-types - as we'll want to inherit the destructor
+                Stack allocated objects, with destructors, are a good way of freeing memory after the scope is exited.
+            Copy Constructors
+                // Initialization methods:
+Complex c(1,2);
+// VS
+Complex d = c; // Copy constructor evoked 
+                To augment the default copy constructor use the following syntax→Complex :: Complex (const Complex& c) {...}
+// Reference to a complex item passed This is useful when I have member variables with pointers in for example. Don't just wanna copy everything
+                To disallow copying of objects→Make the copy constructor Private! Note, can still use assignment );
+                IMPORTANT NOTE: Assignment (d = c) differs from invoking the copy constructor: Complex d = c. Does not use the copy constructor.
+            Assignment operator
+                By default when the assignment operator is used→all the non-static members of a class are overwritten (x = y;). 
+                    This may not be desirable if the class contains pointers, when I copy a dog I want it to have a pointer to its own dog bowl?
+                You can implement your own assignment operator this syntax (for the class Complex)→Complex& Complex :: operator=(Complex& c) {...}
+// We take the input to the right hand and return a reference
+// e.g in x = y, c = y 
+            Constant member Functions
+                Member functions can be declared const →This prevents the function from modifying any object members.
+                The syntax for constant member functions is (for a function real in the Complex class )→ double Complex::real() const {
+ 	return this->re;
+ }
+ // Note that if you declare beforehand you need to include the const:
+ double real() const;
+            Arrays and heap allocation
+                If we want to create an array of objects, the class needs a default constructor.
+                To create and delete objects on the heap, we use this syntax→ Complex* c = new Complex(1.0);
+ // To delete them we use
+ delete c;
+ // This invokes the object destructor !!
+                We need a method for array heap deletion because→C doesn't distinguish between a pointer to an object, and a pointer to an array of objects. 
+                Array heap deletion is done using the following syntax→ delete[] c;
+                Deleting objects using the array heap deletion invokes→the object destructor on each object.
+            Operators and Virtual (11.2)
+                The "this" pointer
+                    'this' is used much like self in python (while in python you need to explicitly pass it, C++ does that behind the scenes). Useful for many tasks. Such as overloading in the body of a function:
+                    &Complex Complex::operator*=(Complex input) {
+	this->re *= input.real();
+	this->im *= input.imag();
+	return *this;
+	// Note this returns a reference NOT the object itself
+} 
+                    Remember, at its core this is a POINTER.
+                Class instances as member variables:
+                    Consider a class with objects as member variables Complex a, how do we initialize said objects? I.e. how do we call the constructor?→class Example {
+	Complex a;
+	Complex b;
+	Example(double im, double re) : a(1.0, 0.0), b(im,re) {
+		...
+	}
+}; 
+                Temporary Objects
+                    Jesus Christ. 
+                    Temporary objects exist for the duration of a full expression, after which they are lost.
+                    What is wrong with string a("abd"), b("def");
+ const char* SCARY = (a+b).c_str(); // c_str converts a c++ string to a c string→Temporary objects are things such as:  string a("dsadsa"), b("dsadfsadsaadsa");
+ // THE TEMPORARY OBJECT BELOW IS FORMED FROM (a+b)!!!
+ const char* SCARY = (a+b).c_str();
+ // c_str() just returns a pointer to the objects string value
+ // HOWEVER, because its temporary the value is lost!!!
+ // SCARY don't got nothin' in it
+                Friends
+                    Within our class, we can define another class to be our friend, this means→Code within the other class, can access the private and protected members of our class: class A {
+	friend B;
+	private:
+		int myPrivateNumber = 3;
+};
+class B {
+	static doStuff(A someObject) {
+		// Because their friends, they share the number
+		A.myPrivateNumber;
+	}
+}  
+                    We can even define non-member functions to be friends, this means→that functions defined elsewhere can access our private methods:  class a {
+ 	friend void outputTheNumber();
+ 	private: 
+ 		const static int myPrivateNumber = 3;
+ }
+ 
+void outputTheNumber() {
+	std::cout << a::myPrivateNumber << std::endl; 
+}
+                    Note: Friendship is not symmetric 
+                Operators
+                    Operator Overloading 
+                        C++ allows for operator overloading, this is syntactic sugar.
+                        It can be done outside the body of the class, using the following syntax→bool operator==(Complex a, Complex b)
+	return a.real() == b.real()
+		&& a.imag() == b.imag(); 
+                        Or it can be done inside the class, in which case we can use the following syntax→ bool Complex::operator==(Complex a) {
+ 	return re == a.real() && im == a.imag(); 
+ }
+                        Operator overloading can be done on almost all operators.
+                    Streams
+                        Streams output the left argument, this allows for chaining of streams.
+                        std::cout << "Like this" << std::endl; 
+                        We can use overloading with streams like the built in type using either syntax below: The difference is:→const char* s = "Hello World";
+cout.operator<<(s);
+cout.operator<<(std::endl, s);
+// The << operator is overloaded, if we pass one value it behaves differently to two (in this case it would pass &s[0])
+                Inheritance 
+                    C++ inheritance works much like java
+                    The syntax for C++ inheritance is→class Animal {
+	int legs;
+	public:
+		Animal(int l) : legs(l) {}
+};
+class Dog : public Animal {
+	int ears;
+	// Could have lost 1+ ears
+	public:
+		Dog(int e) : Animal(4), ears(e) {}
+}; 
+                Virtual Functions 
+                    What will the following code output?class Animal {
+	int legs;
+	public:
+		Animal(int l) : legs(l) {}
+		void makeNoise() {
+			std::cout << "A noise!" << std::endl;
+		}
+};
+class Dog : public Animal {
+	public:
+		Dog() : Animal(4) {}
+		void makeNoise() {
+			std::cout << "BARK" << std::endl;
+		}
+};
+
+void makeAnimalsBark(Dog d, Animal a) {
+	d.makeNoise();
+	a.makeNoise();
+}
+
+int main() {
+	Dog d;
+	makeAnimalsBark(d, d);
+}
+
+→The problem is, makeAnimalsBark isn't virtual, so the output will be - "Bark" "A noise!"
+                    Non virtual member functions depend on the static type of the arguments. 
+                    We need the virtual keyword because→a pointer to a subclass can be cast to the base class, then the base class cannot see the overridden function. 
+                    To get polymorphic behaviour we must→define the function as virtual in the superclass. Then it will be dynamically evaluated at runtime.
+                    Why does C++ give the option of none virtual overridden functions?→It's a trade off of performance vs Programmer conceptualization - dynamically type checking at run-time can be slow, so if it's not explicitly needed we don't want to do it. Instead of a function call in machine code, its an indirect function call - While at first glance this is not much slower, the effect on the cache and branch predictor can be large 
+                    Enabling Virtual Functions
+                        To enable virtual functions, C++ uses→a vtable or virtual function table. These store a pointer to the specific function to call for every object instance. They are slower.
+                        C++ vtables also encode RTTI - runtime type information about the class in question. Can ask if an object has the same type as another.
+                Multiple Inheritance and Casts (11.3)
+                    Abstract Classes 
+                        Works like java but with a different syntax 
+                        In C++ it is verboten to instantiate an abstract class.
+                        What is the syntax for C++ abstract classes→ class shape {
+ 	public:
+ 		virtual void drawTheShape() = 0;
+ }
+ 
+ // Inherit it as normal
+ class Triangle {
+ 	public:
+ 		void drawTheShape () {...};
+ } 
+                        When can a derived class be instantiated?→When all the abstract functions are implemented. If some of them are, you cannot instantiate the class. 
+                    Multiple Inheritance
+                        In C++ you may inherit from multiple classes, if you have a name clash you must...→class Car {
+	public: void noise() {cout << "Beep";}
+};
+class Bike {
+	public: void noise() {cout << "Toot";}
+};
+class Cabike : public Bike, public Car {};
+
+// Explicit Naming is required
+Cabike.Car::noise();
+// or
+Cabike.Bike::noise();
+                        The Diamond problem with multiple inheritance→Is when a subclass contains two instances of another class. E.g. two sets of the same variables. It can be achieved like so  class A {int someInt;};
+ class B : public A {};
+ class C : public A {};
+ class D : public B, public C {};
+ //We can do the following:
+ D dInstance;
+ dInstance::B.someInt = 3;
+ dInstance::C.someIne = 4; 
+                        If we have a case of the diamond problem in C++→All variables from the "top" of the diamond, must be chosen explicitly in order to be used. E.g. we need to know which A class to choose from if we have two instances.
+                        Virtual base classes
+                            Virtual base classes allow for only one instance of the "top" class within inherited classes. 
+                            Virtual base classes mean that↔any class that inherits from multiple classes containing the same virtual base class, will share that class instance without ambiguity.
+                            The syntax for virtual base classes is simply  class A {public: int a};
+ class B : virtual public A {};
+ class C : virtual public A {};
+ class D : public B, public C {};
+ 
+ // Means we can do:
+ D d;
+ cout << d.a;
+                    Casts
+                        double* p;
+int i = (int)*p; // fine
+int j = *(int*)p; // Undefined - we've lied about the type of the pointer and then got the value of the supposedly int pointer
+                        In C++ the role of casts and constructors can overlap, casts can be seen as implicit calls to the constructor. Give an example with Complex→ double x = 0.1;
+ Complex s = x; // Because there is a constructor that take a single double
+ 
+ // Similar to this: (which simply does the cast)
+ int a = int(x);
+ int b = x; // Implicit cast!
+ 
+                        To disallow  double x = 0.1;
+ Complex a = x; we must→Declare the constructor explicit. Implicit vs explicit casts.
+                        If I want to cast from a class type to a default type I do the following→Overload the operator of the type we with to cast to, e.g.: Complex i(0,1);
+double x = (double)i; // This would cause type error
+// Need to overload double() :
+Complex {
+	...
+	// NOTE: Don't specify return types
+	// For conversion functions
+	double operator double () {
+		return a->re;
+	} 
+} 
+                        New forms of casts in C++ 
+                            Problems with C-style casts include 
+                                They do no type checking
+                                They are hard to find in the code
+                            Describe what these do dynamic_cast<T>(e)
+static_cast<T>(e)
+reinterpret_cast<T>(e)
+const_cast<T>(e)→dynamic_cast<T>(e)
+// This uses RTTI and performs runtime checks
+// when casting pointers within an inheritance 
+// hierarchy
+Car car;
+dynamic_cast<Vehicle&>(car);
+
+static_cast<T>(e)
+// This is very similar to C, does it's best effort
+// at compile time: static_cast<int>(3.14)
+
+reinterpret_cast<T>(e)
+// Explicitely flags re-use / reinterpiration of bit pattern
+
+const_cast<T>(e)
+// remove const or volatile from a type, allowing you to edit it as you please
+// Specifically for const pointers
+                    
+                    
+                    
+                    
+            
+    Lecture 12:
+        Exceptions and RAII
+            Exceptions
+            Done just like java, but throw object values not object references - the reason for this is→if you run out of storage, a reference requires the creation of an object in storage... 
+            The principal of exceptions is a given piece of code (a library) may encounter an error and not know what to do with it - the user code may know how to handle it.
+            One portion of code throws an exception, another catches it.
+            If an exception is thrown, the call stack is→unwound until a function that can handle the exception is found
+            An uncaught exception results in the program terminating.
+            Throwing Exceptions
+                Exceptions in C++ are just normal values, matched by type. Often a class is used to define a particular error type.
+                An instance of the class can then be thrown, caught and possibly rethrown. The syntax for these is→ class myError() {
+ 	public:
+ 		int X;
+ 		myError(int x) : X(x) {}
+ };
+ 
+ void f() { throw myError(10); }
+ 
+ try {
+ 	f();
+ }
+ catch (myError) {
+ 	//handle the error
+ 	throw; // re-throw
+ } 
+                The thrown type can carry information  try {f();}
+ catch (myError instance) {
+ 	std::cout << instance.X; // outputs 10
+ 	// We could simply make myError a struct so all members are public
+ }
+                The syntax for catching multiple errors is the following (also what does catch(...) do?)→ try {...}
+ catch (errorA) {...}
+ catch (errorB) {...}
+ catch (...) {} // is a wildcard that catches all exceptions - discouraged, what have I caught?
+                Class hierarchies can be used to express errors→e.g. someError > myError. However, this requires runtime-type-information!
+            Exceptions and local variables
+                When an exception is thrown, that stack is unwound this differs from stepping down the stack as→all local variables we meet call their destructor. This plays the role of try - finally (in java finally frees memory)
+                It is good practise to wrap locks, open file handles, heap memory etc. in stack allocated objects - this is because→when the stack is unwound the destructor of the stack allocated object will be called and all the memory can be freed.  
+                RAII is→Resource acquisition is initialisation (this is a terrible name), actually means memory is freed once the object is out of scope - done by wrapping resources in stack allocated objects.
+        Templates
+            Templates support metaprogramming, this is where→code can be evaluated at compile time rather than run time
+            Templates support generic programming, this is where→types are parameters to a program
+            Generic programming in void * pointers has the disadvantage→that we lost type-checking
+            Class templates
+                The syntax for defining and instantiating a class template is→ template<typename T> class Stack { ... };
+ // Or alternatively, this is the same
+ template<class T> class Stack { ... };
+ 
+ // We can the instantiate the Stack
+ Stack<int> stack = ...;
+ 
+ // the template parameter T could be any C++ type - hence preferring typename to class
+                Stack could then be implemented like:  template<typename T> class Stack { 
+ 	struct Item {
+ 		T val; // the important bit
+ 		Item* next;
+ 		Item(T v) : val(v), next(0) {}
+ 	}
+ 	...
+ 	public:
+ 		void push(T val);
+ 		T pop();
+ };
+            Template richer details 
+                How do you specify a template to take a value?→template<int i> class ... 
+                How do you give a template several parameters?→ template<typename T, int i> class ...
+                How do you declare a subsequent parameter with a template parameter?→ template<typename T, T x> class...
+                How to you use templates to give default values?→template<typename T, int x=100> class ...
+            Templates behave like macros
+                Templated classes are type checked when→the template is instantiated. 
+                Template definitions are often placed in the→header file, because the compiler needs the source to instantiate an object.
+                The difference between java and C++ templates is→ Java does type erasure setting all the types to Object, while C++ works like a macro where the type is replaced and the new function for that type is added to the binary 
+            Templated specialisation
+                What does Template specialisation allows us to do and what is the syntax?→It allows us to define different definitions of a class depending on the type parameter passed. 
+The syntax is: struct Test{};
+
+template<typename T> struct doStuff {
+    void stuff() {std::cout << "HI!" << std::endl;}
+};
+// NOTE, the missing typename T is ON PURPOSE
+// You must have empty angle brackets
+template<> struct doStuff<Test> {
+    void stuff() {std::cout << "NO!!" << std::endl;}
+};
+            Templated functions
+                The syntax for defining and instantiating a template class is→this:template<typename T> void sort(T arr[], const unsigned int& len);
+
+// The type of the template is then inferred from the argument types:
+int sam[] = {4, 1, 2};
+sort(sam, 3);
+sort<int>(a,3); 
+                Unlike template classes, template functions have type inference. 
+                Using templates for functions like this results in
+                    Better type checking than using void *
+                    Larger binaries if multiple different types of sort() are invoked
+                    Potentially faster code than runtime type inference as we don't have vtables for functions - we know the type of the function at compile time
+                Overloading templated functions 
+                    Templated functions can be overloaded with templated and non-templated functions. Resolving an overloaded function call uses the "most specialised" function call
+            Template specialisation enables metaprogramming 
+                %LOCAL_FILE%_qsNY9_ag-ZhMMnJoBIlTBcdNHf3yUahT-AMm2TonL3ay1_mtpzUixn0ACOUbvzuRBBUliHrc1qG9hED_MVdo29srt_WOUI7DZfbgABrzZ47XkYigIPhHplmm7HBr46h.png 
+                Meaning templates are a Turing complete compile-time programming language! However the type you seek to evaluates value must be known at compile time - like enum or static
+            
+            
+        
 Intro to Computer Architecture
+    Supervision 5
+        Discuss an example of a problem that we can solve efficiently by using CUDA.
+            CUDA works only for Nvidia GPUs, so the problem needs to be parallelisable (problems like video decode, rendering, deep learning etc.) and preferably with enough data to take advantage of the large scale compute GPUs offer. Due to CUDAs relative succinct syntax, the solution can be developed quicker than with OpenCL and will run faster than OpenCL code on nvidia GPUs. I.e. while OpenCL code can be run on NVidia GPUs, CUDA exploits methods to make it's code run faster.
+        Discuss an example of a problem that we can solve efficiently by using OpenCL.   
+            OpenCL can be used for problems where the final device the code will run on varies. Because the code is compiled at runtime, OpenCL can cater to many different device types (CPUs, GPUs, FPGAs...) as the ISA is optimized for at runtime. Thus, if you were planning on implementing your code on a microchip without space for a GPU, and on an FPGA OpenCL would be a good option. However, the hardware you're planning on running your OpenCL code on must have support from the vendors as otherwise the API will not work with the device. OpenCL can provide many of the same parallel features that CUDA does, however on some of it's application domains those features will not be applicable (For example CPUs with modest numbers of cores).
+        How is it possible that so many different devices, with completely different internal  architecture are compatible with OpenCL and enable acceleration of execution?
+            This is possible due to two reasons
+                OpenCL code is compiled at runtime, allowing the system to implement system specific optimizations when the physical characteristics of the device can be determined. The alternative method would be to have separate binaries for every device.   
+                OpenCL gives the programmers set ways of abstracting away from the metal. Memory is viewed abstractly, threads and thread grouping is viewed abstractly and the platform model abstractly models the system with one host and multiple devices. 
+        In CUDA, what’s the difference between a thread block and a warp?
+            In CUDA thread blocks contain multiple warps - while thread blocks describes a set of warps all executing the same kernel, a warp describes a set of threads all executing the same kernel. Warps within a thread block can communicate. Thread blocks are executed on a single streaming multi-processor, with individual threads being executed concurrently. 
+        Why does OpenCL require an application to discover the available platforms and devices?   
+            Because we don't know before runtime what platforms and devices are available, OpenCL code can be run on a wide range of different platforms and devices. This also forces the programmer to consider that fact.
+        Compare and contrast the OpenCL programming model with CUDA.   
+            CUDA built for NVIDIA GPUs only, OpenCL heterogenous. Meaning OpenCL requires more general programming approach that will work for many devices.
+            CUDA specifies host and device, OpenCL specifies host and devices. Both have sections run on the host CPU and the devices. OpenCL uses the kernel keyboard while CUDA uses device.
+            OpenCL much more verbose than CUDA, more code required as less guarantees about the devices and their capabilities.
+            OpenCL has work groups and NDRanges - while CUDA has warps, thread blocks and grids. NDRange comes from a use of mostly 1, 2 or 3d problems in most target applications of parallel processing, CUDA gives you more freedom to structure your solution how you'd like.
+            Compilation at runtime with OpenCL, meaning you can't know the exact machine code your program will generate - with NVidia you have more guarantees.
+        What types of application best suit GPUs and how can you program to take advantage of the  various forms of parallelism available? Try to describe examples.
+            The best applications are so called 'embarrassingly' parallel applications. These applications require the same operations to be applied on a wide array of data items, with (crucially) individual operations being independent. This allows all the operations to occur at once, with minimal consideration on whether another operation has completed or not. However, one must program in such a way that the parallel operations are truly done in parallel - for example in graphics the different types of the Phong light model are independent, so rather than doing them one by one in - load them all into the immensely capable GPU and let the cores work away. Another example would be machine learning, while layers depend on each other for back-propagation, we can pipe in partial results from one layer to start working on the next - partly parallelising a linear sequence. 
+        
+            %LOCAL_FILE%4ouCT39UXVo_2Bj7qJhThMxfe_vyMST5gsBkVM-nYLDRVEczCQPWTeC682qd3XYi7ev-Yxp_eS8B81hHJxaArA1PcHIuWtWGLg33HbqWjk-UfwxRh92RVUusa5o9yQEf.png 
+                Platform Model - Describes how one host interacts with multiple devices. Using a rich API to facilitate communications to disparate devices.
+                Execution Model - Describes how the host interacts with devices, an abstract environment is prepared to manage memory objects and interact with devices.
+                Memory Model - Describes how memory is logically (not necessarily physically arranged) where work groups have their own shared memory, work units have private memories and there are device global memories - one read only and one writable.
+                Kernel execution model - Defines how concurrency is mapped. This wasn't really discussed in the lectures, would be helpful to go through this. 
+            %LOCAL_FILE%H3ilrOTcONHsImYWvjkSJBeFEo9leITtzTe7jiTnlRn4YtakmfeQyrbb_Qkmf5FxDwUSwoP6vq3qjhEol_xbZoZRgvNVYRZVQ2Oixupxv0-lRigrvS1dtv3qu5D415Gs.png 
+                Individual work items have their own private memory containing their stack and registers for computation, this is very fast to access with no congestion. Then work groups are given a shared memory to facilitate communication and allowing for a single fetch for all work items rather than multiple different fetches, this is slower to access but is still quick. Multiple work groups can be running the same kernel, and each of those can access a global memory, which is part constant read-only memory this is slow to access - but large chunks can be loaded to work group local memory at a time. 
+            %LOCAL_FILE%hIyewZoz0zMszjLOw_8Fhc9vO2cWNX9KLO1Y8Fj1AQo2SEjqXrRCp5jE8pFEUQBWnDyj57QuFpxZPgHD039DzVEJ-UqOX1K3dYrptvYfgwdv34jySrYMs-rQnMdx_Y1I.png 
+                In CUDA calls are scheduled based on if they are blocked, the scheduler orders commands for maximum efficiency - the programmer must specify the grid size and the number of warps in each thread block. The function must be specified as running on the device, and is then launched form the host computer. 
+                In OpenCL command dependencies replace the scheduler, with guards used to ensure dependencies are not violated. Each command is given an event and a wait list, where other threads are dependent on a given threads event. NDRanges containg work groups much like warps.
+        Why is energy efficiency the “new fundamental limiter of processor performance”, as Borkar  and Chien say?  
+            The problem is no longer the number of transistors that can be fit on the board, we now have the issue that we cannot control the heat produced when a large proportion of those transistors are switching. With the breakdown of Dennard scaling (due to transistors requiring more static power), transistors are used actively sparingly to not overheat the board. A similar effect describes why frequency cannot be easily increased as it had in the past, the heat cannot be easily dissipated and hotter transistors perform slower.  
+        Describe Arm’s big.LITTLE system.
+            Arm's big. LITTLE system pairs a smaller more efficient CPU with a larger more powerful (and more power hungry) CPU into a single SoC, such that the system appears to be a single multicore processor to users and the OS. This allows for real-time selection of the appropriate processor for the task, depending on the required computation intensity and the power budget. The vast majority of the time, the smaller low power CPU will be in operation saving battery power - however when the user undertakes demanding tasks like gaming, video decode and certain web browsing the larger more powerful CPU steps up to take the load.
+        When might it make sense to implement functionality in a specialised accelerator rather than  within a general-purpose core?
+            If energy efficiency and speed are a important, and the task is specific and unchanging then a specialised accelerator is a good option. Accelerators are faster and more energy efficient than a general purpose core, this is because they can make much better sue of parallelism and take advantage of the fact that not everything needs to be routed through a CPU. However, they are custom designed for a singular purpose - so if a better algorithm is found then the accelerator would need to be replaced to be upgraded, which can be expensive. 
+        Discuss a general multicore CPU vs ASIC vs DSP  
+            A general multicore CPU does implement some parallelism, but is designed to carry out any problem one can dream up to throw at it (albeit not hugely efficiently for all) - DSP and ASIC on the other hand are designed to solve specific problems efficiently and quickly. DSPs are for signal processing problems generally concerned with mathematical operations, they are SIMD and allow for lots of parallelism. ASIC are designed for a very specific operation, customized for high performance and efficient power usage. ASICs are more general than DSPs in that more problems than digital signal processing are solved with them, but only one problem is implemented at once on an ASIC. ASICs have a much higher one time cost than CPUs or DSPs as a specific solution must be painstakingly designed and implemented on silicon, while CPUs are very general and can be bought off the shelf and DSPs are cheaper to specialize to a given signal processing problem. 
+        Discuss Approximate Computing:
+            Approximate computing is computing in which (generally small) errors in results are accepted, allowing for far less error checking and the use of algorithms that sacrifice correctness for speed. Approximate computing is deployed in areas where correctness is not critical such as videos, gaming, graphics, audio, etc. The thought process that a missing pixel here or there in a single frame of a > million pixel image will not go amiss.
+        
+            %LOCAL_FILE%HJi56y0nwzE0cilTtsd0vFKyRasLtGjNsw1DJmHZ2k_Z5AZbF26xUzydqNZ8R4cDZGqlx-uz2Mr-vqVET3nPtWYHUTRVkzh9IpfC04h0gM2H0H8no3diZPWaPBipsAAb.png 
+                Computational sprinting would be perfect for workloads where the general case is simple, manageable computation - but rarely a heavy serial amount of execution needs to be undertaken, for which a speedup of clock speed will reduce the time taken to compute. In the case of serial execution, accelerators usually take advantage of parallelism to make gains in speed and energy efficiency, thus accelerators would fall behind. Additionally, if the general case the CPU can manage the load. This system would also be cheaper than a specialised accelerator and allow for on the fly patching.
+                %LOCAL_FILE%IYi4VtVDDSvT6SSNeJaOQg40uKCtASXOwlFUH6X8fD715TIU5JbCDXzquNypf5adAkXxMJorq5-LTdmZf3hapXwMQqZpgvTuQcEaPVjeMhAJhLpTMtxS9URgZlW0hExL.png 
+                    Advantages:
+                        Can speedup tasks that the CPU regularly uses, as well as reduce energy usage.
+                        Can change the function the FPGA (acting as an accelerator) computes, depending on requirements, changing of the algorithm or depending on user habits (e.g. a user that does more graphical processing could convert the FPGA to do rendering).
+                    Disadvantages: 
+                        Added cost of buying an FPGA. Additionally, FPGA need a lot of power supplier for their constituent controllers - need to have access to lots of those.
+                        Need to keep the FPGA close to the CPU, so time isn't lost transferring the data (energy will be spent during transfer).  
+                        FPGA slower than an ASIC and less energy efficient, so if we end up not upgrading the system we've lost out. Additionally, while ASICs have a high up-front cost they are cheaper per-unit - thus if a large number of these boards are to be produced use ASICS.
+                        Reprogramming the FPGA can be arduous as you need to use a hardware design language like verilog, which requires a lot of expertise and low level knowledge (far more than a language like c), and a very long compilation process (hours long) needs to be undertaken (place and route very slow). 
+        Discuss the Spectre bug 
+            Spectre takes advantage of speculative execution to extract kernel information the program should not have access to. This is done using speculative execution, where commands within branches are computed under a probabilistic assumption that the branch is likely to be computed - while the CPU does roll the changes to registers back if unwanted computation was performed, it cannot roll back the changes made to the cache. The cache can then be probed by repeatedly getting the CPU to read data and timing the speed it takes, if the data is read quickly (you start this process by flushing the cache so you know you aren't reading an unrelated value) then it's in the cache and must have been what was read from the kernel. 
+            This is an interesting bug, because it was prevalent under many different CPU manufacturers and was caused by a design issue within hardware not software - meaning it couldn't simply be patched on the fly. This resulted in millions being spent patching the bug, CPUs having to be redesigned to address the issue. 
+        Create a diagram with all discussed elements of a computer system (e.g., cache, RAM). Discuss  common units of time for operations that these elements perform (e.g., time to fetch memory  from cache and RAM, time to execute an instruction).   
+            %LOCAL_FILE%f-uF3MGr2QyRTAJRFcKgoGMmxdh6wtTBzNR1fJGCFn25DufzT_OEp61iAggmyk0HybwuVUX0zMdRTKlP5KijPkXPlLmrsYAdEzukkCjPYvOAPdKvLCq4mWxzAKZv3Kdt.png 
+        
+            Write a 1-page essay (no longer) describing how topics discussed in different lectures are related, and how in your opinion they relate to software engineering. Focus on identifying conceptual solutions discussed in different lectures and explain how these abstract concepts are applied for different concrete problems, on different abstraction levels.
+            Discussion of GPUs, FPGAs and parallelism improvements -> Moore’s law and breakdown of Dennard scaling -> Discussion of increasing complexity of computer architecture -> System Verilog and HDL -> Abstraction to and away from the metal -> Using different cache levels and relation to C programming -> relation to security with spectre and meltdown
+            Three areas that had direct relations between lectures were that of GPUs, FPGAs and concurrency in general. All of these topics move away from serial ­computation, and towards parallelism allowing multiple computations to be performed at once (with individual instructions often taking longer to compute than in a serial CPU). GPUs user a huge array of threads which are split into ‘warps’ which operate serially in lock step, FPGAs design varies and makes use of concurrency as sections of the program can be computed in parallel and then combined. Abstractly concurrency is used in both, but on the metal, they employ the technique in different ways.
+            Concurrency is something programmers are increasingly having to take account of if they wish to gain large speedups in code, this is because of (and relates to) the decline of Moore’s law and the breakdown of Dennard scaling.  Dennard scaling relates to the increasing amount of static power transistors use, resulting in power requirements not shrinking with the size of transistors – this is part of the reason for the slowdown of Moore’s law, as a large number of transistors cannot be made use of due to temperature constraints. The solution to the decline of Moore’s law is twofold, one is increased parallelism of architecture and software and another is cleverer architecture making further use of techniques like speculative execution, accelerators (which make use of concurrency) and pipelining (also uses concurrency, different stages of execution computed at once).
+            These techniques relate to the discussions of increasing complexity of computer architecture. As systems become larger, more complex and with more people working on them the design of chips has long surpassed what can be contained in the brain of a single person. Computer architecture is now developed using the cognition of hundreds of engineers over tens of thousands of man hours. While systems like System Verilog and other Hardware Design languages be a solution to reduce complexity, computer architects still need to be incredibly focused and detail oriented to make progress (the required focus is rewarded with a big fat salary). Another tool for conceptualizing massively complex systems is abstraction, allowing for thinking at the level of individual transistors up to the level of communication between different components on the board. Similarly, programmers should have some conception of these abstractions when writing performant and accurate code – for example, a thorough understanding of the working of a cache can help write more performant code using techniques like preloading, loop-blocking and struct-of-arrays.
+            However, when a large system of huge complexity is deployed, unseen problems can occur (despite extensive testing through fuzzing and other methods) as they did in the use of caches. The problems in discussion being Spectre and Meltdown, these two disparate functions of the CPU, that of speculative execution and caching, to leak kernel information to people who should not have been able to access it. These bugs cost (and is still costing) companies across the globe millions as they rushed to fix the problem, also resulting in a palpable slowdown in the computing devices of all large vendors across the glove as systems were needed to ensure the exploit isn’t employed. Similarly, software developers need to be cognisant of the security of the code they write – and ensure exploits are detected or ideally caught before they make their way into the codebase.
+        Summarize the main message from “Lecture 15: Cuda, OpenCL” in 1-3 sentences?
+            New programming languages can help build better code in specific areas. CUDA is Nvidia's approach while OpenCL is more heterogeneous. Modern GPUs are multithreaded multiprocessors, with multithreading hiding latency from stalls.
+        Summarize the main message from Lecture “16: Future directions. Energy efficiency.  Performance. Reliability. Security” in 1-3 sentences?  
+            Computer Architecture is changing rapidly, with the rise of multicores and accelerators. There are lots of good solutions already, with more sure to arise. We are in a new golden age for computer architecture.
     Supervision 4
         %LOCAL_FILE%Guf1exbPhgo5Z2eHqD_6p41EcW-pvbqzLDBBZ_gOjY64bnMq11BYpEMCRjDD3_JWU3vMJWO67JNqmPSquhOyJkS2PxJKRzPY6XuzIcYWXPAbuDEVMGcvlSn9bpEIyR0F.png 
             The load linked instruction ll r1 (0)r2 loads the value of the memory address in r2 from memory into r1, the store conditional sc r5 (0)r2 then checks if the value stored in r2 has been altered in-between operations (generally checking for alterations or reads by a different core), and if it hasn't it writes r5 to memory - if the write succeeds (e.g. r2 hasn't change and no hardware problem occurs with the write) then sc writes a 1 to r5 otherwise it would write a 0. 
@@ -1396,7 +2515,7 @@ endmodule
         Manufacturing cost
             What is the most crucial factor for determining a chip production profit margin, and what is that item proportional to?↔Yield, which is proportional to Chip size
             One of chip production cost is going up, and semiconductor fabrication foundries are getting  more expensive exponentially
-        Wire Scaling 
+        Wire Scaling
             %LOCAL_FILE%1T9JycMAAFENrnfZUO0ti3ABwW9gPPx7tlIvpaxhOCk1D53dJNi65eBCRM6mtfzcDtHO6cPcfvmz_juAgfvUAO6oZ3_swOANtSJ3F89qkLy0QdS604_CmJIUBd_MtVwp.png 
             R \propto \frac{L}{W+H}
             C \propto w \cdot L
@@ -1442,13 +2561,12 @@ endmodule
                 Higher level hardware description languages
         General Purpose Chips
             Not power efficient and slower than the equivalent FPGA which have 15x slower gates - this is due to parallelism being exploited. 
-    
     Lecture 15:  CUDA and OpenGL
         GPU Memory:
             Different hierarchies of memory, various levels of sharing. Isolation vs sharing for individual threads and warps composed of threads.
-            Modern GPUs also use caches, even though multithreading hides DRAM latency - they reduce DRAM bandwidth requirements (Would need larger buses).
-            Memory Types:
-                Threads allocated private local memory. Stack Frame, spilling registers. 
+            Why do Modern GPUs also use caches, even though multithreading hides DRAM latency?↔Caches reduce DRAM bandwidth requirements (Would need larger buses).
+            What are the GPU Memory Types
+                Threads allocated private local memory. Stack Frame, spilling registers.
                 Shared Memory on each multithreaded processor (streaming multiprocessors):
                     Not shared between processors 
                     Dynamically allocated to thread blocks on creation
@@ -1460,97 +2578,163 @@ endmodule
                 Shared Memory - within each multithreaded processor; high bandwidth
                 Global memory - In external DRAM; can be cached
                 Constant and texture memories - In external DRAM; cached in specialised caches.
-                NOTE: Accesses by one thread is broadcasted to all other - don't need 32 accesses for a single value.
+                How are thread accesses of values different in a GPU to a CPU → Accesses by one thread is broadcasted to all other - don't need 32 accesses for a single value.
             Example - Kepler Memory:
                 %LOCAL_FILE%XuzblUh_rrlMLk8o-CPXl4Rw7Hjsp0HIfwgeOevS6YsNjBev9u3lAXwXPQ77Cg8sIS57ijCwg3fcPgtWE5wzKHu-ltUTmoxfomsFz8W1B26CPtf6i4BOuhcvjPl8DIq_.png 
                 Configurable, can set up a split between amount of shared memory and cache. E.g. 16/48kb split.
                 ECC (Error correction Codes) on registers, caches and DRAM, protect from errors from things like particle strikes.
         Programming with CUDA:
-            We can use High-Level languages, make things portable across GPUS. To abstract away from GPU internals. 
+            Why use a GPU programming language?↔We can use High-Level languages, make things portable across GPUS. To abstract away from GPU internals.
             CUDA widely used and mature.
             Compute Unified Device Architecture overview: 
-                Its a C like language but allows C++ constructs too. Programmer identifies the code to run on the CPU and that for the GPU.
-            %LOCAL_FILE%2_rk_SLGfYaCbC7L7_eBMpQTqnZeHX85WaM_EL3At4or7O4_zj0ySO38fofD4qJbpTa9w5X8HmiTlFyeqC9Y2mx0XBSa9KUyHCPyxSc8NFRJ2tlqx-2lXlsBhkAhT3q3.png 
+                Its a C like language but allows C++ constructs too. 
+                What does the programmer need to specify about CUDA code?→Programmer identifies the code to run on the CPU and that for the GPU.
             %LOCAL_FILE%dbmGAZxgLYhjIY9qKOOKtFehp2duKks1M9KvhVIZ8qGP3rH_8j3ZFrfwKvIgEaCBq2jOImcvNFHRsExCVfjqAsUD1uCtrSUpFx1kq6Y0vy2xxCRBsFo7TQ3LxrLETxKf.png 
+            In CUDA what is the kernel? ↔A Program or function, designed to be executed in parallel.
+            In CUDA, what is a thread? ↔A single stream of instructions from a computation kernel
+            In CUDA, what is a Warp? ↔A group of threads that are executed together
+            In CUDA, what is a Thread Block? ↔A set of threads (usually a set of warps) that execute the same kernel and can cooperate
+            In CUDA, what is a Grid? ↔A set of thread blocks that execute the same kernel
             The 128 forms the THREAD BLOCKS within the GRID. Contained within the Thread blocks are WARPS. 
             %LOCAL_FILE%IOpN_f2w7U97udVrPrApTVX3kF50t4vhMTdOHOIfpfFaCbTbe3SpkPBmt4vq47OWje2XY4Uee77ULJh7FJSLx-sIvb4GYv3lSqzlQkdXiGXKo602PG-3Yq9gjV1bNum_.png 
             __device__ or __global__ mean on the GPU.
 __host__ means on the CPU Must call GPU functions with code dimensions:
-            These specify the number of blocks within a grid, AND the number of threads within a block. Programmer sets these, and vary from problem to problem.
+            What does this specify in cuda: func<<<128, 8>>>(params)↔These specify the number of blocks within a grid, AND the number of threads within a block. In this case, 8 blocks with 128 threads for each block. Note in CUDA this will result in 128/32 = 4 warps for each block.
             func<<<dimGrid, dimBlock>>>(params)
 In the above case:
 func<<<128, 8>>>(params) 
             %LOCAL_FILE%IV-BieGOCBrUPR1f1WfLxLAxTszfR145eY_YKGy6PUT58Cez6N2otQQygd5YmlzTzqVo6sdf9kkTILbMntewX-mi3FT19NTryACLaUcemLRyXt3Q6gJk81Jk6trgQf3t.png This is replaced with: 
-            %LOCAL_FILE%Mge8HfaS1Wte6Kp2rLWLoeKXEMlPkYyTEXjOskuf7-lRgHMPpunbIMoP_g09Dp2D3RyvUfD1ulqyB1crfvIveWJYrFJmm3Fl1Mg6lk0g2yC5mlsHeDOYPVCQUjhG2I_Z.png 
-            So each thread is one iteration of the for loop! Note that the i<n is used because we could call it with more threads than needed because must have 32 threads in a warp. 
+            Explain this %LOCAL_FILE%Mge8HfaS1Wte6Kp2rLWLoeKXEMlPkYyTEXjOskuf7-lRgHMPpunbIMoP_g09Dp2D3RyvUfD1ulqyB1crfvIveWJYrFJmm3Fl1Mg6lk0g2yC5mlsHeDOYPVCQUjhG2I_Z.png→Each thread is one iteration of the for loop!  i<n is used because we could call it with more threads than needed, as there are 32 threads in a warp.
             Called using:
             %LOCAL_FILE%fEpPAxd5Adxm1gbu5o48waHRg8Yxt0gtDGWLkfS9yGG8Jv0zZoC4LWtuGndgcOhm9EcJTaqJhJ_hZ7TkS2UpMKYBig7Qu_MvpVUdkKiW8ugEl_TJRrqNhxm61IH2LTMN.png 
         Programming with OpenCL:
-            Designed for many different types of systems. CPUs, GPUs, DSPs, FPGAs, etc
+            What types of systems is OpenCL designed for?↔Many types, including CPUs, GPUs, DSPs, FPGAs, etc
             Based around 4 models of Computation
                 Platform model - Specifies one host and multiple devices
                 Execution model - Defines how the host interacts with devices
                 Kernel programming model - Defines how concurrency is mapped
                 Memory Model - Defines the abstract memory that kernels use
             OpenCL Platform Model:
-                Host & 1+Devices where devices are divided into compute units and then divided into processing elements: 
-                %LOCAL_FILE%4rf5xMsFBIDTfR0cNw_V4VC8lpFBr-lM4-LRcaHfGkjUvQTVEQ-SNxLabgxSBbzKYYGTzExGqfVnOncifpWkm2T1JtlV8xRP6d3znfFsLl6-Z45uDGmgVv9Lv_5JDXkR.png 
-                Host would be main CPU for your computer, GPU one device containing streaming multiprocessors (Compute unit) and each thread would be a Processing element.
-                A system could have multiple platforms, e.g. intel and AMD platform with different characteristics. And apps use a rich API to determine devices and platforms and create and run computation. 
-                 clGetPlatformIDs(entries, *platforms, *num)
-                    Need to call twice, the first call gets the number of platformIds then allocate the memory for the platform array (now you can with the number) and call again to populate the array.
-                    Do the same with  clGetDeviceIDs(platform, device_type, ...)
+                Give a high level overview of the OpenCL Platform model→Host & 1+Devices where devices are divided into compute units and then divided into processing elements: %LOCAL_FILE%foy6M1jue01yXLC_9O94FlbNKw1Rz3fHxllaYgi_isUxkQyhHD8T45bMRrfdRiCzZBKBQDkHLITYvoRTRFvdVravQx_dgMKWFf6lLrUAqLVHBVOgQq2J8hTfO3AHKzFF.png
+                On your PC, what would the high level parts of the OpenCL Platform model?↔The Host would be main CPU for your computer, the GPU would be one device containing streaming multiprocessors (Compute unit) and each thread would be a Processing element.
+                How does OpenCL handle multiple platforms on a single system (e.g. Intel and AMD devices)↔Apps use a rich API to determine devices and platforms and create and run computation.
+                How does  clGetPlatformIDs(entries, *platforms, *num)work?↔Need to call twice, the first call gets the number of platformIds then allocate the memory for the platform array (now you can with the number) and call again to populate the array.
+                Do the same with  clGetDeviceIDs(platform, device_type, ...)
             OpenCL Execution Model: 
-                This describes how execution is actually set up. For which we need a context:
+                This describes how execution is actually set up.
+                For which we need a context. What is contained within the OpenCL Execution model context?
                     An abstract environment for the execution
                     Manages memory objects
-                    Manages interaction between the host and devices
                     Keeps track of programs and kernels on each device
-                Command queues lets the host to communicate with the devices
-                    One queue per device, host sends the commands
+                    Manages interaction between the host and devices
+                What are Command queues in OpenCL?
+                    Command queues allow the host to communicate with the devices within the OpenCL Execution model
                     For example data transfer or running a kernel
-                Queues can be in-order or out-of-order, in order = FIFO Queue. Out-of-order, commands can be rearranged for efficiency. 
-                Barriers used to synchronise queues.
-                We also have command dependencies, e.g. a given command depends on others. Event objects specify these command dependencies.
+                    One queue per device, host sends the commands
+                What type of queues are used for OpenCL command queues↔Queues can be in-order or out-of-order, in order = FIFO Queue. Out-of-order, commands can be rearranged for efficiency.
+                How do we synchronise OpenCL command queues?↔Barriers used to synchronise queues.
+                Describe Command Dependencies in the OpenCL execution model
+                    A given command depends on others. Event objects specify these command dependencies.
                     Each command has a wait list.
                     Each command has its own event, to link dependent commands with this
-                    Events contain the state of the command: Queued, running, submitted, ended, ready, complete.
-                    %LOCAL_FILE%g5IxZIxS7kbLZkh4q50OMN6J0KveTEEgfwzVD_yBNJfcMjSDnH5CEJgWa8M4KMFeOlATwdk4J67xdlsd_bLA_53GlGQGpP9J8Pb3z-zz9Ft5R0mIlv-ggcPKyCJbahrV.png 
+                    Events contain the state of the command: Queued, running, submitted, ended, ready, complete.%LOCAL_FILE%g5IxZIxS7kbLZkh4q50OMN6J0KveTEEgfwzVD_yBNJfcMjSDnH5CEJgWa8M4KMFeOlATwdk4J67xdlsd_bLA_53GlGQGpP9J8Pb3z-zz9Ft5R0mIlv-ggcPKyCJbahrV.png 
                 Kernels is the code that actually runs on the device. 
                     Syntactically like a C function, each kernel contains the body of a loop. 
                     Kernels express parallelism at a fine granularity - allows efficient mapping to a wide range of hardware.
-                Work items are the basic unit of concurrency, each work item executes one iteration of a loop. Corresponds to a CUDA thread. 
-                Number of work-itiems created is expressed as a n-d range
-                    Either 1 2 or 3 dims, called an index space.
+                What are work items in OpenCL?↔Work items are the basic unit of concurrency, each work item executes one iteration of a loop. Corresponds to a CUDA thread.
+                What is an NDRange?
+                    Work items are given a index depending on the NDRange, for a 1d problem consider vector addition work item X computes the addition at index X. For a 2d problem, consider matrix multiplication where work-item (x,y) computes a multiplication (x,y). Work group space would also be the same number of dimensions.
                     Usually corresponds to input/output data 
-                Work items within an NDRange are grouped into smaller units called work-groups
-                    Share a memory address space AND can synchonise with barriers.
-                    So NDRange like multiprocessor, and work group like warps. 
+                    Either 1 2 or 3 dims, called an index space.
+                Describe work groups
+                    Work items within an NDRange are grouped into smaller units called work-groups
+                    Share a memory address space AND can synchronise with barriers.
+                    So NDRange like multiprocessor, and work group like warps.
                     %LOCAL_FILE%YIcQUGPH3R_-VjyAdj7kTkf8DIabxxt09KamvGHs6zTC4mm1qgG_bR7FaodXWBWygh_LmlhTO6ZLlzLk7TcU74n8x182ThQtHUsOZoQBo6gSPZiTRmFFdY5dSKRl2cgx.png 
                 %LOCAL_FILE%ByZZ8HnD4pWOMhL-gIvdDRe5GmBzERU4KHrrgdtesq-HdvOkuhp6Tll6ruD-BIxUuuGrq9vmfm7ig5BGEXQUwAITQSF9GUTpPxN7AQZ34pHceFFNr_koWHUL3qmflvOZ.png 
-                Kernels are compiled at runtime, this allows optimisation for a specific device - otherwise would have to provide binaries for new devices.  Allows easy development and execution on different systems. This adds an overhead in startup time. We start with kernel code as a char array in memory.
+                Describe the benefits of compiling the kernel at runtime↔Allows for optimisation for a specific device - otherwise would have to provide binaries for new devices.  Allows easy development and execution on different systems. This adds an overhead in startup time. We start with kernel code as a char array in memory.
             OpenCL Memory Model:
-                An abstract memory model, to abstract away differences between different devices, need to be able to map to something physical as vendors map their hardware to this model.
+                What is the benefit of the OpenCL memory model?↔Abstracts away differences between different devices, need to be able to map to something physical as vendors map their hardware to this model.
                 Defines what happens to each memory operation, i.e. what values to read and in what order the operations should occur.
-                Memory objects encapsulate data for devices:
+                What are the 3 Memory objects in Open CL
                     Buffers - equiv to C arrays
-                    Images - abstract storage that cannot be directly referenced
+                    Images - abstract storage that cannot be directly referenced, rather pixels can be selected. Just stores images mate, innit
                     Pipes - ordered sequences of data as a FIFO
                 Memory is either host or device memory, host memory is not worried about by openCL. Device memory is accessible to kernels. 
-                    Global memory visible to all work-items. 
-                    Constant memory visible to all for simultaneous access. 
+                Describe how memory is structured in the OpenCL memory model?
+                    Global memory visible to all work-items.
+                    Constant memory visible to all for simultaneous access.
                     Local memory shared between work-items within a work group
                     Private memory only visible to each work-item
                     %LOCAL_FILE%DyxW5z8yzG_0ws52kJDEee5y0NAr4d8jYSmzFcS94aip5zBnrvJCXtc1SldJS8_PcHcWFkcHnIXFN6E-16fB-ISxGATxacbBHZkXLftjvkdQa2nDWRT2-aOmmh8dhhAX.png 
                 Running OpenCL code:
                     %LOCAL_FILE%5w9hDVmdSIRGs7TDGAtayWCd-e7D4CWxIJ84aSMi1Wo_lFYQUkTL_VltlCzoRG9MuDh0_GjWFi-XqsqOxlKycy2ICDXGGpezzUn8h3M6eqoYPtaMVodyqTzHDEVc4Zb4.png 
                 %LOCAL_FILE%rA3v0z1Eq08duWs10CRgOManH37EqCKMBY-BtWX7cAPLjleoKygO7meQgBbN98k8Q-IJZJkR5dX7VRAeFqH2sIZqOvA3HheT5dDzSaJN8N_2Knaifnp2Zz5ZHsz_5tWr.png 
-                OpenCL much more verbose than CUDA 
-                    Platform discovery and compilation performed at runtime. SO you can't actually know what's going to be executed, in terms of machine code. Allows code to be changed at will depending on the generation of the gpu.
-                    CUDA only targets NVIDIA's GPUs, so one platform and static comilation to PTX. OpenCL targets much more than that.
-                    Intel and ARM can't "retire" commands from their ISA as they require backwards compatibility, however NVIDIA can change by adding or removing instructions. For OpenCL the ISA is only known at runtime. 
+                Why do people sometimes choose CUDA over OpenCL
+                    OpenCL much more verbose than CUDA
+                    OpenCL gives start-up slowdown as kernel compiled
+                    CUDA faster on Nvidia devices, better optimizations
+                    Never know the exact commands that will be run with OpenCL, decided at runtime 
+                Platform discovery and compilation performed at runtime. SO you can't actually know what's going to be executed, in terms of machine code. Allows code to be changed at will depending on the generation of the gpu.
+                CUDA only targets NVIDIA's GPUs, so one platform and static compilation to PTX ISA. OpenCL targets much more than that.
+                Intel and ARM can't "retire" commands from their ISA as they require backwards compatibility, however NVIDIA can change by adding or removing instructions. For OpenCL the ISA is only known at runtime. 
             
         
+    Lecture 16: Future directions in Computer Architecture
+        Industry Opinions
+            Industry quite conservative, only looking 5 years ahead max. 
+            Energy efficiency is the new fundamental limiter of processor performance, far beyond the number of processors. Miniaturization helping with energy efficiency. Compute very inexpensive.
+            Moore's law slowing, getting down to 7nm. Even if you don't make the transistors smaller over a period, you can improve your process of working with that node. Smaller transistors more expensive, used to be a complete win of smaller and cheaper. 
+        Challenges:
+            Energy efficiency - moral obligation to keep power down.
+            Reliability - keep things working correctly.
+            Performance - how to make things go as fast as required.
+            Security - How to make things go as fast as required
+            Often these things are intertwined
+            Could get to a point where there's a backlash against computer systems, need to get roll out right.
+        Energy-Efficiency Challenge:
+            What change comes with multicore systems→Moving from complex single cores, to multiple simple cores.
+            Dial down clock frequency to save power. 
+            Problem: Neither CPU like or GPU like multicore designs are sufficient to meet speedup and efficiency wanted.
+            Simply adding cores not solution. 
+            Need to fundamentally alter the cores themselves. 500x more energy efficient on ASIC than on general processor.
+            One option to specialise our multicore chips. Heterogenous cores. Problem, locks in to using a specific algorithm. 
+            Often optimizing around software designed for specific hardware. 
+            Google's TPU uses custom ASIC for neural network training - locks yourself into a particular style of machine learning. Could be better solutions designed in the future. 
+            Use reconfigurable FPGAs that can be changed. But can't get clock speed up very high.
+        Performance Challenge:
+            Performance must come from parallelism, can we beat Amdahl's law? Research and change in culture takes a long time! Only mid 2000s multicores became mainstream. 
+            Speeding Sequential Code:
+                Temporarily exceed power budget (sprinting) allow some cores to run faster and hotter based on dynamic voltage/frequency scaling. 
+            Processing-In-Memory: Data movement uses energy, some computations can be done in memory such as Zeroing blocks of memory don't need CPU to be involved. Lot's of different systems try and zero memory as don't trust other things to do it.  
+            New Memory Technologies:
+                Phase change memory is non-volatile but with slower writes than DRAM. 
+                3D XPoint - SSD caches could be alongside DRAM within the year. Latency of 10s of nanoseconds, slower than DRAM but far faster than flash. 
+        Reliability Challenge:
+            Reliability is also becoming a significant issue.
+            Process variation is a concern, doping has some random elements. Meaning some transistors operate slower than others.
+            How to get less variability with transistors?↔Use bigger transistors.
+            Why do failures occur over a processors lifetime?→Transistors wear out quickly and Permanent faults develop that must be addressed.
+            Dual-Core lockstep:
+                Two seperate processors running the same code, for safety critical application. Logic ensures results are the same, mandated by standards for some sectors. %LOCAL_FILE%4fQL9HpquKHetGG8iCV-SW96EfhFJPWdBMSLSWkS2cd416xjxAEgeWtBflEsVDK_-B_iEqPnwBkjXOO4XrPmeycG7zLIIzZB_y1q2MP9oDy6fr8aSFIiYSq7rOb3bSc1.png 
+            Can Embrace the poor reliability: 
+                Many applications don't require 100% accuracy. Such as graphics, video, audio, sensor analysis, games, etc.
+        Security Challenges:
+            Why do systems increasingly need to be secure
+                May be running on unstrusted servers (cloud).
+                May be computing with sensitive data
+            Programming languages can help, but lots of legacy code out there!
+            Spectre: 
+                An attack that relies on speculative execution, tricking victims into loading secret data by training the branch predictor. Cache side channels to leak information via timing - see if the load hit in the cache or not. %LOCAL_FILE%JX1bFVt_kKvC56tPoPSUzeAdbKGPd8Ffb-GrW-TeSnFavGYQ7emHM4a8RD4_m0po810-ISomhkeXccel9A4bFeLmapustEXEQscVl6ZCy_cu5sJtNP4K3gYZzYgF3jZC.png 
+                While the execution is rolled back, the cache is still perturbed.
+                Mitigation:
+                    Filter Cache preventing things in speculation affecting the cache
+            Generally want to prevent leakage of secret information, ensure no unaurthosised modification either.
+            Must protect against existing attacks, we can protect against whole classes of attacks (CHERRI). We can also make systems resilient to future attacks, allow for patching in the field.
+        
+        
+        
+    
 Further Graphics
     Supervision 2
         
@@ -2110,6 +3294,427 @@ void ordered_thrprint(int thread_id, char *message) {
                 Then decrement the protected integer, if that integers value is now 0 print out all the debug messages and associated indexes and we're done.
                 Release the protected integer and the buffer.
     Lecture 1
+    
+    Distributed Systems Lecture 1
+        Introduction
+            What 4 advantages are there to make a system distributed? 
+                Some Systems are inherently distributed (text messaging).
+                For better reliability - if one node fails others can be used
+                For better performance - different nodes for different parts of the world 
+                To solve Large problems - some problems consist of such a huge amount of data, can't fit on one computer.
+            The problem with distributed systems is that processes can crash and communications can fail without us knowing. Additionally, these may happen non-deterministically.  
+            We want Fault Tolerance, a system should continue working even if it faces these problems. 
+        Computer Networking
+            %LOCAL_FILE%J4ZxKhqnf7YPMc5Ea8liL9bMYQS-goUHpgeoYlVCrKv7VTkhfIle7j8MwYyoAPuOubzU79fQ5RZxTlDG74x2GtG5fd12tWrjFjdZ8LkE9qxWOodDrXj3pIubVuBOE0Ne.png 
+            The fundamental abstraction of distributed systems is that of nodes sending messages to each other.
+            Latency: Is↔the time it takes for a message to arrive 
+            Bandwidth: Is↔The data volume per unit time
+            Client-server comms over the web:
+                %LOCAL_FILE%6IhRlUSXdP3733UVQmOFVDHC6Y0SLe-fYyKuwmLbL3b2U5a2oy4D7ZPz0nHz3m1t06uB3w_2pTNhRk2qpGDvSoLsQpaN92fCXiIZzljH8icC1Qndznxoklb3M_CdU0Df.png 
+                URLs are separated into the server name and the path of the page you'd like to get.
+        RPC (Remote Procedure Call)
+            Consider an online shop communicating with a payment service:%LOCAL_FILE%NHXB6R_B2KKd0WN4Dpvtf-FS0i_-AZwnXGdIDp-4KeagopAQLGHJdKnebhFw-cyNVYqG20tL2suIEBVbuKa7_l5sN7OtQ2-A53JtIsVMwGEaIr2-G8yAuLXLB5OzsoV9.png 
+            We can have a function applied to the shops card object, that is processed on another node/s (that of the payment service). What looks like a function call, is translated to a network request.  
+            RPC is used to→invoke a function call from your local machine, on a different machine via network communication.
+            RPC's are implemented using a RPC framework: 
+                RPC frameworks implements stubs, which are→function definitions with the same type and arguments as the function to be called via RPC. This stub function sends a message to the other node to process the payment.
+                The RPC framework "marshals" and "unmarshals" the arguments, this means→it encodes the arguments of the stub so they can be sent over the network, then on the other end the args are reencoded into the function:%LOCAL_FILE%r037lljqIJLOb5QtnsdTRQFyTEq8ssiKFEVmqAV4vYTAhU1BleC9nB8lqX9fcHYH1Y9i0aaPShY4UuPiNLGOOjnppR4QRSBrY-L7djycaZ1vuuIvlWO_AoOhgYd7rpmM.png 
+                The return value is then sent back, via the same process.%LOCAL_FILE%3fJb_xRoqYCt3dK-TfmYos_wLSknPOsok2cuONek9VDV2yCb_PhIoxuDDhLMbTMX7rvHTUa6KYJJYoBcAB6SOaqktjRaobFagTDvg39xb5-sQ8dAkriVULQGXoWD0j2e.png 
+            We would like our RPC call to look the same as a local function call. This is Location transparency, the location of resources is hidden. 
+            RPC in enterprise systems
+                RPC is used in enterprise systems because→these systems can become so large that they cannot be run on a single computer. 
+                A "Service oriented Architecture" (SOA)→is the architecture in which a large service is broken down into microservices on multiple nodes which communicate via RPC. 
+                If multiple services within SOA are running different languages, we use→Interoperability (datatype conversion) and IDLs (Interface Definition Language).
+                An IDL (Interface definition language) is a→Language independent API specification. Method of ensuring datatypes are stored in a method not specific to any one programming language.  
+                Example IDL: %LOCAL_FILE%0xdtpuDkEuhCU8penCtWhT3yg4iFSQacbIje6oM4eGYy5K-eQRmFuyFQ7oE1txO74kASiw2cYLWza3bW8Ho_A9Ur1gMwi_U-gk95VJY_GhJL2GuRgF4IgJ9PpafguiKQ.png 
+        
+        
+        
+        
+    Distributed Systems Lecture 2 (Models of distributed systems) 
+        The two Generals Problem: 
+            Consider two armies, if they attack together they win - but if either one attacks alone they will lose. %LOCAL_FILE%kZF5kAjLXMdskp7Es7wh7db6UkMY_9NZcFf9DvSpP-6zUwEsFYgDhPIpmv9ovYPdIQwryWGSfXEzul_ZeP-_trYhNxI-asW1L4n7bEtV62xzcnLhcC1BrwMoEJndrbZj.png 
+            The two generals can only communicate via messengers, however the messengers may be captured and the sender could not know (except if they receive a response).
+            Initial message delivered, but the response is captured: %LOCAL_FILE%bP57WAkbwWs9MDQXFH0vELMgsOf0iZkhPpGCCu2cYZXMwBbw0BcAZGgMpinj8FVjILtbJtjaWE77MbaPaEcPw4UNaQiW7X86i4TjGhQqxyze-gddSQENt1dJ-Yb57bNI.png 
+This is indistinguishable from the following (from general 1's POV): %LOCAL_FILE%Ey46dnl7hwQePgXZ1o7bHuVw7OV6dgmdaS3mxrncvAibJNFQMW2JzRp0Hjg3CHDJdpgQJe1ks_lNrCWzAa0v5pvvzqe3NpjyUCiXLeskxHn_4bkAF0GDD-8UEPlzP54Y.png 
+            In the two Generals problem, General 1 has the following two choices 
+                Choice 1: General 1 always attacks, in this case they may send lots of messengers to increase the probability of receipt - then if the message is received General 2 knows it's safe to attack (even without sending a response). However, if the message isn't received General 1 will die. 
+                Choice 2: General 1 attacks if a positive response is received, in this case General 2 is safe if a response arrives but General 2 is in Choice 1 when they send the positive response. 
+            This can result in an infinite chain back and forth of communications where no absolute certainty of an attack is reached. 
+This is the problem of No common knowledge in DS which is→when the only way of knowing something is to communicate it. 
+            An example of the two generals is the following:%LOCAL_FILE%CfPVn-fTG7HNM1XhiINgF1iSMSKSHqv5Rny771BO2iMwu7RG4OxInE0oxC2IjB-5Gx98WFGcN6o2UB-bAvPjpe_fCoomhEBPbPBpRM0qZph8ADP66ZqlNx3rs9kE7IiS.png 
+The reason that this differs from the Two General problem is that→The charge is a revocable action, we can always return to the starting point.
+        The Byzantine Generals Problem:
+            %LOCAL_FILE%kVjnfDY9vy2AyF3x7MfD3YRsM_q6WT92dlh1O5oVermmNCANiw2qsOklQ7t9MwAEvRVMI8T9RSns63Oxj1ZLVqKrPlOnvNVfpGGtZbJzSsMiyZEUKDmymk_B4C_K77kG.png 
+            Within the Byzantine Generals problem we make the assumption that communications are reliable but some of the generals are traitors. 
+            We further make the assumptions that up to f generals are malicious, that traitorous generals may collude and know who the other traitorous generals are and that honest generals don't know who the traitorous ones are. We then require that the honest generals must agree on a plan. 
+            Generals may lie:
+ %LOCAL_FILE%5y7MCi0wsHxY59MPzWPIY-KL9gZc7jv7vo3MtTd6mxd-w5A8cbXB2dVuqGqFRn7tXBDkPwuSroBGKrMrS6APOTSaJBc47XpUQ7MXSuhSUPoqF40YQTYjbmRoSn0ehD3M.png 
+General 3 cannot tell who is lying!
+            Theorem: We need 3f + 1 honest generals to tolerate f traitorous generals. I.e. < \frac{1}{3} may be malicious 
+            Cryptography: Digital signatures help, as we can prove a certain party sent a given message, however the problem is still hard.
+            Real life agreement:
+ %LOCAL_FILE%OxXWMFBndgJuLV8Z1-F3b7M6MusMgTuaDnq4kdDu1NCuYCwNFYLcf2ZWcy0x7MREMxDxTAFlZBvRqp2KYAy7vk9N5wUx_LGgLiiYJkQp5ge17R3NzXory9ZLFYnxV946.png 
+Customers can act fraudulently, online shops could be fraudulent etc. (could have asymmetric relationship where the payments service is trusted).
+        System models
+            We have seen the two generals problem in which the communication medium was faulty and the Byzantine generals problem in which the nodes were faulty. In real networks both can be faulty!
+            Networks are unreliable, can be damaged by nature.
+            System Model: Network behaviour
+                Assume a bidirectional point-to-point communication between two nodes. The three models of such a link are→a perfect link, a fair-loss link and an arbitrary link.
+                A perfect link is→a link where no packets are lost, reordered or damaged.
+                A fair-loss link is→a link in which some packets can be lost or reordered, however we make the assumption that if we send a packet enough times it will be delivered.
+                An arbitrary link is→a link in which anything can happen. We model this as having an adversary acting on our communications. They can replay, block or edit packets as they please.
+                A Network Partition is when a link between two nodes is disconnected for a period of time. 
+                A fair loss link can be converted to a perfect link using→Continuously resending, and deduplicating at the other end.  
+                An arbitrary link  can (*almost) be converted to a Fair-loss link using→TLS. An internet protocol to guarantee successful communication has not been tampered with. 
+This is only arbitrary, as the adversary could block all packets. 
+            System model: node behaviour
+                Under the assumption that each node executes a given architecture, the three types of nodes are→Crash-stop, Crash-recovery and Byzantine.
+                A Crash-stop node means→the node could crash at any time and never re-join the network (dropping phone in toilet). 
+                A Crash-recovery node means→The node could crash at any time, lose its memory state but it will re-join the network at some point. 
+                A Byzantine node means→A node that doesn't follow the algorithm (although it could pretend to).
+                A node is either correct or faulty. 
+            System model: synchrony (timing) assumptions
+                The three types of synchrony assumptions about nodes and networks are→Synchronous, Partially synchronous and Asynchronous.
+                A Synchronous connection means→Message latency is no greater than an upper bound. Nodes execute the algorithm at a known speed.
+                A Partially synchronous connection means→communication has (finite) periods of asynchronicity but is synchronous otherwise.
+                A Asynchronous connection means→Messages can be delayed an arbitrary amount of time, nodes can be suspended an arbitrary amount of time. 
+                Real networks behave in a partially synchronous manner, under such a system an algorithm designed for a synchronous network could fail catastrophically.
+                We can have many real life violations of synchrony, within message latency we can have: 
+message loss requiring retry - removing any hope of an upper bound on latency
+Congestion causing queueing
+Network/route configuration, meaning a packet could get stuck for long periods of time.
+
+                Similarly we can have changes in node execution speed:
+OS scheduling resulting in a thread being suspended.
+Stop-the-world garbage collection pauses.
+Page faults, swap, thrashing (constant page faults).
+                Real-time operating systems (RTOS) can give some scheduling guarantees - however most DS don't use RTOS.
+        Availability
+            Online services being offline = losing money. 
+            We can measure uptimes using the fraction of time the service is operating correctly. For this we can use "nines" 
+'Two nines' = 99% up ⇒ down 3.7 days/year
+'Three nines' = 99.9% up ⇒ down 8.8 hours/year
+...
+            Service-Level Objective (SLO), the period of times the service will be up and the response times. "99.9% of requests get a response within 200ms"
+            Service-Level Agreement (SLA), a contract specifying some SLO ⇒ there will be penalties for failure to meet the SLO.
+            High availability: Fault Tolerance: 
+                We have a Failure of the system, in which the system as a whole stops working. We have Faults where a node is faulty or communication with that node is hampered.  
+                Fault tolerance is the design of a system so→a given number of faults does not result in a failure.
+                A Single-point-of-failure (SPOF) is→a single point in the system where a fault will result in failure. 
+            A Failure Detector is an algorithm that→detects if a given node is faulty.
+A Perfect failure detector is an algorithm that → says a given node is faulty IFF it has crashed. 
+            The typical implementation of a failure detector is to→send a message to the node, then wait a set amount of time for a response. IF the node doesn't respond in that time it will be assumed to have crashed.
+                The problem with this implementation of a failure detector is that→we can't know if that's because the node has crashed, the message was lost or the message/node was only very delayed.
+            Failure detection in partially synchronous systems
+                We can only build a perfect failure detector in a→synchronous, crash-stop system with reliable links.
+                Instead we have a Eventually perfect failure detector this can→temporarily label a working node node as crashed or temporarily label a crashed node as working. But, it will always eventually reach the truth of the labelling. 
+                This reflects the fact that detection is not instantaneous and we can have long timeouts from a working node. 
+        
+        
+        
+    Distributed Systems Lecture 3 (Time) 
+        Physical Time
+            Distributed need systems to measure time, used for:
+                Scheduling
+                Performance measurements
+                Log files
+                Data with time validity (e.g. cache entries, TTL)
+            The difference between a logical and physical clock is→Physical clocks count number of seconds elapsed while logical clocks count events (e.g. messages sent) 
+            Quartz Clocks
+                Quartz crystals can be engineered to vibrate at a particular resonant frequency, this frequency can then be detected (and fed back into the crystal again to keep the vibrating going). 
+                We use this quartz vibration by→counting the number of cycles to measure elapsed time. As we know f 
+                Clock drift is measured in parts per million, meaning 1ppm = 32s/year of drift. 
+                %LOCAL_FILE%acy_5LTVfZi7tnDFZQCnv__uIjFbqSiIwq8P9U5BQXY2cNJN_RXcJM9g1BVOQjjT9FwYNIKdhyhX248FmQyvO9sf7C7HX4nmYpXFVWvK-3_GpHMASP-kA3Al6KhMy0f-.png 
+            Atomic clocks
+                Caesium-133 has a given resonance we can measure - about 9 GHz . The second is defined by 9192631770 periods of that signal. We are of by 1 second every 3 million years
+            GPS as time source
+                31 Satellites in space broadcast their location and the time from their atomic clocks. We then pick that up, and can calculate the time taken for the signal to arrive (via c) and thus get the time.
+                We do need to correct for atmospheric effects and suchlike.
+            Coordinated Universal Time (UTC) 
+                Greenwich Mean Time is defined by→noon when the sun is in the south, as seen from the Greenwich meridian
+%LOCAL_FILE%R9jUYQZGK9nZ6IIhjhW_voek4fxcitDPk3Z3yWTRZj4hvYUVxeEFkbBKxIp1khhsXIy1YwU9mFeTkWVNR9tfhkVwGoKuz0MgWIt7384d0evYj6KJCVM3w2IsCIT7qFv5.png 
+                International Atomic Time (TAI (based on French)) is → time based on Caesium resonant frequency 
+                Problem: Speed of Earth's rotation is not constant
+                Because of the disagreement between GMT and TAI, UTC is→TAI with corrections to account for Earth rotation.
+            Leap Seconds
+                A leap second is→a second that can be inserted or removed (typically) twice a year
+                Every year on 30 June and 31 December at 23:59:59 UTC, one of 3 things happen 
+                    The clock jumps forward to 00:00:00 without waiting a second (a negative leap second) 
+                    The clock continues to 00:00:00 after a second as normal
+                    The clock continues to 23:59:60 after a second, adding a second (a positive leap second) 
+                Leap seconds are announced several months in advanced
+            Most common timestamps
+                Unix time: Which is→the number of seconds since 1 Jan 1970 00:00:00 UTC not counting leap seconds 
+                ISO 8601: Which is→year, month, day, hour, minute, second and time-zone offset relative to UTC. E.g. 2020-11-09T09:50:17+00:00
+                Conversion between the two requires Gregorian calendar to calculate leap years and knowledge of past and future leap seconds 
+            Most software ignores leap seconds, however OS and DistSys require them.
+            Smearing is→The spreading out of a leap second over a whole day. This helps prevent software that doesn't manage leap seconds from crashing when encountering a discontinuity of a second.
+        Clock Synchronisation
+            Computers track physical time/UTC with a quartz clocks - and due to clock drift the error gradually increases.
+            Clock skew is the→difference between two clocks at a point in time 
+            A solution to clock skew is→periodically get the time from a server with an accurate time (based on an atomic clock/ GPS). Using the NTP protocol.
+            Network Time Protocol (NTP)
+                An NTP server is→A server to give an accurate time source for computers to sync with. Many OS vendors run NTP servers and configure their OS to use them. 
+                Hierarchy of clock servers are arranged into strata, these are→
+Stratum 0: atomic clock or GPS receiver. 
+Stratum 1: Something synced with Stratum 0 device
+Stratum 2: Something synced with Stratum 1 device
+                NTP servers may query multiple clock servers, discard outliers and average the rest. Furthermore, servers are queried multiple times to remove network error
+                Using NTP we can reduces clock skew to a few milliseconds in good network conditions, but can be much worse over a bad network .
+                %LOCAL_FILE%3H78pNX0DSOHMqLDwyVPqkjGFU7zmOV7K0fZkHoGgXtkzVZAm7wjLcoEQttsBlj3Hrz4FkSwU39_HL7Ev8iQ5-vxPvQlrTV2aG0Uz4DBV2l7p856O5XpanEJArqHOIc2.png 
+                    The round trip network delay would be→\delta = (t_4 - t_1) - (t_3 - t_2) 
+                    We can't find the time taken for the request and response individually because→the two clocks aren't synchronised. We can only get the time difference between two timestamps of the same clock. 
+                    The estimated the server time when client receives the response would be→t_3 + \frac{\delta}{2}
+ Because we assume the delay each way is half the total.
+                    The estimated clock skew would be→\theta = t_3 + \delta/2 - t_4 
+            Correcting Clock Skew
+                Once the client has estimated the clock skew \theta, there are three options for changing the time 
+                    If \theta < 125ms, slew the clock. Speed up or slow down the clock very slightly (around 50ppm) so it's correct after a period of roughly 5 mins.
+                    If  125ms \leq \theta \lt 1000s, step the clock - i.e. suddenly reset the clock to the server estimate. 
+                    If  \theta \geq 1000s, panic and let the human resolve it.
+                What's wrong with this code? start_time = System.time()
+code_to_profile()
+print("Function took", System.time() - start_time)AND, what is the solution?→NTP could have stepped backwards while code_to_profile() was running - resulting in a negative time taken or too high of a time. Solve this by  using a monotonic clock, who still have slewing but will never jump backwards 
+            What are Time-of-day and Monotonic clocks and how do they differ?→Time-of-day clocks is the time since some fixed date. Monotonic clocks are the time since some arbitrary point (e.g. since system booted up). 
+The difference is that Time-of-day clocks can suddenly jump forwards or backwards subject to leap second adjustments, monotonic clocks simply go forward at some (near) fixed rate. 
+Additionally Time-of-day clocks can be synchronised across multiple nodes, monotonic clocks cannot (only good for measuring elapsed time on 1 node).
+        Ordering of messages
+            %LOCAL_FILE%cSyRVfDprWQX6kkONyGuwzXN2cN0oyfX6oT83kiZLRpY4bOkHQ9lOXbG_D-03xvyuC8B0azFM9uvHw7Hj-wBD_IOpw0j4tNwiCrL28Yox_ow4OqhZpM2ERHovfopgoFu.png 
+            The problem with using timestamp ordering→is that t_2 < t_1is  still possible if the clock skew is greater than the network latency. 
+            The happens-before relation
+                An event is something happening at one node. 
+                We say event a happens before event b ( a \rightarrow b ) iff 
+                    a & b occurred at the same node and a occurred before b in the local execution order.
+                    event a is the sending of some message m, and event b is the receipt of said message (establishing causality)
+                    There exists an event c s.t. a \rightarrow c \ \text{ and } \ c \rightarrow b . Transitive closure!
+                The happens-before relation is a partial order - it is possible that neither a or b occur before one another (i.e. they are unrelated, doesn't mean they occurred at the same time) this is written→a||b  
+                %LOCAL_FILE%Bd6o0t7rZ1n8gzSYN0RPPgRQ-0aFu86YR9Wo9EaJDut_cwcndGwgL4ezC2i7DkZo5Ubp0Vma60xmCyP-z5RpbSZEo5C9ann8FL4-JWlOWaD7eTw5jUUabr3rb1uOTdaa.png 
+            Causality
+                When a \rightarrow b, a might have caused b 
+                When a||b, a cannot have caused b 
+                Happens-before relations encode potential causality.  %LOCAL_FILE%E91bglfXDom_vwusocHwkGxcTDNMEX7Moxuhp-TSmcOwQBQSHlCAQmz19vRpVbCNDCsUnbsroqMQYgVVx19c46wt4vhTq1Ri2FbvYSdBOOZgASW6b1C-C2ALIPFo9r19.png 
+        
+        
+        
+    Distributed Systems Lecture 4 (Time) 
+        Logical Time
+            Logical clocks are designed to capture causal dependencies (e_1 \rightarrow e_2) \implies (T(e_1)  < T(e_2) ) 
+            Lamport clocks algorithm
+                The Lamport clock algorithm is→# for every node:
+t := 0
+
+on event:
+	t += 1
+
+send_message():
+	t+=1 
+	message = (t, m)
+	send (message)
+	
+receive_message(M):
+	t', m = M
+	t := max(t, t') + 1
+	deliver m # to application 
+                Within the Lamport clock algorithm, L(e) is→the time after an the increment due to e.
+                The Lamport scheme has the following Properties 
+                    if a \rightarrow b  then L(a) < L(b) 
+                    However, L(a) < L(b)  does not imply a \rightarrow b  . We could also have a||b. 
+                    We can have L(a) = L(b)  
+                %LOCAL_FILE%NWzGP1UyEkHkO4gREgLixeoi8cOAM4abaB3se7r0ImB-uzVNIeJLEEEilhXwyPSYFctCqAc8cLQLGqg2iXnPG5HF_yYSeGBjEAiTAUxkYYBLtQWAWq5JqrzjIa__JHhu.png 
+                We can form a unique identifier for an event by→combining the name of the node (the event occurred at) and the time the event occurred ID = (N(node), L(e)). 
+                %LOCAL_FILE%xg2IfyouuRbVa9FbkOdHsZXyJrWZxa92DLDPqCaeqaBZR37C6_wCYtchKhkZaF1LKEjOHs1N8x3PyIv-OF-XxQr8SfrNiTL26-8Kc2Qfox0K7qERfYkVDVtK73NpHwmw.png 
+                The main problem with Lamport clocks is→if we have timestamps L(a) and L(b) we can't tell if a \rightarrow b  or a||b . Remember, a||b simply means they're unrelated! If no messages have been exchanged all events are concurrent . To solve this we need vector clocks. 
+            Vector Clocks 
+                %LOCAL_FILE%UvnFvkZTVzGPxEWZjr_kMUAUiA7FcxrCIors0myTDQknWQy0MOakHVv5DjhY0pPpkSIOxF37OGZ7cqINEulpWsY8VMVsTHrhChFYieuysBBZlfJpbEkqsvS5lL4yem04.png 
+                The algorithm for merging vector clocks is→ T = [0] * n
+ i = index of us
+ 
+ on_event():
+ 	T[i] += 1
+ 
+ send_message(m):
+ 	T[i] += 1
+ 	send( (T, m) )
+ 
+ receive_message(M):
+ 	T', m = M
+ 	# Max of each element
+ 	T = [max(a,b) for a,b in zip(T, T')]
+ 	T[i] += 1
+ 	deliver m to app
+                Example vector clock arrangement:%LOCAL_FILE%Nr5EZypRAEEhXIQ3kVwQIrAtEEzY7-1YKCseaafPouBz8U9SArWl5NBxnYxQ3E1DpzsTK0SW2zXUkMJ6qeaWYvFCBPj4Vv9vAHDxLtiFGC0w6xzAIX0AxjIhzxwrDRwd.png 
+                The vector timestamp of event e represents→e and all it's causal dependencies: t = \{e\} \ \cup \ \{a \ | \  a\rightarrow e\}   
+So <2, 2, 0> represents the first two events from a, the first 2 events from b and no events on c.
+                %LOCAL_FILE%jFFIw1x1E-_MHi9JcaPCEKgEPWcijXTumy-uCOmOWnKEh71Kj14VxJa0iETImwR0bE3qfHN_3vPgy6eXGfP15rhqUhXkak-Iou5cYI6cN6pmwg9CZgfn0wNNlMJuI95r.png 
+                Two events are concurrent in vector clocks iff→Some events in T happened before events in T' and some events occurred after events in T'. 
+                %LOCAL_FILE%fhN2SFw_h1aP_p7Qcn7UesaVszsVJ1kru10VOP5nlT890pjRlorhlOqw9B5dGM_DcWj7OAQb2rH12_9VM1BYQnevf-mC_886oGi05m1S6IeXHdc-Om81nVkytey9s-TF.png 
+        Broadcast ordering
+            Broadcast protocols
+                Broadcast is group communication where 
+                    One node sends a message, but all nodes in the group deliver messages
+                    Groups can be a fixed or variable size
+                    If one node is faulty, the remaining group members carry on
+                Group communication can be designed to be best-effort (messages may be dropped) or reliable (non-faulty nodes deliver every message by retransmitting dropped messages). There is no upper bound on message latency, as we use an Asynchronous/partially synchronous timing model.
+                The layout of a broadcast system is→%LOCAL_FILE%mFs8TN1pTuSMYFTopeZB2CUFSaNOk2UVEs0gL8tcAuDdaJ1GFrg-gwSi5vUp1M-SvvrldgftFPs3ME__MzkOS4qXyRkFubKjHa6FQzd5bYKziVR0Vn8KHVcD7QaJG9hu.png 
+                The broadcast algorithm may wait to deliver a message to the application, because→we wish the messages to arrive in a certain order
+            FIFO broadcast
+                Note that when a node broadcasts a message, it also sends it to itself.
+                %LOCAL_FILE%I8jo0cSS3gODTf6w8D-mqHvxH6IBkmHggRtWq7ZQ27V5108wBpOfUFy-f6iFOPAgFvy-xQp4AidZD7C1calXQ5p-qEngwFMCc8X8IREnv5zzoYSww9hYtWmapqTBp2Zb.png 
+                For FIFO broadcasts we require that→messages sent from a given node are delivered in the order they were sent. Messages sent from different nodes have no required ordering.
+                Valid orderings of the above diagram are then (m_1, m_3, m_2) || (m_1, m_2, m_3) ||(m_2, m_1, m_3)  
+            Causal broadcast
+                %LOCAL_FILE%L1nUAnI60q5QqXN8NehbVWovcNwsWgdNcwup_XbfUwGOx-93_iv4GtGP5E_b19fPyGA9SxZC81O5d5FmZTfsJGNX6f-M_wkVxHfnZloOIqmfxL0hY8tOXzgDfChYqMw6.png 
+                For Causal broadcasts we require that→Causally related events are delivered in causal order, concurrent events can be delivered in any order. 
+                The valid orders here are (m1, m3, m2) or (m1, m2 m3). 
+                The difference between Causal and FIFO→If FIFO we could technically have m1, m2, m3. In Causal broadcasts this would not be allowed. Or m2, m1, m3.
+%LOCAL_FILE%I8jo0cSS3gODTf6w8D-mqHvxH6IBkmHggRtWq7ZQ27V5108wBpOfUFy-f6iFOPAgFvy-xQp4AidZD7C1calXQ5p-qEngwFMCc8X8IREnv5zzoYSww9hYtWmapqTBp2Zb.png 
+            Total order broadcast
+                %LOCAL_FILE%JG3S3CbaHrwr0rjbwr8YSPGYh6GWcWdCw9q_Dt68yE8YD47hQlqUDWyyR6uOeZx-V0qgaufPQlakuX1RNi_zzdC7SRN-ce1ZlUOB9aSbmVIZuuppV0gX5nOdkwNoNUkU.png 
+                For Total order broadcast  we require→that all nodes deliver the messages in the same order. This includes the nodes delivery to itself! 
+                The above ordering is for the example m1, m2, m3, but we could just have easily have said  m1, m3, m2: %LOCAL_FILE%G782ZOFwPUarYj_VHKvoWeHGWkbal8CP8CDza7d5sze5ffFJcnNtmgsUzVj1HvJsjnZtkoE4t0Svhhvf9d-Fug9YQ-x17gBueGzyuzJ0TtUQsUfX0J0meyQAk4v8-jEJ.png 
+            FIFO total order-broadcast:
+                Fifo total order-broadcast requires → That all messages are delivered in the same order and messages from a given node are delivered in the order they were sent
+                %LOCAL_FILE%JLfDCSOtxO_AKEZA9k300iA46WVFHDVBzEUHdfxH2KpbRXALgOjd9Hm1L60e9Jle3lEBqCJ2FLwp08e_Bg1mYDRxoEUVVzEusDhrNLCXjnQ4aRzuYXBJT2xuA5dxeuw7.png 
+        Broadcast algorithms
+            There are two sections for devising a broadcast algorithm 
+                Ensuring the best-effort connection becomes reliable (retransmitting dropped messages)
+Enforce delivery order atop of the reliable connection 
+            What is the problem with simply retransmitting and deduplicating dropped messages?→A node may crash in the middle of retransmitting a message, in which case not all nodes in the group will have received the message 
+            Eager reliable broadcast
+                Eager reliable broadcast is→%LOCAL_FILE%P3SNOBLC-Ooeys3gf9H7Qj0ZdDIu890t306QOWR0iqkivcEUNQE7tDaYU0LksM93348Hg3O__KEcRTbsTUpjmMjXGtwOJwLKmEhCdrDgkQbSb-pbnTVKMd4-Ja20jR5J.png 
+                The problem with eager reliable broadcasts is→for n nodes, we have O(n^2) messages being sent. 
+            Gossip protocols 
+                Gossip protocols works by→%LOCAL_FILE%AzHyQZqzTUIfVER7QY9jaTCTx-lgQzOZlK8nHdNeWaYKIvhopEjZU7JzK87ameqhPIbJ0HjY3nyWJixFvnQiV4T7PLY-OaTSLRv5NHcDstyN0dTnLbX7JMBuJ-MWsLTM.png 
+                %LOCAL_FILE%_3X3m6GVxLKq8rUjorTbV_cZm4Sb0heFxEEyEPt1EO3EZbOX0o5r7U2QGz2FC9nT_oTen14u9eTrBZcTvud57w6f6uD8MvaFr1i1PTWg3ZgmDZ7hhZ1Q1n88MIVP7jSI.png 
+                Note: if a node has already received a message it doesn't send it again. 
+            FIFO broadcast algorithm
+                The FIFO broadcast algorithm is as follows→sendSeq, buffer, delivered = 0, [], [0,0,0...,0]
+i = ourNodeNumber
+
+send_message(m):
+	send(i, sendSeq, m)
+	sendSeq+=1
+
+receive_message(msg):
+	buffer.append(msg)
+	for M in buffer:
+		i', sendSeq, m = M
+		if sendSeq == delivered [i']:
+			send (m)
+			delivered [i'] += 1	    
+			buffer.remove(M)
+            Causal broadcast algorithm
+                The causal broadcast algorithm is as follows→ sendSeq, buffer, delivered = 0, [], [0,0,0...,0]
+ i = ourNodeNumber
+ 
+ send_message(m):
+ 	dependencies = buffer[:]
+ 	dependencies[i] = sendSeq
+ 	# Remember we send dependencies to ourself too
+ 	send( (i, dependencies, m) )
+ 	sendSeq += 1
+ 	
+ receive_message(msg):
+ 	buffer.append(msg)
+ 	for M in buffer:
+ 		i', dependencies, m = M
+ 		if dependencies <= delivered:
+ 			delivered[i'] += 1
+ 			send(m)
+ 			buffer.remove(M)
+            Total order broadcast algorithms
+                The single leader approach is done by 
+                    Choosing a single node to be the leader 
+                    All nodes send their messages directly to the leader (FIFO)
+                    The leader sends a FIFO broadcast to all nodes
+                What's the problem with the single leader approach→If the leader crashes no more message can be sent. Additionally, changing the leader safely can be hard
+                The Lamport clocks approach is done by
+                    Attaching a Lamport timestamp to every message 
+                    The order messages are broadcast is the order of the Lamport timestamps
+                    But - if we get a time stamp T, how do we know we won't in the future get a timestamp < T? We need to wait for a timestamp ≥ T from EVERY node! We need to use FIFO links
+        
+    Distributed Systems Lecture 5 
+    
+    GO FROM HERE NEXT: Distributed Systems 5.1: Replication - YouTube 
+    NEED TO DO PROOF Q's
+    Distributed Systems supervision 1 
+        Exercise 1. A TCP connection allows two nodes to send each other arbitrarily long sequences of bytes. You decide that you want to send multiple requests and responses over the same TCP connection. What do you need to do in order to implement such a request-response protocol using TCP?
+            You could wrap each request and response with a header which would encode the length of the message (among other possible pieces of information), the header would have to accord to a set code that both nodes understood (e.g. it could have the first 4 bytes specifying the length of the header, the next 4 specifying the length of the whole packet perhaps more data specifying the type of the request). Then when a node receives a stream of bytes, it can find the length of each individual message by examining the header - then if there are more bytes after the header they can know that is another message (whose header will be examined).
+        Exercise 2. How is RPC different from a local function call? Is location transparency achievable?
+            An RPC call is different in a few ways
+                The function is not executed on your local machine
+                The arguments of an RPC must first be marshalled to be sent over the network
+                RPCs make use of an API to facilitate their use
+            Location transparency (the idea that the location of a resource (whether it be on our local computer or on another node) is achievable under perfect conditions (impossibly fast WiFi or having local resources slowed down to achieve such transparency) however in reality the lag between forging and communicating over a network connection is detectable and is much greater than the lag of local file being opened is large. So the very quick loading of a file would indicate a local file.
+        Exercise 3.  Say you have a client-server RPC system in which a client repeats an RPC request until it receives a response. How could the server deduplicate the requests?
+            One solution would be to attach a request number and a repeat number to each request. So if I a request "GET : "img:coolpic.png"", it could be sent multiple times like this:
+            "req:1, rep:1, GET : "img:coolpic.png""      "req:1, rep:2, GET : "img:coolpic.png"" ...
+Then a second request "STORE : "img:coolerpic.jpeg"", could be sent like:
+   "req:2, rep:1, STORE : "img:coolerpic.jpeg""        "req:2, rep:2, STORE : "img:coolerpic.jpeg""
+
+This would allow for easy deduplicating in order of req then rep
+        Exercise 4. Reliable network links allow messages to be reordered. Give pseudocode for an algorithm that strengthens the properties of a reliable point-to-point link such that messages are received in the order they were sent (this is called a FIFO link), assuming an asynchronous crash-stop system model. 
+            buffer = []
+received, messages_incoming = 0, 0
+time = time.monotonic()
+# read_message() blocks while waiting for a message
+# Wait a max of 10 seconds before exiting the while loop
+while (time.monotonic()-time < 10000 and msg = read_message()):
+	time = time.monotonic()
+    received += 1
+    messages_incoming = msg.messages_incoming
+    buffer.append(msg)
+
+    if received == messages_incoming:
+        break
+
+if time.monotonic() - time > 10000:
+	send_failure_message()
+	return []
+else:
+	# Sort based on the message number
+	buffer.sort(lambda x : x.number)
+	return buffer 
+        Exercise 5. How do we need to change the algorithm from Exercise 4 if we assume a crash-recovery model instead of a crash-stop model?  
+            We would need to implement a mechanism for informing the receiver/sender that we have crashed and lost the data stored in our memory, in the two cases: 
+            Sender node crashes: We don't know how long the period of unresponsiveness will last, so we can't simply keep waiting until the node comes back online. Instead the receiver should cache the messages received so far in some non-volatile memory. Then when the sender wakes up again, a unique ID of the message should be sent, the recipient can then indicate how many (if any) messages were received and the sender can resume sending where they left off. 
+            Recipient node crashes: Once the recipient wakes up, it will need to signal the resending of the entire incoming message - on the senders side a non-volatile storage of outgoing messages will need to be held or a method of backtracking execution so the message can be sent again.
+        Exercise 6. Describe some problems that may arise from leap second smearing.
+            Floating point accuracy: The smearing of 1/86400 in binary form will introduce a very small error, and that error will be repeated 86400 times every time this update is done - if a small low bit floating point representation is used, the error introduced will defeat the purpose of the whole exercise. 
+            This is more reason for software vendors to simply ignore the problem. While this is not a problem  now, bugs mirroring Y2K could start to appear in the (far) future which go undetected.
+            This makes bugs harder to detect, as desync occurs over many hours rather than at one instant - while the latter would be noticeable in logs, the former would be very difficult to sus out.
+            Desync problems can arise if one node is doing smearing and another isn't. 
+        Exercise 7. What is the maximum possible error in the NTP client’s estimate of skew with regard to one particular server, assuming that both nodes correctly follow the protocol?
+            %LOCAL_FILE%qpQ_ydxHmeLCcJOH6RsYAsXfSQmhKyB1tFdamdF6Ap_bDPQSH3D9yXDiDWlMRhPCDIbkBbsV34oweAqelXOk2YakrBsEOBexbuDNPmUFzd2RpaSGhmlB3zKHzVrmj3e5.png 
+            delta = (t4 - t1) - (t3 - t2) = total network delay
+            skew = (t3 + delta/2) - t4  Question: should the skew not be the absolute value of this? 
+            This estimate is worst, when the estimate of the time taken for the second response is worst - i.e. when request 2 took the minimum time (according to the speed of light & the distance) \tau and the response took  (t4 - t1) - (t3 - t2) - \tau, resulting in a true value of: (t_3 + \tau) - t_4  = (t_3 - t_4) + \tau 
+            and an estimated value of:
+            (t_3 + ((t_4 - t_1) - (t_3 - t_1))/2) \ = \ \frac{t_2 - t_1 + t_3 - t_4}{2} 
+            Resulting in an error of:
+            \frac{t_2 - t_1 + t_3 - t_4}{2}  - ((t_3 - t_4) + \tau) 
+            
+            \text{error} = \frac{t_2-t_1-t_3+t_4}{2} - \tau = \delta/2 - \tau 
+        Exercise 8. A relation R is a strict partial order if it is irreflexive (\nexists a. \ (a,a) \in R) and transitive %LOCAL_FILE%Tr9viplmSNiKq50nlHvkjyohfNkNxldfyLFftzC7JUv-v8e7n6hIDdBX1gO_OOMmmP5GjnbhpBY4048vJGJBE5zmzwoXCjTSGQlA_WR5BP80fAZWZL_oxr_IvSwOInUn.png. (These two conditions also imply that it R asymmetric, i.e. that %LOCAL_FILE%4hpbm3lFLPnpNpJ_WQZCAX4vNJhu1Xkmi68UO7aQf6faFCgjsCsjTlz5PczTq1BOYoHaZBl-wlg3YzArARI9wFAfg4jmCqzIIA1tHsMIH1WdvxqEZcbZbt7NQa2jb_Ba.png Prove that the happens-before relation is a strict partial order. You may assume that any two nodes are a nonzero distance apart, as well as the physical principle that information cannot travel faster than the speed of light.    
+        Exercise 9. Show that for any two events a and b, exactly one of the three following statements must be true: either a⇒b, or b⇒a, or a || b.   
+        Exercise 10. Given the sequence of messages in the following execution, show the Lamport timestamps at each send or receive event   
+            %LOCAL_FILE%4atqIBUEAzm7OncyN5qB3j5Z5XjQtc_OHDZgMdXZh6kXNeqKApIIRpARrwbyAHUyX7k7ndM-H0MBpStyrugFtkC4DMVZEVYv2pTPR9uWBOaXYXUGmwbk1reIC3dx1sE2.png 
+        Exercise 11. Prove that the total order ≺ using Lamport timestamps is a causal order. 
+        Exercise 12. Given the same sequence of messages as in Exercise 10, show the vector clocks at each send or receive event.  
+            %LOCAL_FILE%9jwOOpv8Z8WqVwxq7ynfW03XwQFEn7ipkP88FMsmB5DkrGrmrNBuwEUhIDojkOzdAeBx17jEOVmlWrU2whx6-qnXAjz4jqukHzSSGc3F-r53v3Rg82YAzsXevXp8Bh-Z.png 
+        
+        
+        
+        
+        
+    Distributed Systems supervision 2
+        Exercise 13. Using the Lamport and vector timestamps calculated in Exercise 10 and 12, state whether or not the following events can be determined to have a happens-before relationship.   
+            SAVED TO BROWSER IN DRAW IO
+            
+                local://C:/Users/malac/remnote/Malachy_O'Connor/files/4atqIBUEAzm7OncyN5qB3j5Z5XjQtc_OHDZgMdXZh6kXNeqKApIIRpARrwbyAHUyX7k7ndM-H0MBpStyrugFtkC4DMVZEVYv2pTPR9uWBOaXYXUGmwbk1reIC3dx1sE2.png    local://C:/Users/malac/remnote/Malachy_O'Connor/files/9jwOOpv8Z8WqVwxq7ynfW03XwQFEn7ipkP88FMsmB5DkrGrmrNBuwEUhIDojkOzdAeBx17jEOVmlWrU2whx6-qnXAjz4jqukHzSSGc3F-r53v3Rg82YAzsXevXp8Bh-Z.png  
+                
+        
     
     
 

@@ -1,0 +1,11 @@
+TO REMEMBER:             
+    Computer Architecture Supervision work
+        Lecture 16
+    Java tick
+    C Work
+    Distributed systems tick
+
+TODO:
+    12 - 1.50 Work on Computer architecture supervision stuff 
+    2 - 3:10 Do ELE supervision
+    4:45 - Keep working on computer architecture work

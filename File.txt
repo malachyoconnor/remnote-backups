@@ -1,0 +1,9 @@
+Type
+    Pdf #Type
+    Image #Type
+URL
+Name
+Authors
+Keywords
+Title
+ViewerData
