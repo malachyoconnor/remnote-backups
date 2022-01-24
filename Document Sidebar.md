@@ -1,0 +1,55 @@
+--------------------- Portal ---------------------
+--------------------- Portal ---------------------
+    - Quick Add
+    - ‒‒‒HOLIDAY TODO‒‒‒
+    - TODO
+    - Daily Document
+        - January 18th, 2022
+        - PASSED
+            - 18/01/22
+            - 18/01/22 ↓ 
+            - 16/01/22 ↓ 
+            - 15/01/22
+            - 14/01
+            - 11/01
+            - 10/01
+            - 08/01
+            - 07/01
+            - 06/01
+            - 04/01
+    - ‒Ideas‒
+    - Lecture Notes
+        - Logic & Proof
+        - Computer Networking
+        - Compiler Construction
+        - Further HCI
+        - Computation Theory
+        - Term 1
+            - Economics Law & Ethics
+                - Supervision 2
+                - Supervision 1
+            - Semantics
+                - 
+                - Semantics Supervision  1
+            - Data Science
+                - Supervision 1 Work
+                - Supervision 3 Work
+            - Programming in C & C++
+                - Supervision 3
+                - Supervision 2
+                - Supervision 1
+            - Intro to Computer Architecture
+                - Supervision 5
+                - Supervision 4
+                - Supervision 3
+                - Supervision 2
+                - Supervision 1
+            - Further Graphics
+                - Supervision 2
+                - Supervision 1
+            - Concurrent & Distributed Systems
+                - Supervision 2
+                - Supervision 1
+                -  _Distributed Systems supervision 1 _ 
+                -  _Distributed Systems supervision 2_   
+--------------------- Portal ---------------------

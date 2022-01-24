@@ -1,0 +1,7 @@
+- Color
+    - Red #Color
+    - Orange #Color
+    - Yellow #Color
+    - Green #Color
+    - Blue #Color
+    - Purple #Color

@@ -1,9 +1,0 @@
-TO REMEMBER:       
-    Computer Architecture Supervision work
-        Lecture 16
-    Java tick
-    C Work
-    Distributed systems tick
-
-TODO:
-    12:30 - 1:15 - On the train, convert the comp architecture lecture to flashcards and do some more questions. 

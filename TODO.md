@@ -1,0 +1,6 @@
+- Notes:
+    - Need to organize 2 Further HCI supos - 1 for after 4th lecture and 1 for  __after 8th?__  
+    - Need to review regex, Finite automata, NFA ⇒DFA, the lexing problem & how DFAs solve that problem.
+- 
+- 
+- 

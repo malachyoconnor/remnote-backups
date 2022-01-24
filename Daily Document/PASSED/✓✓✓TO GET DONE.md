@@ -1,0 +1,24 @@
+- Ticks:
+    - Further Java tick DUE FRIDAY
+    - ECAD Tick DUE 16th
+- Supervision Work
+    - Intro to Architecture Supo Work
+    - Data Science Supervision (for Sunday)
+    - Tim Jones C & C++ work (for Sunday)
+- **Lectures:**
+    - Concurrent & distributed systems 
+        - Lecture 7 - Write notes on 7.3
+    - Introduction to Computer Architecture
+        - Lecture 10
+        - Lecture 11
+        - Lecture 12
+    - Programming in C & C++
+        - Lecture 5
+        - Lecture 6
+        - Lecture 7
+- Lab work:
+    - C & C++ 
+        - Lab 6 - ^^Need to watch lecture to complete very last part^^ 
+        - Lab 7
+        - Lab 8
+- 

@@ -1,0 +1,19 @@
+- To Remember:            
+    - **Data Science Supervision (Sunday)**
+        - Requires Lectures 8-10
+        - Requires doing the Questions
+    - **C & C++ Supervision (Sunday Morning)**
+        - Requires Lecture 7&8
+        - Requires doing the questions
+    - **Further Graphics WORK due Monday**
+    - **ECAD Tick (Next Tuesday)**
+    - Further java ticking 19th
+- 
+- TODAY:
+    - 11:00-13:00 Finish C Lecture 8. Keep going with the SUPO work
+    - 13:25-15:30 Continue with C supo work - get it done!
+    - 4:00 - 4:30 Dont stress to much, just work on the last Data science lecture
+    - 5-6 Conc Dist Supo 
+    - BACK TO LIBRARY!
+    - 7-8:30 More Data Science
+    - Get food

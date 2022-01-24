@@ -1,0 +1,20 @@
+--------------------- Portal ---------------------
+    - Lecture Notes
+        - Term 1
+            - Programming in C & C++
+                -  _**Lecture 1**_ 
+                    - How do you specify different types of number in C? ↓ 
+                        - long―123L
+            - Further Graphics
+                - **Lecture 1 Geometry Representations**
+                    - **Implicit Curves and surfaces**
+                        - What are the pros and cons of implicit surfaces? ↓ 
+                            1. Pros ↓ 
+                                - Easy to Know inside / outside / on Surface
+                                - Easy to combine surfaces
+- Message
+    - Restructure #Message
+    - Add Connection #Message
+    - Add Mnemonic #Message
+    - Typo #Message
+    - Correct Content #Message

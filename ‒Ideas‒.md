@@ -1,0 +1,1 @@
+- Hold button to activate bold - See if this is possible with autohotkey 

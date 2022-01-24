@@ -1,0 +1,15 @@
+- To Remember:                  
+    - **Data Science Supervision (Sunday)**
+        - Requires Lectures 8-10
+        - Requires doing the Questions
+    - **C & C++ Supervision (Sunday Morning)**
+        - Requires Lecture 7&8
+        - Requires doing the questions
+    - **Further Graphics WORK due Monday**
+    - **ECAD Tick (Next Tuesday)**
+    - Need to do ECAD Questions
+    - Further java ticking 19th
+- 
+- 
+- 
+- 

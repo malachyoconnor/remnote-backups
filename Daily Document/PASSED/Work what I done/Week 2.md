@@ -1,0 +1,8 @@
+- ![](local://C:/Users/malac/remnote/Malachy_O'Connor/files/2EvOhDCrSfHdp7_UCXVQD2mq8fo0gsvjavEwzaYwWnCI1mV5m97s7ICNT_7CR05g2zLF6Vb6X6tGZdqf8cKMCSTehLL6Nd2TGyzXe9MdFDZ5XP-7TYclKRClrr2Lptja.png) 
+- Wednesday:
+    - Watched a previous Further Graphics video
+    - 
+- 
+- 
+- 
+- 

@@ -1,0 +1,22 @@
+- To Remember:
+    - **Data Science Supervision (Sunday)**
+        - Requires Lectures 8-10
+        - Requires doing the Questions
+    - **C & C++ Supervision (Sunday Morning)**
+        - Requires Lecture 5-8
+        - Requires doing the questions
+    - **Java Tick (Friday)**
+    - **ECAD Tick (Next Tuesday)**
+- To Do Today:
+    - C lectures 2:10 - 4:15
+        - Lecture 5
+        - Lecture 6
+    - Highlight parts of completed Data Science Notes: 4:15-4:45 AND 5:30-5:45 
+    - Break for lunch \w Winnie at 4:45-5:30
+    - Data Science Lectures 5:40 - 7:25
+        - Lecture 8 - Need to finish
+        - Lecture 9
+    - Worked on the coding part of C supervision and finished lecture 8  8-10 
+    - 
+- 
+    - 
