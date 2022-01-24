@@ -55,11 +55,16 @@ Exercise 7. What is the maximum possible error in the NTP client’s estimate of
     \frac{t_2 - t_1 + t_3 - t_4}{2}  - ((t_3 - t_4) + \tau) 
     
     \text{error} = \frac{t_2-t_1-t_3+t_4}{2} - \tau = \delta/2 - \tau 
-Exercise 8. A relation R is a strict partial order if it is irreflexive (\nexists a. \ (a,a) \in R) and transitive %LOCAL_FILE%Tr9viplmSNiKq50nlHvkjyohfNkNxldfyLFftzC7JUv-v8e7n6hIDdBX1gO_OOMmmP5GjnbhpBY4048vJGJBE5zmzwoXCjTSGQlA_WR5BP80fAZWZL_oxr_IvSwOInUn.png. (These two conditions also imply that it R asymmetric, i.e. that %LOCAL_FILE%4hpbm3lFLPnpNpJ_WQZCAX4vNJhu1Xkmi68UO7aQf6faFCgjsCsjTlz5PczTq1BOYoHaZBl-wlg3YzArARI9wFAfg4jmCqzIIA1tHsMIH1WdvxqEZcbZbt7NQa2jb_Ba.png Prove that the happens-before relation is a strict partial order. You may assume that any two nodes are a nonzero distance apart, as well as the physical principle that information cannot travel faster than the speed of light.    
-Exercise 9. Show that for any two events a and b, exactly one of the three following statements must be true: either a⇒b, or b⇒a, or a || b.   
+Exercise 8:  %LOCAL_FILE%5S3daW4zY8nipJDU9bb6QDZFwpAKv76GLWXklLBsLwNMaHVyXCyqi6beHbSePSUh2wUUqfIM089PwNg7KdgKAG393iZn0TG3vKoFUqd6uZlbpIj28GT5HfxMznzEsjyk.png 
+%LOCAL_FILE%JZ0cqETpk4kB-8uo8RsxSXte3C9NVDfOw4vemdbEKxinYe3CqfOPdSUNb_Fpyd4-ye6MCznEIu-9sZu06atSqyFY7bbC1aTgvSUTUTXT9mFmE5HTbSF5PSAVbnrb2wkH.png 
+Exercise 9. %LOCAL_FILE%yjzPiqfzh56oOnjdrWniK1-rmUzLvrJVHdmIi3wGYvHrNK61hUGjfCo6hw7JQp6f_L5YYwSlqfsN8hscm798IJxxy9ynwJuNREyNIPIdegj_vVikP0lJGqiVY31FzpHB.png 
+%LOCAL_FILE%ob9D3CB9suoCvYxZxqxdjPsKhfoPPSYm6DlccDXCh0NtAPdvEKZA7Lly3ra6n6EQ8nrb-eQAqp-ly0gw__HevRFKuj9ebM1cP9wxXqeeExDvTyWgi-ry8nKXL0kJ1kY9.png 
 Exercise 10. Given the sequence of messages in the following execution, show the Lamport timestamps at each send or receive event   
     %LOCAL_FILE%4atqIBUEAzm7OncyN5qB3j5Z5XjQtc_OHDZgMdXZh6kXNeqKApIIRpARrwbyAHUyX7k7ndM-H0MBpStyrugFtkC4DMVZEVYv2pTPR9uWBOaXYXUGmwbk1reIC3dx1sE2.png 
-Exercise 11. Prove that the total order ≺ using Lamport timestamps is a causal order. 
+Exercise 11. Not really sure what im doing in this Q 
+    %LOCAL_FILE%OLpHgGNm5MfltmNel8M5Q5lLaLiOvEi-XeYkJSwWR2d7kXOaSbkgkSRhko_Iat92Wrqx24q4XCLZlBOuaCfxNSdmG60OZoL9OyAZd8aFGEzVQs2X26dJVDRGVZhjhzk1.png 
+%LOCAL_FILE%oBARg9P1D24HOK5JpsjKfxt9BYToaiGQaEFssa4ymDfFEdCvwPFRyS1POKECnRvToCUUSUDiGleDPpD1--KUBhU6sgaQqXCITyKlJIKliumPf_oMLkMtWVPrL2PwqsPV.png 
+%LOCAL_FILE%_yytoqeaDujPLnHDbTmbdQ8mL45y-VCzC7OtvC2qnqKA8ofMwyZq15n7C4nYTpYnzbyjKVGghpq51wFQGApk_Zsmi4sMKo7jf3lGLupIBvMobBOH_MVgEeECiIBzpoqp.png 
 Exercise 12. Given the same sequence of messages as in Exercise 10, show the vector clocks at each send or receive event.  
     %LOCAL_FILE%9jwOOpv8Z8WqVwxq7ynfW03XwQFEn7ipkP88FMsmB5DkrGrmrNBuwEUhIDojkOzdAeBx17jEOVmlWrU2whx6-qnXAjz4jqukHzSSGc3F-r53v3Rg82YAzsXevXp8Bh-Z.png 
 

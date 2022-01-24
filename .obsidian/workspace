@@ -1,0 +1,94 @@
+{
+  "main": {
+    "id": "31d00793b7a947f1",
+    "type": "split",
+    "children": [
+      {
+        "id": "f6274eedc9afd198",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Daily Document/PASSED/Work what I done/dsa.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d2d35cdc0c93b49d",
+    "type": "split",
+    "children": [
+      {
+        "id": "a530055a8dc70bb1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bbee7d0980394061",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "bd8da323eb6a81e2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "9790ed7f6858fb3e",
+    "type": "split",
+    "children": [
+      {
+        "id": "9103e292bb6f15f9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "640bbf5d2a804c4e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Daily Document/PASSED/Work what I done/dsa.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "f6274eedc9afd198",
+  "lastOpenFiles": [
+    "Daily Document/PASSED/Work what I done/dsa.md"
+  ]
+}

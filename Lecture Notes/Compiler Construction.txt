@@ -1,0 +1,73 @@
+Lecture 1 
+    Text > Compiler > target machine 
+    A good compiler should do these 5 things 
+        Be correct, i.e. meaning is preserved - i.e. semantics preserved (source language and target language have different semantics)
+        Produce good error messages 
+        Generate efficient code
+        Itself be efficient 
+        Be well structured and maintainable - Programming languages evolve and change, should be as easy as possible to upgrade the compiler. 
+        The first 2 are REQUIRED, from the last 3 options generally 1/2 of them are achieved. Hard to have quick compilation while deeply optimizing code.
+    Pareto frontier of optimization - trade-offs, feasible solution region often common. Changing technology changes this frontier.
+%LOCAL_FILE%XoUFAUYcPtd3q4WN2ics6Z8Fc4ar-9Hc7_3E3s-3v3n2hWiz-r-kBSkC6pJWRPt7Ip1k0J7y_SCsgT5EFZIZ-YN5R1uLAVb2RkAlTifAnGBXIS4QJyjbhjwiC5IkU8jh.png 
+    Divide and conquer is used in compiler construction by 
+        %LOCAL_FILE%VUV7dcNkXjfhgwniatPtyGOsxPv5_ZX7yRJzMdNa7mYvl6ogT1-ds5rH56U8zXwwBQOezXWMQ-ljzK6Hk5fNqWoqZ9qeedo3l9rgBEqHVKOxL3C4ED6hB-RfR0GXCg69.png 
+        Compiler DKSLJDASLKJ 
+        Front end, checks for errors and warnings.
+        Middle, input is a legal program in the source language - the output of the middle end is target independent output.
+        Back end, takes the target independent output and molds it to target a certain VM or OS etc.
+    The shape of a front end is sectioned into 
+        Lexical analysis - code tokenised into lexical tokens
+        Parsing - an AST is formed (an abstract syntax tree). Tradeoff of simple language easy to parse but hard to read for a human.
+        Semantic analysis - is the code type correct, are scoping rules upheld etc.
+    The middle end also provides optimisation - with the trade-off that more optimizations result in a slower compiler. 
+    The back-end takes the low-level retargetable code and aims it at a certain target machine. Requires intimate knowledge of Instruction set and details of target machine. Need to understand details of OS interface. Target dependent optimisations occur here.
+    
+    
+    
+Lecture 2
+    The problem to be solved 
+        Translate a sequence of characters into a sequence of tokens, implemented with some datatype/constructor: 
+        Character Sequence:
+%LOCAL_FILE%TaD32UcLpWln0wjca2pELJ4CCA0QO_gIjRxrKjzOr4bEef9YFYB2-INVyPOf6nrLsYwnkhIggCb2OqK2w297yidr3M6eV9B393j7E9jUV_ItD9iUH7mojdFUxj2tv-qF.png 
+        Sequence of tokens:
+%LOCAL_FILE%QAOOXh0TiKvQWqr1XI4Xu5DMvlBetnQG4Voxzb2cwdtR_P6T8COG20TzAb84puq5e6AC13lldfixS9ZfIQRf59vlG9o82MaBuaQNlnVAIzhP9-TjIJnbWXEGE2iETgaD.png 
+        Implemented in some data type:
+%LOCAL_FILE%PCouvqdW5sb9X6DiuBCbI6ag7iI1YYH6eOeTDZEN5ERx-f3EdD4g8BFqGJpFqRLXC0h8l-WhpIaJougOf8Iqb2eSjLndVC2pHRB0Yeo45dSmGTIbMFjigKFDGPnLLYjv.png 
+        Whitespace ignored in this tokenization, as opposed to Python.
+        Having such a specification can be useful for testing, even if you write a faster implementation yourself.
+    Regular Expressions 
+        %LOCAL_FILE%VmIk_F1iXeNXSNyDhKl_RGWd16mvfgRzodqRxhWED8_5_cKOKKZYja7-1Pm6rTSDiF-WcZGZBuL3vPJ7vfvXCkgoYqrvBZmignQgEzUglP0X-0nnpkV3YlxU8UFW0IHp.png 
+    Finite automata
+        %LOCAL_FILE%CoXu4VHkVDHF8oWyHULR14pjikmutIiy88aTmpNO3P16dULVgKG53MvqFPVwabkDx__7X0t2VXZc0hJLG-3RWJhkG2DKnz26ddtPlqW-JzO97SEvNYcA_bVx8-yJxjz5.png 
+    Notation
+        %LOCAL_FILE%1FwrQ6R5ei__2Z7KKalr1whqWa5PZvpPfLJyGZbtDPb1DXzazUrIApR6ix_mzmRc_J3_tRUyPILjzpWCCyDnAKdtsovHTbvawNFq9Ps_4Q76OzGbvt4LMa6L4S9Znk9n.png 
+    RE ⇒ NFA
+        We can prove that we can always build an NFA for a Regular Expression, by rule induction on the rules.
+    Review of NFA ⇒ DFA
+        %LOCAL_FILE%aasRinDrSoRkEve-i9koOujN9l-DrAoeHoa7SuPw_hZWplVUjwvMVDGLmSTHsFBXmI0TsFlIRxi05B2ymul37zBmaC65lPMYjarijwvOIucSboS2M30anfsYcaSAmKm0.png 
+    How do we computer the \epsilon -closure(s)? 
+        Version of transitive closure
+        
+    Traditional Regular Language Problem
+        If we wish to solve the lexing probem, can we simply construct an NFA from our expression, then run the DFA on w -  
+        In reality we have a lexical class for all our keywords - we want to break up w into a concatenation of each keyword. We also want to know which of the expression each section of the concatenation matches - also need specification of whitespace (might not pass on to the parser)
+        We also need a priority order of expressions - need priority to resolve ambiguity! E.g. consider a variable ifif, that could be detected as two ifs. We want to make the longest match possible. Results in most specific match. 
+    Defining Tokens with Regex's
+        if: %LOCAL_FILE%VHNu5TeH3fg_klhWwwrOPlmzrxjwU218RA5O4tTMWHXi3EpCGBXOb4_eBrrd3_qKE9Jv-Lo8Fj3Wj3UV7gKBZTZl96SGFM4hpzaiUqTPX_sQLInDHiKpjtt1UEXWdAmZ.png 
+        identifiers: %LOCAL_FILE%eMp8Bf4ydWm_fC9N233ZG_XzBmNPxpc8HyVkPgN-8cSHtm4dlJ130fVwexzNNXlB5EjyvjVOyk3TGl72oS1UGwc3TMXiztYKMjmixWzwIR8jLZQ2HNuNPpY1y_KwgOj6.png 
+        number: %LOCAL_FILE%986Qre2nWAnT_cZyBIQo2RxyPyWvPCqyYnJLHHE4d0FCBF_7BVWtiMKfl5znRbcs-MmL0fnvt7_Q1N-3qC35CQFC2mTIG6w4GBsCBFM0Ulnm6fl5ocOKzrgQo_fijRFp.png 
+        float: %LOCAL_FILE%ID1epqdeMU2T0_rQF9N3Ng8duyHHKVqypnLD0z-UTuovfRIAo5mmdNx3t7n0xrSCMbzqKo0sSErEx47vKQdbISwiudcQdTskKC1VKdIGqW7FM1Spm59M1Mwqb9lPjzce.png 
+    Constructing a Lexer
+        Take our ordered list of regex's, with highest priority first and 
+        %LOCAL_FILE%CtKZd8H7JDfSgpkNhlo3IppRUaPGy5RdJSiobrGXsB0eN1a21ajop1WZ22rm0bY_1ivYXNM-XGNXthMeNEsEDlzuYS5nyq279UtXsMKt5WcCQ2a200TLNK1AWvIXmr1D.png 
+        At each state we store the possible identifier we could be dealing with. The priority rules are "baked-in" to the machine. This eliminates any ambiguity.
+        Finding longest match 
+            Start in an initial state 
+            Repeat the following:
+      Read an input until a dead state is reached, then emit the last accepting state.
+      Then reset to the start state.
+            An example of a dead state would be a space after seeing a "then" - this takes us to a dead state. 
+            %LOCAL_FILE%fYtjPc8TaQ3Br_o2KZvj1ApcTVRs56oNqySfZGbeXFV48zxF3t_-U8sfj2n4Cc-aaSUj1E29N4pkth1mPYexBWv_WpBlchrb7fkmERCe4z-QfUvKSf9VML--6153_Epi.png 
+Note after we RESET, we step backwards one step - notice this is done on Whitespace
+            $ sign indicates end of buffer.
+    

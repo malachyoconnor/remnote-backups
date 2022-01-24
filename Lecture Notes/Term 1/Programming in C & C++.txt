@@ -1,3 +1,4 @@
+
 Supervision 3
      2015 Paper 3 Question 1:   
         a.) It encourages the compiler to immediately evaluate the function inline. However, it gives no guarantee that the compiler will actually do that. Can waste space if an inline function is reused many times, less space efficient than creating a stand alone function to be run.
@@ -475,31 +476,29 @@ Lecture 1
     Primitive Types in C
         What are the three primitive types?↔Numbers, Characters and pointers
         Are there primitives of composite types in C?↔NO
-    What types of locals are supported, and what is implemented by a library
-        Stack and static locals built in
-        Heap implemented by library 
+    The Stack and static locals are built in, the heap is implemented by a library. 
     Sizing of various types
-        Char↔≥8 bits
-        Int↔≥16 bits
-        Float↔Single precision
-        Double↔Double precision
+        Char→≥8 bits
+        Int→≥16 bits
+        Float→Single precision
+        Double→Double precision
     Type operators meaning
-        unsigned↔Makes the value unsigned
-        short↔Synonymous to short int, varies but is at least 16 bits
-        long↔8 bytes
+        unsigned―Makes the value unsigned
+        short―Synonymous to short int, varies but is at least 16 bits
+        long―8 bytes
         const↔Informs the compiler that this value will not be changed, can still be changed using pointers though
         volatile↔Means the storage can change at anytime, compiler must check it every time it's used
     How do you specify different types of number in C?
-        long↔123L
-        float↔123e10F OR 12.5F
-        double↔123e10
-        octal↔053
-        hex↔0x54
+        long―123L
+        float→123e10F OR 12.5F
+        double→123e10 or 1.4
+        octal→053
+        hex→0x54
         
     Enumeration
         enum boolean {TRUE, FALSE};
 enum override {TRUE=1, FALSE=5, T=5} One can define Booleans, they are indexed from 0 by default - but this can be overridden. 
-        What items in a enum need to be distinct and what don't↔Names must be distinct but values need not be.
+        What items in a enum need to be distinct and what don't→Names must be distinct but values need not be.
     Declaration
         Variables must be declared before they are definition, where definition means giving them storage. They can be declared, defined and initiated inline. int i = 5;
  char a, b, c;
@@ -507,10 +506,11 @@ enum override {TRUE=1, FALSE=5, T=5} One can define Booleans, they are indexed f
             Declaring↔Telling the compiler this variable name will be used
             Defining↔Setting aside storage for a variable
             Initiating↔Putting a value in that variable
-        What does the extern keyword do?↔It declares but doesn't define a variable, means the variable will be defined elsewhere - i.e. we allocate it no storage.
+        What does the extern keyword do?→It declares but doesn't define a variable, means the variable will be defined elsewhere - i.e. we allocate it no storage.
         What does the static keyword do in regards to
-            Static variables in functions↔The variables keep their values between invocations
-            Static global variables↔Static global variables are only seen in the file they're defined in
+            Static functions→Usually functions are global, however static functions can only be accessed within the file they're declared in 
+            Static variables→Static local variables don't lose their contents when they go out of scope - so functions can reuse their values when called a multiple time. Static global variables are only seen in the file they're defined in
+        
     ALL OPERATORS RETURN A RESULT INCLUDING ASSIGNMENT! int y;
  int x = (y = 3);
  // x = 3
@@ -537,11 +537,44 @@ x = 5, y = 3↔The expression has type short and value 3. (The rightmost express
             No bounds checking is performed
             The compiler places them on a contiguous chunk of memory
         What does the following result in and why does it work? char x[] = "abc" "def";
- printf("%s", x);↔This results in abcdef, it works because string concatenation is done by default. "abc" and "def" are set to strings using double quotes.
+ printf("%s", x);↔This results in abcdef, it works because string concatenation is done by default. "abc" and "def" are set to strings using double quotes. This happens at compile time
     goto statement
         Works but shouldn't be used some_label:
  	printf("We used a goto")
  goto some_lable;
+    
+
+Lecture 2 (Only address space layout)
+    
+    Address space layout 
+        
+        The four most important areas of memory within a compiled x86 C program→The Stack, the heap, the static variables and the C binary code.
+        Describe the layout of the heap, the static variables, the stack and the C binary code within the address space of a compiled x86 C program.→%LOCAL_FILE%9EqclGaeJ229axupOmXVqqvMy9SUdPUX7V3UUJKfqAvlQamJKCqsY20bbll3HJaaplmHBKojGNlm-veoZGeWqEKPswm8cEwA_HSec_wpoL4PW054VXI79WQoWA_A92Yu.png 
+Start at 0xffff ffff the top of the address space
+The stack grows downwards
+The heap Grows upwards
+0x0 is often mapped to an illegal address to cause a seg fault if accessed
+        Describe the features of the heap →The heap is manually managed, using malloc and free - it is generally larger than the stack.
+        Describe the features of the stack →The stack is managed by the compiler and holds temporary local variables declared in the body of a function which are freed when they go out of scope. It grows downwards on the address space. It grows and shrinks as function calls push and pop their values.
+        Describe the features of the data segment →The data segment holds global and static variables who have a value.  
+        Describe the features of the BSS→The BSS stores uninitialized local or global variables initialized to 0. 
+    Unspecified behaviour is →behaviour where the C standard give's 2 or more options of implementations - the implementation chose can be decided by the compiler. It gives more freedom to optimise code for a given architecture. Some examples are whether to implement inline, evaluation order of function arguments, order and contiguity of memory in the heap. Memory layout of storage of function arguments.
+    Undefined behaviour is→behaviour not described by the C standard, when a compiler is faced with such behaviour it can do anything it likes. An example is modifying a string literal (string literals are in read only memory) or i++ + ++i.
+    
+    
+Lecture 3 (Only unions)
+    
+    Unions
+        A union variable is a variable can store one of multiple types, the size of a union variable is equal to the size of it's largest member, the type retrieved must be the last value set . The syntax for fetching from a union is the same as for structs (⇒ and .). The syntax for defining a union is  union u {int i; char p; short x;}; The type stored within a union can change during the execution of the program.
+    
+    Bit-fields
+        Bit fields are used for low-level control over bits of memory. They are useful when memory is limited. Bit fields are defined within structs. The syntax for bit fields is struct fred{int x : 4; int y : 10;};  The details of bit fields is very implementation specific. Bit field members do not have addresses.
+    
+    
+
+The C Pre-processor
+    The C pre-processor executes before the program is converted to an object file, it examines lines beginning with # and does textual replacements. It can be used for debugging by setting a DEBUG variable to 1 or 0, and having if (debug) printf(...) - these are optimized away if debug is set to false. 
+    
 
 Lecture 10: 
     C++ is said to be: 
@@ -559,7 +592,7 @@ Lecture 10:
     C++ vs Java
         Speed or safety
         More vs fewer features
-        Java trying to follow C++ with value types 
+    Java trying to follow C++ with value types - types as values (like int or string) not wrapped in classes
     Types:
         A lot like C types, but additionally: 
             Character literals 'a' type char (int in c) 
@@ -743,7 +776,7 @@ int main() {
         Default Constructor  
             Default constructors are called when→you type "C x;" or if you do "new C();" i.e. with no arguments.
             If no default constructor is specified→The compiler creates one, with little to no initialization.
-            To disallow users to use the default constructor we↔define the default constructor and set it to private.
+            To disallow users to use the default constructor we→define the default constructor and set it to private.
         Destructors 
             destructor are called→when a stack-allocated object goes out of scope INCLUDING when an exception causes this to happen, when a heap allocated object is deleted
             There can only be one destructor for a class
@@ -754,8 +787,10 @@ int main() {
 Complex c(1,2);
 // VS
 Complex d = c; // Copy constructor evoked 
-            To augment the default copy constructor use the following syntax→Complex :: Complex (const Complex& c) {...}
-// Reference to a complex item passed This is useful when I have member variables with pointers in for example. Don't just wanna copy everything
+            To augment the default copy constructor use the following syntax→class Complex {
+	Complex (const Complex& c) {...} 
+}
+// we don't pass a value This is useful when I have member variables with pointers in for example. Don't just wanna copy everything
             To disallow copying of objects→Make the copy constructor Private! Note, can still use assignment );
             IMPORTANT NOTE: Assignment (d = c) differs from invoking the copy constructor: Complex d = c. Does not use the copy constructor.
         Assignment operator
@@ -862,35 +897,33 @@ class Dog : public Animal {
 }; 
             Virtual Functions 
                 What will the following code output?class Animal {
-	int legs;
-	public:
-		Animal(int l) : legs(l) {}
-		void makeNoise() {
-			std::cout << "A noise!" << std::endl;
-		}
+    public:
+        void makeNoise() {
+            std::cout << "A noise!" << std::endl;
+        }
 };
 class Dog : public Animal {
-	public:
-		Dog() : Animal(4) {}
-		void makeNoise() {
-			std::cout << "BARK" << std::endl;
-		}
+    public:
+        void makeNoise() {
+            std::cout << "BARK" << std::endl;
+        }
 };
 
-void makeAnimalsBark(Dog d, Animal a) {
-	d.makeNoise();
-	a.makeNoise();
+void makeAnimalBark(Animal* a) {
+    a->makeNoise();
 }
 
 int main() {
-	Dog d;
-	makeAnimalsBark(d, d);
-}
-
-→The problem is, makeAnimalsBark isn't virtual, so the output will be - "Bark" "A noise!"
+    Animal* a = new Animal;
+    Dog* d = new Dog;
+    makeAnimalBark(a);
+    makeAnimalBark(d);
+}→The problem is, makeAnimalBark isn't virtual, so the output will be - "Bark" "A noise!". Note this is only the case if we pass a pointer - if makeAnimalBark took the value it would work.
                 Non virtual member functions depend on the static type of the arguments. 
                 We need the virtual keyword because→a pointer to a subclass can be cast to the base class, then the base class cannot see the overridden function. 
                 To get polymorphic behaviour we must→define the function as virtual in the superclass. Then it will be dynamically evaluated at runtime.
+                Non-virtual member functions are called depending on the static type of the variable, pointer or reference. Since a pointer to a derived class can be cast to a pointer to a base class, calls at base class do not see the overridden function. To get polymorphic behaviour, declare the function virtual in the superclass. 
+                To enabe virtual functions the C compiler must→generate a "virtual function table" or vtable. This table contains the function to call for each object instance. This adds run-time overhead as every function call must go via the vtable. 
                 Why does C++ give the option of none virtual overridden functions?→It's a trade off of performance vs Programmer conceptualization - dynamically type checking at run-time can be slow, so if it's not explicitly needed we don't want to do it. Instead of a function call in machine code, its an indirect function call - While at first glance this is not much slower, the effect on the cache and branch predictor can be large 
                 Enabling Virtual Functions
                     To enable virtual functions, C++ uses→a vtable or virtual function table. These store a pointer to the specific function to call for every object instance. They are slower.
@@ -956,17 +989,14 @@ int j = *(int*)p; // Undefined - we've lied about the type of the pointer and th
  
                     To disallow  double x = 0.1;
  Complex a = x; we must→Declare the constructor explicit. Implicit vs explicit casts.
-                    If I want to cast from a class type to a default type I do the following→Overload the operator of the type we with to cast to, e.g.: Complex i(0,1);
-double x = (double)i; // This would cause type error
-// Need to overload double() :
+                    If I want to allow casts from a class type to a default type I do the following→Overload the operator of the type we wish to cast to, e.g.: Complex i(0,1);
+double x = (double)i; // TYPE ERROR
+
 Complex {
-	...
-	// NOTE: Don't specify return types
-	// For conversion functions
 	double operator double () {
 		return a->re;
 	} 
-} 
+}  
                     New forms of casts in C++ 
                         Problems with C-style casts include 
                             They do no type checking
@@ -1060,24 +1090,24 @@ Lecture 12:
  		T pop();
  };
         Template richer details 
-            How do you specify a template to take a value?→template<int i> class ... 
+            What is the syntax for setting a specific template type?→template<int i> class ... 
             How do you give a template several parameters?→ template<typename T, int i> class ...
-            How do you declare a subsequent parameter with a template parameter?→ template<typename T, T x> class...
-            How to you use templates to give default values?→template<typename T, int x=100> class ...
+            How do you declare a subsequent argument with a template argument?→ template<typename T, T x> class...
+            What's the syntax for a template function with a default value?→template<typename T, int x=100> class ...
         Templates behave like macros
             Templated classes are type checked when→the template is instantiated. 
-            Template definitions are often placed in the→header file, because the compiler needs the source to instantiate an object.
+            Template definitions are often placed in the→header file, because if we had it in one file and another file used it - we'd end up having to recompile a load of files whenever we updated the template. Additionally, it makes separate compilation impossible.
             The difference between java and C++ templates is→ Java does type erasure setting all the types to Object, while C++ works like a macro where the type is replaced and the new function for that type is added to the binary 
         Templated specialisation
             What does Template specialisation allows us to do and what is the syntax?→It allows us to define different definitions of a class depending on the type parameter passed. 
 The syntax is: struct Test{};
 
-template<typename T> struct doStuff {
+template<typename T> class someClass {
     void stuff() {std::cout << "HI!" << std::endl;}
 };
 // NOTE, the missing typename T is ON PURPOSE
 // You must have empty angle brackets
-template<> struct doStuff<Test> {
+template<> class someClass <Test> {
     void stuff() {std::cout << "NO!!" << std::endl;}
 };
         Templated functions
@@ -1088,7 +1118,7 @@ int sam[] = {4, 1, 2};
 sort(sam, 3);
 sort<int>(a,3); 
             Unlike template classes, template functions have type inference. 
-            Using templates for functions like this results in
+            Two benefits and a negative of using templates for functions 
                 Better type checking than using void *
                 Larger binaries if multiple different types of sort() are invoked
                 Potentially faster code than runtime type inference as we don't have vtables for functions - we know the type of the function at compile time

@@ -1,0 +1,46 @@
+Lecture 1  Theory Driven approaches to HCI
+    UI Design 
+        How would you go about designing UIs
+        How do we know what a good UI is?
+        Could our UI be improved?
+        How do the answers to these questions differ between a Family home printer, Facebook privacy settings and a visual programming UI.
+    HCI Theories
+        Theories give a critical perspective.  
+        What is the Gestalt theory
+            The Gestalt theory of perceptual organisation, is a theory on how people enjoy and perceive marks on a screen. 
+            Continuity -  Continuity is that our brains tend to see objects as continuous or smooth rather than disjointed or discontinuous  
+%LOCAL_FILE%S9nuVLYthKXuGuFdgE0vUibDhynR1XvRBkxj7A49bUFCDbklzBEEYrBfGvydkIWsIyHIMaS-PA83-IOGmAcF8p1gxDgRaoMxYj1dWxV41qa34GaHdv9GBZPGHPAR_SWO.png 
+            Similarity - how we piece information together by how similar objects are  %LOCAL_FILE%eUxUjVwn49Oo06KksV7SpLxLR8BMg9p8X2E0cxeCb1bRrPDOn6RYPGsj4EAS7gDVUAiqf9cKiFeJIx70EqqrqdJSfF3NyNcwFotE37YD1Tv0dpr6RNgRp9bceYXyEQ2H.png 
+            Closure - when individuals fill in the blanks
+  %LOCAL_FILE%YZvz-laQSfMkMiW4HmZ0iqXrK6S0VistpU_v_KyJ73PnM1Yk1MJeF7-yj6Wnuuc6k9wtYW6bbQ0jXMQzsQ219QwhXqe2GlXJbvVMcpbHZ4dk7a2eKnuXgTuD-EezuoG5.png  
+        Using Closures for visual programming design of lines: Lines between blocks could be blocked.
+        Problematic Similarity in Visual programming - Given that objects look the same, code block and a number, is that a problem? Non-programmers think a number & a computation resulting in a numbers are not the same. 
+        Summary of Gestalt theory application 
+            How can we use Gestalt theory to evaluate a design?→Take a candidate design - predict some properties that will work well and some that will cause problems. E.g. in visual programming using blocks, the blocks might look too similar - so wont work. Lines between blocks that are hidden use closure - so will work.%LOCAL_FILE%2MczzW4gbyTgZC1oV9UKKiGWX9i7WXxqj_Eaftmw8XBuh6bQ8y01DEq4ScxqDXxBxlHrD-qgwmlA4kPUDG5LprvCw0768Bf81HwlGIzm-C1uHJxStbrBq7LPvAyXzNym.png 
+    Iterative Design
+        Describe iterative design→Iterative design is the process of expanding and contracting your designs over time. At first you generate a batch of designs, then distil the good parts and combine them - discarding some ideas. Then you generate more ideas this is called 'creative disruption' (make sure you've explored the problem space and have not hit a local maxima) and repeat this process. %LOCAL_FILE%ubld7KHOuUQKWOjU9NtbzKy3_pwVT6Ywop-fIqjwxA0Dcm7ATSKnN8uZSBPjAP7jcZZgEn_po9dBjrIQZVyVvgmS9F3GTQXEIkPfSrj30judQBs86_ndNfgwMVGwmVpY.png 
+        Gestalt swapping is→If a design depends upon a certain Gestalt property - force yourself to use a different Gestalt property. It's not intended to be an end answer, rather to give new ideas from which the good parts can be pulled.
+For example, instead of emojis as variable names for similarity - perhaps we can colour variables instead.
+    Why theory in HCI?
+        Interested in making interaction 'better' - theories s us ways of criticising proposed designs and ...
+    Three waves of HCI
+        First Wave - Theory from Human factors, Ergonomics and Cognitive Science
+        Second Wave - Theory from Anthropology, Sociology and Work Psychology
+        Third Wave - Theory from Art, Philosophy and Design
+        First Wave
+            HCI as a engineering discipline, analyse the person as a part of a system. E.g. the Apollo-Soyuz controls. Additionally, ergonomic factors - can they reach that etc.
+            The "user interface" is a separate module, designed independently of the main system
+            Design goal is efficiency (speed and accuracy) for a human operator to achieve well-defined functions.
+            Use methods from cognitive science to model users' perception, decision and action processes and predict usability.
+        Second Wave
+            HCI as a social system - take account of information systems outside the computer, including conversations, paper and physical settings.
+            More and more people using computers - the system becomes a whole organisation with many computers
+            Study the context where people work, understand different ways of seeing the world around the world.
+            Integrate stakeholders into the design process.
+        Third Wave
+            HCI as culture and experience. Computers everywhere mixes public (office) and private (bedroom).
+            Outside the workplace, efficiency not necessarily a priority - Usage discretionary (no choice of software in the workplace, but can decide at home) and UX includes aesthetics, affect.
+            Design experiments are speculative and interpretive (Not as concrete as ergonomics) - need a Critical assessment of how this is meaningful. 
+        Alternative Perspectives 
+            Positive computing that focuses on wellbeing, flow, empathy, mindfulness, altruism (Calvo and Peters), work  on inclusion and accessibility that addresses physical and sensory capabilities, ageing, low income  and human rights, or explicitly critical points of view such as Bardzell’s feminist utopianism, where  design critique directly attacks the mechanisms of institutional privilege, using practices that are  designed to amplify marginalized voices when thinking about the future.
+    

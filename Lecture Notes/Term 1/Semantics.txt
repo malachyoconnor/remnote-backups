@@ -1,3 +1,4 @@
+
 Semantics Supervision  1
     %LOCAL_FILE%EWCgcOK-lZJ6GXtKgqpmCeQA2MFAPMXNYxRMBbtq1Xo64BIrKQCe2_wG2RV3mMZDM0vlnXIIDh2jgmHZ7JV5hYlLSXv7Nh7gdgyv65mlLn2cT_dn6BefcHmjX5Q-Un2e.png 
         l2 := 1;
@@ -36,4 +37,5 @@ l1;
         N̶o̶,̶ ̶i̶f̶ ̶e̶ ̶i̶s̶ ̶v̶ ̶i̶n̶ ̶v̶;̶e̶2̶v̶;̶ ̶e̶_̶2̶ ̶v̶;̶e̶2̶ ̶​̶ ̶v; e_2 ̶ ̶t̶h̶e̶n̶ ̶v̶'̶s̶ ̶v̶a̶l̶u̶e̶ ̶i̶s̶ ̶a̶t̶ ̶f̶i̶r̶s̶t̶ ̶i̶n̶t̶,̶ ̶b̶u̶t̶ ̶u̶p̶o̶n̶ ̶t̶h̶e̶ ̶n̶e̶x̶t̶ ̶s̶t̶e̶p̶ ̶t̶h̶e̶ ̶v̶a̶l̶u̶e̶ ̶i̶s̶ ̶n̶o̶n̶e̶ ̶  - No cant step in a section of a statement.
         I believe type preservation does still hold, I don't see how assign1 could change that, as the type should be unchanged - and seq1 shouldn't affect the final 'return' type, as we evaluate left to right - meaning our new int value is stuck at the front.
     
+
 
