@@ -1,0 +1,17 @@
+- Chords
+    - C chord
+        - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/putDBA4Yxcu4DULUztF3nP5vv5d1Tl-P2_0-aW6GnPjoaf9ZusMmQ5pGo6C_Qyw65KuuTlcs9u22jVr3zu0M_ALBgmO7mM4yJIEWvIEZ0cOwtnRJGgg6s2NYbkZhlLPk.png) 
+    - A chord
+        - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/jL1fLWuykBOkXJUX3sEGTS4ERGMmP2mbmN4IjJJhnSk17stxNvUpyOuFmOmxyg834ishq9qj6ZiW06tnK-CS-x5pf1UWKICm5OtE91YuLxC624uY-GHgs5CrwGKnIlA1.png) 
+    - G chord
+        - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/viHGSZ-qiuzwuad01wsGh52_Wubl_uR8E8HikL2mRw8X2QvKAg8O9guYqYx_5IG5EiGsZW8_3_pLL2TpSlXGjLOjWSiSRpQpi33ZkmM_3C9UvJhM98G5WZ5QNuz85PO4.png) 
+    - E chord
+        - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/rtcWgn4V43KdRoA1cotzO_GcVBf0bOB7slgTyxfOaKD7Ad_S-L6tJmUGR7X_BtxxCjQOjYVE3rXuILa_G-_1sq3ylj6lg-oKAXOkG80P340Nx-yx96cb0heK27dor6qv.png) 
+    - D chord
+        - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/YpFy2be9h5yXe1RYVf7mfur_MpBoa3qNNpB1AyzmFCuhARwVyON--s1pyKfFi1L1-b3xUIHayWa3ByYqZ4-H6wb3liVBH63XP7D5OKK8q0LFDd_v1pZQttCpHsZpNKZs.png) 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 

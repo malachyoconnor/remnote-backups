@@ -1,0 +1,689 @@
+- Case Study Notes
+    - **Critically read the weekly reading assignment.** Only 2 papers a week. 
+    - Present a case study:
+
+        - Cybercrime event / series of events.
+        - Should be sufficient objective information about the event for you to consider. Make sure the offender **has been prosecuted & sentenced**. This ensures there's enough information.
+        - Relate this to the academic literature related to this incident.
+        - If it relates to subsequent essays - leave that out.
+        - **Can go 10% over.** 
+        - Argument ⇒ Evidence to support your argument. Have the argument throughout the essay, don't wait until the end to reveal it.
+        - Careful how you **choose sources **journals, social science journals, academic articles and computer science conferences papers. 
+        - Make it **accessible **don't assume that the reader knows what a denial of service attack is etc. 
+        - Don't be general - e.g. don't write 'Cybercrime has increased exponentially in the last decade', **not relevant!** 
+        - Signposting, the first X is this, the second X is this...
+Use reader instruction to signal when you shift gear, 'now we turn to consider this...'
+        - Intro ⇒ tell me what you're going to tell me
+        - Body ⇒ tell me what you're telling me
+        - Conclusion ⇒ tell me what you told me
+        - Don't use headings, no bullet points, no figures, no appendices.
+        - References!
+        - Wordcount excludes title & bibliography
+        - Department heavily penalises late submissions - NO EXTENSIONS
+- Mirai Notes
+    - Paras Jha github: [dreadiscool (dreadiscool) · GitHub](https://github.com/dreadiscool/) 
+    - Attacks on ProxyPipe - abuse complaints that kneecapped Mirai.  
+        - Goes on to spam ISP abuse complaints - DDOSs Frantech when they didn't respond in reasonable time. Before he did that he threatened them on: [lowendtalk.com/discussion/91889/need about 5 dedicated servers/p2](https://lowendtalk.com/discussion/91889/need-about-5-dedicated-servers/p2) 
+        - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/aT6HR7p2lTT8_9o4-_qB0Tfe7Ne1KijpM0xMs4rq8WjLRMmdArMzLXCYB_Hk-Qwj96G4JWA4ikUlIM46D13rzdeb6KqixtAW1QsQrercH2Tpy8uxXzD5ZoQszm4-a7fD.png) 
+    - **Rents **net-spots - i.e. chunks of the mirai botnet to use for pre-arranged periods of time (starting at $5k a week). 
+        - Also paid to DDoS Hypixel
+        - Client was upset about an article on krebsonsecurity - so paid to attack it. Supposedly Paras didn't realise.
+    - Code in Mirai looks **very similar **to code on github (not 100% sure on this: [Paras Github code](https://github.com/dreadiscool/LastProxy/blob/master/src/network.c?aliasId=spMrMora9IYzb8Cym) - [Mirai code](https://github.com/0x27/linux.mirai/blob/master/mirai/bot/attack_gre.c?aliasId=9l3DsTmFEAu0ftNAm).  
+    - Previously his account nickname was OG_Richard_Stallman - with an email ogmemes123123@gmail.com, this was used to create a facebook acount under the name OG_Richard_Stallman which included that the OG_Richard_Stallman studied at Rutgers university... (the uni paras studied at) which had been suffering many DDoS attacks. (He ran an ama about the attacks !! [Reddit AMA](https://www.reddit.com/r/rutgers/comments/3mnxyp/im_exfocus_ama/?aliasId=ZwkGm0SajIvWVOo8H)  and took credit on twitter [twitter.com/ogexfocus](https://twitter.com/ogexfocus)[Twitter](https://twitter.com/ogexfocus?aliasId=UTsUnr9eO0mHVZ2w1).  AND AN INTERVIEW
+    - He tried to extort Frantech and a **previous client of ProTraf! **This previous client assumed it was related as they new secret addresses that should have been hidden by Cloudflare. 
+    - Entire conversation between ProxyPipe and Anna-Senpai:
+[krebsonsecurity.com/wp content/uploads/2017/01/annasenpaichat.txt](https://krebsonsecurity.com/wp-content/uploads/2017/01/annasenpaichat.txt)
+        - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/n_kXndh-YaMdqxeQnh8rFltDka5Ebr4fWMhGM224_C4sf1fwhIHooreJPOKL_JoTLZe0BxwVVudNleH6MK3YY8brfDYBrmfqo83LpsTEffnwdUOMryUhCqoqNhR7eGMU.png) 
+Anna senpai interested in the story behind the ProTraf launch!! 
+        - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/xqg7S9Np6fmFG_MfINZItC9t_mGpUjKrHyTwsCYgQH315i6UsP5trjQKPZhZ3PAERgkTqFgmsFJoM45LabLKizqXXUCC4bgZkMOZIBG8zWTWqxPp81Hz34naHlVbNnS7.png) 
+    - A "null" route specifies a set of Ips to DROP rather than forward - is done in routing, before the packets reach the internals of the network. Also called a black-hold route. Sustain higher throughput than firewalls - so good for DDoS
+    - A black hole is a placae in a network where incoming/outgoing traffic is dropped without informing the source. They are invisible when examining the network.
+    - Mirai was also used for **click fraud **- i.e. fake users that "click" the ads and cost internet advertisers more than $16 billion a year. Received around **200 bitcoin! **Valued at over 180,000 then. 
+    - A paper on the Mirai botnet: 
+        - Page 02
+            - The Mirai botnet, composed primarily of embedded and IoT devices, took the Internet by storm in late 2016 when it overwhelmed several high-profile targets with massive distributed denial-of-service (DDoS) attacks. In this paper, we provide a seven-month retrospective analysis of Mirai’s growth to a peak of 600k infections and a history of its DDoS victims
+            - Starting in September 2016, a spree of massive distributed denial-of-service (DDoS) attacks temporarily crippled Krebs on Security [46], OVH [43], and Dyn [36]. The ini- tial attack on Krebs exceeded 600 Gbps in volume [46]
+            - We track the outbreak of Mirai and find the botnet infected nearly 65,000 IoT devices in its first 20 hours before reaching a steady state population of 200,000– 300,000 infections.
+        - Page 03
+            - While DDoS was Mirai’s flavor of abuse, future strains of IoT malware could leverage access to compromised routers for ad fraud, cameras for extortion, network attached storage for bitcoin mining,
+            - Mirai is a worm-like family of malware that infected IoT devices and corralled them into a DDoS botnet.
+            - Mirai spread by first entering a rapid scanning phase ( ̈) where it asynchronously and “statelessly” sent TCP SYN probes to pseudorandom IPv4 addresses, excluding those in a hard-coded IP blacklist, on Telnet TCP ports 23 and 2323 (hereafter denoted TCP/23 and TCP/2323). If Mirai identifies a potential victim, it en- tered into a brute-force login phase in which it attempted to establish a Telnet connection using 10 username and password pairs selected randomly from a pre-configured list of 62 credentials. At the first successful login, Mirai sent the victim IP and associated credentials to a hard- coded report server (≠)
+            - A separate loader program (Æ) asynchronously in- fected these vulnerable devices by logging in, determining the underlying system environment, and finally, down- loading and executing architecture-specific malware
+            - Mirai attempted to conceal its presence by deleting the downloaded binary and ob- fuscating its process name in a pseudorandom alphanu- meric string.
+            - In order to fortify itself, the malware additionally killed other processes bound to TCP/22 or TCP/23, as well as processes associated with competing infections,
+        - Page 04
+            - To distinguish Mirai traffic from background radiation  and other scanning activity, we uniquely fingerprinted Mirai probes based on an artifact of Mirai’s stateless scanning whereby every probe has a TCP sequence number — normally a random 32-bit integer — equal to the destination IP address. The likelihood of this occurring incidentally is 1/232
+            - We would expect to see roughly 86 packets demonstrating this pattern in our entire dataset. In stark contrast, we observed 116.2 billion Mirai probes from 55.4 million IP addresses.
+            - A number of challenges make accurate device labeling difficult. First, Mirai immediately disables common out- ward facing services (e.g., HTTP) upon infection, which prevents infected devices from being scanned.
+        - Page 05
+            - To track the evolution of Mirai’s capabilities, we collected binaries installed on a set of Telnet honeypots that masqueraded as vulnerable IoT devices.
+            - We logged 80K connection attempts from 54K IP ad- dresses between November 2, 2016 and February 28 , 2017, [118 days total] collecting a total 151 unique binaries. We filtered out executables unrelated to Mirai based on a YARA sig- nature that matched any of the strings from the original source code release, leaving us with 141 Mirai binaries.
+        - Page 06
+            - We analyzed the binaries for the three most common ar- chitectures — MIPS 32-bit, ARM 32-bit, and x86 32-bit — which account for 74% of our samples. We extracted the set of logins and passwords, IP blacklists, and C2 do- mains from these binaries, identifying 67 C2 domains and 48 distinct username/password dictionaries (containing a total 371 unique passwords).
+        - Page 07
+            - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/Ef_s_W1z4cOGy0E6a2-UR9Kl1zpF9Z_SnH8OyiaYfdrffYuY8CMy5LL_HIAsXlH2krSfiIHAAzacTmqMq4USloMZ19dT1lk2EoAFwqwFiuFTkDN8OhS9sEYq3PVvt2wX.png) 
+            - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/qlP_m-ICbjThGaKMeq__K9q44eFeiWdZZm6BMbqoNUT39WD_17tb92nvRHWY3g3eNoIio7Bm-Bz1riu7AOrKRGqdggSI22SaTqnBO56mhvF7_dTISKAamlIP0VwcQI1a.png) 
+            - We observed multiple phases in Mirai’s life: an initial steady state of 200,000–300,000 infections in September 2016; a peak of 600,000 infections at the end of Novem- ber 2016; and a collapse to roughly 100,000 infections at the end of our observation window in late February 2017
+            - The decay that followed may be explained best by Deutsche Telekom patching routers soon after the attack [21]. The non-immediate decay may have been due to the devices requiring a reboot for the patch to take effect.
+        - Page 08
+            - Mirai largely infected regions the black market considers to be low-quality hosts used for proxies and DDoS [88] and may have limited potential avenues for monetization
+            - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/-1WQcinVLe1hj0fU_Vz7M5K3qHy5QxfoplAEJUTKnOjKxuq68IGxlZAEecJPRXOdZA0CjZ629yzXcFe0AwoSRnAGc3DGeIzworuLh_GqmvcJDOQy6oL-oPAhdkX_Uo9U.png) 
+        - Page 09
+            - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/Wzy4s_qrRhamwuNlJkc9WIG_5w_0zNPqhcRsqBC3y8QTDRH7AsjP_E6LgXN-9QWkGJMoT0j6h-MYUCny_KUQd1_ezMio_NnLGEWhzK0skOnWyxU7Tr914u7Pa3z5Cczk.png) 
+            - Our results across all five protocols indicate that security cameras, DVRs, and consumer routers represent the majority of Mirai infections (
+        - Page 10
+            - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/h_weEA9cMlyd735fWbW1eZpQ0GjqBreBHC4ApcuUqfkpdZmSqlnXbpU60qWS_n5ZJuqnJRRbkDh1MY8Pqnw0kJ8xn-U1wGuQN_ARObQncXAypHtetNhuDEKtwBCuFERd.png) 
+            - We further note that the majority of bots scanned at an estimated rate below 250 bytes per second. We note however this is a strict underestimate, as Mirai may have interrupted scanning to process C2 commands and to conduct brute force login attempts.
+            - e used to cluster C2 IPs and domains based on shared network infrastructure.
+        - Page 13
+            - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/gT-K1dj36UfLH8GLAWkDc_UhTRSTRDlTSd9A6TiS5pKjbpd0YehyRKgj5eN-4gvmnLZC_pBF5rEvf22N3mzkMcRx5P1-WOJ4p0SBkcSrxayj_2kensqgW1Zfw7fkR0D0.png) 
+            - hese victims ranged from game servers, telecoms, and anti-DDoS providers, to political websites and relatively obscure Russian site
+            - The Mirai source code supports targeting of IPv4 sub- nets, which spreads the botnet’s DDoS firepower across an entire network range.
+            - The three most frequently targeted victims were Liberia’s Lonestar Cell (4.1%), Sky Network (2.1%), and 1.1.1.1 (1.6%). We examine Lonestar Cell in depth in Section 6.3. Sky Network is a Brazilian company that operates servers for Minecraft (a popular game), which is hosted by Psychz Networks.
+            - Interestingly, the 7th most common attack target was an IP address hosted by Voxility that was associated with one of the Mirai C2 servers, and we note that 47 of 484 Mirai C2 IPs were themselves the target of a Mirai DDoS attack.
+        - Page 14
+            - Dyn On October 21, 2016, Dyn, a popular DNS provider suffered a series of DDoS attacks that disrupted name resolution for their clients, including high-traffic sites such as Amazon, Github, Netflix, PayPal, Reddit, and Twitter
+        - Page 15
+            - We note a 71% intersec- tion between the 107K IPs that attacked Dyn and Mirai scanning in our network telescope.
+            - Lonestar Cell Attacks on Lonestar Cell, a large tele- com operator in Liberia and the most targeted victim of Mirai (by attack account), have received significant attention due to speculation that Mirai substantially de- teriorated Liberia’s overall Internet connectivity
+            - Fur- thermore, the juxtaposition of attacker geography (largely Southeast Asia and South America) and victim geography (majority in the U.S.) places a spotlight on the importance of global solutions, both technical and non-technical, to prevent the rise of similar botnets. Otherwise, adversaries will continue to abuse the most fragile hosts to disrupt the overall Internet ecosystem
+    - A paper on the economics of a botnet: 
+        - Page 1
+            - Botnets and malware over the last couple of years have proven to be a serious threat to cybersecurity.
+            - It comes as no surprise that the primary motive for the use of botnets is for economic gain [1].
+            - Tier 1:Practitioners who rely on others to develop malicious code, delivery mechanism and execution strategy. Tier 2:Practitioners who have a great depth of experience, with the ability to develop their own tools. Tier 3:Practitioners who focus on the discovery and use of unknown malicious code. Tier 4:Practitioners who are organised, highly technical, proficient and well funded to discover new vulnerabilities and develop exploits.
+        - Page 2
+            - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/NjFMQS-G6TExmrZJKfgmYyAGzqwxd577fLA1_NrVzzQdW7k4aA6alVTuKLKRu-NX_vbLi_lHgMeLBoI-rqQC2mIdfdtQgc-kU78TEbqllktNyZbypQeMo2ozTLSw2xe2.png) 
+            - On this subject, Rodriguez-Gomez et al. [14] argues that there are five motives for a botmaster to setup a botnet. These are money, entertainment, ego, cause and social status.
+            - Bottazzi et al. [1] states that spamming and DDoS-attacks can be considered least profitable among the activities mentioned in Table I, since the operation is too noisy,
+        - Page 4
+            - U.K. based institutions defines four types of costs associated with cybercrime: costs in anticipation of, costs as a consequence of, costs in response to and indirect costs associated with cybercrime
+        - Page 5
+            - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/2dPSku7jFO8TxzlmgzREJziaRQUrehMyZpH9xWZNi7MRVk0j5MHfwsQbJ7j614AWfJnq_75w_wwJI2YvEP8r8yz6dVpTK4OYDBrgNF37sqKqrlXhbVeDzDDKE7EtyqHW.png) 
+    - A paper on the botnet revenue model: 
+    - Paras Jha DDoS Court complaint 
+    - Paras Jha DDoS plea, 
+    - After the source code was released **many botnets were unleashed.** 
+    - All the pleas:
+        - [Jha click fraud complaint](../Jha1.md) (PDF)
+[Jha click fraud plea](../jhacf plea.md) (PDF)
+[Jha DDoS/Mirai complaint](../Jha DDoS.md) (PDF)
+[Jha DDoS/Mirai plea](../Jha DDoS Plea.md) (PDF)
+[White DDoS complaint](../JWhite DDoS.md) (PDF)
+[White DDoS/Mirai Plea](../whiteddosplea.md) (PDF)
+[Norman click fraud complaint](../Norman Clickfraud.md) (PDF)
+[Norman click fraud plea](../NormanPlea.md) (PDF)
+    - 
+    - **Essay 2** 
+        - Introduction
+            - The Mirai botnet attack caused widespread harm to individuals, businesses and governments alike. 
+The direct losses, indirect losses and defence costs alike were all massive.
+Continues to harm people today, and the potential for further harm lingers (Medusa virus continues to evolve). Made it easier for hackers to get involved.
+        - 
+        - Direct Losses
+            - **Paragraph 1** 
+                - Direct financial losses **to individuals ** - was widespread.
+                - Mention business that got repeatedly DDoSd - mention the effect of the Mirai on your IoT device - mention the students in Rutgers.
+                - "over one million British households have had a machine in a botnet at least once per year" - cost of cybercrime
+                - 
+            - Paragraph 2  
+                - PSYCHOLOGICAL EFFECTS ON INDIVIDUALS
+                - We can get quotes for this.
+                - 
+            - Paragraph 3
+                - Not only were individuals harmed, the Mirai virus had huge effects on the infrastructure of whole **regions. **Direct financial losses to countries and people through infrastructure destruction. 
+                - Talk about those two big cases
+        - 
+        - Indirect Losses
+            - Paragraph 4 
+                - Indirect losses  - loss of trust in IoT devices (Cost to businesses), increasing security of IoT (more friction), "**Efforts to clean up machines infected with botnet malware" - **Cost of cybercrime quote. This cost was felt by individuals and businesses alike.
+                - "revealed that in 2010, around 6% of the 19 million UK broadband subscribers had a machine in a botnet at some point during the year." - Cost of cybercrime
+                - "costs of cleanup at $500 per infected household, or $30 for every household with a broadband connection." - cost of cybercrime
+        - 
+        - Defence costs
+            - Paragraph 5 
+                - Whole IoT industry had to change - passwords etc.
+Cost of software patching, overall cost $1bn in 2012
+                - As for IoT botnets such as Mirai, the appropriate countermeasure is probably a law on patching, such as the new EU directive on sale of goods
+                - require firms that sell goods with digital elements to maintain those elements during the lifetime that consumers can reasonably expect. This will impose substantial costs on some firms,
+                - Government push
+                - Firms have to get ddos protection services from cloudflare
+            - Paragraph 6
+                - Botnets in general cause... 
+
+                - ISPs have to set up abuse handling department - Cost of cybercrime. Typical European ISP will spend over $3m in 2018
+                - From other firms (banks etc) - "Some reports available in 2012 suggested of the order of $20bn" cost of cybercrime.
+                - **ESTIMATE OF $4bn** 
+        - 
+        - Future costs?
+            - 
+    - 
+    - 
+- Lecture 1
+    - Tools & techniques of cybercrime
+        - Cyber **dependent** crimes are crimes who are wholly enabled by the internet and would not occur without it. 
+        - Cyber **enabled **crimes are traditional offences that have moved online.
+        - Three generations of cybercrime
+            - Gen 1 mainframes + OS
+            - Gen 2 computer networks such as viruses and worms
+            - Gen 3 distributed and automated such as botnets
+        - Earliest example of cybercrime - illegal interception of telegram communications for injecting terrible news to change stock prices.
+        - CCCD Cambridge computer crime database - only arrested/charged.
+        - Worm vs Virus vs trojan vs drive-by-download
+            - Worm self replicates and activates on its own
+            - Viruses are activated by someone
+            - Trojans are disguised
+            - Drive by download is unauthorised downloads without you knowing
+        - Toolkits lower barrier of entry
+    - As-A-Service business model
+        - Zeus - injects items into say banking sites. Man in the middle, works on websites.
+        - You could **buy **Zeus (banking Trojan) for $2000. 
+        - Instead sell it as a service to reduce user financial outlay, reduces risk of failure AND outsources logistical and maintenance requirements to the Zeus team.
+        - Booter services - denial of service as a service.
+    - Airline ticketing fraud
+        - Credit card fraud - loyalty point fraud
+        - Obtained via unauthorised access to global distribution systems (phishing)
+        - Compromised business accounts
+        - Linked to other types of crime
+            - Human smuggling & trafficking 
+            - Theft
+            - Smuggling cash and contraband
+            - Facilitating money laundering
+            - Credit card fraud
+    - Anonymity
+        - Anonymity networks ⇒ TOR
+        - Proxies/VPNs
+        - Currencies
+        - Physical security
+        - Some sites are intended for a **victim **to visit (account recovery, fake websites for phishing, malware dissemination) and some for the **offender **to visit (child porn, drugs etc.) 
+        - Currencies
+            - Compromised / mule acocunts
+            - Alternative currencies - gift cards, loyalty point accounts
+            - eCurrencies - web money, RBK money
+            - Crypto
+- Lecture 2
+    - Lecture 2 Reading Notes
+        - [Virtual Criminality: Old wine in new bottles?](https://journals.sagepub.com/doi/pdf/10.1177/a017405?aliasId=YbsThrujaYZqQuQ6i) 
+            - "I suggest that ‘virtual criminality’ is basically the same as the terrestrial crime with which we are familiar."
+                - They say it differs only in terms of the medium.
+Then describe it's transnational implications.
+            - Motivations
+                - "Computer criminals are driven by time-honoured motivations, the most obvious of which are greed, lust, power, revenge, adventure, and the desire to taste ‘forbidden fruit’. "
+                    - Waffle - they say funds transfer fraud = greed. Child porn trafficking = lust (??). Are the ones selling it necessarily paedophiles?
+                    - Loss or damage = Revenge (???). This is true in some cases but obviously false in others.
+                    - They say adventure/forbidden fruit is the idea of hackers being where they aren't supposed to be. 
+                - "Given the degree of technical competence required to commit many computer related crimes, there is one other motivational dimension worth noting here. This, of course, is the intellectual challenge of mastering complex systems"
+            - Interpersonal relations in cyberspace
+                - "The illusion of anonymity seems to have elicited more candour over the internet than one would expect in face-to-face communications." 
+                    - In some way true in some way not. Certainly people will more candidly insult you - but I'm far more likely to share my mental state, what I study + where in reality than in CS:GO.
+                - Argument that communication over the internet for crime can be done just the same in a disco (i.e. for a predator to lure a victim). Presumably while staying anonymous..?
+                - "The most adept are never noticed, much less identified. By contrast the inept cybercriminal leaves his footprints all over cyberspace." 
+                    - Author makes the argument that this is the same for normal criminals and cyber criminals.
+Edge cases include crimes so large that they can not go unnoticed. 
+Because he says **never noticed **this implies the most adept wouldn't do such large obvious crimes.
+            - New challenges for the state
+                - Discusses challenging of policing bad speech on the internet.
+                - Relates burglary (where the criminal will never be caught) to cybercrime where all the police can do is officiate insurance claims. **This is probably true.** 
+            - Paradoxes of the digital age
+                - Cryptography boon to criminals and to legitimate business. Conflict of interest then, as business wants low crime.
+                - "Arguably, the internet constitutes a greater threat to privacy than was ever thought possible. The possibility of remaining anonymous in cyberspace, far from being endless, appears significantly constrained." 
+                    - He mentions methods of anonymity, but says not everyone uses them.
+            - The private threat to privacy
+                - Describes that before the internet, all the public information about you was spread out - and would be near impossible to collate. Data mining now possible.
+                - Apparently someone googled their wifes name and found loads of chat logs to use in his custody battle...
+            - The transnational dimension
+                - Crimes across jurisdictions - different laws and different priorities. If I get scammed by an Albanian, good luck to me.
+            - Implicating third parties
+                - "If I were to send a co-worker sexually offensive email messages, my employer could be liable for failing to provide a safe working environment. What degree of preventive or reactive response would be required on my employer’s part in order to avoid liability?"
+                - Companies have websites that can be hacked or mimicked. How often should a company's website be update to ensure information on it is correct?
+            - Conclusion
+                - "One of the basic tenets of criminology holds that crime can be explained by three factors: motivation, opportunity, and the absence of a capable guardian. This explanation can apply to an individual incident as well as to long-term trends. Derived initially to explain conventional ‘street’ crime, it is equally applicable to crime in cyberspace. As we have seen, motives for computerrelated crime are nothing new. Technologies may change rapidly, but human nature does not. The Ten Commandments are as relevant today as they were in Biblical times." 
+                - But he says there are more opportunities for cybercrime.
+            - Makes the argument that there are more private security guards than police in many places - so too with the internet.
+        - [Help, I need somebody: Examining the antecedents of social support
+seeking among cybercrime](https://reader.elsevier.com/reader/sd/pii/S0747563220300649?token=4EA32B98CBC8C59C2A3D1B00F4704EAC72D8CC32FFE98B158A9EC4002932E32E9A85A1C66134EB99E58CE5BCB753602E&originRegion=eu-west-1&originCreation=20230125175019?aliasId=LXPLg1kuXRhFBbJ86) 
+            - 
+            - "Moreover, in 2018, 8.5% of the Dutch citizens claimed they were a cybercrime victim (of crimes such as hacking, online fraud, identity theft, ransomware, and interpersonal incidents)" 
+                - 8.5 fucking percent??? Checked median age for Netherlands and it sits about central for Europe.
+![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/SWB3kgl_Kyb_THKQhcfZ11IrgJhw6VtqqRy8QhlvfpiYPZqG2JShWRiFaSiIU7QO9rIntBkebPEPP9ybWVjNQTXgdiYJ_S40kEIRdL5R_-5nyXZcGNy3pmScjZ7cZu8g.png)
+                - 
+            - "What these studies have in common is that they apply a situational preventive perspective and aim to reduce the amount of future cybercrime victims. However, it is likely that progress made in the cybersecurity field will always be paralleled by cybercriminals’ increasing professionalism and sophistication" 
+            - A considerable number of victims don't share their victimization experience with friends or family.
+                - Not unusual for the victim to be blamed. Which would effect their willingness to share.
+                - Seeking support is effective for dealing with negative psychological and emotional effects **and **can provide useful info to stop it happening in the future. 
+            - Consequences of cyber-crime victimization
+                - "Victimization is a potentially traumatizing experience (Richards & Cross, 2018), which can be linked to a myriad of negative effects."
+                    - Cybercrime can result in financial consequences.
+                        - Direct losses (scammed out of money)
+                        - Indirect losses (opportunity cost + cost to society)
+                        - Defense costs (costs of antivirus etc.)
+                    - Can result in psychological + emotional effects.
+                        - "cybercrime victims have reported reduced subjective well-being, feelings of depression, fear, shock, distress, sadness, anger and embarrassment" 
+                        - "some online fraud victims have claimed feeling stupid or cheated afterwards, and have reported decreased levels of trust in themselves and in others, which can further develop into physical effects, such as sleeplessness or insomnia, nausea or weight loss"
+            - Social support seeking
+                - "It is assumed that victims complete three steps before they decide whether or not to disclose the incident to a third party (van de Weijer, Leukfeldt, & Bernasco, 2018). First, victims need to identify themselves as victims. Next, they assess the seriousness of the crime. Based on these two steps, they can make a final decision about whether to report the incident or not."
+                - Help, I need somebody: Examining the antecedents of social support seeking among cybercrime victims [Article](../Article.md)
+            --------------------- Portal ---------------------
+                - Page 02
+                    - Moreover, receiving social support can help to maintain or enhance victims’ self-esteem, speed up the processing of stress caused by the incident (Frieze et al., 1987), and stabilize emotional functioning (DeValve, 2005) 
+                    --------------------- Portal ---------------------
+ -- Avoided infinite recursion --             --------------------- Portal ---------------------
+                - Page 03
+                    - Determine how (1) perception of the cybercrime event, (2) primary responses to the event, and (3) a person’s social capital are related to social support seeking. 
+                        - This is what the study seeks to do
+            - Perception of the event
+                - They measure **perceived severity** __ __ and **perceived control.** 
+                - Perceived severity is important - the more severre it is perceived to be, the more help/compensation they will receive so the **larger the pro is to reporting.** 
+                - **Hypothesis**: H1. There is a positive relationship between perceived severity of cybercrime and social support seeking. 
+                --------------------- Portal ---------------------
+                    --------------------- Portal ---------------------
+                        - Page 03
+                            - internet users take after cybercrime victimization. For example, a study of online fraud victims found that when these victims felt like they had enough skills to deal with the incident on their own, and thus felt like they had control over the situation, they were less likely to seek formal support 
+                - [H2. There is a negative relationship between perceived control and social support seeking. ](../Untitled/Page 03/H2. There is a negative relationship between perceived control and social support seeking.md) **Hypothesis: H2. **There is a negative relationship between perceived control and social support seeking. 
+                    - The more control - the less likely they are to seek support.
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/E7-ngP6IlAOvvehoUOIBU7MCoa0CxB4-EHJrDtmdClXMiB-FajnEZTLDKyyKoegbT9FRfso8-scF8JjDpJgVLGEcnhaKbkeWybm1x8brVKqK1tJyIJGwI6sY7zFH_Hxt.png) 
+                --------------------- Portal ---------------------
+                    - 
+                - [H4. There is a negative relationship between denial and social support seeking. ](../Untitled/Page 04/H4. There is a negative relationship between denial and social support seeking.md)** Hypothesis: H3 - **There is a negative relationship between self-blame and social support seeking. 
+            - Social capital
+                --------------------- Portal ---------------------
+                    - 
+                - The more people around you - the more likely you are to tell them...
+                --------------------- Portal ---------------------
+                    - 
+                --------------------- Portal ---------------------
+                - [H7b. A negative relationship exists between fear of cybercrime and perceived control. ](../Untitled/Page 04/H7b. A negative relationship exists between fear of cybercrime and perceived control.md) H7b. A negative relationship exists between fear of cybercrime and perceived control. 
+                    - More afraid ⇔ Less control
+                - Fear ⇒ Less rational decisions, fight or flight.
+                - [H7c. A positive relationship exists between fear of cybercrime and self- blame. H7d. A positive relationship exists between fear of cybercrime and denial. ](../Untitled/Page 05/H7c. A positive relationship exists between fear of cybercrime and self- blame. H7d. A positive relationship exists between fear of cybercrime and denial.md) [H7c. A positive relationship exists between fear of cybercrime and self- blame. H7d. A positive relationship exists between fear of cybercrime and denial. ](../Untitled/Page 05/H7c. A positive relationship exists between fear of cybercrime and self- blame. H7d. A positive relationship exists between fear of cybercrime and denial.md) 
+                - 
+                - Found that perceived control + denial (H2 and H4) were found to negative relationship with social support-seeking. 
+                - Significant relationship between **self-blame **and social support seeking - **but the relationship was positive.** So H3 was the wrong way round. I.e.e Those who blame themselves are more likely to seek help. 
+                - H5 Wrong - no significant association found between social capital and social support seeking..
+                - H1 wrong - no significant link betweewn perceived severity and seeking support.
+                - H6 wrong - no significant link between available **trusted **connections and support. 
+                - More fear ⇒ perceived as more severe
+                - More fear ⇒ More self-blame
+                - More fear ⇒ Less control.
+            - 
+        - 
+    - Lecture 2 Notes
+        - The routine activity approach
+            - Can use in essay 3.
+            - Predatory crime = likely offenders + suitable targets - capable guardians.
+            - Suitable targets:
+                - VIVA:
+                    - Value: Resale value.
+                    - Inertia: Ease with which it can be carried (stealing a washing machine hard)
+                    - Visibility: is the target in view?
+                    - Accessibility: Where the targets are placed.
+            - New attack vectors brought by the internet means new victims
+                - Dating apps ⇒ Romance scams
+                - Online shopping ⇒ fraud
+                - Gaming ⇒ DDOS
+                - Finding a job ⇒ Job scams
+            - Crime **appeared to be dropiing** in the statistics, but they weren't measuring fraud + computer misuse in the survey. In fact it had increased when those were included. 
+            - Note that in British courts, the victim is always R - e.g. Rex or Regina (king or queen). The actual victim becomes a **witness.** 
+        - Victims and liability
+            - Lots of small print!
+                - When the cost is incurred by the bank or account holder - the customer has things they are required to do. E.g. Having a pin that is difficult to remember but not writing it down.
+                - This shifts the onus onto the customer - if transaction is challenged but authorised by PIN, the banks argue that the user must have violated T&Cs.
+        - Businesses
+            - Exposure, risk and impact varies (Richards, 2009).
+                - Business size: Larger businesses are more likely to self report victimization.
+                - Business turnover: Large turnover more likely to self-report victimization.
+                - Small business operating in more resouce-constrained operating + technical environments are **less likely to detect** 
+                - Retail most likely to report victimization.
+            - **Reputation** 
+                - Organises compete, thus keeping customer data safe is important.
+                - It can also affect **sale price **- when Yahoo announced data breaches, their sales price dropped $350 Million. 
+                - Share price  __usually __ drops. Results can vary.
+        - Governments
+            - Individuals have little choice about governments holding data - i.e School, taxation, health, council, police records etc. 
+Unlike how I can choose my internet provider or google drive etc.
+            - Police intelligence data - can do bulk collections of communications data.
+            - Governments control **critical** national infrastructure
+                - E.g. Wannacry, randsomware that affected the health sector very badly. Used EternalBlue which was detected and stockpiled by the NSA before it was stolen and leaked by shadow brokers.
+        - Blame
+            - If offending occurs because of lack of guardianship, who is to blame? 
+            - Wannacry blame put on
+                - NHS for not having up to date systems
+                - UK government for not funding NHS enough
+                - Microsoft, for pushing new OSs which didnt support legacy systems
+                - NSA for stockpiling the eternal blue exploit
+        - Airline ticketing fraud victim
+            - Is it the cardholder who may be reimbursed
+            - Is it the card issuer who will normally refund the cardholder
+            - Is it the merchant?
+        - 
+- Lecture 3
+    - Actual reference notes
+        - Cost of cybercrime
+            - Page 01
+                - The period has seen major platform evolution, with the mobile phone replacing the PC and laptop as the consumer terminal of choice, with Android replacing Windows, and with many services moving to the cloud.
+                - about half of all property crime, by volume and by value, is now online
+                - The infrastructure supporting cybercrime, such as botnets, continues to evolve
+                - traditional offences that are now technically ‘computer crimes’ such as tax and welfare fraud cost the typical citizen in the low hundreds of Eu- ros/dollars a year;
+                - We are particularly bad at prosecuting criminals who operate infrastructure that other wrongdoers exploit.
+            - Page 02
+                - However, many of the existing surveys are carried out by organisations (such as security vendors or police agencies) with a particular view of the world and often a specific agenda.
+                - However, many of these activities rely on criminal infrastructure, based on botnets, which impose costs on the owners of subverted machines and also on society more broadly in the form of indirect and defence costs.
+                - Measurement is not straightforward, as cybercrimes frequently cross jurisdictions, and the avail- able statistics are fragmentary.
+            - Page 03
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/bc-mpJydoY_PS07V9tvjeTAHkW-yUcWwVwAqWPD7DpGeZY65NIQTmDqXmpwOgKAEeHx1w80jZPuZ0EXrN1m08pUpfJy0OZeQzr2tr5bEwMDmjRMsqzuSIgHS1j4yD_zQ.png) 
+                - We split direct costs from indirect costs, accounting for the costs of security (which often cannot be allocated to specific crime types) and for the social and opportunity costs of reduced trust in online transactions
+                - Direct loss is the value of losses, damage, or other suffering felt by the victims as a consequence of a cybercrime. Examples include money withdrawn from victim accounts; time and effort to reset account credentials after compromise (for both banks and consumers); and lost attention and bandwidth caused by spam messages
+            - Page 04
+                - Indirect loss is the value of the losses and opportunity costs imposed on society by the fact that a certain type of cybercrime is carried out. Indirect costs generally cannot be attributed to individual perpetrators or victims. Examples include loss of trust in online banking, lead- ing to reduced revenues from transaction fees and higher costs for maintaining branch staff; sales foregone by online retailers when their fraud engines cause them to decline shopping baskets; reduced uptake by citizens of electronic services whether from companies or governments; cancelled operations due to online medical services being unavailable; and efforts to clean up machines infected with botnet malware.
+                - Defence costs measure prevention efforts. They include security products such as spam filters and antivirus; security services provided to individuals, such as awareness raising; security ser- vices provided to industry, such as website ‘take-down’ services; fraud detection and recovery efforts; law enforcement; and opportunity costs such as the inconvenience of missing messages falsely classified as spam.
+                - For example, a botnet that earned about $3m a year by promoting Viagra was costing about a hundred times that much, as it was responsible for about a third of the world’s spam in 2011 – and spam cost the industry about $1bn a year
+            - Page 06
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/K8sbhj-3_aE4duPPhTaHVac1qHGeJA_YyzYALKonwqerTotmE9YDbVLzl5lx78i-ou0ChLoet1vYRBFMqp5FmO76UeFsSX6uDdxsMelgVt-RDN1Axsnn4gWdJTwc0_Uj.png) 
+            - Page 07
+                - In an APP scam, a bank account holder is tricked into transferring money to the fraudster, who typically poses as a bank employee and uses some combination of social engineering skills and technical mechanisms.
+                - Many banks use SMS for two-factor authentication, but Android apps can listen to any incoming SMS (assuming the user gives consent, which is usually granted without thought). There has been an uptick in frauds based on SMS stealing, but we do not yet have any dependable numbers.
+            - Page 09
+                - Ransomware has been around for over a decade, the rise of cryptocurrencies has enabled this particular type of malware to flourish. I
+                - n the first three quarters of 2012, there was an esti- mated £1.9m–3.8m lost to ransomware
+                - we found: $7.1m lost to Ponzi schemes and similar ‘investments’; $52m lost to mining scams; $36.3m raised by fake ICO scams; $6m raised by fraudulent cryptocoins; and $5m raised by other fake cryptocurrency services.
+                - They found over a million crypto- mining samples had been in use over a 12-year period. They extracted the wallet identifiers and mining pool information and grouped the samples into campaigns. This allowed them to count the number of criminal groups involved and estimate their profits, Their conclusion was that at least 4.32% of the Monero crypto-currency had been mined by criminals
+            - Page 10
+                - Billions of dollars annually are spent on online advertising, but there’s little authentication to verify that the users are actually viewing the ads that the advertiser is paying for. B
+                - advertising. This fraud is usually in the form of an automated browser viewing ads, especially expensive video ads, whereupon the publisher pockets the revenue (‘impression fraud’
+                - here was $36m lost from ad fraud during 2014–2018 via just two different campaigns from a single advertiser [91]. The amount lost to the entire industry was much higher, though harder to quantify directly.
+            - Page 13
+                - The IC3 has published a detailed account of the scam, along with a number of variations [40], and their 2018 Annual Report [39] shows that they received over 14,000 complaints over the year relating to victim losses of $38m, an increase of 161% year on year. The IC3 notes that most of the victims were over 60 years old.
+                - In 2012 we discussed the ‘stranded traveller’ scam whereby an attacker who had compromised an email account posed as the account owner, explained some predicament in a foreign land and asked to be sent money to get home again. The ubiquity of mobile phones which allow rapid debunking of the story has pretty much put paid to this particular scam, so compromised email accounts are of limited use apart from for sending spam.
+                - However, the case of Yahoo gives some indication. In 2014 around 1 billion accounts were compromised by, the FBI alleges, hackers working for the Russian security services [92] and it was then discovered that in an earlier (so far not understood) attack all of Yahoo’s 3 billion accounts were compromised
+            - Page 17
+                - Around the time of our 2012 report, government spokespersons were talking up the risk of espionage and ‘IP theft’, particularly by China.
+            - Page 19
+                - Cybercriminals continue to use networks of infected computers – so-called botnets – to support their operations. In recent years, the ‘Internet Of Things’ (IoT) has facilitated the spread of new botnets, an example being the Mirai botnet that infects devices such as CCTV cameras and DVRs that have known default passwords
+                - Lowered the acquisition costs of ‘botnet herders’ who can now build large botnets of IoT devices within days.
+                - oday cybercriminals have managed to monetize botnets in multiple ways: they can distribute a range of scams or even ransomware; perform DDoS attacks; mine cryptocurrencies; or be used to cheat advertising networks or social media.
+                - a DDoS-for-hire botnet only earned its herder some $26,000 per month [15
+            - Page 20
+                - The costs of botnets thus falls not only on Internet intermediaries and their customers but also on society as a whole. Previous works [7, 18] have shown that almost 85% of the botnet infrastructure is located in consumer ISP networks
+                - However, not all providers suffer the costs of botnets equally. Mimicking the market structure, the concentration of bots across ISPs follows a power-law distribution [7], i.e., two or three ISPs typically account for over half the total infected machines within a country.
+                - In order to fight botnets, medium-sized and large-sized ISPs have set up abuse handling departments. Their costs of these are mainly driven by the salaries and benefits for abuse desk responders plus their technical support staff and managers. On top of staff costs, these depart- ments must bear technology and telecom expenses (computers, software licensing fees, etc.), facilities costs (office space, utilities, insurance, etc.) and training costs too. A recent survey quantified the average cost of a handling a ticket at $15.56 plus $1.60 per minute of handling time [82]. Thus a typical European ISP with about 5 million subscribers that opened 200,000 abuse-related tickets in 2018 will spend over e3m.
+                - Botnet mitigation by firms other than service providers (and banks, whose anti-fraud measures we account for above) is hard to nail down, as are figures for the total information security industry. Some reports available in 2012 suggested of the order of $20bn
+                - Overall an estimate of $4bn seems reasonab
+                - firms also get DDoS defence services from Cloudflare. There’s also the global cost of software patching, which we estimated at $1bn in 2012.
+            - Page 21
+                - As for IoT botnets such as Mirai, the appropriate countermeasure is probably a law on patching, such as the new EU directive on sale of goods
+                - which when it comes into force will require firms that sell goods with digital elements to maintain those elements during the lifetime that consumers can reasonably expect. This will impose substantial costs on some firms, but software patching is good practice and needed for product safety and functionality in any case, and we are reluctant to describe compliance with consumer-protection law as a cost of cybercrime
+                - n 2012, we noted two robust and independent estimates that a little over one million British households have had a machine in a botnet at least once per yea
+                - ne from Microsoft, whose Malicious Software Removal Tool cleaned up around 500,000 bots in the UK in the first half of 2010
+                - revealed that in 2010, around 6% of the 19 million UK broadband subscribers had a machine in a botnet at some point during the year.
+                - costs of cleanup at $500 per infected household, or $30 for every household with a broadband connection.
+            - Page 23
+                - t became rapidly clear that more than twice as many households were falling victims to scams (that are mostly online) than suffered traditional property crimes such as burglary or car theft.
+                - A big Belgian study [74, 75] surveyed 1000 people on victimisation in both 2015 and 2017, did two online surveys of Belgian businesses with about 300 responding, and did 160 face-to-face interviews. 16.5% of the population reported reducing or stopping certain activities online as a security measur
+            - Page 26
+                - In terms of the amounts stolen by criminals, it is still the case that traditional frauds such as tax and welfare fraud cost each of us as citizens a few hundred pounds/euros/dollars a year, while payment card and online banking fraud cost each of us as citizens a few tens of pounds/euros/dollars a year. It is still the case that cyber-frauds such as fake antivirus net their perpetrators relatively small sums, with common scams pulling in tens of cents/pence per year per head of population, while the indirect and defence costs we pay, in terms of securing our systems, are much larger – in the tens of dollars a year.
+                - he core problem is that many cybercriminals operate with near-complete impunity. We con- cluded in 2012 that while we might perhaps spend less in anticipation of computer crime (on antivirus, firewalls etc.), we should certainly spend an awful lot more on catching and punishing the perpetrators. We see no reason to change this policy advice. We will not get a real handle on cybercrime until we put an end to impunity.
+            - Page 28
+        - The Dark figure of online cybercrime
+            - Page 02
+                - A pronounced drop in crime, since the early 1990s, has encompassed every crime category tracked by the FBI’s Uniform Crime Reports, including prop- erty crime. However, over the same period, the rates of online property crime (OPC) have been on the rise according to available evidence
+            - Page 04
+                - When fraudulent transactions are reported, it is often impossi- ble to infer exactly how the information was obtained, or even how it was exploited.
+                - Others may have their details exploited to obtain products or services, but will suffer no direct loss themselves—argu- ably a crime more similar to defamation than “theft”, at least as far as the original owner of the data is concerned.
+            - Page 05
+                - expansion of human activities past dusk, facilitated by the introduction of electric lighting into newly settled territories in the west, had an impact on crime. Every time human activity crosses new “frontiers”, crime seems to follow.
+                - Botnet herders would manipulate infected computers to gather keystroke information and to direct these com- puters—unbeknownst to their owners—to execute specific programs, host fake websites and online pharmacies, and send out spam emails
+                - In 2011, Symantec reported the price for 10,000 bots (infected computers acting as “robots” on commands) was around $15 - **Note: This is bollocks, Symantec are a fucking Security company** 
+            - Page 06
+                - First, existing research shows consistently that a much smaller proportion of victims of property crime report their victimization compared to victims of violent crime
+            - Page 07
+                - According to the NCVS estimates, the number of households affected by identity theft has risen from 3.1% in 2004 to 7% in 2010, while the number of individuals affected rose from 5% of the population in 2008 to 7% in 2012
+            - Page 08
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/Ch4EDdSf229yAIDhoz4VnR52bfesFkW3WslKWLqKLUFqrnRD2YL06ruhORrkEKGTAvUc27wOhS0AEGhmBr5aa9FUaGb_QZ6GSPaOzf-Nf_LVnRB4WMl3Jxri1OLOo4wk.png) 
+            - Page 09
+                - Identity theft victimization is reported to police at a significantly lower rate—around 20%—compared to the proportion of people who report their victimizations from traditional property crime to police—about 40%,
+            - Page 11
+                - Estimates of financial losses from online theft and fraud are compiled by Javelin Strategy & Research (2011), using a methodology closest to the one employed in calculating losses from traditional crime by the FBI in their annual Crime in the US reports (U.S. Federal Bureau of Investigation, 2013). The results paint a picture that clearly shows losses from online crime far surpass those from traditional crime (see Table 3), and that the proportion of people or households financially affected by OPC is substanti
+            - Page 12
+                - ven though only less than half of all property crime is reported to the police (according to NCVS estimates), the figures for financial losses cannot be assumed to be representative of losses for all such crimes because one of the main reasons some property crimes are not reported to law enforcement is the insignificance of losses
+            - Page 13
+                - One successful security breach of a network may only be a single offense, but its effects on victims may be widespread if millions of data records con- taining personal information are accessed by the hackers. Such a crime may expose millions of people to becoming potential victims of identity theft or account fraud
+            - Page 16
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/m4k677AXySgIbHASa-Q9xRDkJLAWnJZZ_kYZFOUKL0efUqw3Uu4_pJJRLxjGIG9jxBj1rbjBvk_XFvuJzQsZS9aL9Pp3k2cncGIe5Y4mIYtkHedyNf04eWOfujVFx1uF.png) 
+            - Page 17
+                - (1) malicious attacks that are most similar to vandalism —computer viruses, denial of service, and other attacks designed to bring damage to the systems without the intent to profit financially from such dam- age, and (2) cybercrime that is perpetrated with the explicit intent to profit (designated as cyber-theft in the BJS report [Rantala, 2008]). These two types of OPC (cyber-vandalism and cyber-theft) may have very different origins and types of perpetrators but both cause substantial financial losses to the organi- zations targeted.
+                - The data presented here suggest that the rate at which US residents are now affected by OPC actually outstrips that of traditional property crime, which continues to fall.
+            - Page 18
+                - Moreover, the amount of financial harm they suffer is far greater in dollar amounts than that inflicted by traditional property crime
+                - when it comes to counting crime throughout history, namely: what is the unit to be counted?
+                - riminologists have traditionally counted discrete acts as separate “crimes,” but have consis- tently wrestled with the conundrum of how to count criminality which is, in effect, spread out over several acts such as spree or serial/repeat offenses.
+                - When it comes to counting “the victim” and, relatedly, “the victimization”, the same problem occurs. Clearly, victims are a diverse group and victimiza- tions vary in their financial impact, but for counting purposes the real chal- lenge is saying where one victim, and one victimization, begins and ends. Recall that in the case of arson, the FBI has given up on calculating losses because it seems unreasonable to attribute the losses from a fire that burns out of control to a single offense
+    - Reference notes
+        - Measuring the changing cost of cybercrime
+            - Crimes are global with strong externalities - spend **less **in anticipation and more in response. Paper gives a static view of the economics of cybercrime. 
+            - Direct losses much lower than indirect losses (imposed by society, e.g. loss of trust, online services being off or the effort required to clean up).
+            - Direct losses lower than prevention efforts. **Can be linked to IOT devices needing to be updated.** 
+            - 
+            - 
+            - 
+        - other paper other paper other paper other paper other paper other paper 
+            - Traditional crime rate decreasing since 1990s
+            - Better economic conditions + higher average ages.
+            - Authors argue that online property crime (OPC) is increasing, and that would lead to the downward trends in crime overall.
+            - OPC likely increasing, **larger surface area. ** 
+            - Large online market for personal data - i.e. targeted marketing like Cambridge Analytica.
+            - Hard to track OPC
+                - Difficult to quantify what constitutes OPC
+                - Skewing of data due to incentives
+                - Extremely low reporting rates
+                - Existing data not too helpful
+                - What should even be measured
+            - Identity theft rate more than doubled from 2004 to 2010 **but **this didn't distinguish between wallet theft or cybersecurity. 
+                - Most identity theft happens offline. But obviously, if your identity is stolen online you might not know. 
+                - Violent crimes reported far more than 
+    - Lecture notes - Costs and harms of Cybercrime
+        - Is cyber-crime **over-hyped **or **under-reported.** 
+        - Action Fraud
+            - Centralised reporting for cybercrime + fraud in the UK.
+            - Not much action comes from it - with a **49% call abandonment rate** of calls trying to get through.
+            - Top 3 by volume
+                - Hacking socials + email 14k
+                - Viruses 5k
+                - Hacking personal devices 5k
+            - Top 3 by financial loss
+                - Hacking - Extortion 4.6 M
+                - Virus 800k
+                - Hacking 500k
+            - 9000 reports posed a security risk and were blocked! Reporting issue. 
+            - After an undercover operation, Action Fraud was found to be very poor. Poor leadership, poor training and most reports are just stored and never investigated.
+Action Fraud is set to be replaced in 2025.
+        - Cambridge computer crime database
+            - The **costs **columns have the most missing data. Alleged financial gain and alleged other costs are often missing (64% and 80%). Note that this is sometimes only attempted, and is sometimes recovered. Loss claims will be exaggerated for insurance by victims, and downplayed by the attacker.
+            - Another cost is the financial loss incurred, estimated lost revenue, expenditure to recover from an offence, fix vulnarabilities.
+        - IOTA cryptocurrency
+            - Attacker sold 10,000,000 euro in crypto (IOTA). He set up a website which was a random password generator, when people put the passwords in he stole their accounts.
+            - Note IOTA dropped 94% from the time the attacker stole it, to the time he was sentenced.
+        - Some costs are hard to value.
+        - Reporting
+            - Online property crimes are less likely to be reported to the police than other property crimes.
+            - Police often caught misusing the system, are they more often **misusing computer systems? **Probably not. 
+            - If you are a victim of online fraud, you report it to the bank **not **to the police. Similar for social media, email provider etc. 
+The police is not being roped in! 
+        - Financial harm
+            - Detica estimated that cybercrime cost the UK £27 BILLION per year (1.8% of GDP) 
+            - Anderson et al work:
+                - Over 100 different sources of data, each which their own biases
+                - Provide estimates for a number of different crime types
+                - Misleading to provide a total, due to limitations in the data
+                - A follow up study to the first 2012 paper found that the landscape was largely the same.
+            - **Defence costs **are greater than direct losses! 
+            - Survey of Australian businesses (Richards, 2009)
+
+                - Total estimated loss AUD $484-649 Million
+                - Total estimated **security expenditure **was AUD $1.37-1.95 BILLION. 
+        - Social + Psychological harm
+            - Cross, Richards and Smith. Interviewed victims of online fraud who had lost AUD $10,000+. Harms included
+                - Shame
+                - Distress
+                - Anger
+                - Long-term depressive episodes
+                - Loss of trust of other people
+                - Considering and attempting suicide
+                - Psychosomatic symptoms
+                - Negative impacts on relationships
+        - Airline ticketing fraud costs
+            - 2015: Annual loss of 1 Billion euros - backed up **by nothing**.  
+            - If a **travel agency** is defrauded, they carry the loss - one compromised account incurred losses of $740,000
+            - If an **airline **is defrauded, they carry the opportunity cost and the cost of an extra meal, baggage weight if that's added on. 
+            - If **loyalty points **are defrauded, the cost of the points and the value of the products that the points can be redeemed for. 
+        - 
+        - 
+    - Include Actual  _**or**_   __Potential __ harms 
+- 
+- Lecture 4
+    - Reference notes
+        - **Hack for Hire: Exploring the Emerging Market for Account Hijacking** 
+            - [Authors](../File/Authors.md)→[Ariana Mirian](../Ariana Mirian.md), [Joe DeBlasio](../Joe DeBlasio.md), [Stefan Savage](../Stefan Savage.md), [Geoffrey M. Voelker,Kurt Thomas](../Geoffrey M. Voelker,Kurt Thomas.md) 
+            - [Keywords](../File/Keywords.md)→[email security; hacking; phishing; account compromise](../email security; hacking; phishing; account compromise.md)
+            - Page 01
+                - Email accounts represent an enticing target for attackers, both for the information they contain and the root of trust they provide to other connected web services. 
+                - study a segment of targeted attackers known as “hack for hire” services to understand the playbook that attackers use to gain access to victim accounts.
+                - It has long been understood that email accounts are the cornerstone upon which much of online identity is built
+                - Whereas attackers operating at scale expect to extract small amounts of value from each of a large number of accounts, targeted attackers expect to extract large amounts of value from a small number of account
+                - Since targeted attackers focus on specific email accounts, they can curate their attacks accordingly to be uniquely effective against those individ- uals. Moreover, since such attackers are unconcerned with scale, they can afford to be far nimbler in adapting to and evading the defenses used by a particular target. Indeed, targeted email attacks— including via spear-phishing and malware—have been implicated in a wide variety of high-profile data breaches against government, industry, NGOs and universities alike
+            - Page 02
+                - These victims in turn were “honey pot” Gmail accounts, operated in coordination with Google, and allowed us to record key inter- actions with the victim as well as with other fabricated aspects of their online persona that we created
+                - We confirm that such hack for hire services predominantly rely on social engineering via targeted phishing email messages, though one service attempted to deploy a remote access trojan
+                - As a whole, however, we find that the commercialized account hijacking ecosystem is far from mature. Just five of the services we contacted delivered on their promise to attack our victim personas. The others declined, saying they could not cover Gmail, or were outright scams.
+                - Victim verisimilitude. We created synthetic victims that appeared sufficiently real that the hacking services we hired would treat them no differently from other accounts that they are typically hired to hack into. • Account non-attributability. We took explicit steps to prevent attackers from learning our identities while we engaged with them as buyers, when they interacted with us as victims, and even if they successfully gained access to a victim email account. • Range of attacker options. We did not know a priori what methods the hacking services would use to gain access to victim email accounts. Since there are many possibilities, including brute-force password attacks, phishing attacks on the victim, and malware- based attacks on the victim’s computers, we created a sufficiently rich online presence to give attackers the opportunity to employ a variety of different approaches.
+                - For each victim, we created a unique web site to enhance the fidelity of their online identity. These sites also provided an opportunity for attackers to attempt to compromise the web server as a component of targeting the associated victim (server attacks did not take place
+            - Page 03
+                - Associate Identity. In addition to the victim identity, we also cre- ated a unique identity of an associate to the victim such as a spouse or co-worker. The goal with creating an associate was to determine whether the hacking services would impersonate the associate when attacking the victim (and some did, as detailed in Section 3.2)
+                - his script logged any activity that occurs within the account, such as sending or deleting email messages, changing account settings, and so on
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/a1elf8R-czI3SnmjbgTiGxOrMke6wSwjiQ-BRorjWkyH22V1qYAWkthw2I1UgOEUuLHtVM8xPW53sjaE7-p0XRWp-DB9fEnAc38NbFozyUPjNvDKEAeZmmh-9ILe-sJa.png) 
+            - Page 04
+                - Service reliability. Of the twenty-seven services engaged, ten re- fused to respond to our inquiries. Another twelve responded to our initial request, but the interactions did not lead to any attempt on the victim account. Of these twelve, nine refused up front to take the contract for various reasons, such as claiming that they no longer hacked Gmail accounts contrary to their contemporary advertisements. The remaining three appear to be pure scams (i.e., they were happy to take payment, but did not perform any service in return). One service provided a web-based interface for entering the target email address, which triggered an obviously fake progress bar followed by a request for payment
+                - Finally, five of the services made clear attempts (some successful, some unsuccessful) to hack into eleven victim accounts. We focus on these services going forwards.
+            - Page 05
+                - As a rule, we always paid the services, even when they requested additional money, and even when we strongly suspected that they might not be able to deliver when they asked for payment up front. Our goal was to ultimately discover what each service would actually do when paid.
+                - There are two legal issues at hand in this study: unauthorized access and the terms of service for account creation and use. Obtain- ing unauthorized access to third-party email accounts is unlawful activity in most countries and in the United States is covered under 18 USC 1030, the Computer Fraud and Abuse Act (CFAA). Contract- ing for such services, as we did in this study, could constitute aiding and abetting or conspiracy if the access was, in fact, unauthorized.
+                - We note that the ultimate “success” of these attacks is partially dependent on our experimental protocol: in some cases, we supplied 2FA SMS codes to phishing attacks or installed a provided executable, while in other cases, we avoided such actions to see if the attackers would adapt.
+                - he associate lures tempted the user to click on an “image” for the victim’s associate (using the personal connec- tion as a sense of safety), while the Google, bank, and government lures conveyed a sense of urgency to induce a user to click on the link.
+            - Page 06
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/mqw5Op40T76TMeMZKwMjRHbOYp-5T24wqkOAL7wn0yE-HEaHPlpeKkc-UsTY0eWonm7EbCh8lvuS9aDtQQPyJ50yoL_hLREwTnLIVB1jFcJ7D_mVk3dxFMDCO7sp2-og.png) 
+                - Only service A.1 was able to construct personal lures without requesting assistance from the buyer, find- ing the details from the victim persona’s website. The extent of personalization was limited, though, consisting either of mimicking the victim persona’s company or their associate’s personal email address. No additional branding was lifted from our web sites.
+                - . All services but one used “combo” domain name squatting [ 14] with the keyword ’google’ in the URL, presumably to trick the victim into thinking that the URL was a real Google subdomain. Services A.2 and B.2 used the same fully qualified domain name for the phishing landing page, suggesting that they share a business relationship (i.e., they may both be value-added resellers for the same phishing page service). Long-lived, reused domains suggest that they are valuable and perhaps relatively costly to acquire
+                - The redirection URLs seemed to be one-time use URLs, since we were not able to visit them after the attack executed and did not see repeat redirection URLs in any of the attacks.
+            - Page 07
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/MjmxIjI0iVxfuaVDVjl_4olRYrX4OWdONIi77peMmdMOUI-nRlV_6pW4KFZo5-hfwjBPHF9BCSuqnOwR26VHryGPv0_CIG2pxbyFYNUFk0lDH7lvcC4mUzSbHOVJXyce.png) 
+                - Figure 4 shows an example page flow used by one hacking service. We always entered the Gmail credentials of the victim to see how the hacking attempt would progress. After collecting the password, all but one of the hacking services would redirect to a new screen which asked for the 2FA code that the victim had just received on their phone from Google. Six of the nine hacking attempts captured the password from the phishing page and then immediately tried to use it to login to the victim’s account (as verified with our Gmail access logging). Due to the similar behavior and speed at which these logins occurred, we believe that most of these services used an automated tool, similar to Evilginx [6], for this step.
+                - Service B.2 was similar to service E.1, but when they were blocked by the 2FA challenge they switched to phishing messages that looked exactly like the messages from service A. Upon col- lecting the password and the 2FA code that was sent to the phone number for the victim, the service was able to login.
+                - ervice D was the only service that attempted to hijack our victim account using malware. The attacker in this case sent just one email message to our victim persona—flagged as spam—that contained a link to a rar archive download (Gmail forbids executable attach- ments). The archive contained a sole executable file. We unpacked and ran the executable in an isolated environment, but to no effect. According to VirusTotal [ 32 ], it is a variant of TeamViewer (a com- mercial tool for remote system access) which would have enabled the attacker to hijack any existing web browsing sessions.
+            - Page 08
+                - Once accessed, all but one of the services abused a portability feature in Google services (Takeout) to download our victim ac- count’s email content and then provided this parcel to our buyer persona. One advantage of this approach is that it acquires the contracted deliverable in one step, thus removing risks associated with subsequent credentials changes, improvements in defenses, or buyer repudiation.
+                - While in- tended for users, such capabilities also increase the ease with which a single account hijacking incident can expose all of a user’s data to attackers. Since our study, Google has added additional step-up verification on sensitive account actions
+                - Our findings suggest that the hack for hire market is quite niche, with few merchants providing hijacking capabilities beyond a handful of providers
+                - all such login attempts from the three services in aggregate. Over a seven-month period from March 16 to October 15, 2018, Google identified 372 accounts targeted by services A, B, and E. Figure 5 shows a weekly breakdown of activity. On an average week, these services attacked 13 targets, peaking at 35 distinct accounts per week
+                - Thus, we surmise that the targeted account hacking market is likely small when compared to other hacking markets, e.g., for malware distribution [11 ]. While the damage from these commercialized hacking services may be more potent, they are only attractive to attackers with particular needs.
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/zXV0R_6Nitxtfo6O8VkYjpaDme4fljoSN2LMG6fW2B25uvPHJTsBDoVTNSuboz1UAfEYM6S_chHW2xM9FxCjygdaiMIJzEIMQ2qvSPKXSvLjikFTq-mtQUwPz2hU28AX.png) 
+            - Page 09
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/n5zlSkYIvDLxM1FkcdqVvo8RPsc05hVkYGYDs8wsiUneUPqt7zf0K5YwKN7If6BjIMOERwKboEQ95PixSQO8FwPWn_enInMFmB9gsMd_gnyqa_RwD8gD_ySa9lzgiM5j.png) 
+                - n, all had pinned posts on forums where this option was available. Only service A paid for banner advertisements on all of these forums. Together, this suggests that the services are profitable enough to continue advertising via multiple outlets.
+                - In addition to this qualitative search, we received an email ad- vertisement from one of the services for upcoming changes to the service, which was sent to 44 other buyers as well (exposing their clientele’s email addresses).
+            - Page 10
+                - At a high level, we find that the commercial account hijacking ecosystem is far from mature. When such attackers are successful, they can be potentially devastating to individuals. Yet, as an overall market it is not poised to cause widespread harm.
+                - Services have inconsistent and poor customer service. For ex- ample, three of the services charged significantly higher prices than their advertised price, and two services changed their initial prices while they were executing the hack. Moreover, customer service is slow and inconsistent in their communication with the buyer, sometimes taking more than a day to respond.
+                - Attackers showed little initiative. Most attacks made no effort to gather information independently about their victims. Of the nine attempts, only services A.1 and A.2 discovered additional information about the victim on their web sites, such as the name of their associate. The others, including different contracts within service A, would not attempt hacking the account without explicitly requesting additional information from the buyer.
+                - n contrast, studies on markets for CAPTCHA solving [21 ], Twit- ter spam [30 ], and Google phone verified accounts [28 ] show that those services are quick to respond, and stable in their services and pricing.
+                - Two-factor authentication creates friction. Even though phishing can still be successful with 2FA enabled, our results demonstrate that 2FA adds friction to attacks. Various services said that they could not hack into the account without the victim’s phone number, had to adapt to 2FA challenges by sending new phishing messages to bypass them, and one renegotiated their price (from $307 to $690) when they discovered that the account had 2FA protection. Based on these results, we recommend major providers encourage or require their user base to use a 2FA physical token
+        - **Plug and Prey? Measuring the Commoditization of Cybercrime  isvia Online Anonymous Markets ** 
+            - Page 02
+                - Researchers have observed the increasing commoditiza- tion of cybercrime, that is, the offering of capabilities, services, and resources as commodities by specialized suppliers in the underground economy.
+                - Commoditiza- tion enables outsourcing, thus lowering entry barriers for aspiring criminals, and potentially driving further growth in cybercrime.
+                - We use longitudinal data from eight online anonymous marketplaces over six years, from the original Silk Road to AlphaBay, and track the evolution of commoditiza- tion on these markets.
+                - We conservatively estimate the overall rev- enue for cybercrime commodities on online anonymous markets to be at least US $15M between 2011-2017. While there is growth, commoditization is a spottier phe- nomenon than previously assumed.
+                - The idea is that specialized suppliers in the underground economy cater to criminal entrepreneurs in need of certain capabilities, services, and resources
+                - Commoditization substantially low- ers entry barriers for criminals, which is hypothesized to accelerate the growth of cybercrime
+                - do so, we turn to transaction cost economics (TCE). We argue that the characteristics of commodities are highly congruent with the characteris- tics of online anonymous marketplaces. More precisely, the one-shot, anonymous purchases these markets sup- port require suppliers to offer highly commoditized of- ferings.
+                - While data from online anonymous marketplaces pro-vides a unique opportunity to track the evolution ofUSENIX Association 27th USENIX Security Symposium 1009commoditization, we are not arguing that these market-places provide a complete picture. They do not have amonopoly, of course.
+            - Page 03
+                - e analyze longitudinal data on the offerings and transactions from eight online anonymous marketplaces, collected between 2011 and 2017.
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/3ykPx24BPivIKJjeuyOsZlUBObZh1ryP44DpD8ONXA6zLu8_3ggirE7D4fjdz3mxpahKB566FktbBMH_LaijIHVk7WpeHj37I1iSOVQq5Cc-GU92LFDXxYNq-Tg3lSjp.png) 
+                - Williamson [47] distinguishes several asset character- istics that determine if and how outsourcing will occur, as shown in Figure 1. A, B, and C are various forms of outsourcing and D is vertical integration
+                - k is a measure of as- set specificity, referring to the degree to which a product or service is specific to e.g., a vendor, location, control over resources, et
+                - “fungible”, meaning that different offer- ings of it are mutually interchangeable (k = 0
+                - The more specific an asset is (k > 0), the more investments are specialized to a particular transaction.
+                - The second factor, s, refers to contractual safeguards.Transactions where investments are exposed to unre-lieved contractual hazards (s = 0) will not be traded pub-1010 27th USENIX Security Symposium USENIX Associationlicly (i.e., anonymous online marketplaces such as SilkRoad or AlphaBay are a poor fit), but on smaller, “invite-only” markets
+            - Page 04
+                - When s > 0, con- tracts with transaction-specific safeguards are in place.
+                - The efficiency gains also work in the other di- rection: those who offer goods or services that can be commoditized would use these markets to sell them and benefit from the wide reach and high frequency of trans- actions, without being exposed to risky direct interaction and coordination with buyers.
+                - Similar to the prominent drugs-trade on anonymous online markets, we expect two type of commodities on these markets: business-to-business (B2B), e.g., whole- sale quantities of credit card details, and business-to- consumer (B2C), e.g., a handful of Netflix accounts. We are primarily interested in B2B, as that is the form of commoditization that is the most worrying and specu- lated to cause a massive growth in cybercrime, though we will also report the main findings for B2C. To assess the degree to which B2B services are commoditized, the next section develops a framework to identify the differ- ent value chains where there is demand for commodi- tized cybercrime.
+                - First, we look into the value chain behind spamvertis- ing, which is driven by three resources: a) advertisement distribution b) hosting and click support and c) realiza- tion and cash-ou
+                - Second, extortion schemes, for instance ransomware or fake anti-virus [17] have a value chain that consists of four distinctive resources: a) development of malware b) distribution, by either exploits or (spear)phishing e- mails, c) take-over and “customer service” and d) cash- out [30, 42].
+                - hird, click fraud is supported by four similar, gen- eral resources: a) development of a website, malware or a JavaScript, b) distribution through botnets, c) take- over by either malware or JavaScript and d) cash-out [32, 42].
+                - Fourth, the criminal business model in social engi- neering scams, such as tech support scams [35], or one- click fraud [16] leans on: a) (optional) development of malware or a malicious app, b) distribution by phish- ing e-mail or website, or through social engineering, c) take-over and setting-up “customer service,” and d) cash- out [35, 42].
+                - Fifth, cybercriminal fraud schemes, e.g. those enabled by financial malware, build on four general, main re- sources: a) development and b) distribution of malware or a malicious app, c) take-over, for instance by using web-injects or a RAT,1 and d) cash-out
+                - Sixth, cryptocurrency mining relies on near-similar re- sources as click fraud: a) the development of malware or JavaScript, b) distribution of malware by botnets or the injection of a JavaScript in a compromised websites, c) the take-over, i.e. mining, and d) cash-out
+            - Page 05
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/a2aJFbUsR8pFYRQFhQXtZ5QHJZ8gj1f6w7X7cr7SohgvDcYjcZ2MktGvwjk_Yx8S1l_5_VaV55BHVlyIopJ7QTAsItY9RD1aHO5h_38DqVI3qBR3GqiCaufiRfHma1fF.png) 
+                - 1) collecting and parsing data on listings, prices and buyer feed- back from eight prominent online anonymous markets, 2) implementing and applying a classifier to the listings to map them to cybercrime components from our con- ceptual model of value chains (Figure 2) as well as to additional categories of B2C cybercrime, and 3) using Latent Dirichlet Allocation (LDA, [10]) to identify the best-selling clusters of listings
+                - We first leveraged the parsed and analyzed dataset of Soska and Christin [40] to obtain information about item listings and reviews on several prominent online anony- mous marketplaces. For each of the over 230,000 item listings, the data include (but are not limited to) ti- tles, descriptions, advertised prices, item-vendor map- ping, category classification, shipping restrictions and various timestamps. Additionally, each item listing con- tains feedback that has been proven to be a reasonable proxy for sales [15, 40]. Each piece of feedback contains a message, a numerical score, and a timestamp.
+                - AlphaBay is important since, according to the FBI [4], by the time of its closure, it had featured over 100,000 listings for stolen and fraudulent documents, counterfeits, and mal- ware in particular. The US Department of Justice (DoJ) also claims that AlphaBay was the largest single online anonymous marketplace ever taken dow
+            - Page 06
+                - Next, we implemented a Linear Support Vector Ma- chine (SVM) classifier. Manual inspection confirmed our suspicion that the markets also contain retail (B2C) cy- bercrime offerings, next to wholesale cybercrime offer- ings. For this reason, we added six product categories to distinguish supply in that part of the market: accounts, custom requests, fake documents, guides and tutorials, pirated goods, and vouchers. A final category, namely, “other”, captures the listings that did not fit anywhere else (e.g., scanned legal documents). The classifier is initially trained and evaluated on a sample of listings (n = 1, 500) from all the markets, where ground truth is created via manual labeling.
+                - First, we identified listings that contain more than one cybercrime component, e.g., offering both a piece of malware and (access to) a botnet. Second, we identified package listings, such as complete cryptocur- rency mining schemes. Third, we observed that some vendors add unrelated keywords to their listings, pre- sumably in a marketing effort similar to search engine optimization. Fourth and last, we observed custom list- ings, i.e., listings that are specifically created to be sold only once to one specific buyer. Custom listings con- tain bespoke products or services ranging from custom quantities to a completely custom-made product such as pre-booked plane tickets.
+                - we excluded three cate- gories of cybercrime components from the classification: JavaScript malware, webinjects, and customer support. For these, we found no listings in our random sample
+                - (i) data cleaning, (ii) tokenizing, (iii) training and evalu- ation of the ground-truth samples which are the concate- nation of the title and description of the item listings
+            - Page 07
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/Q9_vkgaR_4qpaEIB6cxux_KATsM6cbB8KgqQ0i5ojYljxVU0rWLewxvgOZvBlkydUFzZvZ2EAfeBsKaP9bGmMmY7x4FlPcqoee-cNe8ZI5wMud6st8DPOWJeWrMp4BGU.png) 
+                - o calculate the tf-idf, we used a max-df (maximum document frequency) equal to 0.7 – this dis- cards words appearing in more than 70% of the listings. In the classification phase we then used these values as an input for an L2-Penalized SVM under L2-Loss. We im- plemented this classifier using Python and scikit-learn.
+                - Because of the nature of listings that cover multiple categories, e.g. bundled goods, we anticipate some clas- sification errors. It is however important to distinguish between errors where the item listing is classified as “other” (false negative) from acceptable approximations
+                - Our main goal is therefore to prevent cy- bercrime component listings, like malware, from ending up in “other” and vice versa.
+                - he average precision is 0.78 and the average recall is 0.76, denoting some confusion be- tween cybercrime components categories
+            - Page 08
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/v7vy23r0fUCTEiWI1fibs4bgTw86S83gN3vyFrgx2PNIZ-Scd7vG1OxGelEAwNK55iEzMuUWSSSasLFXFpa3EsYymsFUNWR0fwt-O_6_MFMCijG4HBfq2O96bSEQQ9-h.png) 
+                - Cash-out stands out: In terms of the num- ber of listings, active vendors, and in total revenue, this category is by far the larges
+                - We see, again, that the cash-out category contains the most expensive set of offerings with very diverse pricing.
+                - Like an ecstasy tablet, a RAT will hold its value over time in terms of being a functional solution. In contrast, stolen credentials “go bad” after some time. The first buyer who uses these cre- dentials will in all likelihood set off red flags at the credit card company for irregular spending,
+                - Cu- riously, the median lifespan of cash-out listings is above average, which could be due to vendors updating the spe- cific product listed, or persistently selling unusable credit card details, or to a slower-than-expected detection of suspicious transactions by credit card companies.
+            - Page 09
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/MeBo-6Z5QFmlPY4fkX0DSjAHGFzLBlbCMD176J56NczV49ojCdttbSL6ZOFbNWAB-7Zp_d2TbukyGuwFb-OHNd2-eK50V5rf_s672TW8FXzgbssVuBtEx-leerDDbKrj.png) 
+                - Figure 4 shows a growth in listings, amount of feed- back and revenue for cybercrime components between 2012 and 2017. The drop at the end of 2013 and the be- ginning of 2014 is partly due to the take-down of Silk Road 1 and Black Market Reloaded
+                - Right after this volatility, the AlphaBay market emerged, and subsequently became the largest
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/_FmzP9XbAwG923XXhHVGSyEniickpc1QSTWJ6agTriWwueNdtXv35V7TplowrWLMuNWB21cN1QVD6d746s9lmvzvQZXCzb6TP_qE_SsOk0XudbXx_kjdwOuWfk0KthAZ.png) 
+                - Figure 5 shows that the upward trend in feedback in- stances is not only caused by an increase in listings, but also to the increase of amount of feedback per listing. In 2011, a listing on average received around five pieces of feedback per month. Over time, this ascended to around eight pieces of feedback per listing in 2017
+            - Page 10
+                - More specif- ically, one listing offering “US CVVs” received nearly 700 feedbacks in the first quarter of 2014. From the beginning of 2015 onwards we see a steady growth in revenue alongside the growth of AlphaBay market as a whole. In the early days of the ecosystem we see an in- crease in cash-out revenue which was primarily driven by a listing offering “10,000 USD CASH,” which can be seen as typical money laundering – the customer pays in bitcoin and receives cash.
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/5ZP3iPNqcDAdR65si_34Yc4Xx8-I3kd_balcZzNL67BKXzFZioGBCfasnvVeg-Ws5I7sDqstdzoCLBzyGFhblODrIPOymyNIRQ59ifMbmzOgnjAvkdep9EkhyOq7RRI_.png) 
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/KUvjauDgoilMcsaVeehJLVUwsFxm2lovKNN5N_jzUnw_TGxCBcGILR0RBRIvoZSh3G4RRXfaQHaXwTkkVIrch-sOvu4hCCuWKjx3cyZl1hewaBtT1JI0HhFeYyoNoKjD.png) 
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/iSakBy8wyKMTbKjv9w-TpNxdVXZcNdopNmnxEsQw1wusxtPPk4xq1e_2iqy2-M1JvSZY4pebQn20WX_BZckJ4o4UJmkAdku3l9r19EEtp5W3gE7mEpiYh3uMNATGcfaT.png) 
+                - Similarly, we see a spike in botnet-related sales driven by a mysterious listing ti- tled “source,” receiving 10 – rather negative – feedbacks in the summer of 2014.
+            - Page 11
+                - Listings and revenue are not distributed normally across vendors. As in many markets, there are big play- ers and small players. Figure 10 plots the cumulative percentage of listings and revenue of cybercrime compo- nents over vendors. A small portion of vendors are re- sponsible for a large fraction of the listings. To be more precise, around 30% of vendors are responsible for 80% of all listings. More interestingly, just under 10% of ven- dors are responsible for generating 80% of the total rev- enue. That means that around 174 vendors have sold for nearly $7 million worth of cybercrime components. This translates into an average revenue per vendor of around $40,000, but the distribution is wide and skewed. The 174 vendors range from a minimum revenue of $7,355 to a maximum of $1,148,403.
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/vLGiugxhZInAn8eHpxmP8pnB7Q6bucUq5IJGxkpk1WcdOqsA-Ol3VGQDBEXmaogmofJ_7XcsBwdOqDEchN4Bj28hVir2J7mBcErm-1UgzFw2qFoAWG6yhjZmE2pVaYW4.png) 
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/87QUb337kWZvdCcABtwKMhkKzAzV43RJflxmAzo9Iq-H_5eJyiJM1AN3KBEz4pjpSZNRNwnKo9dJ8mMw0OY5egn4aE5xMA_oTNce6eFEu9oXjfKgkBTompeNS7gqPgcO.png) 
+            - Page 12
+                - The large portion of retail cybercrime is in line with what has been observed on the drugs side of these mar- kets; B2C transactions for consumers of drugs, along with more modest amounts of B2B transactions with larger quantities for lower-level dealers
+                - We identified the three best-selling clusters per category by summing the number of feedbacks of all listings in a specific cluster. We then compute the total revenue gen- erated by the item listings in each cluster
+                - For all cate- gories, the three best-selling clusters contain more than 46% of all feedbacks, and in many cases more than 60% of all feedbacks.
+                - The categories “botnet,” “website,” and “RAT” show lower revenue numbers. Upon manual in- spection, we could identify a very small cluster with only a few feedback that was dominated by a few very expen- sive items.
+            - Page 13
+                - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/dXDQrHFsLp-fq4Eq-r10ZGS6-m9WSnETjvtSYuIj0I4EgYJnqkAY3P82osQ7zAnlfoWNFV2bswFxnT0nOwRSQ5DE-ZmjOP50tqfOjFErh5DtcrxKfb7IYv6oTT3CU5uz.png) 
+                - e observe clusters with distinct offer- ings in 4) carding tutorials, 5) PayPal accounts, 6) Visa and Mastercard card details4 , 7) “bitcoin deals,” 8) bank account credentials, 9) Amazon refund guides and 10) Bitcoin exchange
+                - App. Prominent clusters of the App category include of- fers for Android loggers, i.e., malicious keylogger apps, Android bank apps, i.e., malicious banking apps, and Dendroid, a RAT for Android.
+                - Botnet. Prominent clusters of botnet listings feature products and services revolving around Zeus botnets, varying from tutorials, to source-code, to “turn key” setups. We also identified offers on C&C servers and This cluster ressembles 1) and 2) but with a focus on Visa and Mastercard brands. It could a priori also include gift cards. DDoS services
+                - E-mail. The prominent clusters in the e-mail category contain two types of spam lists, namely basic lists of e- mail addresses, as well as complete databases, including personal details to create personalized (spear) phishing mails. In addition we find a cluster of offerings on spam- related services. Exploit. Within the exploit category, the two main themes are 1) Microsoft Office exploits, e.g., malicious macros, and 2) browser exploits. We also recorded a non- trivial set of sales for Mac exploits. Hosting. The prominent “hosting” clusters include host- ing through VPS or CPanel-listings. We also find a prominent cluster on hosting of Tor-based websites. Malware. Within the malware category, ransomware stands out by featuring two prominent clusters. One clus- ter revolves around the Stampado ransomware, the other on Philadelphia ransomware. We also observed a promi- nent cluster on miscellaneous (assistive) software tools such as keyloggers or portscanners. Phone. In the category of phone listings, one prominent cluster comprises listings on bypassing security features on phones. The other two prominent clusters offer re- spectively hacked Vodafone accounts and lists of usable phone numbers. RAT. Two out of three prominent clusters in RAT list- ings contain generic RATs. The third cluster specifically deals with Mac OS RATs. Website. The website category is composed of three distinct, prominent clusters. One cluster contains web- site development listings. The second is predominantly VPN-connections and/or SOCKS proxies. The third cluster consists of compromised RDP-servers/hosts list- ings.
+                - Our analysis suggests that nearly all prolific clusters supply a component that matches B2B demand, but that this supply is incomplete, in that the observed supply ful- fills only a niche demand in each category
+                - For instance, we see ransomware dominating the malware category, whereas domain expertise suggests there are, in general, other types of malware in demand. This demand remains mostly unfulfilled in online anonymous marketplaces.
+                - Yet, the supply is only ori- ented towards setting-up the necessary phone lines. We observed that guides and tutorials are among the promi- nent clusters in the botnet and cash-out categories. We however note that selling a guide is not the same as out- sourcing a cybercrime component.
+            - Page 14
+                - In this section we briefly present the prominent clusters in the B2C categories – i.e., retail cybercrime. Account. In listings that sell accounts, we observed two main clusters that revolve around offerings for single ac- counts to pornography websites. Next, we see a cluster of listings selling Netflix and Spotify accounts, in quan- tities between two and ten per listing. Fake. The three prominent clusters are respectively of- fering fake passports, fake IDs and counterfeit money. Guide. The clustering process revealed guides in a) bit- coin (“deals”), b) “making money” or starting a business, and c) “scamming.” Pirated. Miscellaneous pirated software, like the entire Adobe software suite or pirated adult videos, and pirated Microsoft software, e.g. Windows 7, are the prominent clusters in pirated products. Voucher. In the category of voucher-related listings, we see offers for: a) Tesco vouchers, b) lottery tickets and c) “free” pizzas, of which most are indeed discount vouch- ers or gift cards for various pizza chains, but a few are in fact credit card offerings, where “slices” refer to groups of accounts.
+            - Page 15
+                - hey investigated the market for exploits - which turned out to be moderate in size - and the cybercrime-as-a-service market, where growing numbers of new services types were discovered.
+            - Page 16
+                - In three of them (“javascript,” “customer service,” and “web in- ject”), we found no offerings in the large random sam- ple for the ground truth, not even when we searched the whole data with specific keywords. We assume this means there is very little, if any, commoditization of these value-chain components
+                - n line with what other researchers have observed for the drugs trade on these markets, we see both B2B and B2C transactions in the cybercrime categories. B2B and B2C, a.k.a. retail cybercrime, turns out to be compara- ble in revenue. Between 2011 and 2017 the revenue of B2C cybercrime was around US $7 million, where B2B cybercrime generated US $8 million in revenue.
+                - In terms of generalizability of our findings, we have measured and explained the trends in commoditization of cybercrime on online anonymous markets. Beyond this, our findings only speculatively suggest that the trend to- ward commoditization might not be as comprehensive as has been claimed elsewher
+                - Still, this casts an interesting perspective on the “theory of the commoditization of cybercrime.” There is a huge discrepancy between the reported profitabil- ity of criminal business models like ransomware (over $1 billion in 2016, according to the FBI [20]) or DDoS-services (one youngster making $385,000 with his booter-service according to local British police)
+                - The lack of strong growth suggests that there are still bottlenecks in outsourcing critical parts of criminal value chains. Entry barriers for would-be criminal entrepreneurs remain. The services that are highly commoditized, like booters, seem to draw in mostly B2C activities – i.e., consumers going after other consumers, as was the dominant finding in a victimization study of commoditized DDoS [37]. A recent takedown of a RAT operation also suggested con- sumer consumption, rather than B2B transactions [6].
+                - B2B services that require ongoing coordination among the criminals fall short of full-fledged commodi- tization. In other words, the scarcity of supply suggests less-scalable and potentially vulnerable components in criminal value chains. These might be targeted by inter- ventions
+                - Contrast this approach to the series of police actions aimed at the shutdown of whole markets: from our data, these operations seemed to have had only relatively modest effects on the overall trading of com- moditized cybercrime.

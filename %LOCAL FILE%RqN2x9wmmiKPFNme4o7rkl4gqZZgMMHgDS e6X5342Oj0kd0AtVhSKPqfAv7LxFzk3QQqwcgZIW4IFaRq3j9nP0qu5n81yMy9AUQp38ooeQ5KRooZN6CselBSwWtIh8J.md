@@ -1,0 +1,4 @@
+- Page 04
+    - Syntax refers to the formal notation for writing assertions
+    - Semantics expresses the meaning of a formula in terms of mathematical or real-world entities.
+    - Proof theory concerns ways of proving statements, at least the true  ones

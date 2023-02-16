@@ -1,0 +1,65 @@
+- [Authors](File/Authors.md)―[Ross Anderson](Ross Anderson.md), [Chris Barton](Chris Barton.md), [Rainer Boehme](Rainer Boehme.md), [Richard Clayton](Richard Clayton.md), [Carlos Ganan](Carlos Ganan.md), [Tom Grasso](Tom Grasso.md), [Michael Levi](Michael Levi.md), [Tyler Moore](Tyler Moore.md), [Stefan SavageMarie Vasek](Stefan SavageMarie Vasek.md)
+- Page 01
+    - The period has seen major platform evolution, with the mobile phone replacing the PC and laptop as the consumer terminal of choice, with Android replacing Windows, and with many services moving to the cloud.
+    - about half of all property crime, by volume and by value, is now online
+    - The infrastructure supporting cybercrime, such as botnets, continues to evolve
+    - traditional offences that are now technically ‘computer crimes’ such as tax and welfare fraud cost the typical citizen in the low hundreds of Eu- ros/dollars a year; 
+    - We are particularly bad at prosecuting criminals who operate infrastructure that other wrongdoers exploit. 
+- Page 02
+    - However, many of the existing surveys are carried out by organisations (such as security vendors or police agencies) with a particular view of the world and often a specific agenda.
+    - However, many of these activities rely on criminal infrastructure, based on botnets, which impose costs on the owners of subverted machines and also on society more broadly in the form of indirect and defence costs.
+    - Measurement is not straightforward, as cybercrimes frequently cross jurisdictions, and the avail- able statistics are fragmentary. 
+- Page 03
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/bc-mpJydoY_PS07V9tvjeTAHkW-yUcWwVwAqWPD7DpGeZY65NIQTmDqXmpwOgKAEeHx1w80jZPuZ0EXrN1m08pUpfJy0OZeQzr2tr5bEwMDmjRMsqzuSIgHS1j4yD_zQ.png)
+    - We split direct costs from indirect costs, accounting for the costs of security (which often cannot be allocated to specific crime types) and for the social and opportunity costs of reduced trust in online transactions
+    - Direct loss is the value of losses, damage, or other suffering felt by the victims as a consequence of a cybercrime. Examples include money withdrawn from victim accounts; time and effort to reset account credentials after compromise (for both banks and consumers); and lost attention and bandwidth caused by spam messages
+- Page 04
+    - ndirect loss is the value of the losses and opportunity costs imposed on society by the fact that a certain type of cybercrime is carried out. Indirect costs generally cannot be attributed to individual perpetrators or victims. Examples include loss of trust in online banking, lead- ing to reduced revenues from transaction fees and higher costs for maintaining branch staff; sales foregone by online retailers when their fraud engines cause them to decline shopping bas- kets; reduced uptake by citizens of electronic services whether from companies or governments; cancelled operations due to online medical services being unavailable; and efforts to clean up machines infected with botnet malware.
+    - Defence costs measure prevention efforts. They include security products such as spam filters and antivirus; security services provided to individuals, such as awareness raising; security ser- vices provided to industry, such as website ‘take-down’ services; fraud detection and recovery efforts; law enforcement; and opportunity costs such as the inconvenience of missing messages falsely classified as spam.
+    - For example, a botnet that earned about $3m a year by promoting Viagra was costing about a hundred times that much, as it was responsible for about a third of the world’s spam in 2011 – and spam cost the industry about $1bn a year 
+- Page 06
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/K8sbhj-3_aE4duPPhTaHVac1qHGeJA_YyzYALKonwqerTotmE9YDbVLzl5lx78i-ou0ChLoet1vYRBFMqp5FmO76UeFsSX6uDdxsMelgVt-RDN1Axsnn4gWdJTwc0_Uj.png)
+- Page 07
+    - In an APP scam, a bank account holder is tricked into transferring money to the fraudster, who typically poses as a bank employee and uses some combination of social engineering skills and technical mechanisms.
+    - Many banks use SMS for two-factor authentication, but Android apps can listen to any incoming SMS (assuming the user gives consent, which is usually granted without thought). There has been an uptick in frauds based on SMS stealing, but we do not yet have any dependable numbers.
+- Page 09
+    - ansomware has been around for over a decade, the rise of cryptocurrencies has enabled this particular type of malware to flourish. I
+    - n the first three quarters of 2012, there was an esti- mated £1.9m–3.8m lost to ransomware
+    - we found: $7.1m lost to Ponzi schemes and similar ‘investments’; $52m lost to mining scams; $36.3m raised by fake ICO scams; $6m raised by fraudulent cryptocoins; and $5m raised by other fake cryptocurrency services.
+    - They found over a million crypto- mining samples had been in use over a 12-year period. They extracted the wallet identifiers and mining pool information and grouped the samples into campaigns. This allowed them to count the number of criminal groups involved and estimate their profits, Their conclusion was that at least 4.32% of the Monero crypto-currency had been mined by criminals
+- Page 10
+    - Billions of dollars annually are spent on online advertising, but there’s little authentication to verify that the users are actually viewing the ads that the advertiser is paying for. B
+    - advertising. This fraud is usually in the form of an automated browser viewing ads, especially expensive video ads, whereupon the publisher pockets the revenue (‘impression fraud’
+    - here was $36m lost from ad fraud during 2014–2018 via just two different campaigns from a single advertiser [91]. The amount lost to the entire industry was much higher, though harder to quantify directly. 
+- Page 13
+    - The IC3 has published a detailed account of the scam, along with a number of variations [40], and their 2018 Annual Report [39] shows that they received over 14,000 complaints over the year relating to victim losses of $38m, an increase of 161% year on year. The IC3 notes that most of the victims were over 60 years old.
+    - In 2012 we discussed the ‘stranded traveller’ scam whereby an attacker who had compromised an email account posed as the account owner, explained some predicament in a foreign land and asked to be sent money to get home again. The ubiquity of mobile phones which allow rapid debunking of the story has pretty much put paid to this particular scam, so compromised email accounts are of limited use apart from for sending spam.
+    - However, the case of Yahoo gives some indication. In 2014 around 1 billion accounts were compromised by, the FBI alleges, hackers working for the Russian security services [92] and it was then discovered that in an earlier (so far not understood) attack all of Yahoo’s 3 billion accounts were compromised
+- Page 17
+    - Around the time of our 2012 report, government spokespersons were talking up the risk of espionage and ‘IP theft’, particularly by China.
+- Page 19
+    - Cybercriminals continue to use networks of infected computers – so-called botnets – to support their operations. In recent years, the ‘Internet Of Things’ (IoT) has facilitated the spread of new botnets, an example being the Mirai botnet that infects devices such as CCTV cameras and DVRs that have known default passwords
+    - owered the acquisition costs of ‘botnet herders’ who can now build large botnets of IoT devices within days.
+    - oday cybercriminals have managed to monetize botnets in multiple ways: they can distribute a range of scams or even ransomware; perform DDoS attacks; mine cryptocurrencies; or be used to cheat advertising networks or social media. 
+    -  a DDoS-for-hire botnet only earned its herder some $26,000 per month [15
+- Page 20
+    - The costs of botnets thus falls not only on Internet intermediaries and their customers but also on society as a whole. Previous works [7, 18] have shown that almost 85% of the botnet infrastructure is located in consumer ISP networks
+    - However, not all providers suffer the costs of botnets equally. Mimicking the market structure, the concentration of bots across ISPs follows a power-law distribution [7], i.e., two or three ISPs typically account for over half the total infected machines within a country.
+    - In order to fight botnets, medium-sized and large-sized ISPs have set up abuse handling de- partments. Their costs of these are mainly driven by the salaries and benefits for abuse desk responders plus their technical support staff and managers. On top of staff costs, these depart- ments must bear technology and telecom expenses (computers, software licensing fees, etc.), facilities costs (office space, utilities, insurance, etc.) and training costs too. A recent survey quantified the average cost of a handling a ticket at $15.56 plus $1.60 per minute of handling time [82]. Thus a typical European ISP with about 5 million subscribers that opened 200,000 abuse-related tickets in 2018 will spend over e3m.
+    - Botnet mitigation by firms other than service providers (and banks, whose anti-fraud measures we account for above) is hard to nail down, as are figures for the total information security industry. Some reports available in 2012 suggested of the order of $20bn 
+    - Overall an estimate of $4bn seems reasonab
+    -  firms also get DDoS defence services from Cloudflare. There’s also the global cost of software patching, which we estimated at $1bn in 2012.
+- Page 21
+    - As for IoT botnets such as Mirai, the appropriate countermeasure is probably a law on patching, such as the new EU directive on sale of goods
+    - which when it comes into force will require firms that sell goods with digital elements to maintain those elements during the lifetime that consumers can reasonably expect. This will impose substantial costs on some firms, but software patching is good practice and needed for product safety and functionality in any case, and we are reluctant to describe compliance with consumer-protection law as a cost of cybercrime
+    - n 2012, we noted two robust and independent estimates that a little over one million British households have had a machine in a botnet at least once per yea
+    - ne from Microsoft, whose Malicious Software Removal Tool cleaned up around 500,000 bots in the UK in the first half of 2010
+    - revealed that in 2010, around 6% of the 19 million UK broadband subscribers had a machine in a botnet at some point during the year. 
+    - costs of cleanup at $500 per infected household, or $30 for every household with a broadband connection. 
+- Page 23
+    - t became rapidly clear that more than twice as many households were falling victims to scams (that are mostly online) than suffered traditional property crimes such as burglary or car theft.
+    - A big Belgian study [74, 75] surveyed 1000 people on victimisation in both 2015 and 2017, did two online surveys of Belgian businesses with about 300 responding, and did 160 face-to-face interviews. 16.5% of the population reported reducing or stopping certain activities online as a security measur
+- Page 26
+    - In terms of the amounts stolen by criminals, it is still the case that traditional frauds such as tax and welfare fraud cost each of us as citizens a few hundred pounds/euros/dollars a year, while payment card and online banking fraud cost each of us as citizens a few tens of pounds/euros/dollars a year. It is still the case that cyber-frauds such as fake antivirus net their perpetrators relatively small sums, with common scams pulling in tens of cents/pence per year per head of population, while the indirect and defence costs we pay, in terms of securing our systems, are much larger – in the tens of dollars a year.
+    - he core problem is that many cybercriminals operate with near-complete impunity. We con- cluded in 2012 that while we might perhaps spend less in anticipation of computer crime (on antivirus, firewalls etc.), we should certainly spend an awful lot more on catching and punishing the perpetrators. We see no reason to change this policy advice. We will not get a real handle on cybercrime until we put an end to impunity.
+- Page 28

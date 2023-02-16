@@ -1,0 +1,10 @@
+- Page 2
+    - Go arose through experience build - ing large-scale  distributed  systems  at Google
+    - it was  too  easy  to  unwittingly break a previously unknown client be - cause of the difficulty of finding all the dependencies of a package.
+    - GB of  data  when handed a  set  of  files  totaling  4.2  MB, an expansion  factor  of  almost  2,000  on an already  large  program.  If  the  num - ber of  header  files  read  to  compile  a given source file grows linearly with the source tree, the compilation cost for the entire tree grows quadratically.
+- Page 3
+    - We also  saw  an  op - portunity in  those  additional  cores:  a garbage collector  could  run  in  parallel with the main program on a dedicated core, reducing its latency costs.
+    - Go ar - ranges that  each  import  reads  only  a single file. For example, the fmt pack - age’s public API references types from the io package: the  first  argument  to fmt.Fprintf is an  interface  value  of type io.Writer . In most languages, a compiler processing the import of fmt would also load all of io to make sense of fmt ’s definitions,  which  might  in turn require  loading  additional  pack - ages to make sense of all of io ’s defini - tions. A single import statement could end up processing tens or hundreds of packages.
+    - Go avoids  this  work  by  arranging, similar to Modula-2, 13 for the com - piled fmt package’s metadata  to  con - tain everything necessary to know about its  own  dependencies,
+    - Also, pack - age import cycles are disallowed: since fmt imports io , io cannot import fmt , nor  anything  else  that  imports fmt , even  indirectly.
+    - Importing fmt  does  not  make  the  name  io.Writer  available  to  the  cli-ent.  If  the  main  package  wants  to  use  the  type  io.Writer,  it  must  import "io" for itself. Thus, once all referenc-es  to  fmt-qualified  names  have  been  removed  from  the  source  file—for  ex-ample,  if  the  fmt.Fprintf  call  is  de-leted—the import "fmt" statement is safe to remove from the source without further  analysis.  This  property  makes  it  possible  to  automate  management  

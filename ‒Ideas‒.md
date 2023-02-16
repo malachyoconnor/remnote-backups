@@ -1,1 +1,46 @@
+- ‒‒‒HOLIDAY TODO‒‒‒
+    - TODO
+        - Notes:
+            - Need to organize 2 Further HCI supos - 1 for after 4th lecture and 1 for  __after 8th?__  
+            - Need to review regex, Finite automata, NFA ⇒DFA, the lexing problem & how DFAs solve that problem.
+        - 
+        - 
+        - 
+    - 
+    - **Conc & Dist**
+        - Watch and make notes on the lectures from the second part of the course
+        - Do all the supervision work for Conc & Dist 
+        - Write up notes on Remnote
+        - Flashcard conversion
+    - **Data Science**
+        - Re-watch the lectures we didn't finish and write up notes
+        - Do supervision works 2 & 3 
+        - Write up notes on remnote 
+        - Flashcard conversion
+    - **ELE **
+        - Watch last lectures
+        - Flashcard conversion
+    - **Further Graphics**
+        - Watch remaining lectures and write up 
+        - Make sure you did all supervision work
+        - Write notes up to remnote on lecture we had to speed through
+        - Flashcard conversion
+    - **Further Java **
+        - Look at exam questions - note there are supervisions for this course
+    - **Intro to CompArch**
+        - Write up ALL NOTES to remnote! 
+        - Flashcard conversion
+    - **Prog in C&C++**
+        - Finish the C++ course - write up to remnote 
+        - Flashcard conversion 
+    - **Semantics**
+        - Watch and make notes on lectures as required 
+        - Finish Supervision works 
+    - **Unix Tools - Non-examinable**
+        - Should idly watch through it, fairly interesting. 
+    - 
 - Hold button to activate bold - See if this is possible with autohotkey 
+- Project Ideas Notes
+    - 
+    - 
+    - 

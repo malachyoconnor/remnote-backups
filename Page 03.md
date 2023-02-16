@@ -1,0 +1,3 @@
+- Determine how (1) perception of the cybercrime event, (2) primary responses to the event, and (3) a person’s social capital are related to social support seeking. 
+    - This is what the study seeks to do
+- internet users take after cybercrime victimization. For example, a study of online fraud victims found that when these victims felt like they had enough skills to deal with the incident on their own, and thus felt like they had control over the situation, they were less likely to seek formal support 

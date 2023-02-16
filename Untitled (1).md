@@ -1,0 +1,2 @@
+- Page 03
+    - internet users take after cybercrime victimization. For example, a study of online fraud victims found that when these victims felt like they had enough skills to deal with the incident on their own, and thus felt like they had control over the situation, they were less likely to seek formal support 

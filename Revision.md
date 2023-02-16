@@ -1,0 +1,23 @@
+- Questions we're doing 
+    - Paper 1 
+        - Programming in C
+        - Programming in C++ 
+        - Security
+        - Security
+        - Semantics of Prog 1 OR 2 
+    - Paper 2 
+        - Computer Design * 2 **OR **3 
+        - Computer Networking 1 **OR **2 
+        - ^^Concurrent systems ^^
+    - Paper 3 
+        - AI 2
+        - Complexity 1 or 2 
+        - Computation 1 or 2 
+        - Data Science 1 or 2
+        - Logic and Proof 2  
+    - Paper 4 
+        - ELE * 2 
+        - Concepts in PL  
+        - Formal models of language * 2 
+        - Further HCI * 2 
+        - Prolog 

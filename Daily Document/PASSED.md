@@ -1,13 +1,13 @@
 - 18/01/22
     - Last day before mock
-    - ![](local://C:/Users/malac/remnote/Malachy_O'Connor/files/2UtGASngKkD_DWhNRk2U5RG_xCBxeoRYMoTZIT9SwTQ_FZf4oIhY9GA-XYxGEcjTnR5qeifiWqt0G0I3WYOveOQmC0WiyrCYCiovlpOzqqxSZDjmjdJCIJTKE9W7BeCR.png) 
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/2UtGASngKkD_DWhNRk2U5RG_xCBxeoRYMoTZIT9SwTQ_FZf4oIhY9GA-XYxGEcjTnR5qeifiWqt0G0I3WYOveOQmC0WiyrCYCiovlpOzqqxSZDjmjdJCIJTKE9W7BeCR.png) 
 - 18/01/22 ↓ 
     - 
     - 
     - 5 SESHES
     - FINISH DATA SCIENCE
     - PAST PAPER Q's
-    - ![](local://C:/Users/malac/remnote/Malachy_O'Connor/files/DZjALD5BNu2Xzor7RyRdqDUqmwI7RPWQNQyQVHiNxTdOQ_7AGLRAMM-jMY6kI6Q7GS-SHNA9CPTE9plUUQOOqsAhioYkHbZXtkyh8WqbbzuVbGaFjQJYd_2kyrITi0oy.jpeg) 
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/DZjALD5BNu2Xzor7RyRdqDUqmwI7RPWQNQyQVHiNxTdOQ_7AGLRAMM-jMY6kI6Q7GS-SHNA9CPTE9plUUQOOqsAhioYkHbZXtkyh8WqbbzuVbGaFjQJYd_2kyrITi0oy.jpeg) 
 - 16/01/22 ↓ 
     - Notes:
         - Computer Architecture x2
@@ -20,7 +20,7 @@
     - 5 SESHES
     - FINISH DATA SCIENCE
     - PAST PAPER Q's
-    - ![](local://C:/Users/malac/remnote/Malachy_O'Connor/files/Eu3TBgW42Z6aBMtxtk1oONdIuPIcmpM0flcusoiho9aERARCRmFQDUCwx9kbcqPiHjTzM946ZrSCkXf3YZRla5tuSMUL8iO4zJRGHRGBBMNkMllIRVd6-YkhOlbY2DRo.png) 
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/Eu3TBgW42Z6aBMtxtk1oONdIuPIcmpM0flcusoiho9aERARCRmFQDUCwx9kbcqPiHjTzM946ZrSCkXf3YZRla5tuSMUL8iO4zJRGHRGBBMNkMllIRVd6-YkhOlbY2DRo.png) 
 - 15/01/22
     - Notes:
         - Computer Architecture x2  
@@ -47,7 +47,7 @@
     - 2-4: Semantics ! !!! Supervision 
     - 4-5: go to sainsburys for food !
     - 6-9:Cheeky few more hours 
-    - ![](local://C:/Users/malac/remnote/Malachy_O'Connor/files/2suceVpiZLqrUliZoJn-5Aln6UXTvKPQkB54d8h42Cohtt60cq4olnoKpzjVcCUqOH0OUn34tWnF2p6iW_XYlUHsLRNx35CyTRj7zERsKhzQ72R3Iei0BGkWuNqRXK4s.png) 
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/2suceVpiZLqrUliZoJn-5Aln6UXTvKPQkB54d8h42Cohtt60cq4olnoKpzjVcCUqOH0OUn34tWnF2p6iW_XYlUHsLRNx35CyTRj7zERsKhzQ72R3Iei0BGkWuNqRXK4s.png) 
     - 
 - 11/01
     - ‒NOTES‒ 
@@ -62,7 +62,7 @@
     - 7 SESSIONS COME ON!!!!
     - 4 hours 20 mins out of the way - Fin Strong
     - Nice and early start
-    - ![](local://C:/Users/malac/remnote/Malachy_O'Connor/files/oe_XWfa6KPgYe9A_kJDJoC67RBeZveY7PtQTvw6hxk1VKLlOiwWO7ojMruitHull_PFMDyLVusQaPZ9psMTiAEeCNlm7qW16NGWOs1EFBG1b5YgmS41u9iMH7RY16xIt.png) 
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/oe_XWfa6KPgYe9A_kJDJoC67RBeZveY7PtQTvw6hxk1VKLlOiwWO7ojMruitHull_PFMDyLVusQaPZ9psMTiAEeCNlm7qW16NGWOs1EFBG1b5YgmS41u9iMH7RY16xIt.png) 
 - 10/01
     - ‒NOTES‒ 
         - I've got 6 days to get the shit done, grind time.
@@ -75,7 +75,7 @@
     - **SEMANTICS SEMANTICS LETS GO LETS GO** 
     - 7 SESSIONS COME ON!!!!
     - Nice and early start
-    - ![](local://C:/Users/malac/remnote/Malachy_O'Connor/files/xeua3DVzyzUsfbXbdbMuWyMF0cQCwQFQC4dNWqymk29x6ynRHyfyg2YA0arMooJigB2w2Sagg3fU6xnCtcZljHbgocu2Ki05t07buwlPj4fgAmeGdioylzzhePN5ftWq.png) 
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/xeua3DVzyzUsfbXbdbMuWyMF0cQCwQFQC4dNWqymk29x6ynRHyfyg2YA0arMooJigB2w2Sagg3fU6xnCtcZljHbgocu2Ki05t07buwlPj4fgAmeGdioylzzhePN5ftWq.png) 
 - 08/01
     - ‒NOTES‒ 
         - I've got 6 days to get the shit done, grind time.
@@ -88,7 +88,7 @@
     - Semantics SEMANTICS Semantics!!! 
     - Nice and early start
     - 7 SESSIONS ! Think I did 5, ended up going to Hanas
-    - ![](local://C:/Users/malac/remnote/Malachy_O'Connor/files/XjUxH3iT4-ESBuGc6_7FnnUPICRQD7yRHcyJhho8L0s1viSK0_2YYq5_9sx4KG5XKB8TLDoNGMid4An9y2XnJv8Jv7Qf4f6szKTTlBBf6MMzm2XPbodAIMbJwgeVRVLR.png) 
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/XjUxH3iT4-ESBuGc6_7FnnUPICRQD7yRHcyJhho8L0s1viSK0_2YYq5_9sx4KG5XKB8TLDoNGMid4An9y2XnJv8Jv7Qf4f6szKTTlBBf6MMzm2XPbodAIMbJwgeVRVLR.png) 
 - 07/01
     - ‒NOTES‒ 
         - I've got 7 days to get the shit done, grind time.
@@ -100,7 +100,7 @@
     - Lazy late start
     - 7 Sessions - ^^Ended up doing 5.66 woke up late );^^ 
     - Data Science and semantics focus
-    - ![](local://C:/Users/malac/remnote/Malachy_O'Connor/files/9NX1CU8iGjhgqfF5na7qHaqNNhxUCZFt1JynC5NwnTIAqBBZoMzHXkz3zPuAzRtAoY_tHk2MeysdAmzRNmP7ByRHucvcobxuNP-EY9oic0MMTr5Rctc8g-vVQwER7Yw9.png) 
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/9NX1CU8iGjhgqfF5na7qHaqNNhxUCZFt1JynC5NwnTIAqBBZoMzHXkz3zPuAzRtAoY_tHk2MeysdAmzRNmP7ByRHucvcobxuNP-EY9oic0MMTr5Rctc8g-vVQwER7Yw9.png) 
     - 
 - 06/01
     - ‒NOTES‒ 
@@ -114,7 +114,7 @@
     - 10:30 - 13:00 : SUPERVISION WORK NO LECTURES 
     - 13:00 - 16:30 : C Programming?
     - 16:30 - 19:00 : Dist systems 
-    - ![](local://C:/Users/malac/remnote/Malachy_O'Connor/files/T_ce5JHA5lwKagtQ3f5I01I-kv70WVaUhKZharkNNSHEuYR1qRIqia7HwGBxVM0bEwd2mw5KIVwEpjN-qwIqegKBDkWcaDyEXlEgj7kYAM-rQThK1R8pcnzhZ_aq9GWw.png) 
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/T_ce5JHA5lwKagtQ3f5I01I-kv70WVaUhKZharkNNSHEuYR1qRIqia7HwGBxVM0bEwd2mw5KIVwEpjN-qwIqegKBDkWcaDyEXlEgj7kYAM-rQThK1R8pcnzhZ_aq9GWw.png) 
 - 04/01
     - ‒NOTES‒ 
         - I've got 10 days to get the shit done, grind time.
@@ -123,7 +123,7 @@
     - 11:30 - 12:00 : Wake up get started 
     - 12:00 - 15:35 : Smash the distributed systems supo work Endup doing lectures as well 
     - 15:40 - 19:00 : Lectures - Data science?  ); 
-    - ![](local://C:/Users/malac/remnote/Malachy_O'Connor/files/v75KBdLi_SyMGfq4TSRlSEGrJJsZlP6A-loOco4JUvKrjsKeEWI7WE4ImQ9H-MRgNCUYXPFk0JDx9jixn23bQp0wOpad1V3U89KaIIwO3x92vaF6F7aHig5mHpsBhzW2.png) 
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/v75KBdLi_SyMGfq4TSRlSEGrJJsZlP6A-loOco4JUvKrjsKeEWI7WE4ImQ9H-MRgNCUYXPFk0JDx9jixn23bQp0wOpad1V3U89KaIIwO3x92vaF6F7aHig5mHpsBhzW2.png) 
     - 
     - 
 - 03/01
@@ -134,7 +134,7 @@
     - 14:30 - 16:50 - Lectures
     - 17:00 - 18:00 - More lectures
     - 18:10 - 19:10 - Last push
-    - ![](local://C:/Users/malac/remnote/Malachy_O'Connor/files/4JYCSwTQIr46HbblDTnhL8p4fDf65pWHHcrfLLcQtpcnY1SO1IYDRCqrfTftlzRX2c9v4iholrMSMuoFFjmeSGnE6CjPL0vTPxe-v5O4HjuRPDlevTOml6eM-uwe6Y6g.png) 
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/4JYCSwTQIr46HbblDTnhL8p4fDf65pWHHcrfLLcQtpcnY1SO1IYDRCqrfTftlzRX2c9v4iholrMSMuoFFjmeSGnE6CjPL0vTPxe-v5O4HjuRPDlevTOml6eM-uwe6Y6g.png) 
     - 
     - 
     - 
@@ -144,7 +144,7 @@
     - 
     - 11:50 - 16:30 : WORK ON C (4)
     - 16:30 - 20:00 : LECTURES (3)
-    - ![](local://C:/Users/malac/remnote/Malachy_O'Connor/files/eSQZ6QhDKwzqP0NnqK2VNbjA6MuNK0rzAUZuRxxhQN3rKg-bDNoFhCy4KUlH5Fmb5n5fw-5PLP5nZyU85lpNUnQCjMG8soOP8UJNEtXQ4hqX4qusAT4D_fSaLn_fDSx_.png) 
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/eSQZ6QhDKwzqP0NnqK2VNbjA6MuNK0rzAUZuRxxhQN3rKg-bDNoFhCy4KUlH5Fmb5n5fw-5PLP5nZyU85lpNUnQCjMG8soOP8UJNEtXQ4hqX4qusAT4D_fSaLn_fDSx_.png) 
     - 
     - Change of plans: 
     - 11:50 - 13:00 : Worked on C
@@ -153,7 +153,7 @@
         - 14:20 - 15:30 : MORE DIS SYTEMS
         - 15:45 - 16:45 : Fin dist-system lecture then finish C++ course !! ! ! !  !  !  
     - 16:30 - 20:00 : Some more C (1) - then supo work for SEMANTICS PLEASE!! (2?)
-    - ![](local://C:/Users/malac/remnote/Malachy_O'Connor/files/DS04SO_2b9huhh15-WWqSy4xdy3fF7_M5bQAgoCchYOKqp9fMGZJe61EnbBN3WxVeBBVi8yxJWpRHlPcfLUytXXFaAQwjlqF31WepmfACnwsr-lijHp6rq4gfpKE6QXX.png) 
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/DS04SO_2b9huhh15-WWqSy4xdy3fF7_M5bQAgoCchYOKqp9fMGZJe61EnbBN3WxVeBBVi8yxJWpRHlPcfLUytXXFaAQwjlqF31WepmfACnwsr-lijHp6rq4gfpKE6QXX.png) 
     - 
 - 01/01
     - ‒NOTES‒ 
@@ -161,7 +161,7 @@
     - 
     - 11:00 - 15:00 : WORK ON C++
     - 15:00 - 19:00 : LECTURES
-    - ![](local://C:/Users/malac/remnote/Malachy_O'Connor/files/q848PwI-fMtG8ZP9CHlEXDjwA0sxy4xHx9kFxaM9Y18kNbZdXanBaDAah5ly1X5NriZo_OOt1gLdUukSRUhKbRu56RvsZxJ8SImOe4UIccYYoOb6ATcnv95HG-ohq6X-.png) 
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/q848PwI-fMtG8ZP9CHlEXDjwA0sxy4xHx9kFxaM9Y18kNbZdXanBaDAah5ly1X5NriZo_OOt1gLdUukSRUhKbRu56RvsZxJ8SImOe4UIccYYoOb6ATcnv95HG-ohq6X-.png) 
 - 30/12
     - ‒NOTES‒ 
         - I've got 3 weeks to get the shit done, grind time. DAY 4
@@ -183,7 +183,7 @@
     - 15:00 - 16:30 - More C++ then some Data Science (Just do it)
     - 16:30 - 17:30 - Break time break time
     - 17:30 - 19:00 - Work on what you like
-    - ![](local://C:/Users/malac/remnote/Malachy_O'Connor/files/D5nKfklPs0_XmhXFaRUQ27HzO8HQ3zPUVRoGcvUa9fG0kMCof6liGRrUDKDa3cItsYOZQo2xJFsGN-pE7eyqFccqGHknQdFOy0H9biLwrtYaKNt2FtYu6Vdb6xqMq6EZ.png) 
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/D5nKfklPs0_XmhXFaRUQ27HzO8HQ3zPUVRoGcvUa9fG0kMCof6liGRrUDKDa3cItsYOZQo2xJFsGN-pE7eyqFccqGHknQdFOy0H9biLwrtYaKNt2FtYu6Vdb6xqMq6EZ.png) 
 - 27/12
     - ‒NOTES‒ 
         - I've got 3 weeks to get the shit done, grind time. DAY 2
@@ -196,7 +196,7 @@
     - 7:15 - 8:00: BREAK BREAK BREAK
     - 22:00 - 11:30 - bit more one more lectcha
     - Not bad! More tomorrow
-    - ![](local://C:/Users/malac/remnote/Malachy_O'Connor/files/QaeCFnjgj7-GSPCoJ96dHZ3ySAKBKJEBih3DLKypArzgxloIhrVm5hd8CL4Pzl6kNMNz_oyEEzHp0mxcsiiSrxvwR-OF06mz920JAy0dEIRJrqadURXEuwMBG17vPIdX.png) 
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/QaeCFnjgj7-GSPCoJ96dHZ3ySAKBKJEBih3DLKypArzgxloIhrVm5hd8CL4Pzl6kNMNz_oyEEzHp0mxcsiiSrxvwR-OF06mz920JAy0dEIRJrqadURXEuwMBG17vPIdX.png) 
 - 26/12
     - ‒NOTES‒ 
         - I've got 3 weeks to get the shit done, grind time.
@@ -207,7 +207,7 @@
     - ‒ Went for a long walk with Winnie, Matt and Isaac ‒  ) ;
     - 15:00 - 15:30: BREAK 
     - 15:30 - 17:00: Last push do whatever work you want, lectures please
-    - ![](local://C:/Users/malac/remnote/Malachy_O'Connor/files/g9mlrN1_NkpdCk0-9O-hFRM_KiLcs5bd9GAOEdontx0hdZ67PtOsFBXhxKY65TCz0Ix-zUsAJZS_RqUsgQnxSx5vd7gbTJDCBbgi2o8zCBDRe15vFle_uVsfFPAd6ZY_.png) 
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/g9mlrN1_NkpdCk0-9O-hFRM_KiLcs5bd9GAOEdontx0hdZ67PtOsFBXhxKY65TCz0Ix-zUsAJZS_RqUsgQnxSx5vd7gbTJDCBbgi2o8zCBDRe15vFle_uVsfFPAd6ZY_.png) 
 - 23/12
     - 13:15 - 14:30 - Data Science Lectures
     - 14:30 - 15:00 - Take a break legend X
@@ -255,7 +255,7 @@
         - 21:30 - Finished supo work - Finish the goddamn supervision work
 - Work what I done
     - Week 2
-        - ![](local://C:/Users/malac/remnote/Malachy_O'Connor/files/2EvOhDCrSfHdp7_UCXVQD2mq8fo0gsvjavEwzaYwWnCI1mV5m97s7ICNT_7CR05g2zLF6Vb6X6tGZdqf8cKMCSTehLL6Nd2TGyzXe9MdFDZ5XP-7TYclKRClrr2Lptja.png) 
+        - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/2EvOhDCrSfHdp7_UCXVQD2mq8fo0gsvjavEwzaYwWnCI1mV5m97s7ICNT_7CR05g2zLF6Vb6X6tGZdqf8cKMCSTehLL6Nd2TGyzXe9MdFDZ5XP-7TYclKRClrr2Lptja.png) 
         - Wednesday:
             - Watched a previous Further Graphics video
             - 

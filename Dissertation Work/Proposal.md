@@ -1,0 +1,38 @@
+- TODO:
+    - 
+    - Introduction
+        - Describe what makes these aims challenging  
+        - Describe what makes the project useful
+        - NOTE: Bus data does **not **come through MQTT - CDBB in the building does 
+        - Explain what acronyms mean
+        - Mention **Smart **and **Timely** 
+    - Success criterion
+        - Add extensions
+        - Add MQTT-SN to the extensions
+    - Deliverables
+        - Deliverables vs Measurables - Add a deliverables section (current success criteria look like deliverables) measure success against currently deployed MQTT, mention Go profiling and Python profiling. PAHO MQTT in python
+    - Evaluation metrics
+        - Test on varying use cases, some messages end up as JSON
+        - MQTT Box?
+        - Testing power is v complicated, can't just look at DRAM - all this deep sleep junk going on
+        - Diagram of lab setup
+    - Timetable and milestones
+        - Milestones are a combination of evaluations and deliverables
+    - Resource declaration
+        - Explain you will prototype components on whatever dev setup you have (big that up, mention github, usb backups) but run the testing on the 'lab' platform.  
+- 
+-   
+- Completed Sections:
+    - Introduction
+    - Starting Point
+    - Success criterion
+    - Deliverables
+    - Evaluation metrics 
+    - Timetable and milestones 
+    - Resource declaration 
+- 
+- 
+- 
+- 
+- Check out Kafka
+- Build a Mosquitto Pub & Sub thing

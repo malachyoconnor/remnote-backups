@@ -1,0 +1,35 @@
+- [Authors](File/Authors.md)―[M. Tcherni](M. Tcherni.md)
+- Page 02
+    - A pronounced drop in crime, since the early 1990s, has encompassed every crime category tracked by the FBI’s Uniform Crime Reports, including prop- erty crime. However, over the same period, the rates of online property crime (OPC) have been on the rise according to available evidence
+- Page 04
+    - When fraudulent transactions are reported, it is often impossi- ble to infer exactly how the information was obtained, or even how it was exploited.
+    - Others may have their details exploited to obtain products or services, but will suffer no direct loss themselves—argu- ably a crime more similar to defamation than “theft”, at least as far as the original owner of the data is concerned.
+- Page 05
+    - expansion of human activities past dusk, facilitated by the introduction of electric lighting into newly settled territories in the west, had an impact on crime. Every time human activity crosses new “frontiers”, crime seems to follow.
+    - Botnet herders would manipulate infected computers to gather keystroke information and to direct these com- puters—unbeknownst to their owners—to execute specific programs, host fake websites and online pharmacies, and send out spam emails
+    - In 2011, Symantec reported the price for 10,000 bots (infected computers acting as “robots” on commands) was around $15
+- Page 06
+    - First, existing research shows consistently that a much smaller proportion of victims of property crime report their victimization compared to victims of violent crime
+- Page 07
+    -  According to the NCVS estimates, the number of households affected by identity theft has risen from 3.1% in 2004 to 7% in 2010, while the number of individuals affected rose from 5% of the population in 2008 to 7% in 2012 
+- Page 08
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/Ch4EDdSf229yAIDhoz4VnR52bfesFkW3WslKWLqKLUFqrnRD2YL06ruhORrkEKGTAvUc27wOhS0AEGhmBr5aa9FUaGb_QZ6GSPaOzf-Nf_LVnRB4WMl3Jxri1OLOo4wk.png)
+- Page 09
+    - Identity theft victimization is reported to police at a significantly lower rate—around 20%—compared to the proportion of people who report their victimizations from traditional property crime to police—about 40%,
+- Page 11
+    - Estimates of financial losses from online theft and fraud are compiled by Javelin Strategy & Research (2011), using a methodology closest to the one employed in calculating losses from traditional crime by the FBI in their annual Crime in the US reports (U.S. Federal Bureau of Investigation, 2013). The results paint a picture that clearly shows losses from online crime far surpass those from traditional crime (see Table 3), and that the proportion of people or households financially affected by OPC is substanti
+- Page 12
+    - ven though only less than half of all property crime is reported to the police (according to NCVS estimates), the figures for financial losses cannot be assumed to be representative of losses for all such crimes because one of the main reasons some property crimes are not reported to law enforcement is the insignificance of losses 
+- Page 13
+    - One successful security breach of a network may only be a single offense, but its effects on victims may be widespread if millions of data records con- taining personal information are accessed by the hackers. Such a crime may expose millions of people to becoming potential victims of identity theft or account fraud 
+- Page 16
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/m4k677AXySgIbHASa-Q9xRDkJLAWnJZZ_kYZFOUKL0efUqw3Uu4_pJJRLxjGIG9jxBj1rbjBvk_XFvuJzQsZS9aL9Pp3k2cncGIe5Y4mIYtkHedyNf04eWOfujVFx1uF.png)
+- Page 17
+    - (1) malicious attacks that are most similar to vandalism —computer viruses, denial of service, and other attacks designed to bring damage to the systems without the intent to profit financially from such dam- age, and (2) cybercrime that is perpetrated with the explicit intent to profit (designated as cyber-theft in the BJS report [Rantala, 2008]). These two types of OPC (cyber-vandalism and cyber-theft) may have very different origins and types of perpetrators but both cause substantial financial losses to the organi- zations targeted.
+    -  The data presentedhere suggest that the rate at which US residents are now affected by OPCTHE DARK FIGURE OF ONLINE PROPERTY CRIME 905actually outstrips that of traditional property crime, which continues to fall.
+- Page 18
+    - Moreover, the amount of financial harm they suffer is far greater in dollar amounts than that inflicted by traditional property crime
+    -  when it comes to counting crime throughout history, namely: what is the unit to be counted?
+    - riminologists have traditionally counted discrete acts as separate “crimes,” but have consis- tently wrestled with the conundrum of how to count criminality which is, in effect, spread out over several acts such as spree or serial/repeat offenses.
+    - When it comes to counting “the victim” and, relatedly, “the victimization”, the same problem occurs. Clearly, victims are a diverse group and victimiza- tions vary in their financial impact, but for counting purposes the real chal- lenge is saying where one victim, and one victimization, begins and ends. Recall that in the case of arson, the FBI has given up on calculating losses because it seems unreasonable to attribute the losses from a fire that burns out of control to a single offense
+- 

@@ -1,0 +1,11 @@
+- Page 1
+    - The diffusion of botnets has recently increased due to various factors such as the: • increased availability of powerful Internet connectivity and hosts (to be understood not only as personal computers, but as objects of everyday life more and more interconnected and smart). 50 to 100 billion things are expected to be connected to the Internet by 2020. This paradigm is usually referred as “Internet of Things” – IoT [1]. Many of these “things” have few security arrangements (mobile devices do not have one); • possibility of malware customization (introduced by Zeus botnet and its Software Development Kit); • greater availability of ready-to-use vectors of infection (e.g. Blackhole); • presence in the underground market of cyber criminals renting services and structures that could be usefully used as parts of the supply chain of a botnet or better are the whole real botnets. 
+    - Instead, what is relatively new is the radical change in the way cybercriminals target revenues of their activities; they don’t need to have great technical expertise to operate; they just have to buy or rent all they need (tools, infrastructures and services) with more and more complete and efficient approaches. 
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/jk-do_Omu7BjSi24FMIj4A_kk5V3PCGZ6T5o45mpNbgdpXo48PLnnhe3T-8-iKDb23jvDVBnf4U9ghJcLgGe3exp_zkO68nWlDeKxBjkIWy3J54RMLZNdEbeYVEnElpx.png)
+- Page 2
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/YRCJXDoXT7Xpfn41_FhL1fv1lNFQIq7sKAl2d7wO_ASDjF2BLKDEeCku5ym7xnijnP9rbZuZjBXx3a7fS5-lkJlhmVcNWGbRMz_09hC_VbtU3dO976o4DwsQ0pfyfBJb.png)
+- Page 3
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/Be-w4NcLffWNaQNoYszBrA2SS8Rq0cgnKWPJNFXs4mPLyDPsLnM3A9fupvaZyDA34wUlGTmsylXrk-28et537EEo0yI4NtLbEXdTzhD7T0ZfauSto1DfoxtP7GRPKliZ.png)
+- Page 4
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/JjwEso0w17Uh9t03waFI99Ydxc5vzWsy2HYHSQFbvpGlxbd8KzhEx7g7LKe3IkaOWKVy2d02Bw8-U-wr95iitnhiYC0Kz7iyF_I7WjkqlyxiwCdJbJLNWnqZVX7L-FRE.png)
+    - ![](local:///home/mali/remnote/remnote-614c8a3b6997e6001643dfce/files/9HnkteYk-LN77srOjsFufrXjGfYePddOQL0WKAa-Kv8wcitlqmPFEbi9b0QsFy5xnhzNtec-vuJvCsqLx-Y0iZaVRjUHPqAf_tjEAM6C1acMafjCJW9GA85ggfYJytX2.png)

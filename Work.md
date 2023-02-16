@@ -1,0 +1,14 @@
+- Todo
+    - Add a table listing Average exposure, Gross exposure, average Net exposure, and PNL in dollars for coins held     
+    - Add how many days the max drawdown was over                                                                   
+    - Make Target vol a changeable input on the page - if 0 show unscaled numbers.                                      
+    - Add a button to regenerate the images on the page based on input target vol
+    - Add max single asset exposure  
+    - Add Maximum POV (percentage of market value) get the market values for Binance & FTX
+    - Add percentage of portfolio by dollar exposure
+    - Fix daily sharp                                                         
+    - Max leverage                                                                                       
+    - Sorted by percentage too                                                                               
+    - Histogram of vol percentages           
+    - Create barchart of market volume
+- 
